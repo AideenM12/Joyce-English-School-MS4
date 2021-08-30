@@ -13,7 +13,7 @@
             * [Log Out Features](#Log-Out-Features)
             * [404 Page](#404-Page)
             * [500 Page](#500-Page)
-            * [Features exclusive to Admin][#Features-exclusive-to-Admin]          
+            * [Features exclusive to Admin](#Features-exclusive-to-Admin)         
        * [Features Left To Implement](Feature-Left-To-Implement)  
        * [Design](#Design)
             * [Colors](#Colors)
@@ -64,8 +64,8 @@ The live website can be viewed [here]()
 
 * As a first time user I want to know the site's purpose immediately upon arrival.
 * As a first time user I want to access reviews of the school to inform my decision before signing up for a course.
-* As a first time user I want to find information about English language courses in the city of Trieste.
 * As a first time user I want the site UX to be intuitive for ease of use.
+* As a first time user I want to find information about English language courses in the city of Trieste.
 * As a user I want the site to be responsive across all devices.
 * As a user I want to be able to create an account easily.
 * As a user I want to be able to inform the school of my level of English easily.
