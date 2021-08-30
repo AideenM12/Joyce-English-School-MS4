@@ -40,7 +40,7 @@
 
 ![Website MockUp](assets/documentation/doc-images/MS3-Mockup.png)
 
-The live website can be viewed [here](https://motherfolklore.herokuapp.com/)
+The live website can be viewed [here]()
 
 
 # UX
@@ -62,6 +62,22 @@ The live website can be viewed [here](https://motherfolklore.herokuapp.com/)
 
 ### User Stories
 
+* As a first time user I want to know the site's purpose immediately upon arrival.
+* As a first time user I want to access reviews of the school to inform my decision before signing up for a course.
+* As a first time user I want to find information about English language courses in the city of Trieste.
+* As a first time user I want the site UX to be intuitive for ease of use.
+* As a user I want the site to be responsive across all devices.
+* As a user I want to be able to create an account easily.
+* As a user I want to be able to inform the school of my level of English easily.
+* As a user I want to be able to pay for courses using a secure credit card payment system.
+* As a returning user I want to be able to book lessons to suit my own schedule.
+* As a returning user I want be able to contact the school easily for any further enquires I may have.
+* As an existing user I want to receive school updates/news through my account. 
+* As an existing user I want to be able to update my profile information and delete my account if I wish.
+
+### User Stories - Admin Only
+* As a site administrator I want to be able to create, update and delete course information/course options from the admin view. 
+* As a site administrator I want to be able to create, update and delete the information on the Who we are page of the site from the admin view.  
 
 
 
@@ -129,7 +145,7 @@ The live website can be viewed [here](https://motherfolklore.herokuapp.com/)
 
 This palette was created on the [Coolors Website](https://coolors.co).
 
-<img src="assets/documentation/doc-images/MS3-Palette.png" width="450" height="250" alt="milestone palette">
+<img src="documentation/doc_images/MS4 Palette.png" width="450" height="250" alt="milestone palette">
 
 
 ### Typography
