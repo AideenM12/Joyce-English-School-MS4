@@ -179,25 +179,21 @@ This palette was created on the [Coolors Website](https://coolors.co).
 
 * The wireframe mockup links can be found below:
 
-* [Home Page Wireframes](assets/documentation/wireframes/MS3-homepage-wireframe.pdf)
+* [Home Page Wireframes](documentation/wireframes/MS4-home-wireframe.pdf)
 
-* [Articles Page Wireframes](assets/documentation/wireframes/MS3-articles-wireframe.pdf)
+* [Courses Page Wireframes](documentation/wireframes/MS4-courses-wireframe.pdf)
 
-* [Contact Page Wireframes](assets/documentation/wireframes/MS3-contact-wireframe.pdf)
+* [Contact Page Wireframes](documentation/wireframes/MS4-contact-wireframe.pdf)
 
-* [Register Page Wireframes](assets/documentation/wireframes/MS3-register-wireframe.pdf)
+* [Register Page Wireframes](documentation/wireframes/MS4-register-wireframe.pdf)
 
-* [Profile Page Wireframes](assets/documentation/wireframes/MS3-profile-wireframe.pdf)
+* [Profile Page Wireframes]()
 
-* [Edit-Delete Page Wireframes](assets/documentation/wireframes/MS3-edit-delete-wireframe.pdf)
+* [Login Page Wireframes](documentation/wireframes/MS4-login-wireframe.pdf)
 
-* [Login Page Wireframes](assets/documentation/wireframes/MS3-login-wireframe.pdf)
+* [Who we are Page Wireframes](documentation/wireframes/MS4-who-we-are-wireframe.pdf)
 
-* [Add Article Page Wireframes](assets/documentation/wireframes/MS3-add-article-wireframe.pdf)
 
-* [Topics Page Wireframes](assets/documentation/wireframes/MS3-topics-wireframe.pdf)
-
-* [Further Reading Page Wireframes](assets/documentation/wireframes/MS3-fr-wireframe.pdf)
 
 ### Database Schema
 
