@@ -341,7 +341,7 @@ Once the project been loaded into the IDE it is necessary to install the necessa
 ## Credits
 
 ### Media
-
+The image used to create the James Joyce favicon was originally obtained from [trybooking.com](https://www.trybooking.com/events/landing?eid=751940&)
 
 
 ### Content
