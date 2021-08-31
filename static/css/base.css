@@ -1,3 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Patrick+Hand&display=swap');
 body {
-    font-family: 'Patrick Hand';
+    font-family: 'Architects Daughter', sans-serif;
+    background-color: #f1faee;
+    display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+    flex: 1 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Patrick Hand', sans-serif;
+}
+
+/*--Bootstrap inline list style Found on Stack Overflow--*/
+
+.list-inline {
+	padding-left: 0;
+	margin-left: -5px;
+	list-style: none;
+	padding-top: 10px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.list-inline>li {
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+
+/*--------------Footer--------*/
+
+.page-footer {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+	padding-bottom: 0;
+	padding-top: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+    background-color: #4ea5d9;
+	color: #f1faee;
+}
+
+footer>h5 {
+	padding-top: 10px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+
+/*----Icons----*/
+a{
+    color: #f1faee;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+a:hover{
+    color: #203a54 !important;
+    background-color: #4ea5d9 !important;
+    
+}
+
+@media only screen and (min-width: 577px) and (max-width:992px) {
+	
+
+}
+
+@media only screen and (max-width: 576px) {
+	html,
+	body {
+		max-width: 100%;
+		overflow-x: hidden;
+		height: auto !important;
+	}
+	/*-----------Navigation-------*/
+	
+	
+	
+	
 }
