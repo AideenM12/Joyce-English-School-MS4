@@ -343,11 +343,10 @@ Once the project been loaded into the IDE it is necessary to install the necessa
 ### Media
 The image used to create the James Joyce favicon was originally obtained from [trybooking.com](https://www.trybooking.com/events/landing?eid=751940&)
 
-The parallax container image of the James Joyce statue was originally obtained from [italytraveller.com](https://www.italytraveller.com/en/e/coffee-with-svevo-and-joyce)
+Books.jpg https://unsplash.com/photos/IOzk8YKDhYg?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+flag.jpg Image by <a href="https://pixabay.com/photos/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1209605">Free-Photos</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1209605">Pixabay</a>
 
-sistiana.jpg https://unsplash.com/photos/5B_b1LFAR-U?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
-
-trieste2.jpg https://pixabay.com/photos/trieste-square-night-city-442587/
+pages.jpg Image by <a href="https://pixabay.com/users/kranich17-11197573/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6213537">Kranich17</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6213537">Pixabay</a>
 ### Content
 
 

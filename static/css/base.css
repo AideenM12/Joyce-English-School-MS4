@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Patrick+Hand&display=swap');
 body {
     font-family: 'Architects Daughter', sans-serif;
-    background-color: #f1faee;
+    background-color: #ddfff7;
     display: flex;
 	min-height: 100vh;
 	flex-direction: column;
@@ -16,12 +16,15 @@ h5,
 h6,
 .brand-logo{
     font-family: 'Patrick Hand', sans-serif;
-	color: #f1faee;
+	color: #f1faee !important;
 	font-weight: 600;
 }
 nav{
 	background-color: #e63946;
 	font-family: 'Patrick Hand', sans-serif;
+}
+.brand-logo{
+	margin-left: 20px !important;
 }
 .sidenav{
 	background-color: #f1faee;
@@ -61,14 +64,18 @@ nav{
 	margin-bottom: 0;
     background-color: #4ea5d9;
 	color: #f1faee;
+	text-shadow: 2px #070a0d !important;
 }
 
 footer>h5 {
 	padding-top: 10px;
 	margin-top: 0;
 	margin-bottom: 0;
+	-webkit-text-stroke: 1px black !important;
 }
-
+.text-shadow{
+	text-shadow: 0px 2px 2px rgba(8, 8, 8, 0.4);
+}
 
 /*----Icons----*/
 .footer-icon {
@@ -91,10 +98,17 @@ footer>h5 {
 }
 
 .parallax-container {
-	height: 100vh;
+	height: 70vh;
 }
 
-
+.card{
+	margin-left: 5rem;
+	margin-right: 5rem;
+	font-size: 1.25rem;
+}
+.card-title{
+	font-weight: 600 !important;
+}
 
 @media only screen and (min-width: 577px) and (max-width:992px) {
 	
@@ -110,7 +124,11 @@ footer>h5 {
 	}
 	/*-----------Navigation-------*/
 	
-	
+	.brand-logo {
+
+		font-size: 1.5rem;
+		
+	}
 	
 	
 }

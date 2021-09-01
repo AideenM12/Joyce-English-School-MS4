@@ -1,5 +1,5 @@
 <nav class="nav-extended">
-    <div class="nav-wrapper">
+    <div class="nav-wrapper text-shadow">
        <a href="#" class="brand-logo ">Joyce School of English</a>
        <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
        <ul class="right hide-on-med-and-down">
@@ -19,7 +19,7 @@
           {% else %}
           <li><a href="#">Topics</a></li>
           {% endif %}
-          <li><a href="#">Log Out</a></li>
+          <li><a href="{% url 'account_logout' %}">Log Out</a></li>
           {% else %}
           <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
           <li><a href="{% url 'account_login' %}">Log In</a></li>
