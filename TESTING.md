@@ -965,6 +965,11 @@ All CSS was validated by using [W3C Jigsaw CSS Validation Service](https://jigsa
 
 ## Known Bugs and Issues
 
+* One issue during the start of development was the inability to render images in the browser. A 404 error was being display in the the terminal and after consultation with tutor support it was discovered that the following code needed to be added to the templates section of the settings.py file:
+
+        'django.template.context_processors.media',
+
+After this code was implemented 200 began displaying in the terminal with regard to the image however it still failed to display in the browser. After quick inspection with chrome dev tools it was discovered that the settings for the parallax image were with an opacity of 0, this issue was quickly rectified by applying an opacity of 1 to the parallax image in base.css.  
 
 ## Further Testing
 
