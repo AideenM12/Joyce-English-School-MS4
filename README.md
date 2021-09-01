@@ -343,7 +343,11 @@ Once the project been loaded into the IDE it is necessary to install the necessa
 ### Media
 The image used to create the James Joyce favicon was originally obtained from [trybooking.com](https://www.trybooking.com/events/landing?eid=751940&)
 
+The parallax container image of the James Joyce statue was originally obtained from [italytraveller.com](https://www.italytraveller.com/en/e/coffee-with-svevo-and-joyce)
 
+sistiana.jpg https://unsplash.com/photos/5B_b1LFAR-U?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+
+trieste2.jpg https://pixabay.com/photos/trieste-square-night-city-442587/
 ### Content
 
 

@@ -69,6 +69,17 @@ a:hover{
     
 }
 
+
+/*-----Parallax Container-----*/
+
+.parallax-container .parallax img {
+	opacity: 1;
+}
+
+.parallax-container {
+	height: 100vh;
+}
+
 @media only screen and (min-width: 577px) and (max-width:992px) {
 	
 
