@@ -32,7 +32,7 @@ nav{
 }
 
 .sidenav-h4{
-	color: #070a0d;
+	color: #070a0d !important;
 }
 /*--Bootstrap inline list style Found on Stack Overflow--*/
 
@@ -65,6 +65,7 @@ nav{
     background-color: #4ea5d9;
 	color: #f1faee;
 	text-shadow: 2px #070a0d !important;
+	border-top: 1px #f1faee solid;
 }
 
 footer>h5 {
@@ -97,13 +98,13 @@ footer>h5 {
 	opacity: 1;
 }
 
-.parallax-container {
+#top-parallax {
 	height: 70vh;
 }
 
 .card{
-	margin-left: 5rem;
-	margin-right: 5rem;
+	margin-left: 10rem;
+	margin-right: 10rem;
 	font-size: 1.25rem;
 }
 .card-title{
@@ -125,10 +126,18 @@ footer>h5 {
 	/*-----------Navigation-------*/
 	
 	.brand-logo {
-
-		font-size: 1.5rem;
+		left: 40% !important;
+		font-size: 1.5rem !important;
 		
 	}
+	.sidenav li>a {
+		font-size: 1.5rem;
+	}	
 	
+	.card{
+		margin-left: 5px;
+		margin-right: 5px;
+		font-size: 1.25rem;
+	}
 	
 }
