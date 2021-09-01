@@ -31,7 +31,15 @@
     </head>
 
     <body>
-        <header class="container-fluid fixed-top">Joyce School of English</header>
+      <header>
+         
+            <nav>
+                {% include 'includes/mobile-top-header.html' %}
+                {% include 'includes/main-nav.html' %}
+            </nav>
+       
+      </header>
+        
 
     {% if messages %}
         <div class="message-container"></div>
@@ -50,15 +58,15 @@
          </div>
          <div class="col s6 right">
             <ul class="list-inline right">
-               <li><a href="https://www.facebook.com/" rel="noopener" target="_blank"><i
+               <li><a href="https://www.facebook.com/" class="footer-icon" rel="noopener" target="_blank"><i
                   class="fab fa-facebook-square"><span class="sr-only">Facebook</span></i></a></li>
-               <li><a href="https://www.instagram.com/" rel="noopener" target="_blank">
+               <li><a href="https://www.instagram.com/" class="footer-icon" rel="noopener" target="_blank">
                   <i class="fab fa-instagram "><span class="sr-only">Instagram</span></i></a>
                </li>
-               <li><a href="" rel="noopener">
+               <li><a href="" rel="noopener" class="footer-icon">
                   <i class="fas fa-envelope "><span class="sr-only">Contact</span></i></a>
                </li>
-               <li><a href="https://www.github.com/" rel="noopener" target="_blank">
+               <li><a href="https://www.github.com/" class="footer-icon" rel="noopener" target="_blank">
                   <i class="fab fa-github "><span class="sr-only">GitHub</span></i></a>
                </li>
             </ul>

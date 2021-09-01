@@ -57,13 +57,13 @@ footer>h5 {
 
 
 /*----Icons----*/
-a{
+.footer-icon {
     color: #f1faee;
     font-size: 1.5rem;
     margin-top: 10px;
 }
 
-a:hover{
+.footer-icon:hover{
     color: #203a54 !important;
     background-color: #4ea5d9 !important;
     
@@ -79,6 +79,54 @@ a:hover{
 .parallax-container {
 	height: 100vh;
 }
+
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: black;
+    color: #4ea5d9;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
 
 @media only screen and (min-width: 577px) and (max-width:992px) {
 	
