@@ -13,10 +13,24 @@ h2,
 h3,
 h4,
 h5,
-h6{
+h6,
+.brand-logo{
     font-family: 'Patrick Hand', sans-serif;
+	color: #f1faee;
+	font-weight: 600;
+}
+nav{
+	background-color: #e63946;
+	font-family: 'Patrick Hand', sans-serif;
+}
+.sidenav{
+	background-color: #f1faee;
+	color: #070a0d;
 }
 
+.sidenav-h4{
+	color: #070a0d;
+}
 /*--Bootstrap inline list style Found on Stack Overflow--*/
 
 .list-inline {
@@ -80,52 +94,6 @@ footer>h5 {
 	height: 100vh;
 }
 
-
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
-.logo-font {
-    text-transform: uppercase;
-}
-
-.main-logo-link {
-    width: fit-content;
-}
-
-.shop-now-button {
-    background: black;
-    color: #4ea5d9;
-    min-width: 260px;
-}
-
-.btn-black {
-    background: black;
-    color: white;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
-}
-
-.text-black {
-    color: #000 !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
-}
 
 
 @media only screen and (min-width: 577px) and (max-width:992px) {
