@@ -4,7 +4,7 @@
        <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
        <ul class="right hide-on-med-and-down">
           <li><a href="#" >Home</a></li>
-          <li><a href="#">Articles</a></li>
+          <li><a href="#">Courses</a></li>
           <li><a href="#">Contact</a></li>
           {% if session.user %}
           <li><a href="#">Profile</a></li>
@@ -12,9 +12,7 @@
           {% if session.user|lower == "admin"|lower %}
           <li> <a class='dropdown-trigger' href='#' data-target='dropdown1'>Topics/Further Reading<i class="fas fa-caret-down"></i></a></li>
           <ul id='dropdown1' class='dropdown-content center'>
-             <li><a href="#">Topics</a></li>
-             <li><a href="#">Add Topic</a></li>
-             <li><a href="#">Add Further Reading</a></li>
+            <a href="" class="dropdown-item">Product Management</a>
           </ul>
           {% else %}
           <li><a href="#">Topics</a></li>
@@ -23,6 +21,26 @@
           {% else %}
           <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
           <li><a href="{% url 'account_login' %}">Log In</a></li>
+          <li class="list-inline-item dropdown">
+            <a href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                
+                    <i class="fas fa-user fa-lg"></i>
+                    My Account
+                
+            </a>
+            <li class="list-inline-item">
+               <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                   
+                       <i class="fas fa-shopping-bag fa-lg"></i>
+                     
+                           {% if grand_total %}
+                               ${{ grand_total|floatformat:2 }}
+                           {% else %}
+                               €0.00
+                           {% endif %}
+                       
+               </a>
+           </li>
           {% endif %}
        </ul>
     </div>

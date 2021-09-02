@@ -3,7 +3,7 @@
        <h4 class="center-align sidenav-h4">Joyce School</h4>
     </li>
     <li><a href="#" >Home</a></li>
-    <li><a href="#">Articles</a></li>
+    <li><a href="#">Courses</a></li>
     <li><a href="#">Contact</a></li>
     {% if session.user %}
     <li><a href="#">Profile</a></li>
@@ -12,10 +12,33 @@
     {% if session.user|lower == "admin"|lower %}
     <li><a href="#">Add Topic</a></li>
     <li><a href="#">Add Further Reading</a></li>
+    <li>
+      <a href="#" >Product Management</a>
+    </li>
     {% endif %}
     <li><a href="{% url 'account_logout' %}">Log Out</a></li>
     {% else %}
     <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
     <li><a href="{% url 'account_login' %}">Log In</a></li>
+    <li class="list-inline-item dropdown">
+      <a href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          
+              <i class="fas fa-user fa-lg"></i>
+              My Account
+          
+      </a>
+    <li class="list-inline-item">
+      <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+          
+              <i class="fas fa-shopping-bag fa-lg"></i>
+            
+                  {% if grand_total %}
+                      ${{ grand_total|floatformat:2 }}
+                  {% else %}
+                      €0.00
+                  {% endif %}
+              
+      </a>
+  </li>
     {% endif %}
  </ul>
