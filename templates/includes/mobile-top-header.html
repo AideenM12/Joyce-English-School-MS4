@@ -3,7 +3,7 @@
      <h4 class="center-align sidenav-h4">Joyce School</h4>
   </li>
   <li><a href="{% url 'home' %}" >Home</a></li>
-  <li><a href="#">Courses</a></li>
+  <li><a href="{% url 'courses' %}">Courses</a></li>
   <li><a href="#">Contact</a></li>
   {% if request.user.is_authenticated %}
   <li><a href="#">Profile</a></li>

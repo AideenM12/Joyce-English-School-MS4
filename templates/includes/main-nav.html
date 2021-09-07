@@ -4,7 +4,7 @@
        <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
        <ul class="right hide-on-med-and-down">
           <li><a href="{% url 'home' %}" >Home</a></li>
-          <li><a href="#">Courses</a></li>
+          <li><a href="{% url 'courses' %}">Courses</a></li>
           <li><a href="#">Contact</a></li>
           {% if request.user.is_authenticated %}
           <li><a href="#">Profile</a></li>
