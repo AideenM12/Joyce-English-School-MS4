@@ -21,7 +21,7 @@
           <a href="#" id="scroll" style="display: none;"><span></span></a>
           <div class="collapsible-body">
             
-             <img src="{{ course.image }}" width="400" height="400" class="image" alt="image"><br>
+             <img src="{{MEDIA_URL}}{{ course.image }}" width="400" height="400" class="image" alt="image"><br>
              
              <p><span class="highlight"> </span> {{ course.name }}</p><br>
              {{ course.description }}<br>
