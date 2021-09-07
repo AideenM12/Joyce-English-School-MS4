@@ -5,88 +5,93 @@
       "fields": {
         "name": "Classes for Teenagers",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "price": "€100.00",
+        "price": 100.00,
         "image" : "teenagers.jpg",
-        "dates" : "TBC",
-        "hours" : "TBC"
+        "start_date" : "01-01-2021",
+        "end_date": "31-12-2021",
+        "hours" : "50"
         
      }
     },
     {
         "model": "courses.course",
-        "pk": 1,
+        "pk": 2,
         "fields": {
           "name": "Classes for Children",
           "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "price": "€100.00",
+          "price": 100.00,
           "image" : "children.jpg",
-          "dates" : "TBC",
-          "hours" : "TBC"
+          "start_date" : "01-01-2021",
+          "end_date": "31-12-2021",
+          "hours" : "50"
           
        }
       },
       {
         "model": "courses.course",
-        "pk": 1,
+        "pk": 3,
         "fields": {
           "name": "Classes for Adults",
           "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "price": "€100.00",
+          "price": 100.00,
           "image" : "adults.jpg",
-          "dates" : "TBC",
-          "hours" : "TBC"
+          "start_date" : "01-01-2021",
+          "end_date": "31-12-2021",
+          "hours" : "50"
           
        }
       },
       {
         "model": "courses.course",
-        "pk": 1,
+        "pk": 4,
         "fields": {
           "name": "Classes for Businesses",
           "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "price": "€100.00",
+          "price": 100.00,
           "image" : "business-class.jpg",
-          "dates" : "TBC",
-          "hours" : "TBC"
+          "hours" : "50"
           
        }
       },
       {
         "model": "courses.course",
-        "pk": 1,
+        "pk": 5,
         "fields": {
           "name": "Summer Camps",
           "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "price": "€100.00",
+          "price": 100.00,
           "image" : "summer-camp.jpg",
-          "dates" : "TBC",
-          "hours" : "TBC"
+          "start_date" : "01-01-2021",
+          "end_date": "31-12-2021",
+          "hours" : "50"
           
        }
       },
       {
         "model": "courses.course",
-        "pk": 1,
+        "pk": 6,
         "fields": {
           "name": "Intensive Courses",
           "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "price": "€100.00",
+          "price": 100.00,
           "image" : "intensive-courses.jpg",
-          "dates" : "TBC",
-          "hours" : "TBC"
+          "start_date" : "01-01-2021",
+          "end_date": "31-12-2021",
+          "hours" : "50"
           
        }
       },
       {
         "model": "courses.course",
-        "pk": 1,
+        "pk": 7,
         "fields": {
           "name": "Exam Preparation",
           "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "price": "€100.00",
+          "price": 100.00,
           "image" : "exams.jpg",
-          "dates" : "TBC",
-          "hours" : "TBC"
+          "start_date" : "01-01-2021",
+          "end_date": "31-12-2021",
+          "hours" : "50"
           
        }
       }
