@@ -347,6 +347,22 @@ Books.jpg https://unsplash.com/photos/IOzk8YKDhYg?utm_source=unsplash&utm_medium
 flag.jpg Image by <a href="https://pixabay.com/photos/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1209605">Free-Photos</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1209605">Pixabay</a>
 
 pages.jpg Image by <a href="https://pixabay.com/users/kranich17-11197573/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6213537">Kranich17</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6213537">Pixabay</a>
+
+teenagers.jpg https://unsplash.com/photos/8nHQx4zi9Wk
+
+children.jpg https://unsplash.com/photos/o_lLsdVTxak
+
+business-class.jpg https://unsplash.com/photos/FDV1BaKNKEo
+
+adults.jpg https://unsplash.com/photos/XkKCui44iM0
+
+summer-camp.jpg https://www.pexels.com/photo/man-people-woman-weather-8033897/
+
+questions.jpg https://pixabay.com/illustrations/ask-writing-who-what-how-why-2245264/
+
+intensive-courses.jpg https://pixabay.com/photos/girl-english-dictionary-read-2771936/
+
+exams.jpg https://unsplash.com/photos/s9CC2SKySJM
 ### Content
 
 
