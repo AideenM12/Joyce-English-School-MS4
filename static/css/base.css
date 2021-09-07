@@ -111,6 +111,26 @@ footer>h5 {
 	font-weight: 600 !important;
 }
 
+/*------------Courses------------*/
+.collapsible,
+.collapsible-header{
+	background-color: #e63946;
+	padding: 0;
+}
+.drop-container{
+	margin-left: 1rem;
+	margin-right: 1rem;
+
+}
+.collapsible-body {
+	background-color: #f1faee;
+}
+.course-header{
+	color: #f1faee !important;
+}
+.highlight {
+	font-weight: 800;
+}
 @media only screen and (min-width: 577px) and (max-width:992px) {
 	
 

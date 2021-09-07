@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div class="container">
+<div class="drop-container">
     <ul class="collapsible ">
        {% for course in courses %}
        <li>
@@ -10,7 +10,7 @@
              <div class="row ">
                 <ul class="list-inline">
                    <li>
-                      <h4 class=""> {{course.name }}<i class="fas fa-caret-down"></i></h4>
+                      <h4 class="course-header text-shadow"> {{course.name }}<i class="fas fa-caret-down"></i></h4>
                    </li>
                   
                   
@@ -20,9 +20,9 @@
           <!---------- Body---------->
           <a href="#" id="scroll" style="display: none;"><span></span></a>
           <div class="collapsible-body">
-             {% if course.image %}
+            
              <img src="{{ course.image }}" width="400" height="400" class="image" alt="image"><br>
-             {% endif %}
+             
              <p><span class="highlight"> </span> {{ course.name }}</p><br>
              {{ course.description }}<br>
              <p><span class="highlight"> Price</span>{{ course.price }}</p>
