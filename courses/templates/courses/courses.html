@@ -1,6 +1,39 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<h1>It works</h1>
-{{ courses }}
+<div class="container">
+    <ul class="collapsible ">
+       {% for course in courses %}
+       <li>
+          <!---------- Title----------->
+          <div class="collapsible-header center-align">
+             <div class="row ">
+                <ul class="list-inline">
+                   <li>
+                      <h4 class=""> {{course.name }}<i class="fas fa-caret-down"></i></h4>
+                   </li>
+                  
+                  
+                </ul>
+             </div>
+          </div>
+          <!---------- Body---------->
+          <a href="#" id="scroll" style="display: none;"><span></span></a>
+          <div class="collapsible-body">
+             {% if course.image %}
+             <img src="{{ course.image }}" width="400" height="400" class="image" alt="image"><br>
+             {% endif %}
+             <p><span class="highlight"> </span> {{ course.name }}</p><br>
+             {{ course.description }}<br>
+             <p><span class="highlight"> Price</span>{{ course.price }}</p>
+             <p><span class="highlight">Start</span> {{ course.start_date }}</p>
+             <p><span class="highlight">Finish</span> {{ course.end_date }}</p>
+             <p><span class="highlight">Number of hours</span> {{ course.hours }}</p>
+           </div>
+       </li>
+       {% endfor %}
+    </ul>
+ </div>
+ 
+ 
 {% endblock %}
