@@ -16,7 +16,7 @@
             <span class="card-title">{{ course.name }}</span>
          </div>
          <div class="card-action center-align">
-            <a href="#" class="modal-close btn">Read more</a>
+            <a href="{% url 'course_detail' course.id %}" class=" btn">Read more</a>
          </div>         
       </div>
    </div>

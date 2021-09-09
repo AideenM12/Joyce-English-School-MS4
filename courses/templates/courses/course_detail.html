@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="row">
+   <div class="col s12 center-align">
+      <h3>Courses</h3>
+   </div>
+</div>
+
+<div class="row ">
+   <ul class="list-inline">
+      <img src="{{MEDIA_URL}}{{ course.image }}" width="400" height="400" class="image" alt="image"><br>
+      <p><span class="highlight"> </span> {{ course.name }}</p>
+      <br>
+      {{ course.description }}<br>
+      <p><span class="highlight"> Price</span>{{ course.price }}</p>
+      <p><span class="highlight">Start</span> {{ course.start_date }}</p>
+      <p><span class="highlight">Finish</span> {{ course.end_date }}</p>
+      <p><span class="highlight">Number of hours</span> {{ course.hours }}</p>
+      </li>
+     
+   </ul>
+</div>
+{% endblock %}

@@ -8,6 +8,21 @@
   {% if request.user.is_authenticated %}
   <li><a href="#">Profile</a></li>
   <li><a href="#">Reviews</a></li>
+  <li class="list-inline-item dropdown">
+   <a href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   <i class="fas fa-user fa-lg"></i>
+   My Account
+   </a>
+<li class="list-inline-item">
+   <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+   <i class="fas fa-shopping-bag fa-lg"></i>
+   {% if grand_total %}
+   ${{ grand_total|floatformat:2 }}
+   {% else %}
+   €0.00
+   {% endif %}
+   </a>
+</li>
   {% if request.user.is_superuser %}
   <li id='dropdown1' class='dropdown-content center'>
      <a href="" class="dropdown-item">Product Management</a>
@@ -17,20 +32,5 @@
   {% else %}
   <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
   <li><a href="{% url 'account_login' %}">Log In</a></li>
-  <li class="list-inline-item dropdown">
-     <a href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-     <i class="fas fa-user fa-lg"></i>
-     My Account
-     </a>
-  <li class="list-inline-item">
-     <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
-     <i class="fas fa-shopping-bag fa-lg"></i>
-     {% if grand_total %}
-     ${{ grand_total|floatformat:2 }}
-     {% else %}
-     €0.00
-     {% endif %}
-     </a>
-  </li>
   {% endif %}
 </ul>
