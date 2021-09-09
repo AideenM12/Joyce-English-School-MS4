@@ -112,7 +112,7 @@ footer>h5 {
 }
 
 /*------------Courses------------*/
-.collapsible,
+/*.collapsible,
 .collapsible-header{
 	background-color: #e63946;
 	padding: 0;
@@ -127,6 +127,17 @@ footer>h5 {
 }
 .course-header{
 	color: #f1faee !important;
+}*/ 
+.course-card{
+	height: 15rem;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+.course-content{
+	padding: 0 !important;
+}
+.card-title{
+	padding: 2rem;
 }
 .highlight {
 	font-weight: 800;

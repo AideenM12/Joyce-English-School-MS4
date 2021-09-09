@@ -1,39 +1,29 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div class="drop-container">
-    <ul class="collapsible ">
-       {% for course in courses %}
-       <li>
-          <!---------- Title----------->
-          <div class="collapsible-header center-align">
-             <div class="row ">
-                <ul class="list-inline">
-                   <li>
-                      <h4 class="course-header text-shadow"> {{course.name }}<i class="fas fa-caret-down"></i></h4>
-                   </li>
-                  
-                  
-                </ul>
-             </div>
-          </div>
-          <!---------- Body---------->
-          <a href="#" id="scroll" style="display: none;"><span></span></a>
-          <div class="collapsible-body">
-            
-             <img src="{{MEDIA_URL}}{{ course.image }}" width="400" height="400" class="image" alt="image"><br>
-             
-             <p><span class="highlight"> </span> {{ course.name }}</p><br>
-             {{ course.description }}<br>
-             <p><span class="highlight"> Price</span>{{ course.price }}</p>
-             <p><span class="highlight">Start</span> {{ course.start_date }}</p>
-             <p><span class="highlight">Finish</span> {{ course.end_date }}</p>
-             <p><span class="highlight">Number of hours</span> {{ course.hours }}</p>
-           </div>
-       </li>
-       {% endfor %}
-    </ul>
- </div>
- 
- 
+<div class="row">
+   <div class="col s12 center-align">
+      <h3>Courses</h3>
+   </div>
+</div>
+
+
+<div class="row">
+   {% for course in courses %}
+   <div class="col l3 s12 m10">
+      <div class="card course-card ">
+         <div class="card-content center-align course-content ">
+            <span class="card-title">{{ course.name }}</span>
+         </div>
+         <div class="card-action center-align">
+            <a href="#" class="modal-close btn">Read more</a>
+         </div>         
+      </div>
+   </div>
+   {% endfor %}
+</div>
+
+
+
+
 {% endblock %}
