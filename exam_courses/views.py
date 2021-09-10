@@ -23,4 +23,4 @@ def exam_course_detail(request, exam_course_id):
         'exam_course': exam_course,
     }
 
-    return render(request, 'courses/exam_course_detail.html', context)
+    return render(request, 'exam_courses/exam_course_detail.html', context)
