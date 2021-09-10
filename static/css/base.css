@@ -148,10 +148,29 @@ footer>h5 {
 .highlight {
 	font-weight: 800;
 }
-
+/*----------Forms and Allauth----------*/
 label{
-	font-size: 1rem;
+	font-size: 1.25rem;
 	color: #070a0d !important;
+}
+#signup_form{
+	width: 70vw;
+}
+
+#form-row{
+	margin: 0 !important;
+}
+.form-btn{
+	background-color: #4ea5d9;
+	font-family: 'Architects Daughter', sans-serif;
+}
+
+.form-btn:hover{
+	background-color: #203a54;
+}
+
+.form-p{
+	font-size: 1.5rem;
 }
 @media only screen and (min-width: 577px) and (max-width:992px) {
 	

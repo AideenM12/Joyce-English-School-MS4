@@ -1,14 +1,21 @@
 {% extends "account/base.html" %}
-
+ 
 {% load i18n %}
 {% load account socialaccount %}
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
+
+<div class="parallax-container" id="top-parallax">
+  <div class="parallax">
+     <img src="{{ MEDIA_URL }}flag.jpg" alt="joyce-statue" width="640" height="640">
+  </div>
+  </div>
+
 <div class="row">
 
-<h1 class="text-shadow center-align">{% trans "Sign In" %}</h1>
+<h1 class="text-shadow center-align">{% trans "Log In" %}</h1>
 
 </div>
 
@@ -33,7 +40,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
 {% else %}
 <div class="row">
-<p class="center-align">{% blocktrans %}If you have not created an account yet, then please
+<p class="center-align form-p">{% blocktrans %}If you have not created an account yet, then please
 <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 </div>
 {% endif %}
@@ -46,10 +53,18 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-  <button class="primaryAction btn" type="submit">{% trans "Sign In" %}</button>
+  <div class="row center-align">
+  <a class="button secondaryAction form-p" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+  <button class="primaryAction btn form-btn" type="submit">{% trans "Sign In" %}</button>
+  </div>
 </form>
 </div>
+</div>
+
+<div class="parallax-container">
+  <div class="parallax">
+     <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="banshee">
+  </div>
 </div>
 
 {% endblock %}
