@@ -1,6 +1,6 @@
 [
     {
-      "model": "exam_courses.examcourse",
+      "model": "exam_courses.exam_course",
       "pk": 7,
       "fields": {
         "name": "KET",
@@ -17,7 +17,7 @@
      }
     },
     {
-        "model": "exam_courses.examcourse",
+        "model": "exam_courses.exam_course",
         "pk": 8,
         "fields": {
           "name": "PET",
@@ -34,7 +34,7 @@
        }
       },
       {
-        "model": "exam_courses.examcourse",
+        "model": "exam_courses.exam_course",
         "pk": 9,
         "fields": {
           "name": "FCE",
@@ -51,7 +51,7 @@
        }
       },
       {
-        "model": "exam_courses.examcourse",
+        "model": "exam_courses.exam_course",
         "pk": 10,
         "fields": {
           "name": "CAE",
@@ -68,7 +68,7 @@
        }
       },
       {
-        "model": "exam_courses.examcourse",
+        "model": "exam_courses.exam_course",
         "pk": 11,
         "fields": {
           "name": "CPE",

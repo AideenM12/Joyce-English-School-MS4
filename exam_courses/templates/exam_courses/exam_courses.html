@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="row">
+   <div class="col s12 center-align">
+      <h3>Exam Courses</h3>
+   </div>
+</div>
+<div class="row">
+   {% for exam_course in exam_courses %}
+   <div class="col l3 s12 m10">
+      <div class="card course-card ">
+         <div class="card-content center-align course-content ">
+            <span class="card-title">{{ exam_course.name }}</span>
+         </div>
+         <div class="card-action center-align">
+            <a href="{% url 'exam_course_detail' exam_course.id %}" class=" btn">Read more</a>
+         </div>
+      </div>
+   </div>
+   {% endfor %}
+</div>
+{% endblock %}
