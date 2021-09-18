@@ -8,34 +8,32 @@
 </div>
 {% if cart_items %}
 <table class="responsive-table">
-    <thead>
+   <thead>
       <tr>
-          <th>Course Name</th>
-          <th>Price</th>
-          <th>Number of Hours</th>
-          <th>Course Description</th>
+         <th>Course Name</th>
+         <th>Price</th>
+         <th>Number of Hours</th>
+         <th>Course Description</th>
       </tr>
-    </thead>
-
-    <tbody>
+   </thead>
+   <tbody>
       <tr>
-        <td>Eclair</td>
-        <td>€500.00</td>
-        <td>50</td>
-        <td>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."</td>
+         <td>Eclair</td>
+         <td>€500.00</td>
+         <td>50</td>
+         <td>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."</td>
       </tr>
-    </tbody>
+   </tbody>
 </table>
 {% else %}
 <p class="lead mb-5">Your bag is empty.</p>
-                    <a href="{% url 'courses' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
+<a href="{% url 'courses' %}" class="btn btn-outline-black rounded-0 btn-lg">
+<span class="icon">
+<i class="fas fa-chevron-left"></i>
+</span>
+<span class="text-uppercase">Keep Shopping</span>
+</a>
 {% endif %}
-
 <div class="parallax-container">
    <div class="parallax">
       <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="banshee">

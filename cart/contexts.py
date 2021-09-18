@@ -35,12 +35,12 @@ def cart_contents(request):
                     'quantity': item_data,
                     'course': course,
                 })
-             
+
     context = {
         'cart_items': cart_items,
         'total': total,
         'course_count': course_count,
         'exam_course_count': exam_course_count
-        }
+    }
 
     return context
