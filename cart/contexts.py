@@ -19,7 +19,7 @@ def cart_contents(request):
         if isinstance(item_data, int):
             course = get_object_or_404(Course, pk=item_id)
             exam_course = get_object_or_404(ExamCourse, pk=item_id)
-            if not item_id == course.id:
+            if item_id != course.id:
                 total += item_data * exam_course.price
                 exam_course_count += item_data
                 cart_items.append({
