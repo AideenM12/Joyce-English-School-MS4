@@ -38,12 +38,14 @@ def cart_contents(request):
                     'exam_course': exam_course,
                 })
         print(cart_items)
-              
+    
+    grand_total = total
     context = {
         'cart_items': cart_items,
         'total': total,
         'course_count': course_count,
-        'exam_course_count': exam_course_count
+        'exam_course_count': exam_course_count,
+        'grand_total': grand_total,
     }
 
     return context
