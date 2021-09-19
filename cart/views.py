@@ -12,7 +12,7 @@ def cart(request):
 def add_to_cart(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
 
-    quantity = int(request.POST.get('quantity'))
+    quantity = 1
     redirect_url = request.POST.get('redirect_url')
     item_type = request.POST.get('item_type')
     cart = request.session.get('cart', {"courses": {}, "exam_courses": {}})
@@ -28,7 +28,7 @@ def add_to_cart(request, item_id):
         else:
             cart['exam_courses'][item_id] = quantity
 
-    print(cart)
+    
     request.session['cart'] = cart
     return redirect(redirect_url)
     
