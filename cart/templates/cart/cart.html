@@ -10,21 +10,38 @@
 <table class="responsive-table">
    <thead>
       <tr>
-         <th>{{ cart_items }}</th>
+         <th>Course Name</th>
          <th>Price</th>
          <th>Number of Hours</th>
          <th>Course Description</th>
       </tr>
    </thead>
+   {% for item in cart_items %}
+   {% if item.id == exam_course.id %}
    <tbody>
       <tr>
-         <td>Eclair</td>
+         <td>{{ item.exam_course.name }}</td>
          <td>€500.00</td>
          <td>50</td>
          <td>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."</td>
       </tr>
    </tbody>
 </table>
+
+{% endif %}
+{% if item.id == course.id %}
+<table>
+<tbody>
+   <tr>
+      <td>{{ item.course.name }}</td>
+      <td>€500.00</td>
+      <td>50</td>
+      <td>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."</td>
+   </tr>
+</tbody>
+</table>
+{% endif %}
+{% endfor %}
 {% else %}
 <p class="lead mb-5">Your bag is empty.</p>
 <a href="{% url 'courses' %}" class="btn btn-outline-black rounded-0 btn-lg">
