@@ -11,23 +11,15 @@ def cart_contents(request):
     total = 0
     course_count = 0
     exam_course_count = 0
-    cart = request.session.get('cart', {})
+    cart = request.session.get('cart', {"courses": {}, "exam_courses": {}})
     course = None
     exam_course = None
-
-    for item_id, item_data in cart.items():
-        if isinstance(item_data, int):
-            course = get_object_or_404(Course, pk=item_id)
-            exam_course = get_object_or_404(ExamCourse, pk=item_id)
-            if item_id != course.id:
-                total += item_data * exam_course.price
-                exam_course_count += item_data
-                cart_items.append({
-                    'item_id': item_id,
-                    'quantity': item_data,
-                    'exam_course': exam_course,
-                })
-            else:
+    
+    for key, value in cart.items():
+        for item_id, item_data in cart[key].items():
+            if key == "courses":
+                course = get_object_or_404(Course, pk=item_id)
+                # if item_id == course.id:
                 total += item_data * course.price
                 course_count += item_data
                 cart_items.append({
@@ -35,7 +27,18 @@ def cart_contents(request):
                     'quantity': item_data,
                     'course': course,
                 })
-
+            elif key == "exam_courses":
+                exam_course = get_object_or_404(ExamCourse, pk=item_id)
+                # if item_id != exam_course.id:
+                total += item_data * exam_course.price
+                exam_course_count += item_data
+                cart_items.append({
+                    'item_id': item_id,
+                    'quantity': item_data,
+                    'exam_course': exam_course,
+                })
+        print(cart_items)
+              
     context = {
         'cart_items': cart_items,
         'total': total,
