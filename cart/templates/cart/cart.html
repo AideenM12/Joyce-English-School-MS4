@@ -16,31 +16,33 @@
          <th>Course Description</th>
       </tr>
    </thead>
+
+
    {% for item in cart_items %}
    {% if item.id == exam_course.id %}
    <tbody>
       <tr>
          <td>{{ item.exam_course.name }}</td>
-         <td>€500.00</td>
-         <td>50</td>
-         <td>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."</td>
+         <td>{{ item.exam_course.price }}</td>
+         <td>{{ item.exam_course.hours }}</td>
+         <td>{{ item.exam_course.description }}</td>
       </tr>
    </tbody>
 </table>
-
+<a class="btn" href="{% url 'clear_cart' item.item_id %}">Clear</a>
 {% endif %}
 {% if item.id == course.id %}
 <table>
 <tbody>
    <tr>
       <td>{{ item.course.name }}</td>
-      <td>€500.00</td>
-      <td>50</td>
-      <td>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."</td>
+      <td>{{ item.course.price }}</td>
+      <td>{{ item.course.hours }}</td>
+      <td>{{ item.course.description }}</td>
    </tr>
 </tbody>
 </table>
-<a class="btn" href="{% url 'clear_cart' item.id %}">Clear</a>
+<a class="btn" href="{% url 'clear_cart' item.item_id %}">Clear</a>
 {% endif %}
 {% endfor %}
 {% else %}
@@ -52,6 +54,7 @@
 <span class="text-uppercase">Keep Shopping</span>
 </a>
 {% endif %}
+
 <div class="parallax-container">
    <div class="parallax">
       <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="banshee">

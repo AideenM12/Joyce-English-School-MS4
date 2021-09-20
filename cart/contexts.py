@@ -14,7 +14,7 @@ def cart_contents(request):
     cart = request.session.get('cart', {"courses": {}, "exam_courses": {}})
     course = None
     exam_course = None
-    
+
     for key, value in cart.items():
         for item_id, item_data in cart[key].items():
             if key == "courses":
@@ -38,7 +38,7 @@ def cart_contents(request):
                     'exam_course': exam_course,
                 })
         print(cart_items)
-    
+
     grand_total = total
     context = {
         'cart_items': cart_items,
