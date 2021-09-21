@@ -32,19 +32,24 @@ def add_to_cart(request, item_id):
     return redirect(redirect_url)
 
 
+def remove_from_cart(request, item_id):
+    cart = request.session.get('cart', {"courses": {}, "exam_courses": {}})
+
+
+
 def clear_cart(request, item_id):
     """Remove courses from the cart"""
-    quantity = 1
-    item_type = request.session.get('item_type')
-    cart = request.session.get('cart', {"courses": {}, "exam_courses": {}})
-    print(cart)
-    print(f"ITEM TYPE: {item_type}")
-    if 'courses' in cart.keys():
-        cart['courses'].pop(item_id)
-        print(f"NEW CART: {cart}")
-    if 'exam_courses' in cart.keys():
-        cart['exam_courses'].pop(item_id)
-        print(f"NEW CART: {cart}")
+   # quantity = 1
+    #item_type = request.session.get('item_type')
+    request.session['cart'] = {"courses": {}, "exam_courses": {}}
+   # print(cart)
+   # print(f"ITEM TYPE: {item_type}")
+   # if 'courses' in cart.keys():
+   #     cart['courses'].pop(item_id)
+   #     print(f"NEW CART: {cart}")
+   # elif 'exam_courses' in cart.keys():
+   #     cart['exam_courses'].pop(item_id)
+   #     print(f"NEW CART: {cart}")
    # for key, value in cart.items():
    #     print(key, value)
    #     for item_id, item_data in cart[key].items():
@@ -62,7 +67,7 @@ def clear_cart(request, item_id):
       #                      print(item_type)
        #             else:
         #                cart['exam_courses'][item_id] = quantity
-    print(item_type)
-    request.session['cart'] = cart
+   # print(item_type)
+   # request.session['cart'] = cart
 
     return redirect('home')

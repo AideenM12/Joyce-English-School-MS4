@@ -29,7 +29,7 @@
       </tr>
    </tbody>
 </table>
-<a class="btn" href="{% url 'clear_cart' item.item_id %}">Clear</a>
+
 {% endif %}
 {% if item.id == course.id %}
 <table>
@@ -42,8 +42,9 @@
    </tr>
 </tbody>
 </table>
-<a class="btn" href="{% url 'clear_cart' item.item_id %}">Clear</a>
+
 {% endif %}
+<a class="btn" href="{% url 'clear_cart' item.item_id %}">Clear</a>
 {% endfor %}
 {% else %}
 <p class="lead mb-5">Your bag is empty.</p>
