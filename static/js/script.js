@@ -45,4 +45,10 @@ $('.decrement-qty').click(function(e) {
    var itemId = $(this).data('item_id');
    handleEnableDisable(itemId);
 });
-// End of Credit
+
+
+$('.update-link').click(function(e) {
+  var form = $(this).prev('.update-form');
+  form.submit();
+})
+

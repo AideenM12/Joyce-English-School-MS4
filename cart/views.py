@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 
 # Create your views here.
 
@@ -33,41 +33,40 @@ def add_to_cart(request, item_id):
 
 
 def remove_from_cart(request, item_id):
-    cart = request.session.get('cart', {"courses": {}, "exam_courses": {}})
+    
+    try:
+        course = None
+        exam_course = None
+        cart = request.session.get('cart', {"course": {}, "exam_course": {}})
+
+        item_type = request.POST['item_type']
+        print(f'item type: {item_type}')
+        
+        if 'item_type' in request.POST:
+            item_type = request.POST['item_type']
+            print(item_type)
+
+        if item_type == 'course':
+            
+            if item_id in list(cart['course'].keys()):
+                del cart[item_id]['course'][item_type]
+                print(item_type)
+                cart.pop(item_id)
+                if not cart[item_id]['course']:
+                    cart.pop(item_id)
+        else:
+            cart.pop(item_id)
+        print(item_type)
+        request.session['cart'] = cart
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        messages.error(request, f'Error removing item: {e}')
+        return HttpResponse(status=500)
 
 
-
-def clear_cart(request, item_id):
+def clear_cart(request):
     """Remove courses from the cart"""
-   # quantity = 1
-    #item_type = request.session.get('item_type')
     request.session['cart'] = {"courses": {}, "exam_courses": {}}
-   # print(cart)
-   # print(f"ITEM TYPE: {item_type}")
-   # if 'courses' in cart.keys():
-   #     cart['courses'].pop(item_id)
-   #     print(f"NEW CART: {cart}")
-   # elif 'exam_courses' in cart.keys():
-   #     cart['exam_courses'].pop(item_id)
-   #     print(f"NEW CART: {cart}")
-   # for key, value in cart.items():
-   #     print(key, value)
-   #     for item_id, item_data in cart[key].items():
-   #         if 'courses' in cart.keys():
-   #             if item_id in list(cart['courses'].keys()):
-   #                 cart['courses'][item_type].pop(item_id)
-   #             else:
-   #                 cart['courses'][item_id] = quantity
-   #         elif 'exam_courses' in cart.keys():
-   #             if item_id in list(cart['exam_courses'].keys()):
-   
-   #                 if key in cart:
-    #                    cart = {"exam_courses": {}}
-     #                   cart['exam_courses'][item_type].pop(item_id)
-      #                      print(item_type)
-       #             else:
-        #                cart['exam_courses'][item_id] = quantity
-   # print(item_type)
-   # request.session['cart'] = cart
-
+  
     return redirect('home')
