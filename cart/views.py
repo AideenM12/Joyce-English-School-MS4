@@ -18,6 +18,11 @@ def add_to_cart(request, item_id):
     item_type = request.POST.get('item_type')
     cart = request.session.get('cart', {"courses": {}, "exam_courses": {}})
 
+    if request.user.is_authenticated:
+        if cart.items():
+            messages.error(request, 'You already have added a course to your cart.')
+            return redirect('home')
+
     if item_type == "courses":
         if item_id in list(cart['courses'].keys()):
             cart['courses'][item_id] += quantity
