@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, HttpResponse
 from django.contrib import messages
 
+
 # Create your views here.
 
 
@@ -22,8 +23,10 @@ def add_to_cart(request, item_id):
         if item_type == "courses":
             if item_id in list(cart['courses'].keys()):
                 cart['courses'][item_id] += quantity
+                messages.success(request, f'Added course to your cart')
             else:
                 cart['courses'][item_id] = quantity
+                messages.success(request, f'Added course to your cart')
            
         elif item_type == "exam_courses":
             if item_id in list(cart['exam_courses'].keys()):
