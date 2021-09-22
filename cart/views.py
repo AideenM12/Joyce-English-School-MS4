@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, HttpResponse
+from django.contrib import messages
 
 # Create your views here.
 
@@ -29,6 +30,7 @@ def add_to_cart(request, item_id):
             cart['exam_courses'][item_id] = quantity
 
     request.session['cart'] = cart
+    print(cart)
     return redirect(redirect_url)
 
 
@@ -38,6 +40,9 @@ def remove_from_cart(request, item_id):
         course = None
         exam_course = None
         cart = request.session.get('cart', {"course": {}, "exam_course": {}})
+        print(cart)
+        print(item_id)
+        print(type(item_id))
 
         item_type = request.POST['item_type']
         print(f'item type: {item_type}')
@@ -48,20 +53,20 @@ def remove_from_cart(request, item_id):
 
         if item_type == 'course':
             
-            if item_id in list(cart['course'].keys()):
-                del cart[item_id]['course'][item_type]
-                print(item_type)
-                cart.pop(item_id)
-                if not cart[item_id]['course']:
-                    cart.pop(item_id)
-        else:
-            cart.pop(item_id)
+            if item_id in cart['courses'].keys():
+                del cart['courses'][item_id]
+        elif item_type == 'exam_course':
+            
+            if item_id in cart['exam_courses'].keys():
+                del cart['exam_courses'][item_id]
+               
         print(item_type)
         request.session['cart'] = cart
         return HttpResponse(status=200)
 
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
+        print(e)
         return HttpResponse(status=500)
 
 
