@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cart_tools %}
 {% block content %}
    <div class="parallax-container" id="top-parallax">
       <div class="parallax">
@@ -34,8 +35,15 @@
                <p> {{ item.exam_course.price }}</p>
                <p> {{ item.exam_course.hours }}</p>
                <p> {{ item.exam_course.description }}</p>
+               
             
             {% endif %}
+            <a href="{% url 'checkout' %}" class="btn  rounded-0 btn-lg">
+               <span class="text-uppercase">Secure Checkout</span>
+               <span class="icon">
+                   <i class="fas fa-lock"></i>
+               </span>
+               </a>
                <!-- While still in the loop add a form here -->
                <form class="form" class="remove-item">
                   <input type="hidden" value="{{ csrf_token }}" name="csrf_token" />
@@ -52,6 +60,7 @@
          <span class="icon">
             <i class="fas fa-chevron-left"></i>
          </span>
+        
          <span class="text-uppercase">Keep Shopping</span>
       </a>
       <a onclick="M.toast({html: 'I am a toast'})" class="btn">Toast!</a>

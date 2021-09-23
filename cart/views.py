@@ -36,11 +36,12 @@ def add_to_cart(request, item_id):
 
       
         if cart.items(): 
-            print(item_id)
-            print(item_to_add)           
+                    
             for key, value in request.POST.items():
                 if item_type in cart["courses"].keys():                
-                    if item_id in cart == ['courses'][item_to_add].values():                        
+                    if item_id in cart == ['courses'][item_to_add].values(): 
+                        print(item_id)
+                        print(item_to_add)                       
                         messages.error(
                         request, 'You already have added a course to your cart.')
                         return redirect('home')
@@ -72,7 +73,7 @@ def add_to_cart(request, item_id):
 
 
         request.session['cart'] = cart
-        print(cart)
+        
         return redirect(redirect_url)
 
 
