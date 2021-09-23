@@ -35,12 +35,12 @@ def add_to_cart(request, item_id):
                 cart['exam_courses'][item_id] = quantity
 
       
-        if cart.items():            
+        if cart.items(): 
+            print(item_id)
+            print(item_to_add)           
             for key, value in request.POST.items():
-                if item_type in request.POST == cart["courses"].keys():                
-                    if item_id in request.POST == cart['courses'][item_to_add]:
-                        print(item_id)
-                        print(item_to_add)
+                if item_type in cart["courses"].keys():                
+                    if item_id in cart == ['courses'][item_to_add].values():                        
                         messages.error(
                         request, 'You already have added a course to your cart.')
                         return redirect('home')
