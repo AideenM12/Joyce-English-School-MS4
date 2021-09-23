@@ -13,7 +13,7 @@ def cart(request):
 
 def add_to_cart(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
-    
+    item_to_add = item_id
     quantity = 1
     redirect_url = request.POST.get('redirect_url')
     item_type = request.POST.get('item_type')
@@ -34,15 +34,27 @@ def add_to_cart(request, item_id):
             else:
                 cart['exam_courses'][item_id] = quantity
 
-        if request.user.is_authenticated and cart.items():
-           if item_type == "courses":
-               if item_id in cart == cart['courses'][item_id]:
-                   messages.error(
-                   request, 'You already have added a course to your cart.')
-                   return redirect('home')
+      
+        if cart.items():            
+            for key, value in request.POST.items():
+                if item_type in request.POST == cart["courses"].keys():                
+                    if item_id in request.POST == cart['courses'][item_to_add]:
+                        print(item_id)
+                        print(item_to_add)
+                        messages.error(
+                        request, 'You already have added a course to your cart.')
+                        return redirect('home')
+               # elif key and value in request.session['cart'] == cart['exam_courses'][item_id]:
+                 #   messages.error(
+                  #  request, 'You already have added a course to your cart.')
+                   # return redirect('home')
+                
 
-        
-        
+         # if request.user.is_authenticated and cart.items():
+        #   if item_type == "courses":
+         #      if item_id in cart == cart['courses'][item_id]:
+       # for item_id, item_data in cart[key].items():
+        #                if key == "courses" and value == cart[value]:
     
        # if item_type == "courses":
         #    if cart.items():
