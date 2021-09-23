@@ -27,7 +27,7 @@ class Order(models.Model):
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     
 
-     def _generate_order_number(self):
+    def _generate_order_number(self):
         """
         Generate a random, unique order number using UUID
         """
@@ -42,7 +42,7 @@ class Order(models.Model):
         self.save()
 
 
-     def save(self, *args, **kwargs):
+    def save(self, *args, **kwargs):
         """
         Override the original save method to set the order number
         if it hasn't been set already.
