@@ -10,7 +10,7 @@ var client_secret = $('#id_client_secret').text().slice(1, -1);
 var stripe = Stripe(stripe_public_key);
 var elements = stripe.elements();
 
-
+/* Taken from https://codepen.io/ebucis/pen/gWGgXE */
 var card = elements.create('card', {
   iconStyle: 'solid',
   style: {
@@ -73,7 +73,18 @@ function setOutcome(result) {
 }
 
 card.on('change', function(event) {
-  setOutcome(event);
+  var errorDiv = document.getElementById('card-errors');
+  if (event.error) {
+      var html = `
+          <span class="icon" role="alert">
+              <i class="fas fa-times"></i>
+          </span>
+          <span>${event.error.message}</span>
+      `;
+      $(errorDiv).html(html);
+  } else {
+      errorDiv.textContent = '';
+  }
 });
 
 document.querySelector('form').addEventListener('submit', function(e) {
@@ -84,6 +95,8 @@ document.querySelector('form').addEventListener('submit', function(e) {
   };
   stripe.createToken(card, extraDetails).then(setOutcome);
 });
+
+/* end credit */
 /*var style = {
     base: {
         color: '#000',
@@ -100,6 +113,6 @@ document.querySelector('form').addEventListener('submit', function(e) {
     }
 };
 var card = elements.create('card', {style: style});
-card.mount('#card-element');*/
-
+card.mount('#card-element');
+*/
 
