@@ -32,8 +32,12 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            order = order_form.save()
-            for item_id, item_data in cart.items():
+           order = order_form.save(commit=False)
+           pid = request.POST.get('client_secret').split('_secret')[0]
+           order.stripe_pid = pid
+           order.original_cart = json.dumps(cart)
+           order.save()
+           for item_id, item_data in cart.items():
                 try:
                     course = Course.objects.get(id=item_id)
                     exam_course = ExamCourse.objects.get(id=item_id)
@@ -62,8 +66,8 @@ def checkout(request):
                     order.delete()
                     return redirect(reverse('cart'))
 
-            request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+           request.session['save_info'] = 'save-info' in request.POST
+           return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
