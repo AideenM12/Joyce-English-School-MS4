@@ -33,14 +33,16 @@ def checkout(request):
         order_form = OrderForm(form_data)
         if order_form.is_valid():
            order = order_form.save(commit=False)
-           pid = request.POST.get('client_secret').split('_secret')[0]
-           order.stripe_pid = pid
-           order.original_cart = json.dumps(cart)
+           #pid = request.POST.get('client_secret').split('_secret')[0]
+          # order.stripe_pid = pid
+          # order.original_cart = json.dumps(cart)
            order.save()
            for item_id, item_data in cart.items():
+                print(f"ITEM ID: {item_id}, ITEM DATA: {item_data}")
                 try:
-                    course = Course.objects.get(id=item_id)
+                    course = Course.objects.get(id=int(item_id))
                     exam_course = ExamCourse.objects.get(id=item_id)
+                    for key in cart
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
