@@ -59,6 +59,7 @@
                     </div>
 
                     {% for item in order.lineitems.all %}
+                    {% if 'course' in item %}
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="small mb-0 text-black font-weight-bold">
@@ -69,6 +70,18 @@
                             <p class="small mb-0">{{ item.quantity }} @ ${{ item.course.price }} each</p>
                         </div>
                     </div>
+                    {% elif 'exam_course' in item %}
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="small mb-0 text-black font-weight-bold">
+                                {{ item.exam_course.name }}
+                            </p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="small mb-0">{{ item.quantity }} @ ${{ item.exam_course.price }} each</p>
+                        </div>
+                    </div>
+                    {% endif %}
                     {% endfor %}
 
                     <div class="row">
