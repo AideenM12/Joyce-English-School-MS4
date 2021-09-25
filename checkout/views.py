@@ -19,6 +19,7 @@ def checkout(request):
 
     if request.method == 'POST':
         cart = request.session.get('cart', {"courses": {}, "exam_courses": {}})
+        print(cart)
 
         form_data = {
             'first_name': request.POST['first_name'],
@@ -39,10 +40,11 @@ def checkout(request):
            order.save()
            for item_id, item_data in cart.items():
                 print(f"ITEM ID: {item_id}, ITEM DATA: {item_data}")
+                
                 try:
                     course = Course.objects.get(id=int(item_id))
                     exam_course = ExamCourse.objects.get(id=item_id)
-                    for key in cart
+                    
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
@@ -79,16 +81,16 @@ def checkout(request):
             messages.error(request, "There's nothing in your cart at the moment")
             return redirect(reverse('courses'))
 
-        current_cart = cart_contents(request)
-        total = current_cart['order_total']
-        stripe_total = round(total * 100)
-        stripe.api_key = stripe_secret_key
-        intent = stripe.PaymentIntent.create(
-            amount=stripe_total,
-            currency=settings.STRIPE_CURRENCY,
-        )
+    current_cart = cart_contents(request)
+    total = current_cart['order_total']
+    stripe_total = round(total * 100)
+    stripe.api_key = stripe_secret_key
+    intent = stripe.PaymentIntent.create(
+        amount=stripe_total,
+        currency=settings.STRIPE_CURRENCY,
+    )
 
-        order_form = OrderForm()
+    order_form = OrderForm()
     
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \

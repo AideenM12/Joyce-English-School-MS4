@@ -37,10 +37,11 @@
                     </div>
                 </div>
                 {% for item in cart_items %}
+                {% if 'course' in item %}
                     <div class="row">
                         <div class="col-2 mb-1 ">
                             <a href="{% url 'course_detail' item.course.id %}">
-                                {% if item.product.image %}
+                                {% if item.course.image %}
                                     <img class="w-100" src="{{ item.course.image.url }}" alt="{{ course.name }}">
                                 {% else %}
                                     <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ pt.name }}">
@@ -56,6 +57,28 @@
                             <p class="my-0 small text-muted">${{ item.course.price | calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
+                    {% elif 'exam_course' in item %}
+                    <div class="row">
+                        <div class="col-2 mb-1 ">
+                            <a href="{% url 'exam_course_detail' item.exam_course.id %}">
+                                {% if item.exam_course.image %}
+                                    <img class="w-100" src="{{ item..image.url }}" alt="{{ exam_course.name }}">
+                                {% else %}
+                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ pt.name }}">
+                                {% endif %}
+                            </a>
+                        </div>
+                        <div class="col-7 card">
+                            <p class="my-0"><strong>{{ item.exam_course.name }}</strong></p>
+                            
+                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                        </div>
+                        <div class="col-3 text-right">
+                            <p class="my-0 small text-muted">${{ item.course.price | calc_subtotal:item.quantity }}</p>
+                        </div>
+                    </div>
+                    
+            {% endif %}
                 {% endfor %}
                 <hr class="my-0">
                 <div class="row text-black text-right card">
