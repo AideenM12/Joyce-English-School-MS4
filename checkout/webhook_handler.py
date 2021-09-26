@@ -1,5 +1,6 @@
 from django.http import HttpResponse
-
+from django.template.loader import render_to_string
+from django.conf import settings
 from .models import Order, OrderLineItem
 from courses.models import Course
 from exam_courses.models import ExamCourse
@@ -41,8 +42,8 @@ class StripeWH_Handler:
         while attempt <= 5:
             try:
                 order = Order.objects.get(
-                    first_name__iexact=billing_details.first_name,
-                    surname__iexact=billing_details.surname,
+                    name__iexact=billing_details.name,
+                    #surname__iexact=billing_details.surname,
                     email__iexact=billing_details.email,
                     phone_number__iexact=billing_details.phone,
                     country__iexact=billing_details.address.country,
@@ -68,8 +69,8 @@ class StripeWH_Handler:
             order = None
             try:
                 order = Order.objects.create(
-                    first_name=billing_details.first_name,
-                    surname=billing_details.surname,
+                    name=billing_details.name,
+                   # surname=billing_details.surname,
                     email=billing_details.email,
                     phone_number=billing_details.phone,
                     country=billing_details.address.country,
@@ -93,7 +94,7 @@ class StripeWH_Handler:
                         )
                         order_line_item.save()
                     else:
-                        for quantity in item_data['items_type'].items():
+                        for quantity in item_data['item_type'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 course=course,
