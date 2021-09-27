@@ -58,8 +58,8 @@ class Order(models.Model):
 
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
-    course = models.ForeignKey(Course, null=False, blank=False, on_delete=models.CASCADE)
-    exam_course = models.ForeignKey(ExamCourse, null=False, blank=False, on_delete=models.CASCADE)
+    course = models.ForeignKey(Course, null=True, blank=True, on_delete=models.CASCADE)
+    exam_course = models.ForeignKey(ExamCourse, null=True, blank=True, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
@@ -68,7 +68,14 @@ class OrderLineItem(models.Model):
         Override original save method to set
         lineitem total & update order total.
         """
-        self.order.save()
+        #self.order.save()
+        
+        if self.course is not None:
+            self.lineitem_total = self.course.price * self.quantity
+
+        if self.exam_course is not None:
+            self.lineitem_total = self.exam_course.price * self.quantity
+
         super().save(*args, **kwargs)
 
     def __str__(self):

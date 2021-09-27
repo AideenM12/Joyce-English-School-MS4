@@ -41,7 +41,6 @@ def checkout(request):
 
     if request.method == 'POST':
         cart = request.session.get('cart', {"courses": {}, "exam_courses": {}})
-        print(cart)
 
         form_data = {
             'first_name': request.POST['first_name'],
@@ -55,64 +54,72 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-           order = order_form.save(commit=False)
-           pid = request.POST.get('client_secret').split('_secret')[0]
-           order.stripe_pid = pid
-           order.original_cart = json.dumps(cart)
-           order.save()
-          # for item_id, item_data in cart.items():
-              #  print(f"ITEM ID: {item_id}, ITEM DATA: {item_data}")
+            order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_cart = json.dumps(cart)
+            order.save()
+            for item_id, item_data in cart.items():
+                print(f"ITEM ID: {item_id}, ITEM DATA: {item_data}")
                 
-                #try:
-                   # course = Course.objects.get(id=int(item_id))
-                   # exam_course = ExamCourse.objects.get(id=int(item_id))
-           print(cart)
-           if cart.courses:
-                for key, value in courses.items():
-                    order_line_item = OrderLineItem(
-                        order=order,
-                        course=Course.objects.get(Course,pk=item_id),
-                        quantity=item_data,
-                        )
-                    print(f"key{key}")
-                   
+                try:
+                                    
+                    print(f"CART: {cart}")
+                    if cart['courses']:
+                        for item_id, item_data in cart['courses'].items():
+                            order_line_item = OrderLineItem(
+                                order=order,
+                                course=Course.objects.get(pk=item_id),
+                                quantity=item_data,
+                                )
+                            order_line_item.save()
 
-                   # print(f"ITEM ID: {item_id}, ITEM TYPE: {item_type}")
-                 #   if isinstance(item_data, int):
-                  #      order_line_item = OrderLineItem(
-                   #         order=order,
-                    #        course=course,
-                     #       exam_course=exam_course,
-                      #      quantity=item_data,
-                    #)
-                     #   order_line_item.save()
+                    if cart['exam_courses']:
+                        for item_id, item_data in cart['exam_courses'].items():
+                            order_line_item = OrderLineItem(
+                                order=order,
+                                exam_course=ExamCourse.objects.get(pk=item_id),
+                                quantity=item_data,
+                                )
+                            order_line_item.save()
+                
+
+                    # print(f"ITEM ID: {item_id}, ITEM TYPE: {item_type}")
+                    # if isinstance(item_data, int):
+                    #    order_line_item = OrderLineItem(
+                        #       order=order,
+                        #      course=course,
+                        #     exam_course=exam_course,
+                        #    quantity=item_data,
+                    # )
+                    #    order_line_item.save()
                     #else:
-                     #   for quantity in item_data['item_type'].items():
-                      #      order_line_item = OrderLineItem(
-                       #         order=order,
+                        #   for quantity in item_data['item_type'].items():
+                        #      order_line_item = OrderLineItem(
+                        #         order=order,
                         #        course=course,
-                         #       exam_course=exam_course,
-                          #      quantity=quantity,
-                           #     )
+                            #       exam_course=exam_course,
+                            #      quantity=quantity,
+                            #     )
                             #order_line_item.save()
-     #           except Course.DoesNotExist or ExamCourse.DoesNotExist:
-               #     messages.error(request, (
-              #          "One of the courses in your cart wasn't found in our database. "
-             #           "Please call us for assistance!")
-            #        )
-           #         order.delete()
-          #          return redirect(reverse('cart'))
+                except Course.DoesNotExist or ExamCourse.DoesNotExist:
+                    messages.error(request, (
+                        "One of the courses in your cart wasn't found in our database. "
+                        "Please call us for assistance!")
+                    )
+                    order.delete()
+                    return redirect(reverse('cart'))
 
-         #  request.session['save_info'] = 'save-info' in request.POST
-        #   return redirect(reverse('checkout_success', args=[order.order_number]))
-      #  else:
-       #     messages.error(request, 'There was an error with your form. \
-     #           Please double check your information.')
-    #else:
-    #    cart = request.session.get('cart', {"courses": {}, "exam_courses": {}})
-    #    if not cart:
-   #         messages.error(request, "There's nothing in your cart at the moment")
-  #          return redirect(reverse('courses'))
+            request.session['save_info'] = 'save-info' in request.POST
+            return redirect(reverse('checkout_success', args=[order.order_number]))
+        else:
+            messages.error(request, 'There was an error with your form. \
+                Please double check your information.')
+    else:
+        cart = request.session.get('cart', {"courses": {}, "exam_courses": {}})
+        if not cart:
+            messages.error(request, "There's nothing in your cart at the moment")
+            return redirect(reverse('courses'))
 
     current_cart = cart_contents(request)
     total = current_cart['order_total']
