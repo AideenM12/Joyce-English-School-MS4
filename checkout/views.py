@@ -44,8 +44,8 @@ def checkout(request):
         cart = request.session.get('cart', {"courses": {}, "exam_courses": {}})
 
         form_data = {
-            'first_name': request.POST['first_name'],
-            'surname': request.POST['surname'],
+            'full_name': request.POST['full_name'],
+
             'email': request.POST['email'],
             'phone_number': request.POST['phone_number'],
             'postcode': request.POST['postcode'],
@@ -137,12 +137,12 @@ def checkout(request):
                 'full_name': profile.user.get_full_name(),
                 'email': profile.user.email,
                 'phone_number': profile.default_phone_number,
-                   
+
                 'postcode': profile.default_postcode,
                 'town_or_city': profile.default_town_or_city,
                 'street_address1': profile.default_street_address1,
                 'street_address2': profile.default_street_address2,
-                    
+
             })
         except UserProfile.DoesNotExist:
             order_form = OrderForm()
@@ -178,12 +178,12 @@ def checkout_success(request, order_number):
     if save_info:
         profile_data = {
             'default_phone_number': order.phone_number,
-           
+
             'default_postcode': order.postcode,
             'default_town_or_city': order.town_or_city,
             'default_street_address1': order.street_address1,
             'default_street_address2': order.street_address2,
-           
+
         }
         user_profile_form = UserProfileForm(profile_data, instance=profile)
         if user_profile_form.is_valid():
