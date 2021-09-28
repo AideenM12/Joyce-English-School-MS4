@@ -8,10 +8,13 @@ from .models import Order, OrderLineItem
 
 from courses.models import Course
 from exam_courses.models import ExamCourse
+from profiles.forms import UserProfileForm
+from profiles.models import UserProfile
 from cart.contexts import cart_contents
 
 import stripe
 import json
+
 
 @require_POST
 def cache_checkout_data(request):
@@ -21,7 +24,7 @@ def cache_checkout_data(request):
         stripe.api_key = settings.STRIPE_SECRET_KEY
         print(stripe.api_key)
         stripe.PaymentIntent.modify(pid, metadata={
-            'cart': json.dumps( request.session.get("cart", {})),
+            'cart': json.dumps(request.session.get("cart", {})),
             'save_info': request.POST.get('save_info'),
             'username': request.user,
         })
@@ -31,8 +34,6 @@ def cache_checkout_data(request):
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
-
-
 
 
 def checkout(request):
@@ -61,9 +62,8 @@ def checkout(request):
             order.save()
             for item_id, item_data in cart.items():
                 print(f"ITEM ID: {item_id}, ITEM DATA: {item_data}")
-                
+
                 try:
-                                    
                     print(f"CART: {cart}")
                     if cart['courses']:
                         for item_id, item_data in cart['courses'].items():
@@ -71,7 +71,7 @@ def checkout(request):
                                 order=order,
                                 course=Course.objects.get(pk=item_id),
                                 quantity=item_data,
-                                )
+                            )
                             order_line_item.save()
 
                     if cart['exam_courses']:
@@ -80,9 +80,8 @@ def checkout(request):
                                 order=order,
                                 exam_course=ExamCourse.objects.get(pk=item_id),
                                 quantity=item_data,
-                                )
+                            )
                             order_line_item.save()
-                
 
                     # print(f"ITEM ID: {item_id}, ITEM TYPE: {item_type}")
                     # if isinstance(item_data, int):
@@ -93,7 +92,7 @@ def checkout(request):
                         #    quantity=item_data,
                     # )
                     #    order_line_item.save()
-                    #else:
+                    # else:
                         #   for quantity in item_data['item_type'].items():
                         #      order_line_item = OrderLineItem(
                         #         order=order,
@@ -101,7 +100,7 @@ def checkout(request):
                             #       exam_course=exam_course,
                             #      quantity=quantity,
                             #     )
-                            #order_line_item.save()
+                            # order_line_item.save()
                 except Course.DoesNotExist or ExamCourse.DoesNotExist:
                     messages.error(request, (
                         "One of the courses in your cart wasn't found in our database. "
@@ -118,7 +117,8 @@ def checkout(request):
     else:
         cart = request.session.get('cart', {"courses": {}, "exam_courses": {}})
         if not cart:
-            messages.error(request, "There's nothing in your cart at the moment")
+            messages.error(
+                request, "There's nothing in your cart at the moment")
             return redirect(reverse('courses'))
 
     current_cart = cart_contents(request)
@@ -130,13 +130,29 @@ def checkout(request):
         currency=settings.STRIPE_CURRENCY,
     )
 
-    order_form = OrderForm()
-    
+    if request.user.is_authenticated:
+        try:
+            profile = UserProfile.objects.get(user=request.user)
+            order_form = OrderForm(initial={
+                'full_name': profile.user.get_full_name(),
+                'email': profile.user.email,
+                'phone_number': profile.default_phone_number,
+                   
+                'postcode': profile.default_postcode,
+                'town_or_city': profile.default_town_or_city,
+                'street_address1': profile.default_street_address1,
+                'street_address2': profile.default_street_address2,
+                    
+            })
+        except UserProfile.DoesNotExist:
+            order_form = OrderForm()
+    else:
+        order_form = OrderForm()
+
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
             Did you forget to set it in your environment?')
 
-    
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
@@ -146,12 +162,33 @@ def checkout(request):
 
     return render(request, template, context)
 
+
 def checkout_success(request, order_number):
     """
     Handle successful checkouts
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
+    profile = UserProfile.objects.get(user=request.user)
+    # Attach the user's profile to the order
+    order.user_profile = profile
+    order.save()
+
+    # Save the user's info
+    if save_info:
+        profile_data = {
+            'default_phone_number': order.phone_number,
+           
+            'default_postcode': order.postcode,
+            'default_town_or_city': order.town_or_city,
+            'default_street_address1': order.street_address1,
+            'default_street_address2': order.street_address2,
+           
+        }
+        user_profile_form = UserProfileForm(profile_data, instance=profile)
+        if user_profile_form.is_valid():
+            user_profile_form.save()
+
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
