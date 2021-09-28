@@ -8,7 +8,7 @@
           <li><a href="{% url 'exam_courses' %}">Exam Courses</a></li>
           <li><a href="#">Contact</a></li>
           {% if request.user.is_authenticated %}
-          <li><a href="#">Profile</a></li>
+          <li><a href="{% url 'profiles' %}"></a>">Profile</a></li>
           <li><a href="#">Reviews</a></li>
           <li class="list-inline-item dropdown">
             <a href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
