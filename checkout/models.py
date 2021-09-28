@@ -5,16 +5,17 @@ from django.db.models import Sum
 from django.conf import settings
 
 
-
 from courses.models import Course
 from exam_courses.models import ExamCourse
-
+from profiles.models import UserProfile
 
 # Create your models here.
 
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+                                     null=True, blank=True, related_name='orders')
     first_name = models.CharField(max_length=50, null=False, blank=False)
     surname = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
@@ -68,8 +69,6 @@ class OrderLineItem(models.Model):
         Override original save method to set
         lineitem total & update order total.
         """
-        #self.order.save()
-        
         if self.course is not None:
             self.lineitem_total = self.course.price * self.quantity
 
@@ -79,7 +78,4 @@ class OrderLineItem(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return str(self.id)
-
-    
-   
+        return str(self.id)  
