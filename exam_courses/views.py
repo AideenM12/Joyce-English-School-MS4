@@ -49,3 +49,27 @@ def add_exam_course(request):
     }
 
     return render(request, template, context)
+
+
+def edit_exam_course(request, exam_course_id):
+    """ Edit a course in the site """
+    exam_course = get_object_or_404(ExamCourse, pk=exam_course_id)
+    if request.method == 'POST':
+        form = ExamCourseForm(request.POST, request.FILES, instance=exam_course)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated course!')
+            return redirect(reverse('exam_course_detail', args=[exam_course.id]))
+        else:
+            messages.error(request, 'Failed to update course. Please ensure the form is valid.')
+    else:
+        form = ExamCourseForm(instance=exam_course)
+        messages.info(request, f'You are editing {exam_course.name}')
+
+    template = 'exam_courses/edit_exam_course.html'
+    context = {
+        'form': form,
+        'exam_course': exam_course,
+    }
+
+    return render(request, template, context)
