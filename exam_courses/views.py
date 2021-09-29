@@ -1,5 +1,10 @@
 from django.shortcuts import render, get_object_or_404
+from django.contrib import messages
+from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import ExamCourse
+
+from .forms import ExamCourseForm
 
 # Create your views here.
 
@@ -24,3 +29,14 @@ def exam_course_detail(request, exam_course_id):
     }
 
     return render(request, 'exam_courses/exam_course_detail.html', context)
+
+
+def add_exam_course(request):
+    """ Add a course to the site """
+    form = ExamCourseForm()
+    template = 'courses/add_exam_course.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
