@@ -76,3 +76,11 @@ def edit_course(request, course_id):
     }
 
     return render(request, template, context)
+
+
+def delete_course(request, course_id):
+    """ Delete a product from the store """
+    course = get_object_or_404(Course, pk=course_id)
+    course.delete()
+    messages.success(request, 'Course deleted!')
+    return redirect(reverse('courses'))
