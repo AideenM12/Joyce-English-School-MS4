@@ -1,0 +1,1 @@
+web: gunicorn joyce_school.wsgi:application
