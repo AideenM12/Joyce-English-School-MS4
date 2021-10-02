@@ -1,0 +1,76 @@
+[{
+    "model": "exam_courses.examcourse",
+    "pk": 7,
+    "fields": {
+        "name": "KET",
+        "required_level": "A1 (Elementary)",
+        "certification_awarded": "A2 (Pre-Intermediate)",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "price": "100.00",
+        "image": "questions_x10R79m.jpg",
+        "image_url": "https://pixabay.com/illustrations/ask-writing-who-what-how-why-2245264/",
+        "start_date": "01-01-2021",
+        "end_date": "31-12-2021",
+        "hours": "50"
+    }
+}, {
+    "model": "exam_courses.examcourse",
+    "pk": 8,
+    "fields": {
+        "name": "PET",
+        "required_level": "A2 (Pre-Intermediate)",
+        "certification_awarded": "B1 (Intermediate)",
+        "description": "Test",
+        "price": "100.00",
+        "image": "questions_giI4kAH.jpg",
+        "image_url": "https://pixabay.com/illustrations/ask-writing-who-what-how-why-2245264/",
+        "start_date": "01-01-2021",
+        "end_date": "31-12-2021",
+        "hours": "50"
+    }
+}, {
+    "model": "exam_courses.examcourse",
+    "pk": 9,
+    "fields": {
+        "name": "FCE",
+        "required_level": "B1 (Intermediate)",
+        "certification_awarded": "B2 (Upper Intermediate)",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "price": "100.00",
+        "image": "questions_7PPqaf2.jpg",
+        "image_url": "https://pixabay.com/illustrations/ask-writing-who-what-how-why-2245264/",
+        "start_date": "01-01-2021",
+        "end_date": "31-12-2021",
+        "hours": "50"
+    }
+}, {
+    "model": "exam_courses.examcourse",
+    "pk": 10,
+    "fields": {
+        "name": "CAE",
+        "required_level": "B2 (Upper Intermediate)",
+        "certification_awarded": "C1 (Advanced)",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "price": "100.00",
+        "image": "questions_XR3zCfH.jpg",
+        "image_url": "https://pixabay.com/illustrations/ask-writing-who-what-how-why-2245264/",
+        "start_date": "01-01-2021",
+        "end_date": "31-12-2021",
+        "hours": "50"
+    }
+}, {
+    "model": "exam_courses.examcourse",
+    "pk": 11,
+    "fields": {
+        "name": "CPE",
+        "required_level": "C1 (Advanced)",
+        "certification_awarded": "C2 (Proficient)",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "price": "100.00",
+        "image": "questions_TqXuWVG.jpg",
+        "image_url": "https://pixabay.com/illustrations/ask-writing-who-what-how-why-2245264/",
+        "start_date": "01-01-2021",
+        "end_date": "31-12-2021",
+        "hours": "50"
+    }
+}]
