@@ -47,21 +47,20 @@
   margin: 0;
 }
 
-html {
-  height: 100%;
+
+
+/* OG form style */
+.fieldset-label {
+  position: relative;
+  padding: .5rem;
+  font-weight: 700;
+  font-size: 1.25rem;
 }
 
-body {
-  /*background: #424770;*/
-  display: flex;
-  align-items: center;
-  min-height: 100%;
-}
 
-form {
-  width: 480px;
-  margin: 20px auto;
-}
+
+
+/* BA form styles*/
 
 label {
   height: 35px;
@@ -86,6 +85,7 @@ label > span {
   cursor: text;
   pointer-events: none;
 }
+
 
 label > span span {
   position: absolute;
