@@ -22,6 +22,7 @@ h6,
 nav{
 	background-color: #e63946;
 	font-family: 'Patrick Hand', sans-serif;
+	min-height: 68px;
 }
 .brand-logo{
 	margin-left: 20px !important;
@@ -171,6 +172,16 @@ label{
 
 .form-p{
 	font-size: 1.5rem;
+}
+
+/*----Buttons----*/
+
+.btn{
+	margin: 1px;
+	background-color: #203a54;
+}
+.btn:hover{
+	background-color: #4ea5d9;
 }
 @media only screen and (min-width: 577px) and (max-width:992px) {
 	

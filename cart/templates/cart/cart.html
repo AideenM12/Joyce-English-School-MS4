@@ -8,52 +8,106 @@
       </div>
    </div>
    {% if cart_items %}
-      <table class="responsive-table">
-         <thead>
-            <tr>
-               <th>Course Name</th>
-               <th>Price</th>
-               <th>Number of Hours</th>
-               <th>Course Description</th>
-            </tr>
-         </thead>
-         <tbody>
-         <!-- clear button -->
-         <a class="btn" href="{% url 'clear_cart'  %}">Clear</a>
+      
+         
+        
          
          {% for item in cart_items %}
             {% if 'course' in item %}
-              
-               <p> {{ item.course.name }}</p>
-               <p> {{ item.course.price }}</p>
-               <p> {{ item.course.hours }}</p>
-               <p> {{ item.course.description }}</p>
+            <!--  <tr>
+               <td> {{ item.course.name }}</td>
+               <td> {{ item.course.price }}</td>
+               <td> {{ item.course.hours }}</td>
+               <td> {{ item.course.description }}</td>
+              </tr>-->
+
+              <div class="row ">
+
+               <div class="list-inline">
+                  
+                <div class="card">
+                    <div class="card-content">
+                  <span class="card-title center-align">  {{ item.course.name }}</span>
+                  <br>
+                  <div class="col center-align">
+                  <img src="{{MEDIA_URL}}{{ item.course.image }}" class="image center-align" width="650" height="400" alt="image">
+                  </div><br>
+            
+                  {{ course.description }}<br>
+                  <p class="center-align"><span class="highlight"> Price </span>{{ item.course.price }}</p>
+                  <p class="center-align"><span class="highlight">Start </span> {{ item.course.start_date }}</p>
+                  <p class="center-align"><span class="highlight">Finish </span> {{ item.course.end_date }}</p>
+                  <p class="center-align"><span class="highlight">Number of hours </span> {{ item.course.hours }}</p>
+                  <form class="form center-align" class="remove-item">
+                     <input type="hidden" value="{{ csrf_token }}" name="csrf_token" />
+                     <input type="hidden" name="item_id" value="{% if 'course' in item %}{{ item.course.id }}{% elif 'exam_course' in item %}{{ item.exam_course.id }}{% endif %}" ></input>
+                     <input type="hidden" name="item_type" value="{% if 'course' in item %}course{% elif 'exam_course' in item %}exam_course{% endif %}" ></input>
+                     <input type="submit" value="Remove" class="center-align btn"></input>
+                     </form>
+                  </div>
+                  </div>
+                 
+               </div>
+               </div>
+               </div>
 
             {% elif 'exam_course' in item %}
 
-               <p> {{ item.exam_course.name }}</p>
+               <!--<p> {{ item.exam_course.name }}</p>
                <p> {{ item.exam_course.price }}</p>
                <p> {{ item.exam_course.hours }}</p>
-               <p> {{ item.exam_course.description }}</p>
+               <p> {{ item.exam_course.description }}</p>-->
+
+               <div class="row ">
+
+                  <div class="list-inline">
+                     
+                   <div class="card">
+                       <div class="card-content">
+                     <span class="card-title center-align">  {{ item.exam_course.name }}</span>
+                     <br>
+                     <div class="col center-align">
+                     <img src="{{MEDIA_URL}}{{ item.exam_course.image }}" class="image center-align" width="650" height="400" alt="image">
+                     </div><br>
                
+                     {{ exam_course.description }}<br>
+                     <p class="center-align"><span class="highlight"> Price </span>{{ item.exam_course.price }}</p>
+                     <p class="center-align"><span class="highlight">Start </span> {{ item.exam_course.start_date }}</p>
+                     <p class="center-align"><span class="highlight">Finish </span> {{ item.exam_course.end_date }}</p>
+                     <p class="center-align"><span class="highlight">Number of hours </span> {{ item.exam_course.hours }}</p>
+                     <form class="form center-align" class="remove-item">
+                        <input type="hidden" value="{{ csrf_token }}" name="csrf_token" />
+                        <input type="hidden" name="item_id" value="{% if 'course' in item %}{{ item.course.id }}{% elif 'exam_course' in item %}{{ item.exam_course.id }}{% endif %}" ></input>
+                        <input type="hidden" name="item_type" value="{% if 'course' in item %}course{% elif 'exam_course' in item %}exam_course{% endif %}" ></input>
+                        <input type="submit" value="Remove" class="btn"></input>
+                        </form>
+                     </div>
+                     </div>
+                  
+                  </div>
+                  </div>
+                  </div>
+             
             
             {% endif %}
-            <a href="{% url 'checkout' %}" class="btn  rounded-0 btn-lg">
-               <span class="text-uppercase">Secure Checkout</span>
-               <span class="icon">
-                   <i class="fas fa-lock"></i>
-               </span>
-               </a>
-               <!-- While still in the loop add a form here -->
-               <form class="form" class="remove-item">
-                  <input type="hidden" value="{{ csrf_token }}" name="csrf_token" />
-                  <input type="hidden" name="item_id" value="{% if 'course' in item %}{{ item.course.id }}{% elif 'exam_course' in item %}{{ item.exam_course.id }}{% endif %}"></input>
-                  <input type="hidden" name="item_type" value="{% if 'course' in item %}course{% elif 'exam_course' in item %}exam_course{% endif %}"></input>
-                  <input type="submit" value="Remove"></input>
-               </form>
+       
+               
+             
+               
          {% endfor %}
-         </tbody>
-      </table>
+         
+      
+      <!-- clear button -->
+      <div class="col center-align">
+               <a class="btn" href="{% url 'clear_cart'  %}">Clear Cart</a>
+               <a href="{% url 'checkout' %}" class="btn  btn-sm">
+                  <span class="text-uppercase">Secure Checkout</span>
+                  <span class="icon">
+                      <i class="fas fa-lock"></i>
+                  </span>
+                  </a>
+      </div>
+      
    {% else %}
       <p class="lead mb-5">Your bag is empty.</p>
       <a href="{% url 'courses' %}" class="btn btn-outline-black rounded-0 btn-lg">
