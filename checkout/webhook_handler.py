@@ -47,6 +47,7 @@ class StripeWH_Handler:
         """
         Handle the payment_intent.succeeded webhook from Stripe
         """
+        print("HANDLE PAYMENT SUCCEEDED CALLED")
         intent = event.data.object
         pid = intent.id
         cart = intent.metadata.cart
@@ -54,7 +55,7 @@ class StripeWH_Handler:
 
         billing_details = intent.charges.data[0].billing_details
 
-        order_total = round(intent.charges.data[0].amount / 100, 2)
+        order_total = round(intent.charges.data[0].amount / 100)
 
         profile = None
         username = intent.metadata.username
@@ -118,28 +119,67 @@ class StripeWH_Handler:
                     original_cart=cart,
                     stripe_pid=pid,
                 )
-                for item_id, item_data in json.loads(cart).items():
-                    course = Course.objects.get(id=int(item_id))
-                    exam_course = ExamCourse.objects.get(id=int(item_id))
-                    if isinstance(item_data, int):
+                
+               # for item_id, item_data in json.loads(cart).items():
+                    
+                    #course = Course.objects.get(id=int(item_id))
+                    #exam_course = ExamCourse.objects.get(id=int(item_id))
+                print('cart', cart)
+                print(type(cart))
+                cart_as_dict = json.loads(cart)
+                print("cart_as_dict", cart_as_dict)
+                print(type(cart_as_dict))
+                if cart_as_dict["courses"]:
+                    print('CART', cart)
+                    print(type(cart))
+                    
+                    print("cart_as_dict", cart_as_dict)
+                    print(type(cart_as_dict))
+                    for item_id, item_data in json.loads(cart)["courses"].items():
+                      
+                        print('ITEM DATA', item_data)
+                        print('CART', cart)
+                        print(item_id)
                         order_line_item = OrderLineItem(
                             order=order,
-                            course=course,
-                            exam_course=exam_course,
+                            course=Course.objects.get(pk=item_id),
                             quantity=item_data,
-                        )
-                        order_line_item.save()
-                    else:
-                        for quantity in item_data['item_type'].items():
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                course=course,
-                                exam_course=exam_course,
-                                quantity=quantity,
-
                             )
-                            order_line_item.save()
+                        order_line_item.save()    
+
+                if cart_as_dict["exam_courses"]:
+                    print(cart)
+                    for item_id, item_data in json.loads(cart)["exam_courses"].items():
+                        print(item_id)
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            exam_course=ExamCourse.objects.get(pk=item_id),
+                            quantity=item_data,
+                            )
+                       
+                        order_line_item.save()
+                                           
+                       
+                   # if isinstance(item_data, int):
+                    #    order_line_item = OrderLineItem(
+                     #       order=order,
+                      #      course=course,
+                       #     exam_course=exam_course,
+                        #    quantity=item_data,
+                        #)
+                        #order_line_item.save()
+                   # else:
+                    #    for quantity in item_data['item_type'].items():
+                     #       order_line_item = OrderLineItem(
+                      #          order=order,
+                       #         course=course,
+                        #        exam_course=exam_course,
+                         #       quantity=quantity,
+
+                          #  )
+                           # order_line_item.save()
             except Exception as e:
+                print("EXCEPTION ON LINE 165: ", e)
                 if order:
                     order.delete()
                 return HttpResponse(
