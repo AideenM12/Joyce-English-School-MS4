@@ -10,11 +10,13 @@
 <div class="row">
    {% for exam_course in exam_courses %}
    <div class="col l4 s12 m10">
-      <div class="card course-card ">
+      <div class="card exam-course-card ">
          <div class="card-content center-align course-content ">
-            <span class="card-title">{{ exam_course.name }}</span>
+            <span class=" card-title exam-card-title">{{ exam_course.name }}</span>
+            <span class="highlight">Level Required:</span><br><span>{{ exam_course.required_level }}</span><br>
+            <span class="highlight">Certification Awarded:</span><br><span>{{ exam_course.certification_awarded }}</span>
          </div>
-         <div class="card-action center-align">
+         <div class="card-action center-align exam-card-action">
             <a href="{% url 'exam_course_detail' exam_course.id %}" class=" btn">Read more</a>
          </div>
       </div>

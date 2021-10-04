@@ -192,6 +192,24 @@ body.background-image-1 {
 }
 .highlight {
 	font-weight: 800;
+	
+}
+.exam-course-card{
+    margin-top: 2rem !important;
+    height: 12rem !important;
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+    margin-bottom: 2rem !important;
+	
+}
+.exam-card-action{
+	margin-bottom: 2rem !important;
+    padding: 12px !important
+}
+.exam-card-title{
+	padding: 1rem;
+	line-height: 12px !important;
+    margin-bottom: 0 !important;
 }
 /*----------Forms and Allauth----------*/
 label{
