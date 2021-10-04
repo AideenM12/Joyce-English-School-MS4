@@ -146,6 +146,18 @@ body.background-image-1 {
 	overflow-x: hidden;
 }
 
+body.background-image-2 {
+	background: url("../../media/pages.jpg") no-repeat center center fixed;
+	width: 100vw;
+	height: 100vh;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow-x: hidden;
+}
+
 /* AllAuth CSS */
 #sign-out-card{
 	margin-top: 2rem;

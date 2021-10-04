@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+<body class="background-image-2">
 <div class="row">
    <div class="col s12 center-align">
-      <h3>Exam Courses</h3>
+      <h3 class="page-header text-shadow">Exam Courses</h3>
    </div>
 </div>
 <div class="row ">
@@ -18,15 +19,15 @@
       <img src="{{MEDIA_URL}}{{ exam_course.image }}" class="image center-align" width="650" height="400" alt="image">
       </div><br>
 
-      {{ exam_course.description }}<br>
+      <p class="center-align"><span class="highlight"> Course Description </span><br>{{ exam_course.description }}</p><br>
       <p class="center-align"><span class="highlight"> Price </span>{{ exam_course.price }}</p>
       <p class="center-align"><span class="highlight">Start </span> {{ exam_course.start_date }}</p>
       <p class="center-align"><span class="highlight">Finish </span> {{ exam_course.end_date }}</p>
       <p class="center-align"><span class="highlight">Number of hours </span> {{ exam_course.hours }}</p>
-      </div>
-      </div>
-      </li>
-   </ul>
+      
+      
+      
+  
    {% if request.user.is_authenticated %}
    <form class="form" action="{% url 'add_to_cart' exam_course.id %}" method="POST">
       {% csrf_token %}
@@ -39,20 +40,24 @@
             </div>
         </div>
       
-          <div class="col-12">
-              <a href="{% url 'exam_courses' %}" class="btn btn-outline-black rounded-0 mt-5">
+        <div class="card-action center-align">
+              <a href="{% url 'exam_courses' %}" class="btn">
                   <span class="icon">
                       <i class="fas fa-chevron-left"></i>
                   </span>
-                  <span class="text-uppercase">Keep Shopping</span>
+                  <span>Back to Exam Courses</span>
               </a>
-              <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
-              <a class="text-danger" href="{% url 'delete_exam_course' exam_course.id %}">Delete</a>
+              <input type="submit" class="btn" value="Add to cart">
+              <a class="btn" href="{% url 'delete_exam_course' exam_course.id %}">Delete</a>
           </div>
           <input type="hidden" name="redirect_url" value="{{ request.path }}">
           <input type="hidden" name="item_type" value="exam_courses" />
+          </div>
       </div>
   </form>
+  </div>
+</ul>
   {% endif %}
 </div>
+</body>
 {% endblock %}
