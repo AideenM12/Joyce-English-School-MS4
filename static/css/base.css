@@ -101,7 +101,11 @@ footer>h5 {
     background-color: #4ea5d9 !important;
     
 }
-
+/*----Toasts-----*/
+.toast.rounded {
+ 
+    background-color: #203a54 !important;
+}
 
 /*-----Parallax Container-----*/
 
