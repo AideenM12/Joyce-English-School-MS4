@@ -13,8 +13,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.brand-logo{
+h6{
     font-family: 'Patrick Hand', sans-serif;
 	color: #070a0d!important;
 	font-weight: 600;
@@ -25,11 +24,14 @@ nav{
 	min-height: 68px;
 	padding-right: .75rem;
 }
-.brand-logo{
-	margin-left: 20px !important;
+.brand-logo, 
+.page-header{
 	font-family: 'Patrick Hand', sans-serif;
 	color: #f1faee !important;
 	font-weight: 600;
+}
+.brand-logo{
+	margin-left: 20px !important;
 }
 .sidenav{
 	background-color: #f1faee;
@@ -112,8 +114,8 @@ footer>h5 {
 }
 
 .card{
-	margin-left: 10rem;
-	margin-right: 10rem;
+	margin-left: 8rem;
+	margin-right: 8rem;
 	font-size: 1.25rem;
 }
 .card-title{
@@ -178,9 +180,9 @@ body.background-image-1 {
 	color: #f1faee !important;
 }*/ 
 .course-card{
-	height: 15rem;
-	margin-left: 0 !important;
-	margin-right: 0 !important;
+	height: 12rem;
+	margin-left: 1rem !important;
+	margin-right: 1rem !important;
 }
 .course-content{
 	padding: 0 !important;
