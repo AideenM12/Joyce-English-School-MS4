@@ -98,26 +98,73 @@
          
       
       <!-- clear button -->
-      <div class="col center-align">
-               <a class="btn" href="{% url 'clear_cart'  %}">Clear Cart</a>
-               <a href="{% url 'checkout' %}" class="btn  btn-sm">
+      <div class="row">
+      <div class="col ">
+         <div class="card">
+            <div class="card-content  center-align">
+               <p>Click here to proceed to the checkout and sign up for your course! </p>
+               <a href="{% url 'checkout' %}" class="btn cart-btns">
                   <span class="text-uppercase">Secure Checkout</span>
                   <span class="icon">
                       <i class="fas fa-lock"></i>
                   </span>
                   </a>
+                  </div>
+                  </div>
+                  </div>
+                  
       </div>
-      
+      <div class="row">
+      <div class="col " >
+         <div class="card">
+         <div class="card-content  center-align">
+            <p>Click here to clear your cart</p>
+         <a class="btn cart-btns" href="{% url 'clear_cart'  %}">Clear Cart</a>
+         </div>
+            </div>
+</div>
+      </div>
    {% else %}
-      <p class="lead mb-5">Your bag is empty.</p>
+   
+      <h5 class="center-align">Your cart is empty.</h5>
+      <div class="row">
+         <div class="col l6 s12 m10 offset-m1">
+         <div class="card nav-cards">
+            <div class="card-content nav-card-content center-align">
+               <h5 class="card-title">Courses</h5>
+               <h6>Go back to courses</h6>
+               </div>
+               <div class=" center-align card-action">
       <a href="{% url 'courses' %}" class="btn btn-outline-black rounded-0 btn-lg">
          <span class="icon">
             <i class="fas fa-chevron-left"></i>
          </span>
         
-         <span class="text-uppercase">Keep Shopping</span>
+         <span class="text-uppercase">Courses</span>
       </a>
-      <a onclick="M.toast({html: 'I am a toast'})" class="btn">Toast!</a>
+      <!--<a onclick="M.toast({html: 'I am a toast'})" class="btn">Toast!</a>-->
+      </div>
+      </div>
+      </div>
+      <div class="col l6 s12 m10 offset-m1">
+         <div class="card nav-cards">
+            <div class="card-content nav-card-content center-align">
+               <h5 class="card-title">Exam Courses</h5>
+               <h6>Go back to courses</h6>
+               </div>
+               <div class=" center-align card-action">
+      <a href="{% url 'exam_courses' %}" class="btn btn-outline-black rounded-0 btn-lg">
+         <span class="icon">
+            <i class="fas fa-chevron-left"></i>
+         </span>
+        
+         <span class="text-uppercase">Exam Courses</span>
+      </a>
+      <!--<a onclick="M.toast({html: 'I am a toast'})" class="btn">Toast!</a>-->
+      </div>
+      </div>
+      </div>
+      </div>
    {% endif %}
 
    <div class="parallax-container">

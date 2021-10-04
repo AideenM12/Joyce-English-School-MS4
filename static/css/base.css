@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Patrick+Hand&display=swap');
 body {
     font-family: 'Architects Daughter', sans-serif;
-    background-color: #ddfff7;
+    background-color: #E8F1FD;
     display: flex;
 	min-height: 100vh;
 	flex-direction: column;
@@ -119,6 +119,17 @@ footer>h5 {
 .card-title{
 	font-weight: 600 !important;
 }
+
+/*----Cart Page CSS------*/
+#cart-btn-div{
+	margin-bottom: 10px;
+	margin-top: 5px;
+	
+}
+/*.cart-btns{
+	margin-left: 10rem !important;
+	margin-right: 10rem !important;
+}*/
 
 /*-----Background Image CSS---*/
 body.background-image-1 {
