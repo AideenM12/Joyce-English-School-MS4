@@ -25,6 +25,7 @@ function sendMail(contactForm) {
 
 let contactUs = document.getElementById("contactUs");
 
+
 contactUs.addEventListener('submit', thankYou);
 
 /* thankYouMsg variable allows and thankYou function allow

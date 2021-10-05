@@ -18,6 +18,9 @@ h6{
 	color: #070a0d!important;
 	font-weight: 600;
 }
+.large-text{
+	font-size: 1.5rem;
+}
 nav{
 	background-color: #e63946;
 	font-family: 'Patrick Hand', sans-serif;
@@ -269,6 +272,19 @@ label{
 .btn:hover{
 	background-color: #4ea5d9;
 }
+/*---Contact Page---*/
+#thanks {
+	font-size: 1.5rem;
+	font-weight: 800;
+	padding: 1.25rem;
+}
+#contactUs{
+	padding: 1.5rem;
+}
+.contact-form{
+	font-size: 1.5rem !important;
+}
+
 @media only screen and (min-width: 577px) and (max-width:992px) {
 	
 
