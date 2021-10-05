@@ -11,20 +11,21 @@
 
    <ul class="list-inline">
       
-    <div class="card">
+    <div class="card detail-card">
         <div class="card-content">
       <span class="card-title center-align">  {{ exam_course.name }}</span>
-      <br>
-      <div class="col center-align">
-      <img src="{{MEDIA_URL}}{{ exam_course.image }}" class="image center-align" width="650" height="400" alt="image">
-      </div><br>
-
+      <div class="row">
+        <div class="col  center-align">
+        <img src="{{MEDIA_URL}}{{ exam_course.image }}" class="image responsive-img center-align"  alt="image">
+        </div>
+        </div>
+        <div class="row">
       <p class="center-align"><span class="highlight"> Course Description </span><br>{{ exam_course.description }}</p><br>
       <p class="center-align"><span class="highlight"> Price </span>{{ exam_course.price }}</p>
       <p class="center-align"><span class="highlight">Start </span> {{ exam_course.start_date }}</p>
       <p class="center-align"><span class="highlight">Finish </span> {{ exam_course.end_date }}</p>
       <p class="center-align"><span class="highlight">Number of hours </span> {{ exam_course.hours }}</p>
-      
+      </div>
       
       
   

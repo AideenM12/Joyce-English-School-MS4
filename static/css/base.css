@@ -5,9 +5,11 @@ body {
     display: flex;
 	min-height: 100vh;
 	flex-direction: column;
-    flex: 1 0 auto;
+   
 }
-
+main{
+	flex: 1 0 auto;
+}
 h1,
 h2,
 h3,
@@ -83,6 +85,7 @@ nav{
 	color: #f1faee;
 	text-shadow: 2px #070a0d !important;
 	border-top: 1px #f1faee solid;
+	height: 50px;
 }
 
 footer>h5 {
@@ -237,6 +240,10 @@ body.background-image-2 {
 	line-height: 12px !important;
     margin-bottom: 0 !important;
 }
+.detail-image{
+	height: 40rem;
+	width: 65rem;
+}
 /*----------Forms and Allauth----------*/
 label{
 	font-size: 1.25rem;
@@ -307,11 +314,40 @@ label{
 	.sidenav li>a {
 		font-size: 1.5rem;
 	}	
+	/*--------Footer--------*/
+	.page-footer{
+		height: 100px;
+		left: 0;
+  bottom: 0;
+ 
+		
+	}
+	.footer-row{
+		margin-bottom: 0;
+		background-color: #4ea5d9;
+	}
+	.footer-icon {
 	
+		font-size: 1.5rem;
+		margin-top: 10px;
+		padding-right: .5rem;
+	}
+	/*----------Cards-------------*/
+	.detail-card{
+		margin-left: .75rem !important;
+		margin-right: .75rem !important;
+		
+	}
 	.card{
 		margin-left: 5px;
 		margin-right: 5px;
 		font-size: 1.25rem;
 	}
-	
+	.course-card{
+		margin-bottom: 2.5rem;
+   		margin-top: 2.5rem;
+	}
+	.large-text {
+		font-size: 1.25rem;
+	}
 }

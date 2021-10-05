@@ -39,6 +39,7 @@
       <title>Joyce School of English  {% block extra_title %}{% endblock %}</title>
    </head>
    <body>
+      <main>
       <header>
          <nav>
             {% include 'includes/mobile-top-header.html' %}
@@ -64,8 +65,10 @@
       {% endblock %}
       {% block content %}
       {% endblock %}
-      <footer class = "  ">
-         <div class="row page-footer">
+      </main>
+      <footer class = "page-footer  ">
+       
+         <div class="row ">
             <div class="col s6 left">
                <h5 class=" foot-header text-shadow">Joyce School of English &copy;</h5>
             </div>
@@ -85,6 +88,7 @@
                </ul>
             </div>
          </div>
+         
       </footer>
       {% block postloadjs %}
       <script src="{% static 'js/email.js' %}"></script>

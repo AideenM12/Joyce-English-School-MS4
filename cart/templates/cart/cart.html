@@ -25,15 +25,17 @@
 
                <div class="list-inline">
                   
-                <div class="card">
+                <div class="card detail-card">
                     <div class="card-content">
                   <span class="card-title center-align">  {{ item.course.name }}</span>
                   <br>
-                  <div class="col center-align">
-                  <img src="{{MEDIA_URL}}{{ item.course.image }}" class="image center-align" width="650" height="400" alt="image">
-                  </div><br>
-            
-                  {{ course.description }}<br>
+                  <div class="row">
+                     <div class="col  center-align">
+                     <img src="{{MEDIA_URL}}{{ item.course.image }}" class="image responsive-img center-align"  alt="image">
+                     </div>
+                     </div>
+                     <div class="row">
+                        <p class="center-align"><span class="highlight"> Course Description </span>{{ course.description }}</p>
                   <p class="center-align"><span class="highlight"> Price </span>{{ item.course.price }}</p>
                   <p class="center-align"><span class="highlight">Start </span> {{ item.course.start_date }}</p>
                   <p class="center-align"><span class="highlight">Finish </span> {{ item.course.end_date }}</p>
@@ -44,6 +46,7 @@
                      <input type="hidden" name="item_type" value="{% if 'course' in item %}course{% elif 'exam_course' in item %}exam_course{% endif %}" ></input>
                      <input type="submit" value="Remove" class="center-align btn"></input>
                      </form>
+                  </div>
                   </div>
                   </div>
                  
@@ -62,15 +65,17 @@
 
                   <div class="list-inline">
                      
-                   <div class="card">
+                   <div class="card detail-card">
                        <div class="card-content">
                      <span class="card-title center-align">  {{ item.exam_course.name }}</span>
                      <br>
+                     <div class="row">
                      <div class="col center-align">
-                     <img src="{{MEDIA_URL}}{{ item.exam_course.image }}" class="image center-align" width="650" height="400" alt="image">
-                     </div><br>
-               
-                     {{ exam_course.description }}<br>
+                     <img src="{{MEDIA_URL}}{{ item.exam_course.image }}" class="image responsive-img center-align" width="650" height="400" alt="image">
+                     </div>
+                     </div>
+                     <div class="row">
+                        <p class="center-align"><span class="highlight">Course Description</span>{{ exam_course.description }}</p>
                      <p class="center-align"><span class="highlight"> Price </span>{{ item.exam_course.price }}</p>
                      <p class="center-align"><span class="highlight">Start </span> {{ item.exam_course.start_date }}</p>
                      <p class="center-align"><span class="highlight">Finish </span> {{ item.exam_course.end_date }}</p>
@@ -83,7 +88,7 @@
                         </form>
                      </div>
                      </div>
-                  
+                  </div>
                   </div>
                   </div>
                   </div>
@@ -115,8 +120,8 @@
                   
       </div>
       <div class="row">
-      <div class="col " >
-         <div class="card">
+      <div class="col s12 " >
+         <div class="card center-align">
          <div class="card-content  center-align">
             <p>Click here to clear your cart</p>
          <a class="btn cart-btns" href="{% url 'clear_cart'  %}">Clear Cart</a>
