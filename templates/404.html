@@ -2,6 +2,11 @@
 {% block content %}
 <!----------Main 404 Page Content------->
 <main class="center-align">
+    <div class="parallax-container" id="top-parallax">
+        <div class="parallax">
+           <img src="{{ MEDIA_URL }}flag.jpg" alt="joyce-statue" width="640" height="640">
+        </div>
+     </div>
     <div class="container">
         <div class="row">
             <div class="card-panel center-align">
@@ -11,5 +16,10 @@
             </div>
         </div>
     </div>
+    <div class="parallax-container">
+        <div class="parallax">
+           <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="banshee">
+        </div>
+     </div>
 </main>
 {% endblock %}
