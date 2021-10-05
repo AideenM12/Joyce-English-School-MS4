@@ -6,17 +6,21 @@
           <li><a href="{% url 'home' %}" >Home</a></li>
           <li><a href="{% url 'courses' %}">Courses</a></li>
           <li><a href="{% url 'exam_courses' %}">Exam Courses</a></li>
-          <li><a href="{% url 'add_course' %}">Add Courses</a></li>
-          <li><a href="{% url 'add_exam_course' %}">Add  Exam Courses</a></li>
+         
           <li><a href="#">Contact</a></li>
           {% if request.user.is_authenticated %}
           <li><a href="{% url 'profile' %}">Profile</a></li>
           <li><a href="#">Reviews</a></li>
+          {% if request.user.is_superuser %}
           <li class="list-inline-item dropdown">
-            <a href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-user fa-lg"></i>
-            My Account
-            </a>
+          <a class='dropdown-trigger' href='#' data-target='dropdown1' aria-haspopup="true" aria-expanded="false">
+            Site Management<i class="fas fa-caret-down"></i></a></li>
+            <ul id='dropdown1' class='dropdown-content center'>
+               
+               <li><a href="{% url 'add_course' %}">Add Courses</a></li>
+               <li><a href="{% url 'add_exam_course' %}">Add Exam Courses</a></li>
+            </ul>
+            {% endif %}
          <li class="list-inline-item">
             <a class="{% if order_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'cart' %}">
                <i class="fas fa-shopping-cart"></i>
@@ -27,11 +31,7 @@
             {% endif %}
             </a>
          </li>
-          {% if request.user.is_superuser %}
-          <li id='dropdown1' class='dropdown-content center'>
-             <a href="" class="dropdown-item">Product Management</a>
-          </li>
-          {% endif %}
+          
           <li><a href="{% url 'account_logout' %}">Log Out</a></li>
           {% else %}
           <li><a href="{% url 'account_signup' %}">Sign Up</a></li>

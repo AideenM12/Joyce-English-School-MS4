@@ -2,6 +2,7 @@ $(document).ready(function(){
     $('.parallax').parallax();
     $('.sidenav').sidenav({edge: "right"});
     $('.collapsible').collapsible();
+    $('.dropdown-trigger').dropdown();
   });
 
 //This code was taken from Code Institutes Boutique Ado Tutorials

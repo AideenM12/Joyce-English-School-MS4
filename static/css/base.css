@@ -41,6 +41,13 @@ nav{
 .sidenav-h4{
 	color: #070a0d !important;
 }
+.dropdown-content {
+	background-color: #f1faee;
+}
+.dropdown-content li>a {
+	color: #e63946;
+	font-weight: 500;
+}
 /*--Bootstrap inline list style Found on Stack Overflow--*/
 
 .list-inline {
