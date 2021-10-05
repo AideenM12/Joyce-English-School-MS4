@@ -48,13 +48,21 @@
                   <span>Back to Exam Courses</span>
               </a>
               <input type="submit" class="btn" value="Add to cart">
+              {% if request.user.is_superuser %}
               <a class="btn" href="{% url 'delete_exam_course' exam_course.id %}">Delete</a>
           </div>
           <input type="hidden" name="redirect_url" value="{{ request.path }}">
           <input type="hidden" name="item_type" value="exam_courses" />
+          {% endif %}
           </div>
       </div>
   </form>
+  {% else %}
+  <div class="card-action center-align">
+      <p>Please Sign Up or Log In to purchase your place in one of our classes!</p>
+  <a class="btn" href="{% url 'account_signup' %}">Sign Up</a>
+          <a class="btn" href="{% url 'account_login' %}">Log In</a>
+          </div>
   </div>
 </ul>
   {% endif %}
