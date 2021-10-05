@@ -38,7 +38,7 @@ var card = elements.create('card', {
 });
 card.mount('#card-element');
 
-var inputs = document.querySelectorAll('input.field');
+/*var inputs = document.querySelectorAll('input.field');
 Array.prototype.forEach.call(inputs, function(input) {
   input.addEventListener('focus', function() {
     input.classList.add('is-focused');
@@ -53,7 +53,7 @@ Array.prototype.forEach.call(inputs, function(input) {
       input.classList.remove('is-empty');
     }
   });
-});
+});*/
 
 function setOutcome(result) {
   var successElement = document.querySelector('.success');
