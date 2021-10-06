@@ -21,7 +21,7 @@
       
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
          integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA==" crossorigin="anonymous" type="text/css">
-      <link rel="stylesheet" href="{% static 'css/base.css' %}">
+      <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
       {% endblock %}
       {% block extra_css %}
       {% endblock %}
@@ -79,7 +79,7 @@
                   <li><a href="https://www.instagram.com/" class="footer-icon" rel="noopener" target="_blank">
                      <i class="fab fa-instagram "><span class="sr-only">Instagram</span></i></a>
                   </li>
-                  <li><a href="" rel="noopener" class="footer-icon">
+                  <li><a href="{% url 'contact' %}" rel="noopener" class="footer-icon">
                      <i class="fas fa-envelope "><span class="sr-only">Contact</span></i></a>
                   </li>
                   <li><a href="https://www.github.com/" class="footer-icon" rel="noopener" target="_blank">

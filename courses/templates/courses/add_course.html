@@ -4,20 +4,20 @@
 
 
 {% block content %}
-    <div class="overlay"></div>
+<body class="background-image-2">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6">
-                <hr>
-                <h2 class="logo-font mb-4">Product Management</h2>
-                <h5 class="text-muted">Add a Course</h5>
-                <hr>
+            <div class="col s12 center-align">
+                
+                <h2 class="page-header text-shadow">Site Management</h2>
+                <h5 class="page-header text-shadow">Add a Course</h5>
+                
             </div>
         </div>
 
         <div class="row">
-            <div class="col-12 col-md-6">
-                <form method="POST" action="{% url 'add_course' %}" class="form mb-2" enctype="multipart/form-data">
+            <div class="col l8 offset-l2 m10 offset-m1">
+                <form method="POST" action="{% url 'add_course' %}" class="form card-panel" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right">
@@ -28,4 +28,5 @@
             </div>            
         </div>
     </div>
+    </body>
 {% endblock %}
