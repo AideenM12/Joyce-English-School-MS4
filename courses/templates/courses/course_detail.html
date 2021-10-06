@@ -33,6 +33,7 @@
    {% if request.user.is_authenticated %}
    <form class="form" action="{% url 'add_to_cart' course.id %}" method="POST">
       {% csrf_token %}
+      <input type="hidden" name="redirect_url" value="{{ request.path }}">
       <div class="form-row">
         <div class="col-12 hide">
             <div class="form-group w-50">
