@@ -65,12 +65,7 @@
       
       
          
-        <!--    <h5 class="center-align">Order Total:</h5>>
-         </div>
-         <div class="col-3">
-            <h5 class="my-0">€{{ order_total | floatformat:2 }}</p>
-         </div>
-      </div>-->
+        
    </div>
 </div>
    
@@ -86,7 +81,7 @@
             {{ order_form.email | as_crispy_field }}
          </fieldset>
          <fieldset class="rounded px-3 mb-5">
-            <legend class="fieldset-label">Delivery</legend>
+            <legend class="fieldset-label">Billing</legend>
             {{ order_form.phone_number | as_crispy_field }}
             {{ order_form.postcode | as_crispy_field }}
             {{ order_form.town_or_city | as_crispy_field }}
