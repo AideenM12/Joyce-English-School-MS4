@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<!----------Main 403 Page Content------->
+
+    <div class="parallax-container" id="top-parallax">
+        <div class="parallax">
+           <img src="{{ MEDIA_URL }}flag.jpg" alt="joyce-statue" width="640" height="640">
+        </div>
+     </div>
+    <div class="container">
+        <div class="row">
+            <div class="card-panel center-align">
+                <h3 class="center-align">403</h3>
+                <h3 class="center-align">Page Forbidden!</h3>
+                <a href="{% url 'home' %}" class="btn">Home</a>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax">
+           <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="banshee">
+        </div>
+     </div>
+
+{% endblock %}
