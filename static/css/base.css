@@ -186,7 +186,7 @@ body.background-image-2 {
 	padding: .25rem 1rem .75rem 1rem !important;
 	margin-left: 2rem;
 	margin-right: 2rem;
-	width: 20vw;
+	width: 25vw;
 }
 .nav-card-content{
 	padding: 0 !important;
@@ -306,6 +306,7 @@ label{
 		margin-left: auto;
 		margin-right: auto;
 		width: 70vw;
+	}
 
 }
 
