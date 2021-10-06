@@ -10,8 +10,9 @@ def cart(request):
     """ A view to return the cart page """
 
     return render(request, 'cart/cart.html')
+    
 
-
+@login_required
 def add_to_cart(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
     item_to_add = item_id
@@ -20,26 +21,27 @@ def add_to_cart(request, item_id):
     item_type = request.POST.get('item_type')
     cart = request.session.get('cart', {"courses": {}, "exam_courses": {}})
 
-    if request.user.is_authenticated:
-        if item_type == "courses":
-            if item_id in list(cart['courses'].keys()):
-                cart['courses'][item_id] += quantity
-                messages.success(request, f'Added course to your cart')
-            else:
-                cart['courses'][item_id] = quantity
-                messages.success(request, f'Added course to your cart')
+   # if request.user.is_authenticated:
+    if item_type == "courses":
+        if item_id in list(cart['courses'].keys()):
+            cart['courses'][item_id] += quantity
+            messages.success(request, f'Added course to your cart')
+        else:
+            cart['courses'][item_id] = quantity
+            messages.success(request, f'Added course to your cart')
 
-        elif item_type == "exam_courses":
-            if item_id in list(cart['exam_courses'].keys()):
-                cart['exam_courses'][item_id] += quantity
-            else:
-                cart['exam_courses'][item_id] = quantity
+    elif item_type == "exam_courses":
+        if item_id in list(cart['exam_courses'].keys()):
+            cart['exam_courses'][item_id] += quantity
+        else:
+            cart['exam_courses'][item_id] = quantity
 
-        request.session['cart'] = cart
+    request.session['cart'] = cart
+    print(cart)
+    return redirect(redirect_url)
 
-        return redirect(redirect_url)
 
-
+@login_required
 def remove_from_cart(request, item_id):
 
     try:
@@ -75,7 +77,7 @@ def remove_from_cart(request, item_id):
         print(e)
         return HttpResponse(status=500)
 
-
+@login_required
 def clear_cart(request):
     """Remove courses from the cart"""
     request.session['cart'] = {"courses": {}, "exam_courses": {}}

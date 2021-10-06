@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% load cart_tools %}
 {% block content %}
    <div class="parallax-container" id="top-parallax">
@@ -179,23 +180,7 @@
    </div>
 {% endblock %}
 
-
 {% block extra_js %}
-
-<script type="text/javascript">
-// Remove item and reload on click
-$('form').submit(function(event) {
-  event.preventDefault()
-  const form = event.target
-
-  var url = `/cart/remove/${form.item_id.value}`;
-  var data = {'csrfmiddlewaretoken': form.csrf_token.value, 'item_type': form.item_type.value, 'item_id': form.item_id.value};
-  console.log(data)
-
-  $.post(url, data)
-   .done(function() {
-       location.reload();
-   });
-})
-</script>
+{{ block.super }}
+<script src="{% static 'cart/js/cart.js' %}"></script>
 {% endblock %}

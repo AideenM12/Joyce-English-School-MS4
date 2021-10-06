@@ -1,3 +1,6 @@
+body{
+  align-items: normal;
+}
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
