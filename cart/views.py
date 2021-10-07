@@ -21,24 +21,27 @@ def add_to_cart(request, item_id):
     item_type = request.POST.get('item_type')
     cart = request.session.get('cart', {"courses": {}, "exam_courses": {}})
 
-   # if request.user.is_authenticated:
-    if item_type == "courses":
-        if item_id in list(cart['courses'].keys()):
-            cart['courses'][item_id] += quantity
-            messages.success(request, f'Added course to your cart')
-        else:
-            cart['courses'][item_id] = quantity
-            messages.success(request, f'Added course to your cart')
+    if request.user.is_authenticated:
+        if item_type == "courses":
+            if item_id in list(cart['courses'].keys()):
+                cart['courses'][item_id] += quantity
+                messages.success(request, f'Added course to your cart')
+                print('Item Id', item_id)
+                print('Cart', cart)
+            else:
+                cart['courses'][item_id] = quantity
+                messages.success(request, f'Added course to your cart')
+                print('Item Id', item_id)
+                print('Cart', cart)
+        elif item_type == "exam_courses":
+            if item_id in list(cart['exam_courses'].keys()):
+                cart['exam_courses'][item_id] += quantity
+            else:
+                cart['exam_courses'][item_id] = quantity
 
-    elif item_type == "exam_courses":
-        if item_id in list(cart['exam_courses'].keys()):
-            cart['exam_courses'][item_id] += quantity
-        else:
-            cart['exam_courses'][item_id] = quantity
-
-    request.session['cart'] = cart
-    print(cart)
-    return redirect(redirect_url)
+        request.session['cart'] = cart
+        print(cart)
+        return redirect(redirect_url)
 
 
 @login_required
