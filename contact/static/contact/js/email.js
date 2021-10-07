@@ -2,6 +2,8 @@
 
 /*The sendMail function was taken from Matt Rudge's 
 Code Institute lessons and repurposed for this project*/
+//CSRF Token
+
 
 function sendMail(contactForm) {
     emailjs.send("service_pjbjzz8","template_bqz2lqj", {
