@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="row">
+    <div class="col l8 offset-l2 m10 offset-m1">
+        <form method="POST" action="{% url 'write_review' %}" class="form card-panel" >
+            
+            {% csrf_token %}
+           
+          
+            {{ form }}
+                
+       
+            
+            
+                <a class="btn btn-outline-black rounded-0" href="{% url 'reviews' %}">Cancel</a>
+                <button class="btn btn-black rounded-0" type="submit">Add Review</button>
+            </div>
+        </form>
+    </div>            
+</div>
+{% endblock %}

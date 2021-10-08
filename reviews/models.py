@@ -6,8 +6,8 @@ from django.contrib.auth.models import User
 
 
 class Review(models.Model):
-    """Model to define the fields required to create Forum Posts displayed in
-    Community Forum"""
+    """Model to define the fields required  displayed in
+   """
     title = models.CharField(max_length=200)
     comments = models.TextField()
     creator = models.ForeignKey(User, on_delete=models.CASCADE)

@@ -1,2 +1,28 @@
 from django import forms
 from .models import Review
+
+
+
+class WriteReview(forms.ModelForm):
+    """WriteReview form."""
+    class Meta:
+        model = Review
+        fields = ('title', 'comments', 'creator',)
+        
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        placeholders = {
+            'title': 'Title',
+            'comments': 'Write your review here',
+            'creator': '',
+            
+        }
+
+        self.fields['title'].widget.attrs['autofocus'] = True
+        for field in self.fields:
+            
+            if self.fields[field].required:
+                placeholder = f'{placeholders[field]} *'
+            self.fields[field].widget.attrs['class'] = 'form-control'
+            self.fields[field].label = False
