@@ -47,22 +47,17 @@ class StripeWH_Handler:
         """
         Handle the payment_intent.succeeded webhook from Stripe
         """
-        print("HANDLE PAYMENT SUCCEEDED CALLED")
         intent = event.data.object
         pid = intent.id
         cart = intent.metadata.cart
         save_info = intent.metadata.save_info
-
         billing_details = intent.charges.data[0].billing_details
-
         order_total = round(intent.charges.data[0].amount / 100)
-
         profile = None
         username = intent.metadata.username
         if username != 'AnonymousUser':
             profile = UserProfile.objects.get(user__username=username)
             if save_info:
-
                 profile.default_email = billing_details.email
                 profile.default_phone_number = billing_details.phone
                 profile.default_postcode = billing_details.address.postal_code
@@ -78,15 +73,12 @@ class StripeWH_Handler:
             try:
                 order = Order.objects.get(
                     full_name__iexact=billing_details.name,
-
                     email__iexact=billing_details.email,
                     phone_number__iexact=billing_details.phone,
-
                     postcode__iexact=billing_details.address.postal_code,
                     town_or_city__iexact=billing_details.address.city,
                     street_address1__iexact=billing_details.address.line1,
                     street_address2__iexact=billing_details.address.line2,
-
                     order_total=order_total,
                     original_cart=cart,
                     stripe_pid=pid,
@@ -99,7 +91,8 @@ class StripeWH_Handler:
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+                content=f'Webhook received: {event["type"]} \
+                     | SUCCESS: Verified order already in database',
                 status=200)
         else:
             order = None
@@ -107,79 +100,37 @@ class StripeWH_Handler:
                 order = Order.objects.create(
                     full_name=billing_details.name,
                     user_profile=profile,
-
                     email=billing_details.email,
                     phone_number=billing_details.phone,
-
                     postcode=billing_details.address.postal_code,
                     town_or_city=billing_details.address.city,
                     street_address1=billing_details.address.line1,
                     street_address2=billing_details.address.line2,
-                    # county=billing_details.address.state,
                     original_cart=cart,
                     stripe_pid=pid,
                 )
-                
-               # for item_id, item_data in json.loads(cart).items():
-                    
-                    #course = Course.objects.get(id=int(item_id))
-                    #exam_course = ExamCourse.objects.get(id=int(item_id))
-                print('cart', cart)
-                print(type(cart))
+
                 cart_as_dict = json.loads(cart)
-                print("cart_as_dict", cart_as_dict)
-                print(type(cart_as_dict))
+
                 if cart_as_dict["courses"]:
-                    print('CART', cart)
-                    print(type(cart))
-                    
-                    print("cart_as_dict", cart_as_dict)
-                    print(type(cart_as_dict))
                     for item_id, item_data in json.loads(cart)["courses"].items():
-                      
-                        print('ITEM DATA', item_data)
-                        print('CART', cart)
-                        print(item_id)
                         order_line_item = OrderLineItem(
                             order=order,
                             course=Course.objects.get(pk=item_id),
                             quantity=item_data,
-                            )
-                        order_line_item.save()    
+                        )
+                    order_line_item.save()
 
                 if cart_as_dict["exam_courses"]:
-                    print(cart)
                     for item_id, item_data in json.loads(cart)["exam_courses"].items():
-                        print(item_id)
                         order_line_item = OrderLineItem(
                             order=order,
                             exam_course=ExamCourse.objects.get(pk=item_id),
                             quantity=item_data,
-                            )
-                       
+                        )
                         order_line_item.save()
-                                           
-                       
-                   # if isinstance(item_data, int):
-                    #    order_line_item = OrderLineItem(
-                     #       order=order,
-                      #      course=course,
-                       #     exam_course=exam_course,
-                        #    quantity=item_data,
-                        #)
-                        #order_line_item.save()
-                   # else:
-                    #    for quantity in item_data['item_type'].items():
-                     #       order_line_item = OrderLineItem(
-                      #          order=order,
-                       #         course=course,
-                        #        exam_course=exam_course,
-                         #       quantity=quantity,
 
-                          #  )
-                           # order_line_item.save()
             except Exception as e:
-                print("EXCEPTION ON LINE 165: ", e)
                 if order:
                     order.delete()
                 return HttpResponse(
@@ -187,7 +138,8 @@ class StripeWH_Handler:
                     status=500)
         self._send_confirmation_email(order)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
+            content=f'Webhook received: {event["type"]} \
+                | SUCCESS: Created order in webhook',
             status=200)
 
     def handle_payment_intent_payment_failed(self, event):

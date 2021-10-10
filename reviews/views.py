@@ -8,15 +8,12 @@ from profiles.models import UserProfile
 # Create your views here
 
 
-
 def reviews(request):
     """ A view to return the index page """
     reviews = Review.objects.order_by('-date_created')
-
     context = {
         'reviews': reviews
     }
-
     return render(request, 'reviews/reviews.html', context)
 
 
@@ -25,7 +22,6 @@ def write_review(request):
     """."""
     if request.method == 'POST':
         form = WriteReview(request.POST)
-
         if form.is_valid():
             review = form.save(commit=False)
             review.creator = UserProfile.objects.get(user=request.user)
@@ -34,7 +30,8 @@ def write_review(request):
             return redirect('reviews')
         else:
             messages.error(
-                request, 'Failed to add product. Please ensure the form is valid.')
+                request,
+                'Failed to add product. Please ensure the form is valid.')
     else:
         form = WriteReview()
 
@@ -49,7 +46,6 @@ def write_review(request):
 def edit_review(request, review_id):
     """"""
     review = get_object_or_404(Review, pk=review_id)
-
     if request.user.userprofile != review.creator:
         messages.error(request, 'You do not have access to that Review!')
         return redirect('reviews')
@@ -64,7 +60,6 @@ def edit_review(request, review_id):
             return redirect('reviews')
 
     edit_form = WriteReview(instance=review)
-
     context = {
         'form': edit_form,
         'review': review
@@ -76,7 +71,6 @@ def edit_review(request, review_id):
 def delete_review(request, review_id):
     """ """
     review = get_object_or_404(Review, pk=review_id)
-
     if request.user.userprofile == review.creator:
         review.delete()
         messages.success(request, 'Review Deleted!')

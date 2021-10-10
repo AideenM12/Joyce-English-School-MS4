@@ -6,11 +6,11 @@
           <li><a href="{% url 'home' %}" >Home</a></li>
           <li><a href="{% url 'courses' %}">Courses</a></li>
           <li><a href="{% url 'exam_courses' %}">Exam Courses</a></li>
-         
+          <li><a href="{% url 'reviews' %}">Reviews</a></li>
           <li><a href="{% url 'contact' %}">Contact</a></li>
           {% if request.user.is_authenticated %}
           <li><a href="{% url 'profile' %}">Profile</a></li>
-          <li><a href="{% url 'reviews' %}">Reviews</a></li>
+          
           {% if request.user.is_superuser %}
           <li class="list-inline-item dropdown">
           <a class='dropdown-trigger' href='#' data-target='dropdown1' aria-haspopup="true" aria-expanded="false">

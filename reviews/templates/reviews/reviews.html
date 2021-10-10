@@ -31,8 +31,9 @@
     </div>
     {% endfor %}
 </div>
+{% if request.user.is_authenticated %}
 <a href="{% url 'write_review' %}" class="btn btn-primary">Create Review</a>
-    
+{% endif %}
 <div class="parallax-container">
    <div class="parallax">
       <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="pages">

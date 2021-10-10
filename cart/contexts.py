@@ -19,7 +19,6 @@ def cart_contents(request):
         for item_id, item_data in cart[key].items():
             if key == "courses":
                 course = get_object_or_404(Course, pk=item_id)
-                # if item_id == course.id:
                 total += item_data * course.price
                 course_count += item_data
                 cart_items.append({
@@ -29,7 +28,6 @@ def cart_contents(request):
                 })
             elif key == "exam_courses":
                 exam_course = get_object_or_404(ExamCourse, pk=item_id)
-                # if item_id != exam_course.id:
                 total += item_data * exam_course.price
                 exam_course_count += item_data
                 cart_items.append({
@@ -37,7 +35,6 @@ def cart_contents(request):
                     'quantity': item_data,
                     'exam_course': exam_course,
                 })
-        print(cart_items)
 
     order_total = total
     context = {

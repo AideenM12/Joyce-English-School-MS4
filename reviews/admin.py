@@ -10,7 +10,6 @@ class WriteReviewAdmin(admin.ModelAdmin):
         'comments',
         'date_created',
         'creator',
-
     )
 
 

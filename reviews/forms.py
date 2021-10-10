@@ -2,13 +2,11 @@ from django import forms
 from .models import Review
 
 
-
 class WriteReview(forms.ModelForm):
     """WriteReview form."""
     class Meta:
         model = Review
         fields = ('title', 'comments',)
-        
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -19,7 +17,7 @@ class WriteReview(forms.ModelForm):
 
         self.fields['title'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            
+
             if self.fields[field].required:
                 placeholder = f'{placeholders[field]} *'
             self.fields[field].widget.attrs['placeholder'] = placeholder

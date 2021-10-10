@@ -3,8 +3,6 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from .models import Course
-
-
 from .forms import CourseForm
 
 # Create your views here.
@@ -47,7 +45,8 @@ def add_course(request):
             return redirect(reverse('add_course'))
         else:
             messages.error(
-                request, 'Failed to add course. Please ensure the form is valid.')
+                request,
+                'Failed to add course. Please ensure the form is valid.')
     else:
         form = CourseForm()
 
@@ -75,7 +74,8 @@ def edit_course(request, course_id):
             return redirect(reverse('course_detail', args=[course.id]))
         else:
             messages.error(
-                request, 'Failed to update course. Please ensure the form is valid.')
+                request,
+                'Failed to update course. Please ensure the form is valid.')
     else:
         form = CourseForm(instance=course)
         messages.info(request, f'You are editing {course.name}')
