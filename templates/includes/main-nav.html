@@ -1,29 +1,29 @@
+<!--Main Navigation Content-->
 <nav class="nav-extended">
-    <div class="nav-wrapper text-shadow">
-       <a href="#" class="brand-logo ">Joyce School of English</a>
-       <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-       <ul class="right hide-on-med-and-down">
-          <li><a href="{% url 'home' %}" >Home</a></li>
-          <li><a href="{% url 'courses' %}">Courses</a></li>
-          <li><a href="{% url 'exam_courses' %}">Exam Courses</a></li>
-          <li><a href="{% url 'reviews' %}">Reviews</a></li>
-          <li><a href="{% url 'contact' %}">Contact</a></li>
-          {% if request.user.is_authenticated %}
-          <li><a href="{% url 'profile' %}">Profile</a></li>
-          
-          {% if request.user.is_superuser %}
-          <li class="list-inline-item dropdown">
-          <a class='dropdown-trigger' href='#' data-target='dropdown1' aria-haspopup="true" aria-expanded="false">
-            Site Management<i class="fas fa-caret-down"></i></a></li>
-            <ul id='dropdown1' class='dropdown-content center'>
-               
-               <li><a href="{% url 'add_course' %}">Add Courses</a></li>
-               <li><a href="{% url 'add_exam_course' %}">Add Exam Courses</a></li>
-            </ul>
-            {% endif %}
+   <div class="nav-wrapper text-shadow">
+      <a href="#" class="brand-logo ">Joyce School of English</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+      <ul class="right hide-on-med-and-down">
+         <li><a href="{% url 'home' %}" >Home</a></li>
+         <li><a href="{% url 'courses' %}">Courses</a></li>
+         <li><a href="{% url 'exam_courses' %}">Exam Courses</a></li>
+         <li><a href="{% url 'reviews' %}">Reviews</a></li>
+         <li><a href="{% url 'contact' %}">Contact</a></li>
+         {% if request.user.is_authenticated %}
+         <li><a href="{% url 'profile' %}">Profile</a></li>
+         {% if request.user.is_superuser %}
+         <li class="list-inline-item dropdown">
+            <a class='dropdown-trigger' href='#' data-target='dropdown1' aria-haspopup="true" aria-expanded="false">
+            Site Management<i class="fas fa-caret-down"></i></a>
+         </li>
+         <ul id='dropdown1' class='dropdown-content center'>
+            <li><a href="{% url 'add_course' %}">Add Courses</a></li>
+            <li><a href="{% url 'add_exam_course' %}">Add Exam Courses</a></li>
+         </ul>
+         {% endif %}
          <li class="list-inline-item">
             <a class="{% if order_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'cart' %}">
-               <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-shopping-cart"></i>
             {% if order_total %}
             ${{ order_total|floatformat:2 }}
             {% else %}
@@ -31,12 +31,11 @@
             {% endif %}
             </a>
          </li>
-          
-          <li><a href="{% url 'account_logout' %}">Log Out</a></li>
-          {% else %}
-          <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-          <li><a href="{% url 'account_login' %}">Log In</a></li>
-          {% endif %}
-       </ul>
-    </div>
- </nav>
+         <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+         {% else %}
+         <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+         <li><a href="{% url 'account_login' %}">Log In</a></li>
+         {% endif %}
+      </ul>
+   </div>
+</nav>

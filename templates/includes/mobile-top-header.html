@@ -1,35 +1,32 @@
+<!--Main Mobile Navigation-->
 <ul class="sidenav right" id="mobile-demo">
-  <li>
-     <h4 class="center-align sidenav-h4">Joyce School</h4>
-  </li>
-  <li><a href="{% url 'home' %}" >Home</a></li>
-  <li><a href="{% url 'courses' %}">Courses</a></li>
-  <li><a href="{% url 'exam_courses' %}">Exam Courses</a></li>
-  <li><a href="{% url 'contact' %}">Contact</a></li>
-  <li><a href="{% url 'reviews' %}">Reviews</a></li>
-  {% if request.user.is_authenticated %}
-  <li><a href="{% url 'profile' %}">Profile</a></li>
-  
-  {% if request.user.is_superuser %}
-        
-               <li><a href="{% url 'add_course' %}">Add Courses</a></li>
-               <li><a href="{% url 'add_exam_course' %}">Add Exam Courses</a></li>
-            
-            {% endif %}
-<li class="list-inline-item">
-   <a class="{% if order_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'cart' %}">
-      <i class="fas fa-shopping-cart"></i>
-   {% if order_total %}
-   ${{ order_total|floatformat:2 }}
-   {% else %}
-   €0.00
+   <li>
+      <h4 class="center-align sidenav-h4">Joyce School</h4>
+   </li>
+   <li><a href="{% url 'home' %}" >Home</a></li>
+   <li><a href="{% url 'courses' %}">Courses</a></li>
+   <li><a href="{% url 'exam_courses' %}">Exam Courses</a></li>
+   <li><a href="{% url 'contact' %}">Contact</a></li>
+   <li><a href="{% url 'reviews' %}">Reviews</a></li>
+   {% if request.user.is_authenticated %}
+   <li><a href="{% url 'profile' %}">Profile</a></li>
+   {% if request.user.is_superuser %}
+   <li><a href="{% url 'add_course' %}">Add Courses</a></li>
+   <li><a href="{% url 'add_exam_course' %}">Add Exam Courses</a></li>
    {% endif %}
-   </a>
-</li>
-
-  <li><a href="{% url 'account_logout' %}">Log Out</a></li>
-  {% else %}
-  <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-  <li><a href="{% url 'account_login' %}">Log In</a></li>
-  {% endif %}
+   <li class="list-inline-item">
+      <a class="{% if order_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'cart' %}">
+      <i class="fas fa-shopping-cart"></i>
+      {% if order_total %}
+      ${{ order_total|floatformat:2 }}
+      {% else %}
+      €0.00
+      {% endif %}
+      </a>
+   </li>
+   <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+   {% else %}
+   <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+   <li><a href="{% url 'account_login' %}">Log In</a></li>
+   {% endif %}
 </ul>
