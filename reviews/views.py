@@ -17,6 +17,8 @@ def reviews(request):
 
     return render(request, 'reviews/reviews.html', context)
 
+from .models import Review
+from profiles.models import UserProfile
 
 def write_review(request):
     """."""
@@ -24,8 +26,9 @@ def write_review(request):
         form = WriteReview(request.POST)
         
         if form.is_valid():
-            form.user = request.user
-            review = form.save()
+            review = form.save(commit=False)
+            review.creator = UserProfile.objects.get(user=request.user)
+            form.save()
             messages.success(request, 'Review added!')
             return redirect('write_review')
         else:

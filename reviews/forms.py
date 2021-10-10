@@ -7,7 +7,7 @@ class WriteReview(forms.ModelForm):
     """WriteReview form."""
     class Meta:
         model = Review
-        fields = ('title', 'comments', 'creator',)
+        fields = ('title', 'comments',)
         
 
     def __init__(self, *args, **kwargs):
@@ -15,8 +15,6 @@ class WriteReview(forms.ModelForm):
         placeholders = {
             'title': 'Title',
             'comments': 'Write your review here',
-            'creator': '',
-            
         }
 
         self.fields['title'].widget.attrs['autofocus'] = True
@@ -24,5 +22,6 @@ class WriteReview(forms.ModelForm):
             
             if self.fields[field].required:
                 placeholder = f'{placeholders[field]} *'
+            self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'form-control'
             self.fields[field].label = False
