@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
-
+from django.contrib.auth.decorators import login_required
 from .models import Review
 from .forms import WriteReview
 
 from profiles.models import UserProfile
-# Create your views here.
+# Create your views here
+
 
 
 def reviews(request):
@@ -19,6 +20,7 @@ def reviews(request):
     return render(request, 'reviews/reviews.html', context)
 
 
+@login_required
 def write_review(request):
     """."""
     if request.method == 'POST':
@@ -29,7 +31,7 @@ def write_review(request):
             review.creator = UserProfile.objects.get(user=request.user)
             form.save()
             messages.success(request, 'Review added!')
-            return redirect('write_review')
+            return redirect('reviews')
         else:
             messages.error(
                 request, 'Failed to add product. Please ensure the form is valid.')
@@ -43,6 +45,7 @@ def write_review(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_review(request, review_id):
     """"""
     review = get_object_or_404(Review, pk=review_id)
@@ -69,6 +72,7 @@ def edit_review(request, review_id):
     return render(request, 'reviews/edit_review.html', context)
 
 
+@login_required
 def delete_review(request, review_id):
     """ """
     review = get_object_or_404(Review, pk=review_id)

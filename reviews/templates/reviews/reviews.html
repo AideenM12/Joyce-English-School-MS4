@@ -21,7 +21,7 @@
                 <p class="center-align"><span class="highlight"> Date </span><br>{{ review.date_created }}</p>
                 <p class="center-align"><span class="highlight"> By </span><br>{{ review.creator }}</p>
                 <div class="card-action center-align">
-                    {% if request.user.userprofile == review.creator %}
+                    {% if request.user.userprofile == review.creator or request.user.is_superuser %}
                     <a class="btn" href="{% url 'edit_review' review.id %}" aria-label="Edit review from {{ review.creator }}">Edit</a>
                     <a class="btn" href="{% url 'delete_review' review.id %}">Delete</a>
                    {% endif %}
