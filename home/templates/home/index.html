@@ -2,63 +2,64 @@
 {% load static %}
 {% block content %}
 <main>
-<div class="parallax-container" id="top-parallax">
-   <div class="parallax">
-      <img src="{{ MEDIA_URL }}flag.jpg" alt="joyce-statue" width="640" height="640">
-   </div>
-</div>
-{% if request.user.is_authenticated %} 
-<div class="row">
-<div class="col l12  m10 offset-m1 s12">
-   <div class="card  home-card">
-      <div class="card-content center-align ">
-         <span class="card-title home-card-title">Welcome back to the Joyce School of English</span>
-         <p> We are a small English language school nestled in the heart of Trieste. We are all native English speakers with a passion for teaching and we strive to make English accessible for all our students! We teach all ages and levels. Check out our courses to see if there's something to suit you!
-         </p>
+   <!----Parallax Container---->
+   <div class="parallax-container" id="top-parallax">
+      <div class="parallax">
+         <img src="{{ MEDIA_URL }}flag.jpg" alt="joyce-statue" width="640" height="640">
       </div>
    </div>
-</div>
-</div>
-
-<div class="row">
-   <div class="col l4 s12 m10 offset-m1 ">
-      <div class="card home-card">
-         <div class="card-content center-align ">
-            <span class="card-title home-card-title">Courses</span>
-            <p>Welcome back! Click here to sign up to one of our excellent general English courses!
-            </p>
-         </div>
-         <div class=" center-align card-action">
-            <a href="{% url 'courses' %}" class="btn">Courses </a>
+   <!-----------About Section----------->
+   {% if request.user.is_authenticated %} 
+   <div class="row">
+      <div class="col l12  m10 offset-m1 s12">
+         <div class="card  home-card">
+            <div class="card-content center-align ">
+               <span class="card-title home-card-title">Welcome back to the Joyce School of English</span>
+               <p> We are a small English language school nestled in the heart of Trieste. We are all native English speakers with a passion for teaching and we strive to make English accessible for all our students! We teach all ages and levels. Check out our courses to see if there's something to suit you!
+               </p>
+            </div>
          </div>
       </div>
    </div>
    <div class="row">
-      <div class="col l4 s12 m10 offset-m1">
+      <div class="col l4 s12 m10 offset-m1 ">
          <div class="card home-card">
             <div class="card-content center-align ">
-               <span class="card-title home-card-title">Profile</span>
-               <p>Hello and welcome back {{ user }}! Click here to view your profile and update your billing details.
+               <span class="card-title home-card-title">Courses</span>
+               <p>Welcome back! Click here to sign up to one of our excellent general English courses!
                </p>
             </div>
             <div class=" center-align card-action">
-               <a href="{% url 'profile' %}" class="btn">Profile </a>
+               <a href="{% url 'courses' %}" class="btn">Courses </a>
             </div>
          </div>
       </div>
-      <div class="col l4 s12 m10 offset-m1">
-         <div class="card home-card ">
-            <div class="card-content center-align ">
-               <span class="card-title home-card-title">Exam Courses</span>
-               <p>Want to achieve a certification? Click here to explore our range of exam courses!
-               </p>
+      <div class="row">
+         <div class="col l4 s12 m10 offset-m1">
+            <div class="card home-card">
+               <div class="card-content center-align ">
+                  <span class="card-title home-card-title">Profile</span>
+                  <p>Hello and welcome back {{ user }}! Click here to view your profile and update your billing details.
+                  </p>
+               </div>
+               <div class=" center-align card-action">
+                  <a href="{% url 'profile' %}" class="btn">Profile </a>
+               </div>
             </div>
-            <div class=" center-align card-action">
-               <a href="{% url 'exam_courses' %}" class="btn">Exam Courses </a>
+         </div>
+         <div class="col l4 s12 m10 offset-m1">
+            <div class="card home-card ">
+               <div class="card-content center-align ">
+                  <span class="card-title home-card-title">Exam Courses</span>
+                  <p>Want to achieve a certification? Click here to explore our range of exam courses!
+                  </p>
+               </div>
+               <div class=" center-align card-action">
+                  <a href="{% url 'exam_courses' %}" class="btn">Exam Courses </a>
+               </div>
             </div>
          </div>
       </div>
-   </div>
    </div>
    {% else %}
    <div class="row">
@@ -84,7 +85,6 @@
             </div>
          </div>
       </div>
-    
       <div class="col l4 s12 m10 offset-m1">
          <div class="card home-card ">
             <div class="card-content center-align ">
@@ -97,26 +97,25 @@
             </div>
          </div>
       </div>
-   
-   <div class="col l4 s12 m10 offset-m1">
-      <div class="card home-card ">
-         <div class="card-content center-align ">
-            <span class="card-title home-card-title">Log In</span>
-            <p>Already a member? Click here to jump back in, sign-up for a new course and continue the journey!
-            </p>
-         </div>
-         <div class=" center-align card-action">
-            <a href="{% url 'account_login' %}" class="btn">Log In </a>
+      <div class="col l4 s12 m10 offset-m1">
+         <div class="card home-card ">
+            <div class="card-content center-align ">
+               <span class="card-title home-card-title">Log In</span>
+               <p>Already a member? Click here to jump back in, sign-up for a new course and continue the journey!
+               </p>
+            </div>
+            <div class=" center-align card-action">
+               <a href="{% url 'account_login' %}" class="btn">Log In </a>
+            </div>
          </div>
       </div>
-   </div>
-   </div>
-   </div>
+   </div>   
    {% endif %}
-<div class="parallax-container">
-   <div class="parallax">
-      <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="banshee">
+   <!----Parallax Container---->
+   <div class="parallax-container">
+      <div class="parallax">
+         <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="banshee">
+      </div>
    </div>
-</div>
 </main>
 {% endblock %}
