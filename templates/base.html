@@ -49,7 +49,7 @@
          {% for message in messages %}
          {% if message.tags == 'success'%}
          <div class="container">
-            <script>M.toast({html: "{{message}}", classes: 'blue', displayLength:4000});</script>
+            <script>M.toast({html: "{{message}}", classes: 'blue rounded', displayLength:4000});</script>
          </div>
          {% endif %}
          {% if message.tags == 'error'%}

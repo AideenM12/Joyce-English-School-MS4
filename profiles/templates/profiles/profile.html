@@ -5,17 +5,17 @@
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
+
+{% block content %}
 <div class="parallax-container" id="top-parallax">
     <div class="parallax">
        <img src="{{ MEDIA_URL }}flag.jpg" alt="joyce-statue" width="640" height="640">
     </div>
  </div>
 
-{% block content %}
-
 
     <div class="row">
-        <div class="col text-center">            
+        <div class="col center-align">            
             <h2 class="text-center">{{ user }}'s Profile</h2>
             </div>
     </div>
