@@ -1,27 +1,29 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+<!--Main Exam Course Content-->
 <body class="background-image-1">
-<div class="row">
-   <div class="col s12 center-align">
-      <h3 class=" page-header text-shadow">Exam Courses</h3>
-   </div>
-</div>
-<div class="row">
-   {% for exam_course in exam_courses %}
-   <div class="col l4 s12 m10">
-      <div class="card exam-course-card ">
-         <div class="card-content center-align course-content ">
-            <span class=" card-title exam-card-title">{{ exam_course.name }}</span>
-            <span class="highlight">Level Required:</span><br><span>{{ exam_course.required_level }}</span><br>
-            <span class="highlight">Certification Awarded:</span><br><span>{{ exam_course.certification_awarded }}</span>
-         </div>
-         <div class="card-action center-align exam-card-action">
-            <a href="{% url 'exam_course_detail' exam_course.id %}" class=" btn">Read more</a>
-         </div>
+   <div class="row">
+      <div class="col s12 center-align">
+         <h3 class=" page-header text-shadow">Exam Courses</h3>
       </div>
    </div>
-   {% endfor %}
-</div>
+   <!--Exam Course Cards-->
+   <div class="row">
+      {% for exam_course in exam_courses %}
+      <div class="col l4 s12 m10">
+         <div class="card exam-course-card ">
+            <div class="card-content center-align course-content ">
+               <span class=" card-title exam-card-title">{{ exam_course.name }}</span>
+               <span class="highlight">Level Required:</span><br><span>{{ exam_course.required_level }}</span><br>
+               <span class="highlight">Certification Awarded:</span><br><span>{{ exam_course.certification_awarded }}</span>
+            </div>
+            <div class="card-action center-align exam-card-action">
+               <a href="{% url 'exam_course_detail' exam_course.id %}" class=" btn">Read more</a>
+            </div>
+         </div>
+      </div>
+      {% endfor %}
+   </div>
 </body>
 {% endblock %}

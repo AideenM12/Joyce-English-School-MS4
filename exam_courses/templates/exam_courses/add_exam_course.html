@@ -1,42 +1,35 @@
 {% extends "base.html" %}
 {% load static %}
-
-
-
 {% block content %}
 <!--Main Add Exam Course Content-->
 <body class="background-image-2">
-    
-        <div class="row">
-            <div class="col s12 center-align">
-                
-                <h2 class="page-header text-shadow">Site Management</h2>
-                <h5 class="page-header text-shadow">Add an Exam Course</h5>
-            </div>
-        </div>
-<!--Add Course Form-->
-        <div class="row">
-            <div class="col l10 offset-l1 m10 offset-m1 s12">
-                <form method="POST" action="{% url 'add_exam_course' %}" class="form card-panel course-form" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {% for field in form %}
+   <div class="row">
+      <div class="col s12 center-align">
+         <h2 class="page-header text-shadow">Site Management</h2>
+         <h5 class="page-header text-shadow">Add an Exam Course</h5>
+      </div>
+   </div>
+   <!--Add Course Form-->
+   <div class="row">
+      <div class="col l10 offset-l1 m10 offset-m1 s12">
+         <form method="POST" action="{% url 'add_exam_course' %}" class="form card-panel course-form" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in form %}
             {% if field.name != 'image' %}
             {{ field | as_crispy_field }}
             {% else %}
             {{ field }}
             {% endif %}
             {% endfor %}
-                    <div class="text-right">
-                        <a class="btn " href="{% url 'exam_courses' %}">Cancel</a>
-                        <button class="btn " type="submit">Add Course</button>
-                    </div>
-                </form>
-            </div>            
-        </div>
-  
-    </body>
+            <div class="text-right">
+               <a class="btn " href="{% url 'exam_courses' %}">Cancel</a>
+               <button class="btn " type="submit">Add Course</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</body>
 {% endblock %}
-
 <!--Update Image JS-->
 {% block postloadjs %}
 {{ block.super }}
