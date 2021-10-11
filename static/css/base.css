@@ -384,6 +384,14 @@ label{
 	font-size: 2.5rem;
 }
 
+input#id_title.form-control{
+	font-size: 1.5rem;
+    margin-top: 1rem;
+}
+textarea#id_comments.form-control{
+	font-size: 1.5rem;
+	height: 15vh;
+}
 
 @media only screen and (min-width: 577px) and (max-width:992px) {
 	.allauth-card{
@@ -479,5 +487,8 @@ label{
 		width:auto;
 		margin-left: auto;
     	margin-right: auto;
+	}
+	textarea#id_comments.form-control{
+		height: 10vh;
 	}
 }
