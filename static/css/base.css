@@ -53,6 +53,9 @@ nav{
 	color: #e63946;
 	font-weight: 500;
 }
+.no-float{
+	float: none !important;
+}
 /*--Bootstrap inline list style Found on Stack Overflow--*/
 
 .list-inline {
@@ -156,6 +159,30 @@ footer>h5 {
 	font-family: 'Patrick Hand', sans-serif ;
 	font-size: 2.5rem !important;
 }
+/*---End Home Page----*/
+/*-----Profile Page----*/
+.profile-header{
+	float: none!important;
+}
+
+#profile-update-form{
+	margin-left: 1.5rem !important;
+	margin-right: 1.5rem !important;
+}
+#profile-update-form .input-field>label{
+	color: #070a0d !important;
+	font-size: 1.5rem !important;
+	font-weight: 800;
+    text-decoration-line: underline;
+}
+.order-history{
+	margin-left: 1.5rem !important;
+	margin-right: 1.5rem !important;
+}
+tbody{
+	font-weight: 600;
+}
+/*----End Profile Page---*/
 /*----Cart Page CSS------*/
 #cart-btn-div{
 	margin-bottom: 10px;

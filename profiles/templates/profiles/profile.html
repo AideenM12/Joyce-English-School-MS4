@@ -1,87 +1,86 @@
 {% extends "base.html" %}
 {% load static %}
-
-
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
-{% endblock %}
-
 {% block content %}
+<!--Main Profile Content-->
+<!--Parallax Container-->
 <div class="parallax-container" id="top-parallax">
-    <div class="parallax">
-       <img src="{{ MEDIA_URL }}flag.jpg" alt="joyce-statue" width="640" height="640">
-    </div>
- </div>
-
-
-    <div class="row">
-        <div class="col center-align">            
-            <h2 class="text-center">{{ user }}'s Profile</h2>
-            </div>
-    </div>
-    <div class="row">
-        <div class="">
-            <p class="large-text">Default Billing Information</p>
-            <form class="card-panel" action="{% url 'profile' %}" method="POST" id="profile-update-form">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <button class="btn center-align">Update Information</button>
-            </form>
-        </div>
-        <div class="">
-            <p class="large-text">Order History</p>
-            <div class="order-history table-responsive card-panel">
-                <table class="table table-sm table-borderless">
-                    <thead>
-                        <tr>
-                            <th>Order Number</th>
-                            <th>Date</th>
-                            <th>Items</th>
-                            <th>Order Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for order in orders %}
-                            <tr>
-                                <td>
-                                    <a href="{% url 'order_history' order.order_number %}"
-                                    title="{{ order.order_number }}">
-                                        {{ order.order_number|truncatechars:6 }}
-                                    </a>
-                                </td>
-                                <td>{{ order.date }}</td>
-                                <td>
-                                    <ul class="list-unstyled">
-                                        {% for item in order.lineitems.all %}
-                                            <li class="small">
-                                                {% if 'course' in item %}
-                                                <p class="my-0"><strong>{{ item.course.name }}</strong></p>
-                            
-                                                <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
-                                                
-                                                {% elif 'exam_course' in item %}
-                                                <p class="my-0"><strong>{{ item.exam_course.name }}</strong></p>
-                            
-                                                <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
-                                                {% endif %}
-                                            </li>
-                                        {% endfor %}
-                                    </ul>
-                                </td>
-                                <td>${{ order.order_total }}</td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                
-            
-                </table>
-       
-           <div class="parallax-container">
-            <div class="parallax">
-               <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="banshee">
+   <div class="parallax">
+      <img src="{{ MEDIA_URL }}flag.jpg" alt="joyce-statue" width="640" height="640">
+   </div>
+</div>
+<!--Profile Header-->
+<div class="row">
+   <div class="col l6 no-float offset-l3 profile-header">
+      <div class="card-panel">
+         <h2 class="center-align">{{ user }}'s Profile</h2>
+         <p class="center-align large-text">Default Billing Information</p>
+      </div>
+   </div>
+</div>
+<!--Update Profile Form-->
+<div class="row">
+   <form class="card-panel" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <div class="row">
+         <div class="col s12">
+            <div class="card-action center-align">
+               <button class="btn center-align">Update Information</button>
             </div>
          </div>
+      </div>
+   </form>
+</div>
+<!--Order History-->
+<div class="row">
+   <h4 class=" center-align">Your Order History</h4>
+</div>
+<div class="order-history table-responsive card-panel">
+   <table class="table striped">
+      <thead>
+         <tr>
+            <th>Order Number</th>
+            <th>Date</th>
+            <th>Items</th>
+            <th>Order Total</th>
+         </tr>
+      </thead>
+      <tbody>
+         {% for order in orders %}
+         <tr>
+            <td>
+               <a href="{% url 'order_history' order.order_number %}"
+                  title="{{ order.order_number }}">
+               {{ order.order_number|truncatechars:6 }}
+               </a>
+            </td>
+            <td>{{ order.date }}</td>
+            <td>
+               <ul class="list-unstyled">
+                  {% for item in order.lineitems.all %}
+                  <li class="small">
+                     {% if 'course' in item %}
+                     <p class="my-0"><strong>{{ item.course.name }}</strong></p>
+                     <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                     {% elif 'exam_course' in item %}
+                     <p class="my-0"><strong>{{ item.exam_course.name }}</strong></p>
+                     <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                     {% endif %}
+                  </li>
+                  {% endfor %}
+               </ul>
+            </td>
+            <td>${{ order.order_total }}</td>
+         </tr>
+         {% endfor %}
+      </tbody>
+   </table>
+</div>
+</div>
+<!--Parallax Container-->
+<div class="parallax-container">
+   <div class="parallax">
+      <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="banshee">
+   </div>
+</div>
 {% endblock %}
-
-
-
