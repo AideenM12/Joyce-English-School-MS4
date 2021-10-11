@@ -1,69 +1,60 @@
 {% extends "account/base.html" %}
-
 {% load i18n %}
-
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
-
 {% block content %}
 <body class="background-image-1">
-<div class="row">
-  <div class="col l6 offset-l4 s12 m10 offset-m1">
-  <div class="card-panel" id="sign-out-card">
-<h1 class="center-align">{% trans "Sign Out?" %}</h1>
-
-<h6 class="center-align">{% trans 'Are you sure you want to sign out?' %}</h6>
-
-<form method="post" action="{% url 'account_logout' %}" class="center-align">
-  {% csrf_token %}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-  {% endif %}
-  <button type="submit" class="btn">{% trans 'Sign Out' %}</button>
-</form>
-</div>
-</div>
-</div>
-
-<div class="row">
-  <div class="col l4 s10 offset-s1 m10 offset-m1">
-    <div class="card nav-cards">
-      <div class="card-content nav-card-content center-align">
-         <h5 class="card-title">Courses</h5>
-         <h6>Go back to courses</h6>
+   <div class="row">
+      <div class="col l12  s10 offset-s1 m10 offset-m1">
+         <div class="card-panel allauth-card">
+            <h1 class="center-align">{% trans "Sign Out?" %}</h1>
+            <h6 class="center-align">{% trans 'Are you sure you want to sign out?' %}</h6>
+            <form method="post" action="{% url 'account_logout' %}" class="center-align">
+               {% csrf_token %}
+               {% if redirect_field_value %}
+               <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+               {% endif %}
+               <button type="submit" class="btn">{% trans 'Sign Out' %}</button>
+            </form>
          </div>
-         <div class=" center-align card-action">
-         <a href="{% url 'courses' %}" class="btn">Courses
-         </a>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col l4 s10 offset-s1 m10 offset-m1">
+         <div class="card nav-cards">
+            <div class="card-content nav-card-content center-align">
+               <h5 class="card-title">Courses</h5>
+               <h6>Go back to courses</h6>
+            </div>
+            <div class=" center-align card-action">
+               <a href="{% url 'courses' %}" class="btn">Courses
+               </a>
+            </div>
          </div>
+      </div>
+      <div class="col l4 s10 offset-s1 m10 offset-m1">
+         <div class="card nav-cards">
+            <div class="card-content nav-card-content center-align ">
+               <h5 class="card-title">Profile</h5>
+               <h6>Back to my profile</h6>
+            </div>
+            <div class=" center-align card-action">
+               <a href="{% url 'profile' %}" class="btn">My profile
+               </a>
+            </div>
          </div>
-  </div>
-  <div class="col l4 s10 offset-s1 m10 offset-m1">
-    <div class="card nav-cards">
-      <div class="card-content nav-card-content center-align ">
-         <h5 class="card-title">Profile</h5>
-         <h6>Back to my profile</h6>
-        </div>
-        <div class=" center-align card-action">
-        <a href="{% url 'profile' %}" class="btn">My profile
-        </a>
+      </div>
+      <div class="col l4 s10 offset-s1 m10 offset-m1">
+         <div class="card nav-cards">
+            <div class="card-content nav-card-content center-align ">
+               <h5 class="card-title">Exam Courses</h5>
+               <h6>Back to Exam Courses</h6>
+            </div>
+            <div class=" center-align card-action">
+               <a href="{% url 'exam_courses' %}" class="btn">Exam Courses
+               </a>
+            </div>
          </div>
-         </div>
-  </div>
-  <div class="col l4 s10 offset-s1 m10 offset-m1">
-    <div class="card nav-cards">
-      <div class="card-content nav-card-content center-align ">
-         <h5 class="card-title">Exam Courses</h5>
-         <h6>Back to Exam Courses</h6>
-        </div>
-        <div class=" center-align card-action">
-        <a href="{% url 'exam_courses' %}" class="btn">Exam Courses
-        </a>
-         </div>
-         </div>
-
-  </div>
-</div>
+      </div>
+   </div>
 </body>
-
-
 {% endblock %}

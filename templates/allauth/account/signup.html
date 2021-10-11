@@ -1,40 +1,33 @@
 {% extends "account/base.html" %}
-
 {% load i18n %}
- 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
-
 {% block content %}
 <div class="parallax-container" id="top-parallax">
-  <div class="parallax">
-     <img src="{{ MEDIA_URL }}flag.jpg" alt="joyce-statue" width="640" height="640">
-  </div>
-  </div>
-  
+   <div class="parallax">
+      <img src="{{ MEDIA_URL }}flag.jpg" alt="joyce-statue" width="640" height="640">
+   </div>
+</div>
 <div class="row">
-<h1 class="text-shadow center-align">{% trans "Sign Up" %}</h1>
-
-
-<p class="form-p center-align">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+   <h1 class="text-shadow center-align">{% trans "Sign Up" %}</h1>
+   <p class="form-p center-align">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
 </div>
 <div class="row" id="form-row">
- <div class="container">
-<form class="signup card-panel" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <div class="row center-align">
-  <button type="submit" class="btn form-btn ">{% trans "Sign Up" %} &raquo;</button>
-  </div>
-</form>
+   <div class="col s12">
+      <form class="signup card-panel signup_form" method="post" action="{% url 'account_signup' %}">
+         {% csrf_token %}
+         {{ form.as_p }}
+         {% if redirect_field_value %}
+         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+         {% endif %}
+         <div class="row center-align">
+            <button type="submit" class="btn form-btn ">{% trans "Sign Up" %} &raquo;</button>
+         </div>
+      </form>
+   </div>
 </div>
-</div>
-
 <div class="parallax-container">
-  <div class="parallax">
-     <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="banshee">
-  </div>
+   <div class="parallax">
+      <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="banshee">
+   </div>
 </div>
 {% endblock %}

@@ -204,7 +204,7 @@ body.background-image-1 {
 	-o-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;
-	overflow-x: hidden;
+	overflow-x: hidden !important;
 }
 
 body.background-image-2 {
@@ -220,10 +220,12 @@ body.background-image-2 {
 }
 
 /* AllAuth CSS */
-#sign-out-card{
+.allauth-card{
 	margin-top: 2rem;
 	padding: 1rem 3rem 2rem 3rem;
-	width: 35vw;
+	width: 45vw;
+	margin-left: auto;
+	margin-right: auto;
 
 }
 .nav-cards{
@@ -293,8 +295,10 @@ label{
 	font-size: 1.25rem;
 	color: #070a0d !important;
 }
-#signup_form{
-	width: 70vw;
+.signup_form{
+	width: auto;
+	margin-left: 2rem;
+	margin-right: 2rem;
 }
 
 #form-row{
@@ -317,7 +321,7 @@ label{
 
 .btn{
 	margin: 1px;
-	background-color: #203a54;
+	background-color: #070a0d;
 	font-family: 'Architects Daughter', sans-serif;
 }
 .btn:hover{
@@ -337,7 +341,7 @@ label{
 }
 
 @media only screen and (min-width: 577px) and (max-width:992px) {
-	#sign-out-card{
+	.allauth-card{
 		margin-top: 2rem;
 		padding: 1rem 3rem 2rem 3rem;
 		width: 70vw;
@@ -351,6 +355,11 @@ label{
 		margin-right: auto;
 		width: 70vw;
 	}
+	.signup_form {
+		width: auto;
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
 
 }
 
@@ -358,7 +367,7 @@ label{
 	html,
 	body {
 		max-width: 100%;
-		overflow-x: hidden;
+		overflow-x: hidden !important;
 		height: auto !important;
 	}
 	/*-----------Navigation-------*/
@@ -404,10 +413,10 @@ label{
 		margin-bottom: 2.5rem;
 		margin-top: 2.5rem;
 	}
-	#sign-out-card{
+	.allauth-card{
 		margin-top: 2rem;
-		padding: 1rem 3rem 2rem 3rem;
-		width: 70vw;
+		padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+		width: 80vw;
 		margin-left: auto;
 		margin-right: auto;
 	
@@ -416,9 +425,14 @@ label{
 		padding: .25rem 1rem .75rem 1rem !important;
 		margin-left: auto;
 		margin-right: auto;
-		width: 70vw;
+		width: 80vw;
 	}
 	.large-text {
 		font-size: 1.25rem;
+	}
+	.signup_form{
+		width:auto;
+		margin-left: auto;
+    	margin-right: auto;
 	}
 }

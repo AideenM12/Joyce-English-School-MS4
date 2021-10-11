@@ -1,21 +1,23 @@
 {% extends "account/base.html" %}
-
 {% load i18n %}
-
 {% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
-
 {% block content %}
 <div class="parallax-container" id="top-parallax">
-    <div class="parallax">
-       <img src="{{ MEDIA_URL }}flag.jpg" alt="joyce-statue" width="640" height="640">
-    </div>
-    </div>
-    <h1>{% trans "Verify Your E-mail Address" %}</h1>
-
-    <p>{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. Please contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
-    <div class="parallax-container">
-        <div class="parallax">
-           <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="banshee">
-        </div>
+   <div class="parallax">
+      <img src="{{ MEDIA_URL }}flag.jpg" alt="joyce-statue" width="640" height="640">
+   </div>
+</div>
+<div class="row">
+   <div class="col l12  s10 offset-s1 m10 offset-m1">
+      <div class="card-panel allauth-card">
+         <h1 class="center-align">{% trans "Verify Your E-mail Address" %}</h1>
+         <p class="large-text">{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. Please contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
       </div>
-{% endblock %}
+   </div>
+</div>
+<div class="parallax-container">
+   <div class="parallax">
+      <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="banshee">
+   </div>
+</div>
+{% endblock %
