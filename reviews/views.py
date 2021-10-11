@@ -46,7 +46,7 @@ def write_review(request):
 def edit_review(request, review_id):
     """"""
     review = get_object_or_404(Review, pk=review_id)
-    if request.user.userprofile != review.creator:
+    if review.creator != request.user.userprofile:
         messages.error(request, 'You do not have access to that Review!')
         return redirect('reviews')
 
