@@ -302,7 +302,12 @@ textarea#id_description{
 	color: #070a0d !important;
 	font-size: 1rem !important;
 	font-weight: 700;
-    
+   
+}
+#div_id_image{
+	margin-top: 2rem;
+	height: 5vw;
+    padding-top: 2.5rem;
 }
 /*----------Forms and Allauth----------*/
 label{
@@ -510,5 +515,10 @@ textarea#id_comments.form-control{
 		margin: .25rem .25rem 1.45rem .25rem;
 		background-color: #f1faee;
     	color: #070a0d;
+	}
+	#div_id_image{
+		margin-top: 2rem;
+		height: 15vw;
+    	padding-top: 2rem;
 	}
 }
