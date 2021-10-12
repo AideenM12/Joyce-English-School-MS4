@@ -37,6 +37,9 @@ def cache_checkout_data(request):
 
 @login_required
 def checkout(request):
+    """
+    Gathers the information from an order form and creates an order in the DB.    
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -142,7 +145,7 @@ def checkout(request):
 @login_required
 def checkout_success(request, order_number):
     """
-    Handle successful checkouts
+    A view to handle successful checkouts
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
