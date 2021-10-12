@@ -3,6 +3,9 @@ from .models import ExamCourse
 
 
 class ExamCourseAdmin(admin.ModelAdmin):
+    """
+    Exam Course Admin
+    """
     list_display = (
         'name',
         'required_level',

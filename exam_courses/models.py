@@ -4,6 +4,9 @@ from django.db import models
 
 
 class ExamCourse(models.Model):
+    """
+    A Model for Exam Courses
+    """
     name = models.CharField(max_length=254)
     required_level = models.CharField(max_length=254)
     certification_awarded = models.CharField(max_length=254)

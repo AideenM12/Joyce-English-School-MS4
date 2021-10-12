@@ -9,7 +9,7 @@ from .forms import ExamCourseForm
 
 
 def exam_courses(request):
-    """ A view to return the courses page """
+    """ A view to return the exam courses page """
     exam_courses = ExamCourse.objects.all()
 
     context = {
@@ -20,7 +20,7 @@ def exam_courses(request):
 
 
 def exam_course_detail(request, exam_course_id):
-    """ A view to return details about each individual course"""
+    """ A view to return details about each individual exam course"""
     exam_course = get_object_or_404(ExamCourse, pk=exam_course_id)
 
     context = {
@@ -92,7 +92,7 @@ def edit_exam_course(request, exam_course_id):
 
 @login_required
 def delete_exam_course(request, exam_course_id):
-    """ Delete a product from the store """
+    """ Delete a course from the site """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only site admin can do that.')
         return redirect(reverse('home'))
