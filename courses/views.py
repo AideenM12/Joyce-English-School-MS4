@@ -91,7 +91,7 @@ def edit_course(request, course_id):
 
 @login_required
 def delete_course(request, course_id):
-    """ Delete a product from the store """
+    """ Delete a course from the site """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only site admin can do that.')
         return redirect(reverse('home'))

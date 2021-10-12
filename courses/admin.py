@@ -3,6 +3,7 @@ from .models import Course
 
 
 class CourseAdmin(admin.ModelAdmin):
+    """ Course Admin """
     list_display = (
         'name',
         'description',

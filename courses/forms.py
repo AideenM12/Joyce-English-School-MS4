@@ -4,7 +4,7 @@ from .models import Course
 
 
 class CourseForm(forms.ModelForm):
-
+    """Form to edit or add courses"""
     class Meta:
         model = Course
         fields = '__all__'
