@@ -6,7 +6,7 @@ from django.dispatch import receiver
 
 class UserProfile(models.Model):
     """
-    A user profile model for maintaining default
+    User profile model to maintain default
     delivery information and order history
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)

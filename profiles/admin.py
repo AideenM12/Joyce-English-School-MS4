@@ -3,6 +3,7 @@ from .models import UserProfile
 
 
 class UserProfileAdmin(admin.ModelAdmin):
+    """User Profile Admin"""
     list_display = (
         'user',
         'phone_number',

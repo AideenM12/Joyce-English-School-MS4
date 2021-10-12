@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from profiles.models import UserProfile
 from .models import Review
 from .forms import WriteReview
 
-from profiles.models import UserProfile
 # Create your views here
 
 
