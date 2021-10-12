@@ -36,7 +36,7 @@ body{
 #payment-form .form-control,
 #card-element {
     color: #000;
-    border: 1px solid #000;
+    border-bottom: 1px solid #000;
     margin-bottom: 0;
     opacity: 1 !important;
 }
