@@ -195,7 +195,7 @@ tbody{
 }*/
 
 /*-----Background Image CSS---*/
-body.background-image-1 {
+.background-image-1 {
 	background: url("../../media/flag.jpg") no-repeat center center fixed;
 	width: 100vw;
 	height: 100vh;
@@ -207,7 +207,7 @@ body.background-image-1 {
 	overflow-x: hidden !important;
 }
 
-body.background-image-2 {
+.background-image-2 {
 	background: url("../../media/pages.jpg") no-repeat center center fixed;
 	width: 100vw;
 	height: 100vh;
