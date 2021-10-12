@@ -3,6 +3,8 @@ $(document).ready(function(){
     $('.sidenav').sidenav({edge: "right"});
     $('.collapsible').collapsible();
     $('.dropdown-trigger').dropdown();
+    //Initializes delete modal alerts
+    $('.modal').modal();
   });
 // Floating Back to Top Button functionality
 // This code was found on https://codepen.io/desirecode/pen/MJPJqV

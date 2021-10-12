@@ -132,6 +132,7 @@ footer>h5 {
 
 .parallax-container .parallax img {
 	opacity: 1;
+	height: auto !important;
 }
 
 #top-parallax {
@@ -206,6 +207,7 @@ tbody{
 	background-repeat: no-repeat;
 	overflow-x: hidden !important;
 }
+
 
 .background-image-2 {
 	background: url("../../media/pages.jpg") no-repeat center center fixed;
