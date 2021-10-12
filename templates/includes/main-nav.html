@@ -25,7 +25,7 @@
             <a class="{% if order_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'cart' %}">
             <i class="fas fa-shopping-cart"></i>
             {% if order_total %}
-            ${{ order_total|floatformat:2 }}
+            €{{ order_total|floatformat:2 }}
             {% else %}
             €0.00
             {% endif %}

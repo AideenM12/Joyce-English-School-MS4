@@ -5,59 +5,74 @@
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 {% block content %}
-
+<body class="background-image-1">
    <div class="row">
-      <div class="col">
+      <div class="col s12 center-align">
          
-         <h2 class="center-align">Checkout</h2>
+         <h2 class="text-shadow page-header">Checkout</h2>
          
       </div>
    </div>
 
-<div class="container">
+
    <div class="col">
-      <p class="center-align">Order Summary ({{ course_count }})</p>
+      <h3 class=" text-shadow center-align page-header">Order Summary</h3>
         </div>
       
       {% for item in cart_items %}
       {% if 'course' in item %}
       <div class="row">
-         <div class="col">
+         <div class="col l10 offset-l1">
             <a href="{% url 'course_detail' item.course.id %}">
-               {% if item.course.image %}
-              
-                  <img class="responsive-img"  src="{{ item.course.image.url }}" alt="{{ course.name }}">
-                  {% else %}
-                  <img  src="{{ MEDIA_URL }}noimage.png" alt="{{ course.name }}">
                
-               {% endif %}
             </a>
          
-         <div class="col-7 card">
+            <div class="col l10 offset-l1">
+               <div class="card">
+                  <div class="card-title center-align">Your General Course Orders:</div>
+                  <div class="card-content">
+                     {% if item.course.image %}
+              
+            <img class="responsive-img"  src="{{ item.course.image.url }}" alt="{{ course.name }}">
+            {% else %}
+            <img  src="{{ MEDIA_URL }}noimage.png" alt="{{ course.name }}">
+         
+         {% endif %}
+
             <h5 class="center-align">{{ item.course.name }}</h5>
             <h5 class="center-align">Quantity: {{ item.quantity }}</h5>
          
-         <div class="col-3 text-right">
-            <h5 class="center-align">Order Total: €{{ item.course.price | calc_subtotal:item.quantity }}</h5>
+       
+            <h5 class="center-align">Course Total: €{{ item.course.price | calc_subtotal:item.quantity }}</h5>
+         </div>
          </div>
       </div>
-      {% elif 'exam_course' in item %}
+      {% endif %}
+      {% endfor %}
+      {% for item in cart_items %}
+      {% if 'exam_course' in item %}
       <div class="row">
-         <div class="col-2 mb-1 ">
+         <div class="col ">
             <a href="{% url 'exam_course_detail' item.exam_course.id %}">
-            {% if item.exam_course.image %}
-            <img class="w-100" src="{{ item..image.url }}" alt="{{ exam_course.name }}">
+            
+            </a>
+         </div>
+         </div>
+         <div class="col l10 offset-l1">
+            <div class="card">
+               <div class="card-title center-align">Your Exam Course Orders:</div>
+               <div class="card-content">
+                  {% if item.exam_course.image %}
+            <img class="responsive-img" src="{{ item.exam_course.image.url }}" alt="{{ exam_course.name }}">
             {% else %}
             <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ pt.name }}">
             {% endif %}
-            </a>
+            <h5 class="center-align">{{ item.exam_course.name }}</h5>
+            <h5 class="center-align">Quantity: {{ item.quantity }}</h5>
+         
+            <h5 class="center-align">Exam CourseTotal: €{{ item.exam_course.price | calc_subtotal:item.quantity }}</h5>
          </div>
-         <div class="col-7 card">
-            <p class="my-0"><strong>{{ item.exam_course.name }}</strong></p>
-            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
          </div>
-         <div class="col-3 text-right">
-            <p class="my-0 small text-muted">€{{ item.exam_course.price | calc_subtotal:item.quantity }}</p>
          </div>
       
       {% endif %}
@@ -69,12 +84,13 @@
    </div>
 </div>
    
-      <h6 class="center-align">Please fill out the form below to complete your order</h6>
       
-   <div class="">
+      
+   <div class="container">
     <div class="row">
       <form action="{% url 'checkout' %}" method="POST" id="payment-form" class=" center-align col s12 card-panel">
          {% csrf_token %}
+         <h6 class="center-align">Please fill out the form below to complete your order</h6>
          <fieldset class="rounded">
             <legend class="fieldset-label">Details</legend>
             {{ order_form.full_name | as_crispy_field }}
@@ -100,9 +116,11 @@
             </div>
          </fieldset>
          <fieldset>
+          <legend class="label">Card</legend>
             <label>
+               
                <div id="card-element" class="field  left"></div>
-               <span class="left">Card</span>
+             
             </label>
             <!-- Used to display form errors -->
             <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
@@ -115,12 +133,12 @@
             <i class="fas fa-lock"></i>
             </span>
             </button>
-            <p class="small text-danger my-0">
+            <p class="large-text">
                <span class="icon">
                <i class="fas fa-exclamation-circle"></i>
                </span>
-               <span>Your card will be charged <strong>${{ order_total|floatformat:2 }}</strong></span>
-            </p>
+               Your card will be charged <span class="highlight">€{{ order_total|floatformat:2 }}</span></p>
+            
          </div>
       </form>
       </div>
@@ -128,6 +146,7 @@
    </div>
 </div>
 </div>
+</body>
 {% endblock %}
 {% block postloadjs %}
 {{ block.super }}

@@ -37,9 +37,13 @@ body{
 #card-element {
     color: #000;
     border: 1px solid #000;
-    margin-bottom: 3rem;
+    margin-bottom: 0;
+    opacity: 1 !important;
 }
-
+.checkbox{
+  opacity: 1 !important;
+  position: relative !important;
+}
 
 
 * {
