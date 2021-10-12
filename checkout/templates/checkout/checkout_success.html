@@ -4,77 +4,77 @@
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 {% block content %}
+<!--Main Checkout Success Content-->
 <body class="background-image-1">
    <div class="row">
       <div class="col l10 s12 center-align">
          <h2 class="text-shadow page-header">Thank You</h2>
          <div class="card order-confirm">
             <p class="card-panel l10 s12 large-text">Your order information is below. A confirmation email will be sent to <span class="highlight">{{ order.email }}</span>.</p>
-            </div>
-         
+         </div>
       </div>
    </div>
-   
-      <div class="row">
-         <div class="col l10 s12">
-            <div class="card">
-               <div class="card-content">
-                  <h3 class="center-align">Order Info:</h3>
-                  <p class="large-text highlight">Order Number:</p>
-                  <p class="">{{ order.order_number }}</p>
-                  <p class="large-text highlight">Order Date:</p>
-                  <p class="">{{ order.date }}</p>
-                  <p class="large-text highlight">Order Details:</p>
-                  {% for item in order.lineitems.all %}
-                  {% if 'course' in item %}
-                  <p class="">
-                     {{ item.course.name }}
-                  </p>
-                  <p class="">{{ item.quantity }} @ €{{ item.course.price }} each</p>
-                  {% elif 'exam_course' in item %}
-                  <p class="">
-                     {{ item.exam_course.name }}
-                  </p>
-                  <p class="">{{ item.quantity }} @ €{{ item.exam_course.price }} each</p>
-                  {% endif %}
-                  {% endfor %}
-                  <h3 class="center-align">Billed To:</h3>
-               
-               <p class="large-text highlight">Name</p>
-               <p class="mb-0">{{ order.full_name }}</p>
-               <p class="large-text highlight">Address 1</p>
-               <p class="">{{ order.street_address1 }}</p>
-               {% if order.street_address2 %}
-               <p class="large-text highlight">Address 2</p>
-               <p class="">{{ order.street_address1 }}</p>
-               {% endif %}
-               <p class="large-text highlight">Town or City</p>
-               <p class="">{{ order.town_or_city }}</p>
-               {% if order.postcode %}
-               <p class="large-text highlight">Postal Code</p>
-               <p class="">{{ order.postcode }}</p>
-               {% endif %}
-               <p class="large-text highlight">Phone Number</p>
-               <p class="">{{ order.phone_number }}</p>
-               <h3 class="center-align">Billing Info:</h3>
-               <p class="large-text highlight">Order Total</p>
-               <p class="m">€{{ order.order_total }}</p>
-               <div class="card-action center-align">
+   <!--Order Information-->
+   <div class="row">
+   <div class="col l10 s12">
+      <div class="card">
+         <div class="card-content">
+            <h3 class="center-align">Order Info:</h3>
+            <p class="large-text highlight">Order Number:</p>
+            <p>{{ order.order_number }}</p>
+            <p class="large-text highlight">Order Date:</p>
+            <p>{{ order.date }}</p>
+            <p class="large-text highlight">Order Details:</p>
+            {% for item in order.lineitems.all %}
+            {% if 'course' in item %}
+            <p>
+               {{ item.course.name }}
+            </p>
+            <p class="">{{ item.quantity }} @ €{{ item.course.price }} each</p>
+            {% elif 'exam_course' in item %}
+            <p class="">
+               {{ item.exam_course.name }}
+            </p>
+            <p class="">{{ item.quantity }} @ €{{ item.exam_course.price }} each</p>
+            {% endif %}
+            {% endfor %}
+            <!--Billing Details-->
+            <h3 class="center-align">Billed To:</h3>
+            <p class="large-text highlight">Name</p>
+            <p>{{ order.full_name }}</p>
+            <p class="large-text highlight">Address 1</p>
+            <p>{{ order.street_address1 }}</p>
+            {% if order.street_address2 %}
+            <p class="large-text highlight">Address 2</p>
+            <p>{{ order.street_address1 }}</p>
+            {% endif %}
+            <p class="large-text highlight">Town or City</p>
+            <p>{{ order.town_or_city }}</p>
+            {% if order.postcode %}
+            <p class="large-text highlight">Postal Code</p>
+            <p>{{ order.postcode }}</p>
+            {% endif %}
+            <p class="large-text highlight">Phone Number</p>
+            <p>{{ order.phone_number }}</p>
+            <h3 class="center-align">Billing Info:</h3>
+            <p class="large-text highlight">Order Total</p>
+            <p>€{{ order.order_total }}</p>
+            <!--Back to Courses Buttons-->
+            <div class="card-action center-align">
                <a href="{% url 'courses' %}" class="btn">
                <span class="icon mr-2">
                <i class="fas fa-chevron-left"></i>
                </span>
                <span class="text-uppercase">Back to Courses!</span>
                <a href="{% url 'exam_courses' %}" class="btn">
-                  <span class="icon mr-2">
-                  <i class="fas fa-chevron-left"></i>
-                  </span>
-                  <span class="text-uppercase">Back to Exam Courses!</span>
+               <span class="icon mr-2">
+               <i class="fas fa-chevron-left"></i>
+               </span>
+               <span class="text-uppercase">Back to Exam Courses!</span>
                </a>
-            </div>
             </div>
          </div>
       </div>
-   
+   </div>
 </body>
 {% endblock %}
