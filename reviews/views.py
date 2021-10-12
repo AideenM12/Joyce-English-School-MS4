@@ -9,7 +9,7 @@ from profiles.models import UserProfile
 
 
 def reviews(request):
-    """ A view to return the index page """
+    """ A view to return the review page """
     reviews = Review.objects.order_by('-date_created')
     context = {
         'reviews': reviews
@@ -19,7 +19,9 @@ def reviews(request):
 
 @login_required
 def write_review(request):
-    """."""
+    """A view to allow users to write their own reviews
+    and add them to the site.
+    """
     if request.method == 'POST':
         form = WriteReview(request.POST)
         if form.is_valid():
@@ -44,7 +46,9 @@ def write_review(request):
 
 @login_required
 def edit_review(request, review_id):
-    """"""
+    """A view to allow users to edit any reviews
+    they may have created.
+    """
     review = get_object_or_404(Review, pk=review_id)
     if review.creator != request.user.userprofile:
         messages.error(request, 'You do not have access to that Review!')
@@ -69,7 +73,7 @@ def edit_review(request, review_id):
 
 @login_required
 def delete_review(request, review_id):
-    """ """
+    """A view to allow users to delete their own reviews """
     review = get_object_or_404(Review, pk=review_id)
     if request.user.userprofile == review.creator:
         review.delete()

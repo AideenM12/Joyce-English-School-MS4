@@ -3,7 +3,9 @@ from .models import Review
 
 
 class WriteReview(forms.ModelForm):
-    """WriteReview form."""
+    """WriteReview form to allow users to create their
+    own reviews.
+    """
     class Meta:
         model = Review
         fields = ('title', 'comments',)

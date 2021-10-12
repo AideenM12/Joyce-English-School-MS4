@@ -6,8 +6,9 @@ from profiles.models import UserProfile
 
 
 class Review(models.Model):
-    """Model to define the fields required  displayed in
-   """
+    """
+    Model to define the fields required to be displayed in reviews.
+    """
     title = models.CharField(max_length=200)
     comments = models.TextField()
     creator = models.ForeignKey(

@@ -5,6 +5,9 @@ from .models import Review
 
 
 class WriteReviewAdmin(admin.ModelAdmin):
+    """
+    Add Review admin
+    """
     list_display = (
         'title',
         'comments',
