@@ -190,3 +190,7 @@ button:active {
   font-weight: 500;
   font-size: 15px;
 }
+
+.order-confirm{
+  width:50vw;
+}

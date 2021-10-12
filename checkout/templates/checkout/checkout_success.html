@@ -4,136 +4,77 @@
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 {% block content %}
-<div class="background-image-1">
+<body class="background-image-1">
    <div class="row">
-      <div class="col s12 center-align">
+      <div class="col l10 s12 center-align">
          <h2 class="text-shadow page-header">Thank You</h2>
-         <div class="container">
-            <p class="card-panel large-text">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
-         </div>
+         <div class="card order-confirm">
+            <p class="card-panel l10 s12 large-text">Your order information is below. A confirmation email will be sent to <span class="highlight">{{ order.email }}</span>.</p>
+            </div>
+         
       </div>
    </div>
-   <div class="container">
-   <div class="row">
-      <div class="col l10">
-         <div class="card">
-            <div class="col">
-               <p class="large-text">Order Info:</p>
-            </div>
-            <p class="mb-0 text-black font-weight-bold">Order Number</p>
-            <div class="col-12 col-md-8 text-md-right">
-               <p class="mb-0">{{ order.order_number }}</p>
-            </div>
-            <p class="mb-0 text-black font-weight-bold">Order Date</p>
-            <div class="col-12 col-md-8 text-md-right">
-               <p class="mb-0">{{ order.date }}</p>
-            </div>
-            <small class="text-muted">Order Details:</small>
-            {% for item in order.lineitems.all %}
-            {% if 'course' in item %}
-          
-               <div class="col-12 col-md-4">
-                  <p class="small mb-0 text-black font-weight-bold">
+   
+      <div class="row">
+         <div class="col l10 s12">
+            <div class="card">
+               <div class="card-content">
+                  <h3 class="center-align">Order Info:</h3>
+                  <p class="large-text highlight">Order Number:</p>
+                  <p class="">{{ order.order_number }}</p>
+                  <p class="large-text highlight">Order Date:</p>
+                  <p class="">{{ order.date }}</p>
+                  <p class="large-text highlight">Order Details:</p>
+                  {% for item in order.lineitems.all %}
+                  {% if 'course' in item %}
+                  <p class="">
                      {{ item.course.name }}
                   </p>
-               </div>
-               <div class="col-12 col-md-8 text-md-right">
-                  <p class="small mb-0">{{ item.quantity }} @ €{{ item.course.price }} each</p>
-               </div>
-            
-            {% elif 'exam_course' in item %}
-           
-               <div class="col-12 col-md-4">
-                  <p class="small mb-0 text-black font-weight-bold">
+                  <p class="">{{ item.quantity }} @ €{{ item.course.price }} each</p>
+                  {% elif 'exam_course' in item %}
+                  <p class="">
                      {{ item.exam_course.name }}
                   </p>
-               </div>
-               <div class="col-12 col-md-8 text-md-right">
-                  <p class="small mb-0">{{ item.quantity }} @ €{{ item.exam_course.price }} each</p>
-               </div>
-           
-            {% endif %}
-            {% endfor %}
-           
-               <div class="col">
-                  <small class="text-muted">Delivering To:</small>
-               </div>
-           
-            
-               <div class="col-12 col-md-4">
-                  <p class="mb-0 text-black font-weight-bold">Name</p>
-               </div>
-               <div class="col-12 col-md-8 text-md-right">
-                  <p class="mb-0">{{ order.full_name }}</p>
-               </div>
-            
-           
-               <div class="col">
-                  <p class="mb-0 text-black font-weight-bold">Address 1</p>
-               </div>
-               <div class="col">
-                  <p class="">{{ order.street_address1 }}</p>
-               </div>
-            
-            {% if order.street_address2 %}
-            
-               <div class="col-12 col-md-4">
-                  <p class="mb-0 text-black font-weight-bold">Address 2</p>
-               </div>
-               <div class="col-12 col-md-8 text-md-right">
-                  <p class="mb-0">{{ order.street_address1 }}</p>
-               </div>
-           
-            {% endif %}
-            
-               <div class="col-12 col-md-4">
-                  <p class="mb-0 text-black font-weight-bold">Town or City</p>
-               </div>
-               <div class="col-12 col-md-8 text-md-right">
-                  <p class="mb-0">{{ order.town_or_city }}</p>
-               </div>
-            
-            {% if order.postcode %}
-            
-               <div class="col-12 col-md-4">
-                  <p class="mb-0 text-black font-weight-bold">Postal Code</p>
-               </div>
-               <div class="col-12 col-md-8 text-md-right">
-                  <p class="mb-0">{{ order.postcode }}</p>
-               </div>
-           
-            {% endif %}
-            
-               <div class="col-12 col-md-4">
-                  <p class="mb-0 text-black font-weight-bold">Phone Number</p>
-               </div>
-               <div class="col-12 col-md-8 text-md-right">
-                  <p class="mb-0">{{ order.phone_number }}</p>
-               </div>
-            
-            
-               <div class="col">
-                  <small class="text-muted">Billing Info:</small>
-               </div>
-           
-          
-               <div class="col-12 col-md-4">
-                  <p class="mb-0 text-black font-weight-bold">Order Total</p>
-               </div>
-               <div class="col-12 col-md-8 text-md-right">
-                  <p class="mb-0">€{{ order.order_total }}</p>
-               </div>
-            
-            <a href="{% url 'courses' %}" class="btn">
-            <span class="icon mr-2">
-            <i class="fas fa-chevron-left"></i>
-            </span>
-            <span class="text-uppercase">Back to Courses!</span>
-            </a>
+                  <p class="">{{ item.quantity }} @ €{{ item.exam_course.price }} each</p>
+                  {% endif %}
+                  {% endfor %}
+                  <h3 class="center-align">Billed To:</h3>
+               
+               <p class="large-text highlight">Name</p>
+               <p class="mb-0">{{ order.full_name }}</p>
+               <p class="large-text highlight">Address 1</p>
+               <p class="">{{ order.street_address1 }}</p>
+               {% if order.street_address2 %}
+               <p class="large-text highlight">Address 2</p>
+               <p class="">{{ order.street_address1 }}</p>
+               {% endif %}
+               <p class="large-text highlight">Town or City</p>
+               <p class="">{{ order.town_or_city }}</p>
+               {% if order.postcode %}
+               <p class="large-text highlight">Postal Code</p>
+               <p class="">{{ order.postcode }}</p>
+               {% endif %}
+               <p class="large-text highlight">Phone Number</p>
+               <p class="">{{ order.phone_number }}</p>
+               <h3 class="center-align">Billing Info:</h3>
+               <p class="large-text highlight">Order Total</p>
+               <p class="m">€{{ order.order_total }}</p>
+               <div class="card-action center-align">
+               <a href="{% url 'courses' %}" class="btn">
+               <span class="icon mr-2">
+               <i class="fas fa-chevron-left"></i>
+               </span>
+               <span class="text-uppercase">Back to Courses!</span>
+               <a href="{% url 'exam_courses' %}" class="btn">
+                  <span class="icon mr-2">
+                  <i class="fas fa-chevron-left"></i>
+                  </span>
+                  <span class="text-uppercase">Back to Exam Courses!</span>
+               </a>
+            </div>
+            </div>
          </div>
       </div>
-      </div>
-      </div>
-   </div>
-</div>
+   
+</body>
 {% endblock %}

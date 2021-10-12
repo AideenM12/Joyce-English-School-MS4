@@ -71,4 +71,3 @@ $('.update-link').click(function(e) {
   form.submit();
 })
 
-//M.toast({html: message, displayLength: duration})
