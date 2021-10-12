@@ -190,10 +190,7 @@ tbody{
 	margin-top: 5px;
 	
 }
-/*.cart-btns{
-	margin-left: 10rem !important;
-	margin-right: 10rem !important;
-}*/
+
 
 /*-----Background Image CSS---*/
 .background-image-1 {
@@ -240,22 +237,7 @@ tbody{
 	padding: 0 !important;
 }
 /*------------Courses------------*/
-/*.collapsible,
-.collapsible-header{
-	background-color: #e63946;
-	padding: 0;
-}
-.drop-container{
-	margin-left: 1rem;
-	margin-right: 1rem;
 
-}
-.collapsible-body {
-	background-color: #f1faee;
-}
-.course-header{
-	color: #f1faee !important;
-}*/ 
 .course-card{
 	height: 12rem;
 	margin-left: 1rem !important;
