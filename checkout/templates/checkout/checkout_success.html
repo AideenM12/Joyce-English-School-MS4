@@ -15,12 +15,11 @@
    </div>
    <div class="container">
    <div class="row">
-       <div class="col l10">
-  <div class="card">
-               <div class="col">
-                  <p class="large-text">Order Info:</p>
-               </div>
-            
+      <div class="col l10">
+         <div class="card">
+            <div class="col">
+               <p class="large-text">Order Info:</p>
+            </div>
             <p class="mb-0 text-black font-weight-bold">Order Number</p>
             <div class="col-12 col-md-8 text-md-right">
                <p class="mb-0">{{ order.order_number }}</p>
@@ -32,7 +31,7 @@
             <small class="text-muted">Order Details:</small>
             {% for item in order.lineitems.all %}
             {% if 'course' in item %}
-            <div class="row">
+          
                <div class="col-12 col-md-4">
                   <p class="small mb-0 text-black font-weight-bold">
                      {{ item.course.name }}
@@ -43,7 +42,7 @@
                </div>
             </div>
             {% elif 'exam_course' in item %}
-            <div class="row">
+           
                <div class="col-12 col-md-4">
                   <p class="small mb-0 text-black font-weight-bold">
                      {{ item.exam_course.name }}
@@ -55,12 +54,12 @@
             </div>
             {% endif %}
             {% endfor %}
-            <div class="row">
+           
                <div class="col">
                   <small class="text-muted">Delivering To:</small>
                </div>
             </div>
-            <div class="row">
+            
                <div class="col-12 col-md-4">
                   <p class="mb-0 text-black font-weight-bold">Name</p>
                </div>
@@ -68,7 +67,7 @@
                   <p class="mb-0">{{ order.full_name }}</p>
                </div>
             </div>
-            <div class="row">
+           
                <div class="col-12 col-md-4">
                   <p class="mb-0 text-black font-weight-bold">Address 1</p>
                </div>
@@ -77,7 +76,7 @@
                </div>
             </div>
             {% if order.street_address2 %}
-            <div class="row">
+            
                <div class="col-12 col-md-4">
                   <p class="mb-0 text-black font-weight-bold">Address 2</p>
                </div>
@@ -132,6 +131,8 @@
             <span class="text-uppercase">Back to Courses!</span>
             </a>
          </div>
+      </div>
+      </div>
       </div>
    </div>
 </body>
