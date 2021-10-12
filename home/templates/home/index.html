@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<main>
-   <!----Parallax Container---->
+   <!--Parallax Container-->
    <div class="parallax-container" id="top-parallax">
       <div class="parallax">
          <img src="{{ MEDIA_URL }}flag.jpg" alt="joyce-statue" width="640" height="640">
       </div>
    </div>
-   <!-----------About Section----------->
+   <!--About Section-->
    {% if request.user.is_authenticated %} 
    <div class="row">
       <div class="col l12  m10 offset-m1 s12">
@@ -111,11 +110,11 @@
       </div>
    </div>   
    {% endif %}
-   <!----Parallax Container---->
+   <!--Parallax Container-->
    <div class="parallax-container">
       <div class="parallax">
          <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="banshee">
       </div>
    </div>
-</main>
+
 {% endblock %}
