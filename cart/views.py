@@ -25,17 +25,17 @@ def add_to_cart(request, item_id):
         if item_type == "courses":
             if item_id in list(cart['courses'].keys()):
                 cart['courses'][item_id] += quantity
-                messages.success(request, 'Added course to your cart')               
+                messages.success(request, 'Added course to your cart')
             else:
                 cart['courses'][item_id] = quantity
-                messages.success(request, 'Added course to your cart')                
+                messages.success(request, 'Added course to your cart')
         elif item_type == "exam_courses":
             if item_id in list(cart['exam_courses'].keys()):
                 cart['exam_courses'][item_id] += quantity
             else:
                 cart['exam_courses'][item_id] = quantity
 
-        request.session['cart'] = cart     
+        request.session['cart'] = cart
         return redirect(redirect_url)
 
 

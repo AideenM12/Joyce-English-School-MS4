@@ -1,185 +1,151 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% load cart_tools %}
 {% block content %}
-   <div class="parallax-container" id="top-parallax">
-      <div class="parallax">
-         <img src="{{ MEDIA_URL }}flag.jpg" alt="joyce-statue" width="640" height="640">
+<!--Parallax Container-->
+<div class="parallax-container" id="top-parallax">
+   <div class="parallax">
+      <img src="{{ MEDIA_URL }}flag.jpg" alt="joyce-statue" width="640" height="640">
+   </div>
+</div>
+<!--Cart Items-->
+{% if cart_items %}
+{% for item in cart_items %}
+{% if 'course' in item %}
+<div class="row ">
+   <div class="list-inline">
+      <div class="card detail-card">
+         <div class="card-content">
+            <span class="card-title center-align">{{ item.course.name }}</span>
+            <br>
+            <div class="row">
+               <div class="col  center-align">
+                  <img src="{{MEDIA_URL}}{{ item.course.image }}" class="image responsive-img center-align"  alt="image">
+               </div>
+            </div>
+            <div class="row">
+               <p class="center-align"><span class="highlight"> Course Description </span>{{ course.description }}</p>
+               <p class="center-align"><span class="highlight"> Price </span>{{ item.course.price }}</p>
+               <p class="center-align"><span class="highlight">Start </span> {{ item.course.start_date }}</p>
+               <p class="center-align"><span class="highlight">Finish </span> {{ item.course.end_date }}</p>
+               <p class="center-align"><span class="highlight">Number of hours </span> {{ item.course.hours }}</p>
+               <!--Remove Item Button-->
+               <form class="form center-align" class="remove-item">
+                  <input type="hidden" value="{{ csrf_token }}" name="csrf_token" />
+                  <input type="hidden" name="item_id" value="{% if 'course' in item %}{{ item.course.id }}{% elif 'exam_course' in item %}{{ item.exam_course.id }}{% endif %}" ></input>
+                  <input type="hidden" name="item_type" value="{% if 'course' in item %}course{% elif 'exam_course' in item %}exam_course{% endif %}" ></input>
+                  <input type="submit" value="Remove" class="center-align btn"></input>
+               </form>
+            </div>
+         </div>
       </div>
    </div>
-   {% if cart_items %}
-      
-         
-        
-         
-         {% for item in cart_items %}
-            {% if 'course' in item %}
-            <!--  <tr>
-               <td> {{ item.course.name }}</td>
-               <td> {{ item.course.price }}</td>
-               <td> {{ item.course.hours }}</td>
-               <td> {{ item.course.description }}</td>
-              </tr>-->
-
-              <div class="row ">
-
-               <div class="list-inline">
-                  
-                <div class="card detail-card">
-                    <div class="card-content">
-                  <span class="card-title center-align">  {{ item.course.name }}</span>
-                  <br>
-                  <div class="row">
-                     <div class="col  center-align">
-                     <img src="{{MEDIA_URL}}{{ item.course.image }}" class="image responsive-img center-align"  alt="image">
-                     </div>
-                     </div>
-                     <div class="row">
-                        <p class="center-align"><span class="highlight"> Course Description </span>{{ course.description }}</p>
-                  <p class="center-align"><span class="highlight"> Price </span>{{ item.course.price }}</p>
-                  <p class="center-align"><span class="highlight">Start </span> {{ item.course.start_date }}</p>
-                  <p class="center-align"><span class="highlight">Finish </span> {{ item.course.end_date }}</p>
-                  <p class="center-align"><span class="highlight">Number of hours </span> {{ item.course.hours }}</p>
-                  <form class="form center-align" class="remove-item">
-                     <input type="hidden" value="{{ csrf_token }}" name="csrf_token" />
-                     <input type="hidden" name="item_id" value="{% if 'course' in item %}{{ item.course.id }}{% elif 'exam_course' in item %}{{ item.exam_course.id }}{% endif %}" ></input>
-                     <input type="hidden" name="item_type" value="{% if 'course' in item %}course{% elif 'exam_course' in item %}exam_course{% endif %}" ></input>
-                     <input type="submit" value="Remove" class="center-align btn"></input>
-                     </form>
-                  </div>
-                  </div>
-                  </div>
-                 
+</div>
+</div>
+{% elif 'exam_course' in item %}
+<div class="row ">
+   <div class="list-inline">
+      <div class="card detail-card">
+         <div class="card-content">
+            <span class="card-title center-align">  {{ item.exam_course.name }}</span>
+            <br>
+            <div class="row">
+               <div class="col center-align">
+                  <img src="{{MEDIA_URL}}{{ item.exam_course.image }}" class="image responsive-img center-align" alt="image">
                </div>
-               </div>
-               </div>
-
-            {% elif 'exam_course' in item %}
-
-               <!--<p> {{ item.exam_course.name }}</p>
-               <p> {{ item.exam_course.price }}</p>
-               <p> {{ item.exam_course.hours }}</p>
-               <p> {{ item.exam_course.description }}</p>-->
-
-               <div class="row ">
-
-                  <div class="list-inline">
-                     
-                   <div class="card detail-card">
-                       <div class="card-content">
-                     <span class="card-title center-align">  {{ item.exam_course.name }}</span>
-                     <br>
-                     <div class="row">
-                     <div class="col center-align">
-                     <img src="{{MEDIA_URL}}{{ item.exam_course.image }}" class="image responsive-img center-align" alt="image">
-                     </div>
-                     </div>
-                     <div class="row">
-                        <p class="center-align"><span class="highlight">Course Description</span>{{ exam_course.description }}</p>
-                     <p class="center-align"><span class="highlight"> Price </span>{{ item.exam_course.price }}</p>
-                     <p class="center-align"><span class="highlight">Start </span> {{ item.exam_course.start_date }}</p>
-                     <p class="center-align"><span class="highlight">Finish </span> {{ item.exam_course.end_date }}</p>
-                     <p class="center-align"><span class="highlight">Number of hours </span> {{ item.exam_course.hours }}</p>
-                     <form class="form center-align" class="remove-item">
-                        <input type="hidden" value="{{ csrf_token }}" name="csrf_token" />
-                        <input type="hidden" name="item_id" value="{% if 'course' in item %}{{ item.course.id }}{% elif 'exam_course' in item %}{{ item.exam_course.id }}{% endif %}" ></input>
-                        <input type="hidden" name="item_type" value="{% if 'course' in item %}course{% elif 'exam_course' in item %}exam_course{% endif %}" ></input>
-                        <input type="submit" value="Remove" class="btn"></input>
-                        </form>
-                     </div>
-                     </div>
-                  </div>
-                  </div>
-                  </div>
-                  </div>
-             
-            
-            {% endif %}
-       
-               
-             
-               
-         {% endfor %}
-         
-      
-      <!-- clear button -->
-      <div class="row">
-      <div class="col s12 m8 offset-m2 ">
-         <div class="card">
-            <div class="card-content  center-align">
-               <p>Click here to proceed to the checkout and sign up for your course! </p>
-               <a href="{% url 'checkout' %}" class="btn cart-btns">
-                  <span class="text-uppercase">Secure Checkout</span>
-                  <span class="icon">
-                      <i class="fas fa-lock"></i>
-                  </span>
-                  </a>
-                  </div>
-                  </div>
-                  </div>
-                  
+            </div>
+            <div class="row">
+               <p class="center-align"><span class="highlight">Course Description</span>{{ exam_course.description }}</p>
+               <p class="center-align"><span class="highlight"> Price </span>{{ item.exam_course.price }}</p>
+               <p class="center-align"><span class="highlight">Start </span> {{ item.exam_course.start_date }}</p>
+               <p class="center-align"><span class="highlight">Finish </span> {{ item.exam_course.end_date }}</p>
+               <p class="center-align"><span class="highlight">Number of hours </span> {{ item.exam_course.hours }}</p>
+               <!--Remove Item Button-->
+               <form class="form center-align" class="remove-item">
+                  <input type="hidden" value="{{ csrf_token }}" name="csrf_token" />
+                  <input type="hidden" name="item_id" value="{% if 'course' in item %}{{ item.course.id }}{% elif 'exam_course' in item %}{{ item.exam_course.id }}{% endif %}" ></input>
+                  <input type="hidden" name="item_type" value="{% if 'course' in item %}course{% elif 'exam_course' in item %}exam_course{% endif %}" ></input>
+                  <input type="submit" value="Remove" class="btn"></input>
+               </form>
+            </div>
+         </div>
       </div>
-      <div class="row">
-      <div class="col s12 m8 offset-m2 " >
-         <div class="card center-align">
+   </div>
+</div>
+</div>
+{% endif %}
+{% endfor %}
+<!-- Secure Checkout Button -->
+<div class="row">
+   <div class="col s12 m8 offset-m2 ">
+      <div class="card">
+         <div class="card-content center-align">
+            <p>Click here to proceed to the checkout and sign up for your course! </p>
+            <a href="{% url 'checkout' %}" class="btn cart-btns">
+            <span>Secure Checkout</span>
+            <span class="icon">
+            <i class="fas fa-lock"></i>
+            </span>
+            </a>
+         </div>
+      </div>
+   </div>
+</div>
+<!--Clear Cart Button-->
+<div class="row">
+   <div class="col s12 m8 offset-m2 " >
+      <div class="card center-align">
          <div class="card-content  center-align">
             <p>Click here to clear your cart</p>
-         <a class="btn cart-btns" href="{% url 'clear_cart'  %}">Clear Cart</a>
+            <a class="btn cart-btns" href="{% url 'clear_cart'  %}">Clear Cart</a>
          </div>
-            </div>
-</div>
-      </div>
-   {% else %}
-   
-      <h5 class="center-align">Your cart is empty.</h5>
-      <div class="row">
-         <div class="col l6 s12 m10 offset-m1">
-         <div class="card nav-cards">
-            <div class="card-content nav-card-content center-align">
-               <h5 class="card-title">Courses</h5>
-               <h6>Go back to courses</h6>
-               </div>
-               <div class=" center-align card-action">
-      <a href="{% url 'courses' %}" class="btn btn-outline-black rounded-0 btn-lg">
-         <span class="icon">
-            <i class="fas fa-chevron-left"></i>
-         </span>
-        
-         <span class="text-uppercase">Courses</span>
-      </a>
-      <!--<a onclick="M.toast({html: 'I am a toast'})" class="btn">Toast!</a>-->
-      </div>
-      </div>
-      </div>
-      <div class="col l6 s12 m10 offset-m1">
-         <div class="card nav-cards">
-            <div class="card-content nav-card-content center-align">
-               <h5 class="card-title">Exam Courses</h5>
-               <h6>Go back to courses</h6>
-               </div>
-               <div class=" center-align card-action">
-      <a href="{% url 'exam_courses' %}" class="btn btn-outline-black rounded-0 btn-lg">
-         <span class="icon">
-            <i class="fas fa-chevron-left"></i>
-         </span>
-        
-         <span class="text-uppercase">Exam Courses</span>
-      </a>
-      <!--<a onclick="M.toast({html: 'I am a toast'})" class="btn">Toast!</a>-->
-      </div>
-      </div>
-      </div>
-      </div>
-   {% endif %}
-
-   <div class="parallax-container">
-      <div class="parallax">
-         <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="banshee">
       </div>
    </div>
+</div>
+{% else %}
+<!--Empty Cart Content-->
+<h5 class="center-align">Your cart is empty.</h5>
+<div class="row">
+   <div class="col l6 s12 m10 offset-m1">
+      <div class="card nav-cards">
+         <div class="card-content nav-card-content center-align">
+            <h5 class="card-title">Courses</h5>
+            <h6>Go back to courses</h6>
+         </div>
+         <div class=" center-align card-action">
+            <a href="{% url 'courses' %}" class="btn btn-lg">
+            <span class="icon">
+            <i class="fas fa-chevron-left"></i>
+            </span>
+            <span>Courses</span>
+            </a>           
+         </div>
+      </div>
+   </div>
+   <div class="col l6 s12 m10 offset-m1">
+      <div class="card nav-cards">
+         <div class="card-content nav-card-content center-align">
+            <h5 class="card-title">Exam Courses</h5>
+            <h6>Go back to courses</h6>
+         </div>
+         <div class=" center-align card-action">
+            <a href="{% url 'exam_courses' %}" class="btn btn-lg">
+            <span class="icon">
+            <i class="fas fa-chevron-left"></i>
+            </span>
+            <span>Exam Courses</span>
+            </a>
+         </div>
+      </div>
+   </div>
+</div>
+{% endif %}
+<div class="parallax-container">
+   <div class="parallax">
+      <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="banshee">
+   </div>
+</div>
 {% endblock %}
-
 {% block postloadjs %}
 {{ block.super }}
 <script src="{% static 'cart/js/cart.js' %}"></script>
