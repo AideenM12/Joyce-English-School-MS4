@@ -14,7 +14,7 @@ def cart(request):
 
 @login_required
 def add_to_cart(request, item_id):
-    """ Add a quantity of the specified product to the shopping bag """
+    """ Add a course/exam_course to the cart """
     item_to_add = item_id
     quantity = 1
     redirect_url = request.POST.get('redirect_url')
@@ -41,6 +41,7 @@ def add_to_cart(request, item_id):
 
 @login_required
 def remove_from_cart(request, item_id):
+    """A view to remove an item from the cart"""
     try:
         course = None
         exam_course = None
@@ -67,7 +68,7 @@ def remove_from_cart(request, item_id):
 
 @login_required
 def clear_cart(request):
-    """Remove courses from the cart"""
+    """Remove all items from the cart"""
     request.session['cart'] = {"courses": {}, "exam_courses": {}}
 
     return redirect('home')

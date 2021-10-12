@@ -6,7 +6,10 @@ from exam_courses.models import ExamCourse
 
 
 def cart_contents(request):
-
+    """
+    A view to retrieve information needed to display the cart, by
+    converting what has been saved to the session into key variables.
+    """
     cart_items = []
     total = 0
     course_count = 0
