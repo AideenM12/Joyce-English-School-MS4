@@ -2,72 +2,58 @@
 {% load static %}
 {% block content %}
 <body>
-<!--Parallax Container-->
-<div class="parallax-container" id="top-parallax">
-   <div class="parallax">
-      <img src="{{ MEDIA_URL }}flag.jpg" alt="joyce-statue" width="640" height="640">
+   <!--Parallax Container-->
+   <div class="parallax-container" id="top-parallax">
+      <div class="parallax">
+         <img src="{{ MEDIA_URL }}flag.jpg" alt="joyce-statue" width="640" height="640">
+      </div>
    </div>
-</div>
-<!--Main Review Content-->
-<h1 class="center-align">Our Reviews</h1>
-{% for review in reviews %}
-<a href="#" id="scroll" style="display: none;"><span></span></a>
-<div class="row">
-   <div class="col l10 offset-l1  s12 m10">
-      <div class="card  ">
-         <div class="card-content center-align" id="review-card-content">
-            <h3 class="card-title" id="review-card-title">{{ review.title }}</h3>
-         </div>
-         <div class="card-action center-align">
-            <p class="center-align"><span class="highlight"> Review </span><br>{{ review.comments }}</p>
-            <p class="center-align"><span class="highlight"> Date </span><br>{{ review.date_created }}</p>
-            <p class="center-align"><span class="highlight"> By </span><br>{{ review.creator }}</p>
-            <!--Edit/Delete Review Buttons-->
+   <!--Main Review Content-->
+   <h1 class="center-align">Our Reviews</h1>
+   {% for review in reviews %}
+   <a href="#" id="scroll" style="display: none;"><span></span></a>
+   <div class="row">
+      <div class="col l10 offset-l1  s12 m10">
+         <div class="card  ">
+            <div class="card-content center-align" id="review-card-content">
+               <h3 class="card-title" id="review-card-title">{{ review.title }}</h3>
+            </div>
             <div class="card-action center-align">
-               {% if request.user.userprofile == review.creator %}
-               <a class="btn" href="{% url 'edit_review' review.id %}" aria-label="Edit review from {{ review.creator }}">Edit</a>
-               <a class="btn modal-trigger" href="#delete-modal-{{ review.id }}">Delete</a>
+               <p class="center-align"><span class="highlight"> Review </span><br>{{ review.comments }}</p>
+               <p class="center-align"><span class="highlight"> Date </span><br>{{ review.date_created }}</p>
+               <p class="center-align"><span class="highlight"> By </span><br>{{ review.creator }}</p>
+               <!--Edit/Delete Review Buttons-->
+               <div class="card-action center-align">
+                  {% if request.user.userprofile == review.creator %}
+                  <a class="btn" href="{% url 'edit_review' review.id %}" aria-label="Edit review from {{ review.creator }}">Edit</a>
+                  <a class="btn" href="{% url 'delete_review' review.id %}">Delete</a>
+                  {% endif %}
                </div>
-               
-               {% endif %}
-               <!--Delete Modal-->
-               <div id="delete-modal-{{review.id}}" class="modal">
-                  <div class="modal-content">
-                     <h4>Delete Review?</h4>
-                     <p>Are you sure you want to delete this review?</p>
-                  </div>
-                  <div class="modal-footer">
-                     <a href="{% url 'delete_review' review.id %}"
-                        class="modal-close btn">Delete</a>
-                     <a href="{% url 'reviews' %}" class="modal-close btn">Cancel</a>
-                  </div>
-                 </div>
-                          
+            </div>
          </div>
       </div>
    </div>
-</div>
-{% endfor %}
-<!--Add Review CTA Card-->
-{% if request.user.is_authenticated %}
-<div class="row">
-   <div class="col s12 m8 offset-m2 ">
-      <div class="card center-align">
-         <div class="card-content center-align ">
-            <p class="large-text">Click here to leave your own review</p>
-         </div>
-         <div class="card-action center-align">
-            <a href="{% url 'write_review' %}" class="btn btn-primary">Create Review</a>
+   {% endfor %}
+   <!--Add Review CTA Card-->
+   {% if request.user.is_authenticated %}
+   <div class="row">
+      <div class="col s12 m8 offset-m2 ">
+         <div class="card center-align">
+            <div class="card-content center-align ">
+               <p class="large-text">Click here to leave your own review</p>
+            </div>
+            <div class="card-action center-align">
+               <a href="{% url 'write_review' %}" class="btn btn-primary">Create Review</a>
+            </div>
          </div>
       </div>
    </div>
-</div>
-{% endif %}
-<!--Parallax Container-->
-<div class="parallax-container">
-   <div class="parallax">
-      <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="pages">
+   {% endif %}
+   <!--Parallax Container-->
+   <div class="parallax-container">
+      <div class="parallax">
+         <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="pages">
+      </div>
    </div>
-</div>
 </body>
 {% endblock %}

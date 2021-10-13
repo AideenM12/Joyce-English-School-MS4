@@ -1,1 +1,1 @@
-Joyce School of English Confirmation for Order Number {{ order.order_number }
+Joyce School of English Confirmation for Order Number {{ order.order_number }}
