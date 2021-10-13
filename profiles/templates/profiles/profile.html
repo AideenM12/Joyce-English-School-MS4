@@ -59,10 +59,10 @@
                <ul class="list-unstyled">
                   {% for item in order.lineitems.all %}
                   <li class="small">
-                     {% if 'course' in item %}
+                     {% if item.course %}
                      <p class="my-0"><strong>{{ item.course.name }}</strong></p>
                      <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
-                     {% elif 'exam_course' in item %}
+                     {% elif item.exam_course %}
                      <p class="my-0"><strong>{{ item.exam_course.name }}</strong></p>
                      <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                      {% endif %}

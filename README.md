@@ -263,7 +263,11 @@ This palette was created on the [Coolors Website](https://coolors.co).
 Testing information can be found here in the separate [TESTING.md file](TESTING.md)
 
 ## Deployment
-This project was developed using [Gitpod IDE](https://gitpod.io) and pushed to Github using the in-built terminal. However, because Github can only host static websites it was necessary to deploy this project to Heroku because it is a compatible hosting platform for a back-end focused site like MotherFolklore. 
+This project was developed using [Gitpod IDE](https://gitpod.io) and pushed to Github using the in-built terminal. However, because Github can only host static websites it was necessary to deploy this project to Heroku because it is a compatible hosting platform for a back-end focused site like MotherFolklore. The master branch of this repository is the most current version and has been used for the deployed version of the site.
+
+The Code Institiue student template was used to create this project.
+
+[Code Institute Full Template](https://github.com/Code-Institute-Org/gitpod-full-template)
 
 This project was deployed using Heroku and stored in GitHub.
 
@@ -316,27 +320,13 @@ Navigate to the settings tab and then click the Reveal Config Vars button and ad
 
 
 
-### Making a clone to run locally
 
-It is important to note that this project will not run locally unless an env.py file has been set up by the user which contains the IP, PORT, MONGO_DBNAME, MONGO_URI and SECRET_KEY which have all been kept secret in keeping with best security practices. 
 
-1. Log into GitHub.
-2. Select the [respository](https://github.com/AideenM12/MotherFolklore-MS3).
-3. Click the Code dropdown button next to the green Gitpod button.
-4. Download ZIP file and unpackage locally and open with IDE. Alternatively copy the URL in the HTTPS box.
-5. Open the alternative editor and terminal window.
-6. Type 'git clone' and paste the copied URL.
-7. Press Enter. A local clone will be created.
 
-Once the project been loaded into the IDE it is necessary to install the necessary requirements which can be done by typing the following command.
 
-    -pip install -r requirements.txt
 
-### How to Fork the respository.
+---
 
-1. Log into GitHub.
-2. In Github go to (https://github.com/AideenM12/MotherFolklore-MS3).
-3. In the top right hand corner click "Fork".
 
 ## Credits
 

@@ -61,33 +61,33 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
             order.save()
-            for item_id, item_data in cart.items():
-                try:
-                    if cart['courses']:
-                        for item_id, item_data in cart['courses'].items():
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                course=Course.objects.get(pk=item_id),
-                                quantity=item_data,
-                            )
-                            order_line_item.save()
+            #for item_id, item_data in cart.items():
+            try:
+                if cart['courses']:
+                    for item_id, item_data in cart['courses'].items():
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            course=Course.objects.get(pk=item_id),
+                            quantity=item_data,
+                        )
+                        order_line_item.save()
 
-                    if cart['exam_courses']:
-                        for item_id, item_data in cart['exam_courses'].items():
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                exam_course=ExamCourse.objects.get(pk=item_id),
-                                quantity=item_data,
-                            )
-                            order_line_item.save()
+                if cart['exam_courses']:
+                    for item_id, item_data in cart['exam_courses'].items():
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            exam_course=ExamCourse.objects.get(pk=item_id),
+                            quantity=item_data,
+                        )
+                        order_line_item.save()
 
-                except Course.DoesNotExist or ExamCourse.DoesNotExist:
-                    messages.error(request, (
-                        "One of the courses in your cart wasn't found. "
-                        "Please call us for assistance!")
-                    )
-                    order.delete()
-                    return redirect(reverse('cart'))
+            except Course.DoesNotExist or ExamCourse.DoesNotExist:
+                messages.error(request, (
+                    "One of the courses in your cart wasn't found. "
+                    "Please call us for assistance!")
+                )
+                order.delete()
+                return redirect(reverse('cart'))
 
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse(

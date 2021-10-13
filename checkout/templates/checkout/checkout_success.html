@@ -26,12 +26,12 @@
             <p>{{ order.date }}</p>
             <p class="large-text highlight">Order Details:</p>
             {% for item in order.lineitems.all %}
-            {% if 'course' in item %}
+            {% if item.course %}
             <p>
                {{ item.course.name }}
             </p>
             <p class="">{{ item.quantity }} @ €{{ item.course.price }} each</p>
-            {% elif 'exam_course' in item %}
+            {% elif item.exam_course %}
             <p class="">
                {{ item.exam_course.name }}
             </p>
