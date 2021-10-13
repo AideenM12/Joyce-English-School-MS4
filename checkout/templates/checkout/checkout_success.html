@@ -21,7 +21,7 @@
          <div class="card-content">
             <h3 class="center-align">Order Info:</h3>
             <p class="large-text highlight">Order Number:</p>
-            <p>{{ order.order_number }}</p>
+            <p class="text-break">{{ order.order_number }}</p>
             <p class="large-text highlight">Order Date:</p>
             <p>{{ order.date }}</p>
             <p class="large-text highlight">Order Details:</p>
@@ -61,16 +61,22 @@
             <p>€{{ order.order_total }}</p>
             <!--Back to Courses Buttons-->
             <div class="card-action center-align">
-               <a href="{% url 'courses' %}" class="btn">
+               <a href="{% url 'courses' %}" class="btn checkout-btn">
+               <span class="icon mr-2">
+               <i class="fas fa-chevron-left"></i>
+               </span>               
+               <span class="text-uppercase">Browse Courses!</span>              
+               <a href="{% url 'profile' %}" class="btn checkout-btn">
                <span class="icon mr-2">
                <i class="fas fa-chevron-left"></i>
                </span>
-               <span class="text-uppercase">Back to Courses!</span>
-               <a href="{% url 'exam_courses' %}" class="btn">
+               <span class="text-uppercase">Back to Profile!</span>
+               </a>
+               <a href="{% url 'exam_courses' %}" class="btn checkout-btn">
                <span class="icon mr-2">
                <i class="fas fa-chevron-left"></i>
                </span>
-               <span class="text-uppercase">Back to Exam Courses!</span>
+               <span class="text-uppercase">Browse Exam Courses!</span>
                </a>
             </div>
          </div>

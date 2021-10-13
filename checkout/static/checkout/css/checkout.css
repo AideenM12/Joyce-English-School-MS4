@@ -153,6 +153,12 @@ button {
 	outline: none;
 }
 
+.checkout-btn{
+	font-size: .85rem !important;
+}
+.text-break{	
+	word-wrap: break-word;
+}
 button:focus {
 	background: #24B47E;
 }
