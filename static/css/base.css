@@ -166,6 +166,13 @@ footer>h5 {
 	background-color: #4ea5d9 !important;
 }
 
+.footer-icons{
+	text-align: right;
+}
+
+.foot-header{
+	text-align: left;
+}
 
 /*----Toasts-----*/
 
@@ -493,6 +500,15 @@ textarea#id_comments.form-control {
 		align-content: center !important;
 		flex-wrap: wrap !important;
 	}
+
+	.footer-icons{
+		text-align: right;
+	}
+	
+	.foot-header{
+		text-align: left;
+		margin-left: 1rem;
+	}
 }
 
 @media only screen and (max-width: 576px) {
@@ -524,6 +540,14 @@ textarea#id_comments.form-control {
 		font-size: 1.5rem;
 		margin-top: 10px;
 		padding-right: .5rem;
+		line-height: 1rem;
+		text-align: center;
+	}
+	.foot-header{
+		text-align: center;
+	}
+	.footer-icons{
+		text-align: center;
 	}
 	/*----------Cards-------------*/
 	.detail-card {
