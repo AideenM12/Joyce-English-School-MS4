@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.http import Http404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import ExamCourse
@@ -21,13 +22,17 @@ def exam_courses(request):
 
 def exam_course_detail(request, exam_course_id):
     """ A view to return details about each individual exam course"""
-    exam_course = get_object_or_404(ExamCourse, pk=exam_course_id)
+    try:
+        exam_course = get_object_or_404(ExamCourse, pk=exam_course_id)
 
-    context = {
-        'exam_course': exam_course,
-    }
+        context = {
+            'exam_course': exam_course,
+        }
 
-    return render(request, 'exam_courses/exam_course_detail.html', context)
+        return render(request, 'exam_courses/exam_course_detail.html', context)
+    except Http404:
+        messages.error(request, "Sorry! That course doesn't exist!")
+        return redirect('exam_courses')
 
 
 @login_required
@@ -42,7 +47,7 @@ def add_exam_course(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully added Exam Course!')
-            return redirect(reverse('add_exam_course'))
+            return redirect(reverse('exam_courses'))
         else:
             messages.error(
                 request,
@@ -63,20 +68,24 @@ def edit_exam_course(request, exam_course_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only site admin can do that.')
         return redirect(reverse('home'))
+    try:
+        exam_course = get_object_or_404(ExamCourse, pk=exam_course_id)
+        if request.method == 'POST':
+            form = ExamCourseForm(
+                request.POST, request.FILES, instance=exam_course)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Successfully updated course!')
+                return redirect(reverse(
+                    'exam_course_detail', args=[exam_course.id]))
+            else:
+                messages.error(
+                    request,
+                    'Failed to update course. Please ensure the form is valid.')
+    except Http404:
+        messages.error(request, "Sorry! That course doesn't exist!")
+        return redirect('exam_courses')
 
-    exam_course = get_object_or_404(ExamCourse, pk=exam_course_id)
-    if request.method == 'POST':
-        form = ExamCourseForm(
-            request.POST, request.FILES, instance=exam_course)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully updated course!')
-            return redirect(reverse(
-                'exam_course_detail', args=[exam_course.id]))
-        else:
-            messages.error(
-                request,
-                'Failed to update course. Please ensure the form is valid.')
     else:
         form = ExamCourseForm(instance=exam_course)
         messages.info(request, f'You are editing {exam_course.name}')
@@ -97,7 +106,11 @@ def delete_exam_course(request, exam_course_id):
         messages.error(request, 'Sorry, only site admin can do that.')
         return redirect(reverse('home'))
 
-    exam_course = get_object_or_404(ExamCourse, pk=exam_course_id)
-    exam_course.delete()
-    messages.success(request, 'Course deleted!')
-    return redirect(reverse('exam_courses'))
+    try:
+        exam_course = get_object_or_404(ExamCourse, pk=exam_course_id)
+        exam_course.delete()
+        messages.success(request, 'Course deleted!')
+        return redirect(reverse('exam_courses'))
+    except Http404:
+        messages.error(request, "Sorry! That course doesn't exist!")
+        return redirect('exam_courses')
