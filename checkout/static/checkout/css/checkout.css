@@ -196,3 +196,10 @@ button:active {
 .order-confirm {
 	width: 50vw;
 }
+
+.custom-row{
+	display: flex !important;
+	flex-direction: column !important;
+	align-content: center !important;
+	flex-wrap: wrap !important;
+}

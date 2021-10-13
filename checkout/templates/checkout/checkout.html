@@ -18,11 +18,11 @@
    <!--Cart Items-->
    {% for item in cart_items %}
    {% if 'course' in item %}
-   <div class="row">
-      <div class="col l10 offset-l1">
+   <div class="row custom-row">
+      <div class="col l10">
          <a href="{% url 'course_detail' item.course.id %}">
          </a>
-         <div class="col l10 offset-l1">
+         <div class="col">
             <div class="card">
                <div class="card-title center-align">Your General Course Orders:</div>
                <div class="card-content">
@@ -41,14 +41,14 @@
          {% endfor %}
          {% for item in cart_items %}
          {% if 'exam_course' in item %}
-         <div class="row">
-            <div class="col ">
+         <div class="row custom-row">
+            <div class="col l10 ">
                <a href="{% url 'exam_course_detail' item.exam_course.id %}">
                </a>
             </div>
          </div>
-         <div class="col l10 offset-l1">
-            <div class="card">
+         <div class="col l10">
+            <div class="card detail-card">
                <div class="card-title center-align">Your Exam Course Orders:</div>
                <div class="card-content">
                   {% if item.exam_course.image %}
@@ -68,8 +68,8 @@
    </div>
    <!--Checkout Form-->
    <div class="container">
-      <div class="row">
-         <form action="{% url 'checkout' %}" method="POST" id="payment-form" class=" center-align col s12 card-panel">
+      <div class="row">            
+         <form action="{% url 'checkout' %}" method="POST" id="payment-form" class="card-panel center-align s12">
             {% csrf_token %}
             <h6 class="center-align">Please fill out the form below to complete your order</h6>
             <fieldset class="rounded">
@@ -122,9 +122,6 @@
             </div>
          </form>
       </div>
-   </div>
-   </div>
-   </div>
    </div>
 </body>
 {% endblock %}

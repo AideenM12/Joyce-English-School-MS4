@@ -181,9 +181,7 @@ footer>h5 {
 	height: auto !important;
 }
 
-#top-parallax {
-	height: 70vh;
-}
+
 
 .card {
 	margin-left: 8rem;
@@ -248,12 +246,6 @@ tbody {
 /*----End Profile Page---*/
 
 
-/*----Cart Page CSS------*/
-
-#cart-btn-div {
-	margin-bottom: 10px;
-	margin-top: 5px;
-}
 
 
 
@@ -279,12 +271,14 @@ tbody {
 .nav-card-content {
 	padding: 0 !important;
 }
-
+.input-field label {
+	pointer-events: auto !important;
+  }
 
 /*------------Courses------------*/
 
 .course-card {
-	height: 12rem;
+	/*height: 12rem;*/
 	margin-left: 1rem !important;
 	margin-right: 1rem !important;
 }
@@ -303,7 +297,7 @@ tbody {
 
 .exam-course-card {
 	margin-top: 2rem !important;
-	height: 12rem !important;
+	/*height: 12rem !important;*/
 	margin-left: 1rem !important;
 	margin-right: 1rem !important;
 	margin-bottom: 2rem !important;
@@ -493,6 +487,12 @@ textarea#id_comments.form-control {
 		margin-left: 1rem;
 		margin-right: 1rem;
 	}
+	.custom-row{
+		display: flex !important;
+		flex-direction: column !important;
+		align-content: center !important;
+		flex-wrap: wrap !important;
+	}
 }
 
 @media only screen and (max-width: 576px) {
@@ -531,13 +531,15 @@ textarea#id_comments.form-control {
 		margin-right: .75rem !important;
 	}
 	.card {
-		margin-left: 5px;
-		margin-right: 5px;
+		/*margin-left: 5px;
+		margin-right: 5px;*/
 		font-size: 1.25rem;
 	}
-	.course-card {
-		margin-bottom: 2.5rem;
-		margin-top: 2.5rem;
+	.custom-row{
+		display: flex !important;
+		flex-direction: column !important;
+		align-content: center !important;
+		flex-wrap: wrap !important;
 	}
 	
 	.nav-cards {

@@ -60,8 +60,7 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
-            order.save()
-            #for item_id, item_data in cart.items():
+            order.save()          
             try:
                 if cart['courses']:
                     for item_id, item_data in cart['courses'].items():
