@@ -126,7 +126,6 @@ label .field.is-focused+span {
 	color: #8898AA;
 }
 
-
 /* IE doesn't show placeholders when empty+focused */
 
 .field:-ms-input-placeholder {

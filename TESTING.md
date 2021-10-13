@@ -901,7 +901,13 @@ Because some of the pages of the site contain an Object ID in the url the valida
 ### CSS
 All CSS was validated by using [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) with no issues detected. A screenshot of these results can be seen below:
 
-<img src="assets/documentation/doc-images/jigsaw-validator.png" width="550" height="350" alt="CSS-validator">
+* **Base.css file**
+
+<img src="documentation/doc_images/basecssjigsaw.w3.png" width="550" height="350" alt="Base-CSS-validator">
+
+* **Checkout.css file**
+
+<img src="documentation/doc_images/checkoutcssjigsaw.w3.png" width="550" height="350" alt="Checkout-CSS-validator">
 
 ### Javascript
 * All Javascript code was passed through the [JShint](https://jshint.com/) validator with little to no issues with the exception of 'let' being available in ES6 and the '$' being recognised as an unused variable. Screenshots of the results of these files can be found below:
