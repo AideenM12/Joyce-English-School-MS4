@@ -32,9 +32,10 @@ def add_to_cart(request, item_id):
         elif item_type == "exam_courses":
             if item_id in list(cart['exam_courses'].keys()):
                 cart['exam_courses'][item_id] += quantity
+                messages.success(request, 'Added exam course to your cart')
             else:
                 cart['exam_courses'][item_id] = quantity
-
+                messages.success(request, 'Added exam course to your cart')
         request.session['cart'] = cart
         return redirect(redirect_url)
 
