@@ -26,6 +26,20 @@ h6 {
 	font-size: 1.5rem;
 }
 
+.shadow-text {
+	text-shadow: 0px 2px 2px rgba(8, 8, 8, 0.4);
+}
+
+.card {
+	margin-left: 8rem;
+	margin-right: 8rem;
+	font-size: 1.25rem;
+}
+
+.card-title {
+	font-weight: 600 !important;
+}
+
 /*-----Background Image CSS---*/
 
 .background-image-1 {
@@ -52,8 +66,8 @@ h6 {
 	overflow-x: hidden;
 }
 
-
 /*-----Navigation-----*/
+
 nav {
 	background-color: #e63946;
 	font-family: 'Patrick Hand', sans-serif;
@@ -94,7 +108,6 @@ nav {
 	float: none !important;
 }
 
-
 /*--Bootstrap inline list style Found on Stack Overflow--*/
 
 .list-inline {
@@ -112,8 +125,7 @@ nav {
 	padding-left: 5px;
 }
 
-
-/*--------------Footer--------*/
+/*-------Footer--------*/
 
 .page-footer {
 	width: 100%;
@@ -126,8 +138,7 @@ nav {
 	left: 0;
 	bottom: 0;
 	background-color: #4ea5d9;
-	color: #f1faee;
-	text-shadow: 2px #070a0d !important;
+	color: #f1faee;	
 	border-top: 1px #f1faee solid;
 	height: 70px;
 }
@@ -143,14 +154,9 @@ footer>h5 {
 	color: #f1faee !important;
 }
 
-.shadow-text {
-	text-shadow: 0px 2px 2px rgba(8, 8, 8, 0.4);
-}
-
 .footer-row {
 	margin-bottom: 0;
 }
-
 
 /*----Icons----*/
 
@@ -166,11 +172,11 @@ footer>h5 {
 	background-color: #4ea5d9 !important;
 }
 
-.footer-icons{
+.footer-icons {
 	text-align: right;
 }
 
-.foot-header{
+.foot-header {
 	text-align: left;
 }
 
@@ -180,26 +186,12 @@ footer>h5 {
 	background-color: #203a54 !important;
 }
 
-
 /*-----Parallax Container-----*/
 
 .parallax-container .parallax img {
 	opacity: 1;
 	height: auto !important;
 }
-
-
-
-.card {
-	margin-left: 8rem;
-	margin-right: 8rem;
-	font-size: 1.25rem;
-}
-
-.card-title {
-	font-weight: 600 !important;
-}
-
 
 /*-------Home Page-------*/
 
@@ -218,9 +210,7 @@ footer>h5 {
 	font-size: 2.5rem !important;
 }
 
-
 /*---End Home Page----*/
-
 
 /*-----Profile Page----*/
 
@@ -249,16 +239,9 @@ tbody {
 	font-weight: 600;
 }
 
-
 /*----End Profile Page---*/
 
-
-
-
-
-
-
-/*----- AllAuth CSS -----*/
+/*----- Forms and AllAuth CSS -----*/
 
 .allauth-card {
 	margin-top: 2rem;
@@ -278,9 +261,40 @@ tbody {
 .nav-card-content {
 	padding: 0 !important;
 }
+
 .input-field label {
 	pointer-events: auto !important;
-  }
+}
+
+label {
+	font-size: 1.25rem;
+	color: #070a0d !important;
+}
+
+.signup_form {
+	width: auto;
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
+#form-row {
+	margin: 0 !important;
+}
+
+.form-btn {
+	background-color: #4ea5d9;
+	font-family: 'Architects Daughter', sans-serif;
+}
+
+.form-btn:hover {
+	background-color: #203a54;
+}
+
+.form-p {
+	font-size: 1.5rem;
+}
+
+/*--End of Forms and Allauth--*/
 
 /*------------Courses------------*/
 
@@ -303,8 +317,7 @@ tbody {
 }
 
 .exam-course-card {
-	margin-top: 2rem !important;
-	/*height: 12rem !important;*/
+	margin-top: 2rem !important;	
 	margin-left: 1rem !important;
 	margin-right: 1rem !important;
 	margin-bottom: 2rem !important;
@@ -350,40 +363,6 @@ textarea#id_description {
 
 /*----End of Courses----*/
 
-
-/*----------Forms and Allauth----------*/
-
-label {
-	font-size: 1.25rem;
-	color: #070a0d !important;
-}
-
-.signup_form {
-	width: auto;
-	margin-left: 2rem;
-	margin-right: 2rem;
-}
-
-#form-row {
-	margin: 0 !important;
-}
-
-.form-btn {
-	background-color: #4ea5d9;
-	font-family: 'Architects Daughter', sans-serif;
-}
-
-.form-btn:hover {
-	background-color: #203a54;
-}
-
-.form-p {
-	font-size: 1.5rem;
-}
-
-/*--End of Forms--*/
-
-
 /*----Buttons----*/
 
 .btn {
@@ -395,7 +374,6 @@ label {
 .btn:hover {
 	background-color: #4ea5d9;
 }
-
 
 /*----- Contact Page -----*/
 
@@ -415,10 +393,10 @@ label {
 
 /*-------End of Contact Page-----*/
 
-
 /*-----------Reviews Page--------*/
 
 /*----Back to Top Button -------*/
+
 /*--This Code was found on Codepen.io--*/
 
 #scroll {
@@ -452,8 +430,8 @@ label {
 #scroll:hover {
 	background-color: #4ea5d9;
 	opacity: 1;
-	filter: "alpha(opacity=100)";
-	-ms-filter: "alpha(opacity=100)";
+	filter: alpha(opacity=100);
+	-ms-filter: alpha(opacity=100);
 }
 
 #review-card-content {
@@ -473,6 +451,7 @@ textarea#id_comments.form-control {
 	font-size: 1.5rem;
 	height: 15vh;
 }
+
 /*---End of Review Page-----*/
 
 @media only screen and (min-width: 577px) and (max-width:992px) {
@@ -483,29 +462,32 @@ textarea#id_comments.form-control {
 		margin-left: auto;
 		margin-right: auto;
 	}
+
 	.nav-cards {
 		padding: .25rem 1rem .75rem 1rem !important;
 		margin-left: auto;
 		margin-right: auto;
 		width: 70vw;
 	}
+
 	.signup_form {
 		width: auto;
 		margin-left: 1rem;
 		margin-right: 1rem;
 	}
-	.custom-row{
+
+	.custom-row {
 		display: flex !important;
 		flex-direction: column !important;
 		align-content: center !important;
 		flex-wrap: wrap !important;
 	}
 
-	.footer-icons{
+	.footer-icons {
 		text-align: right;
 	}
-	
-	.foot-header{
+
+	.foot-header {
 		text-align: left;
 		margin-left: 1rem;
 	}
@@ -518,24 +500,29 @@ textarea#id_comments.form-control {
 		overflow-x: hidden !important;
 		height: auto !important;
 	}
+
 	/*-----------Navigation-------*/
 	.brand-logo {
 		left: 40% !important;
 		font-size: 1.5rem !important;
 	}
+
 	.sidenav li>a {
 		font-size: 1.5rem;
 	}
+
 	/*--------Footer--------*/
 	.page-footer {
 		height: 100px;
 		left: 0;
 		bottom: 0;
 	}
+
 	.footer-row {
 		margin-bottom: 0;
 		background-color: #4ea5d9;
 	}
+
 	.footer-icon {
 		font-size: 1.5rem;
 		margin-top: 10px;
@@ -543,35 +530,39 @@ textarea#id_comments.form-control {
 		line-height: 1rem;
 		text-align: center;
 	}
-	.foot-header{
+
+	.foot-header {
 		text-align: center;
 	}
-	.footer-icons{
+
+	.footer-icons {
 		text-align: center;
 	}
+
 	/*----------Cards-------------*/
 	.detail-card {
 		margin-left: .75rem !important;
 		margin-right: .75rem !important;
 	}
-	.card {
-		/*margin-left: 5px;
-		margin-right: 5px;*/
+
+	.card {	
 		font-size: 1.25rem;
 	}
-	.custom-row{
+
+	.custom-row {
 		display: flex !important;
 		flex-direction: column !important;
 		align-content: center !important;
 		flex-wrap: wrap !important;
 	}
-	
+
 	.nav-cards {
 		padding: .25rem 1rem .75rem 1rem !important;
 		margin-left: auto;
 		margin-right: auto;
 		width: 80vw;
 	}
+
 	.large-text {
 		font-size: 1.25rem;
 	}
@@ -595,6 +586,7 @@ textarea#id_comments.form-control {
 	textarea#id_comments.form-control {
 		height: 10vh;
 	}
+
 	/*---Add course/exam_course page---*/
 	.add-btn {
 		width: 40vw !important;
