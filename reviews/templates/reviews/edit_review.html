@@ -1,25 +1,35 @@
 {% extends "base.html" %}
 {% load static %}
+<style>
+   body {
+      background: url("{{ MEDIA_URL }}flag.jpg") no-repeat center center fixed;
+      width: 100vw;
+      height: 100vh;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow-x: hidden !important;
+
+   }
+</style>
 {% block content %}
-
-
 {% if user.is_authenticated %}
 <!--Edit Review Content and Form-->
-<body class="background-image-1" >
-   <div class="row">
-      <div class="col l8 offset-l2 m10 offset-m1">
-         <form method="POST" action="{% url 'edit_review' review.id %}" class="form card-panel" >
-            <h1 class="center-align">Edit Your Review</h1>
-            <p class="large-text center-align">Please fill out the form below to edit own review</p>
-            {% csrf_token %}
-            {{ form }}
-            <div class="center-align">
-               <a class="btn center-align" href="{% url 'reviews' %}">Cancel</a>
-               <button class="btn center-align" type="submit">Edit Review</button>
-            </div>
-         </form>
-      </div>
+<div class="row">
+   <div class="col l8 offset-l2 m10 offset-m1">
+      <form method="POST" action="{% url 'edit_review' review.id %}" class="form card-panel">
+         <h1 class="center-align">Edit Your Review</h1>
+         <p class="large-text center-align">Please fill out the form below to edit own review</p>
+         {% csrf_token %}
+         {{ form }}
+         <div class="center-align">
+            <a class="btn center-align" href="{% url 'reviews' %}">Cancel</a>
+            <button class="btn center-align" type="submit">Edit Review</button>
+         </div>
+      </form>
    </div>
-</body>
+</div>
 {% endif %}
 {% endblock %}
