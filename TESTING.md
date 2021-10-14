@@ -843,14 +843,14 @@ Pass
 All of the following HTML pages were validated by using [W3C Markup Validation Service](https://validator.w3.org/).
 
 — **HTML Pages** —
-* **Add Article Page** &#40; `add_article.html` &#41;:
+* **Add Course Page** &#40; `add_course.html` &#41;:
 
-<img src="assets/documentation/doc-images/add-article-w3validator.png" width="550" height="350" alt="add-article-validator">
+<img src="documentation/doc_images/add-course-validatorw3.png" width="550" height="350" alt="add-course-validator">
 
 
-* **Add Further Reading Page** &#40; `add_further_reading.html` &#41;:
+* **Add Exam Page** &#40; `add_exam_course.html` &#41;:
 
-<img src="assets/documentation/doc-images/add-fr-w3validator.png" width="550" height="350" alt="add-further-reading-validator">
+<img src="documentation/doc_images/add-examcourse-validatorw3.png" width="550" height="350" alt="add-exam-course-validator">
 
 
 * **Add Topic Page** &#40; `add_topic.html` &#41;:
@@ -888,7 +888,17 @@ All of the following HTML pages were validated by using [W3C Markup Validation S
 <img src="documentation/doc_images/signup-validatorw3.png" width="550" height="350" alt="signup-validator">
 
 
-* **Topics Page** &#40; `topics.html` &#41;:
+* **Reviews Page** &#40; `reviews.html` &#41;:
+
+<img src="assets/documentation/doc-images/topics-w3validator.png" width="550" height="350" alt="topics-validator">
+
+
+* **Add Review Page** &#40; `write_review.html` &#41;:
+
+<img src="assets/documentation/doc-images/topics-w3validator.png" width="550" height="350" alt="topics-validator">
+
+
+* **Edit Review Page** &#40; `edit_review.html` &#41;:
 
 <img src="assets/documentation/doc-images/topics-w3validator.png" width="550" height="350" alt="topics-validator">
 
