@@ -15,8 +15,7 @@ var card = elements.create('card', {
   iconStyle: 'solid',
   style: {
     base: {
-      iconColor: '#8898AA',
-      //color: 'white',
+      iconColor: '#8898AA',      
       lineHeight: '36px',
       fontWeight: 300,
       fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
@@ -38,22 +37,6 @@ var card = elements.create('card', {
 });
 card.mount('#card-element');
 
-/*var inputs = document.querySelectorAll('input.field');
-Array.prototype.forEach.call(inputs, function(input) {
-  input.addEventListener('focus', function() {
-    input.classList.add('is-focused');
-  });
-  input.addEventListener('blur', function() {
-    input.classList.remove('is-focused');
-  });
-  input.addEventListener('keyup', function() {
-    if (input.value.length === 0) {
-      input.classList.add('is-empty');
-    } else {
-      input.classList.remove('is-empty');
-    }
-  });
-});*/
 
 function setOutcome(result) {
   var successElement = document.querySelector('.success');
@@ -142,35 +125,8 @@ form.addEventListener('submit', function(ev) {
 }).fail(function () {
   // just reload the page, the error will be in django messages
   location.reload();
-})
+});
 });
 
-/*document.querySelector('form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  var form = document.querySelector('form');
-  var extraDetails = {
-    name: form.querySelector('input[name=cardholder-name]').value,
-  };
-  stripe.createToken(card, extraDetails).then(setOutcome);
-});*/
 
-/* end credit */
-/*var style = {
-    base: {
-        color: '#000',
-        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-        fontSmoothing: 'antialiased',
-        fontSize: '16px',
-        '::placeholder': {
-            color: '#aab7c4'
-        }
-    },
-    invalid: {
-        color: '#dc3545',
-        iconColor: '#dc3545'
-    }
-};
-var card = elements.create('card', {style: style});
-card.mount('#card-element');
-*/
 

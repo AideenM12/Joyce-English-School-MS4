@@ -1,61 +1,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Patrick+Hand&display=swap');
 body {
-    font-family: 'Architects Daughter', sans-serif;
-    background-color: #E8F1FD;
-    display: flex;
+	font-family: 'Architects Daughter', sans-serif;
+	background-color: #E8F1FD;
+	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
-   
 }
-main{
+
+main {
 	flex: 1 0 auto;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6{
-    font-family: 'Patrick Hand', sans-serif;
+h6 {
+	font-family: 'Patrick Hand', sans-serif;
 	color: #070a0d!important;
 	font-weight: 600;
 }
-.large-text{
+
+.large-text {
 	font-size: 1.5rem;
 }
-nav{
+
+.shadow-text {
+	text-shadow: 0px 2px 2px rgba(8, 8, 8, 0.4);
+}
+
+.card {
+	margin-left: 8rem;
+	margin-right: 8rem;
+	font-size: 1.25rem;
+}
+
+.card-title {
+	font-weight: 600 !important;
+}
+
+/*-----Background Image CSS---*/
+
+.background-image-1 {
+	background: url("../../media/flag.jpg") no-repeat center center fixed;
+	width: 100vw;
+	height: 100vh;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow-x: hidden !important;
+}
+
+.background-image-2 {
+	background: url("../../media/pages.jpg") no-repeat center center fixed;
+	width: 100vw;
+	height: 100vh;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow-x: hidden;
+}
+
+/*-----Navigation-----*/
+
+nav {
 	background-color: #e63946;
 	font-family: 'Patrick Hand', sans-serif;
 	min-height: 68px;
 	padding-right: .75rem;
 }
-.brand-logo, 
-.page-header{
+
+.brand-logo,
+.page-header {
 	font-family: 'Patrick Hand', sans-serif;
 	color: #f1faee !important;
 	font-weight: 600;
 }
-.brand-logo{
+
+.brand-logo {
 	margin-left: 20px !important;
 }
-.sidenav{
+
+.sidenav {
 	background-color: #f1faee;
 	color: #070a0d;
 }
 
-.sidenav-h4{
+.sidenav-h4 {
 	color: #070a0d !important;
 }
+
 .dropdown-content {
 	background-color: #f1faee;
 }
+
 .dropdown-content li>a {
 	color: #e63946;
 	font-weight: 500;
 }
-.no-float{
+
+.no-float {
 	float: none !important;
 }
+
 /*--Bootstrap inline list style Found on Stack Overflow--*/
 
 .list-inline {
@@ -73,8 +125,7 @@ nav{
 	padding-left: 5px;
 }
 
-
-/*--------------Footer--------*/
+/*-------Footer--------*/
 
 .page-footer {
 	width: 100%;
@@ -86,9 +137,8 @@ nav{
 	margin-bottom: 0;
 	left: 0;
 	bottom: 0;
-    background-color: #4ea5d9;
-	color: #f1faee;
-	text-shadow: 2px #070a0d !important;
+	background-color: #4ea5d9;
+	color: #f1faee;	
 	border-top: 1px #f1faee solid;
 	height: 70px;
 }
@@ -99,340 +149,348 @@ footer>h5 {
 	margin-bottom: 0;
 	-webkit-text-stroke: 1px black !important;
 }
-.foot-header{
-	color:#f1faee !important;
+
+.foot-header {
+	color: #f1faee !important;
 }
-.text-shadow{
-	text-shadow: 0px 2px 2px rgba(8, 8, 8, 0.4);
-}
-.footer-row{
+
+.footer-row {
 	margin-bottom: 0;
 }
 
 /*----Icons----*/
+
 .footer-icon {
-    color: #f1faee;
-    font-size: 1.5rem;
-    margin-top: 10px;
+	color: #f1faee;
+	font-size: 1.5rem;
+	margin-top: 10px;
 	padding-right: .75rem;
 }
 
-.footer-icon:hover{
-    color: #203a54 !important;
-    background-color: #4ea5d9 !important;
-    
+.footer-icon:hover {
+	color: #203a54 !important;
+	background-color: #4ea5d9 !important;
 }
+
+.footer-icons {
+	text-align: right;
+}
+
+.foot-header {
+	text-align: left;
+}
+
 /*----Toasts-----*/
+
 .toast.rounded {
- 
-    background-color: #203a54 !important;
+	background-color: #203a54 !important;
 }
 
 /*-----Parallax Container-----*/
 
 .parallax-container .parallax img {
 	opacity: 1;
+	height: auto !important;
 }
 
-#top-parallax {
-	height: 70vh;
-}
-
-.card{
-	margin-left: 8rem;
-	margin-right: 8rem;
-	font-size: 1.25rem;
-}
-.card-title{
-	font-weight: 600 !important;
-}
 /*-------Home Page-------*/
-.home-card{
+
+.home-card {
 	margin-left: 0 !important;
 	margin-right: 0 !important;
 	font-size: 1.25rem;
 }
-.home-card .card-action{
+
+.home-card .card-action {
 	padding: 1rem 0 1rem 0;
 }
-.home-card-title{
-	font-family: 'Patrick Hand', sans-serif ;
+
+.home-card-title {
+	font-family: 'Patrick Hand', sans-serif;
 	font-size: 2.5rem !important;
 }
+
 /*---End Home Page----*/
+
 /*-----Profile Page----*/
-.profile-header{
+
+.profile-header {
 	float: none!important;
 }
 
-#profile-update-form{
+#profile-update-form {
 	margin-left: 1.5rem !important;
 	margin-right: 1.5rem !important;
 }
-#profile-update-form .input-field>label{
+
+#profile-update-form .input-field>label {
 	color: #070a0d !important;
 	font-size: 1.5rem !important;
 	font-weight: 800;
-    text-decoration-line: underline;
+	text-decoration-line: underline;
 }
-.order-history{
+
+.order-history {
 	margin-left: 1.5rem !important;
 	margin-right: 1.5rem !important;
 }
-tbody{
+
+tbody {
 	font-weight: 600;
 }
+
 /*----End Profile Page---*/
-/*----Cart Page CSS------*/
-#cart-btn-div{
-	margin-bottom: 10px;
-	margin-top: 5px;
-	
-}
-/*.cart-btns{
-	margin-left: 10rem !important;
-	margin-right: 10rem !important;
-}*/
 
-/*-----Background Image CSS---*/
-body.background-image-1 {
-	background: url("../../media/flag.jpg") no-repeat center center fixed;
-	width: 100vw;
-	height: 100vh;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	background-repeat: no-repeat;
-	overflow-x: hidden !important;
-}
+/*----- Forms and AllAuth CSS -----*/
 
-body.background-image-2 {
-	background: url("../../media/pages.jpg") no-repeat center center fixed;
-	width: 100vw;
-	height: 100vh;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	background-repeat: no-repeat;
-	overflow-x: hidden;
-}
-
-/* AllAuth CSS */
-.allauth-card{
+.allauth-card {
 	margin-top: 2rem;
 	padding: 1rem 3rem 2rem 3rem;
 	width: 45vw;
 	margin-left: auto;
 	margin-right: auto;
-
 }
-.nav-cards{
+
+.nav-cards {
 	padding: .25rem 1rem .75rem 1rem !important;
 	margin-left: 2rem;
 	margin-right: 2rem;
 	width: 25vw;
 }
-.nav-card-content{
-	padding: 0 !important;
-}
-/*------------Courses------------*/
-/*.collapsible,
-.collapsible-header{
-	background-color: #e63946;
-	padding: 0;
-}
-.drop-container{
-	margin-left: 1rem;
-	margin-right: 1rem;
 
-}
-.collapsible-body {
-	background-color: #f1faee;
-}
-.course-header{
-	color: #f1faee !important;
-}*/ 
-.course-card{
-	height: 12rem;
-	margin-left: 1rem !important;
-	margin-right: 1rem !important;
-}
-.course-content{
+.nav-card-content {
 	padding: 0 !important;
 }
-.card-title{
-	padding: 2rem;
+
+.input-field label {
+	pointer-events: auto !important;
 }
-.highlight {
-	font-weight: 800;
-	
-}
-.exam-course-card{
-    margin-top: 2rem !important;
-    height: 12rem !important;
-    margin-left: 1rem !important;
-    margin-right: 1rem !important;
-    margin-bottom: 2rem !important;
-	
-}
-.exam-card-action{
-	margin-bottom: 2rem !important;
-    padding: 12px !important
-}
-.exam-card-title{
-	padding: 1rem;
-	line-height: 12px !important;
-    margin-bottom: 0 !important;
-}
-.detail-image{
-	height: 40rem;
-	width: 65rem;
-}
-textarea#id_description{
-	height: 25vh;
-}
-.course-form{
-	width: 80vw;
-	margin-left: auto;
-	margin-right: auto;
-}
-.course-form .input-field>label{
-	color: #070a0d !important;
-	font-size: 1rem !important;
-	font-weight: 700;
-   
-}
-#div_id_image{
-	margin-top: 2rem;
-	height: 5vw;
-    padding-top: 2.5rem;
-}
-/*----------Forms and Allauth----------*/
-label{
+
+label {
 	font-size: 1.25rem;
 	color: #070a0d !important;
 }
-.signup_form{
+
+.signup_form {
 	width: auto;
 	margin-left: 2rem;
 	margin-right: 2rem;
 }
 
-#form-row{
+#form-row {
 	margin: 0 !important;
 }
-.form-btn{
+
+.form-btn {
 	background-color: #4ea5d9;
 	font-family: 'Architects Daughter', sans-serif;
 }
 
-.form-btn:hover{
+.form-btn:hover {
 	background-color: #203a54;
 }
 
-.form-p{
+.form-p {
 	font-size: 1.5rem;
 }
 
+/*--End of Forms and Allauth--*/
+
+/*------------Courses------------*/
+
+.course-card {
+	/*height: 12rem;*/
+	margin-left: 1rem !important;
+	margin-right: 1rem !important;
+}
+
+.course-content {
+	padding: 0 !important;
+}
+
+.card-title {
+	padding: 2rem;
+}
+
+.highlight {
+	font-weight: 800;
+}
+
+.exam-course-card {
+	margin-top: 2rem !important;	
+	margin-left: 1rem !important;
+	margin-right: 1rem !important;
+	margin-bottom: 2rem !important;
+}
+
+.exam-card-action {
+	margin-bottom: 2rem !important;
+	padding: 12px !important
+}
+
+.exam-card-title {
+	padding: 1rem;
+	line-height: 12px !important;
+	margin-bottom: 0 !important;
+}
+
+.detail-image {
+	height: 40rem;
+	width: 65rem;
+}
+
+textarea#id_description {
+	height: 25vh;
+}
+
+.course-form {
+	width: 80vw;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.course-form .input-field>label {
+	color: #070a0d !important;
+	font-size: 1rem !important;
+	font-weight: 700;
+}
+
+#div_id_image {
+	margin-top: 2rem;
+	height: 5vw;
+	padding-top: 2.5rem;
+}
+
+/*----End of Courses----*/
+
 /*----Buttons----*/
 
-.btn{
+.btn {
 	margin: 1px;
 	background-color: #070a0d;
 	font-family: 'Architects Daughter', sans-serif;
 }
-.btn:hover{
+
+.btn:hover {
 	background-color: #4ea5d9;
 }
-/*---Contact Page---*/
+
+/*----- Contact Page -----*/
+
 #thanks {
 	font-size: 1.5rem;
 	font-weight: 800;
 	padding: 1.25rem;
 }
-#contactUs{
+
+#contactUs {
 	padding: 1.5rem;
 }
-.contact-form{
+
+.contact-form {
 	font-size: 1.5rem !important;
 }
 
-/*-----------Reviews Page------*/
-/*----Back to Top Button ------------*/
-/*----This Code was found on Codepen.io----*/
+/*-------End of Contact Page-----*/
+
+/*-----------Reviews Page--------*/
+
+/*----Back to Top Button -------*/
+
+/*--This Code was found on Codepen.io--*/
 
 #scroll {
-    position:fixed;
-    right:10px;
-    bottom:10px;
-    cursor:pointer;
-    width:50px;
-    height:50px;
-    background-color:#070a0d;
-    text-indent:-9999px;
-    display:none;
-    -webkit-border-radius:60px;
-    -moz-border-radius:60px;
-    border-radius:60px;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	background-color: #070a0d;
+	text-indent: -9999px;
+	display: none;
+	-webkit-border-radius: 60px;
+	-moz-border-radius: 60px;
+	border-radius: 60px;
 	z-index: 1;
 }
+
 #scroll span {
-    position:absolute;
-    top:50%;
-    left:50%;
-    margin-left:-8px;
-    margin-top:-12px;
-    height:0;
-    width:0;
-    border:8px solid transparent;
-    border-bottom-color:#f1faee;
-}
-#scroll:hover {
-    background-color:#4ea5d9;
-    opacity:1;filter:"alpha(opacity=100)";
-    -ms-filter:"alpha(opacity=100)";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -8px;
+	margin-top: -12px;
+	height: 0;
+	width: 0;
+	border: 8px solid transparent;
+	border-bottom-color: #f1faee;
 }
 
-#review-card-content{
-	padding: 0 !important;
-	
+#scroll:hover {
+	background-color: #4ea5d9;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	-ms-filter: alpha(opacity=100);
 }
-#review-card-title{
+
+#review-card-content {
+	padding: 0 !important;
+}
+
+#review-card-title {
 	font-size: 2.5rem;
 }
 
-input#id_title.form-control{
+input#id_title.form-control {
 	font-size: 1.5rem;
-    margin-top: 1rem;
+	margin-top: 1rem;
 }
-textarea#id_comments.form-control{
+
+textarea#id_comments.form-control {
 	font-size: 1.5rem;
 	height: 15vh;
 }
 
+/*---End of Review Page-----*/
+
 @media only screen and (min-width: 577px) and (max-width:992px) {
-	.allauth-card{
+	.allauth-card {
 		margin-top: 2rem;
 		padding: 1rem 3rem 2rem 3rem;
 		width: 70vw;
 		margin-left: auto;
 		margin-right: auto;
-	
 	}
-	.nav-cards{
+
+	.nav-cards {
 		padding: .25rem 1rem .75rem 1rem !important;
 		margin-left: auto;
 		margin-right: auto;
 		width: 70vw;
 	}
+
 	.signup_form {
 		width: auto;
 		margin-left: 1rem;
 		margin-right: 1rem;
 	}
 
+	.custom-row {
+		display: flex !important;
+		flex-direction: column !important;
+		align-content: center !important;
+		flex-wrap: wrap !important;
+	}
+
+	.footer-icons {
+		text-align: right;
+	}
+
+	.foot-header {
+		text-align: left;
+		margin-left: 1rem;
+	}
 }
 
 @media only screen and (max-width: 576px) {
@@ -442,83 +500,104 @@ textarea#id_comments.form-control{
 		overflow-x: hidden !important;
 		height: auto !important;
 	}
+
 	/*-----------Navigation-------*/
-	
 	.brand-logo {
 		left: 40% !important;
 		font-size: 1.5rem !important;
-		
 	}
+
 	.sidenav li>a {
 		font-size: 1.5rem;
-	}	
+	}
+
 	/*--------Footer--------*/
-	.page-footer{
+	.page-footer {
 		height: 100px;
 		left: 0;
-  bottom: 0;
- 
-		
+		bottom: 0;
 	}
-	.footer-row{
+
+	.footer-row {
 		margin-bottom: 0;
 		background-color: #4ea5d9;
 	}
+
 	.footer-icon {
-	
 		font-size: 1.5rem;
 		margin-top: 10px;
 		padding-right: .5rem;
+		line-height: 1rem;
+		text-align: center;
 	}
+
+	.foot-header {
+		text-align: center;
+	}
+
+	.footer-icons {
+		text-align: center;
+	}
+
 	/*----------Cards-------------*/
-	.detail-card{
+	.detail-card {
 		margin-left: .75rem !important;
 		margin-right: .75rem !important;
-		
 	}
-	.card{
-		margin-left: 5px;
-		margin-right: 5px;
+
+	.card {	
 		font-size: 1.25rem;
 	}
-	.course-card{
-		margin-bottom: 2.5rem;
-		margin-top: 2.5rem;
+
+	.custom-row {
+		display: flex !important;
+		flex-direction: column !important;
+		align-content: center !important;
+		flex-wrap: wrap !important;
 	}
-	.allauth-card{
-		margin-top: 2rem;
-		padding: 1.5rem 1.5rem 2.5rem 1.5rem;
-		width: 80vw;
-		margin-left: auto;
-		margin-right: auto;
-	
-	}
-	.nav-cards{
+
+	.nav-cards {
 		padding: .25rem 1rem .75rem 1rem !important;
 		margin-left: auto;
 		margin-right: auto;
 		width: 80vw;
 	}
+
 	.large-text {
 		font-size: 1.25rem;
 	}
-	.signup_form{
-		width:auto;
+
+	/*-----Allauth CSS-----*/
+	.signup_form {
+		width: auto;
 		margin-left: auto;
-    	margin-right: auto;
+		margin-right: auto;
 	}
-	textarea#id_comments.form-control{
+
+	.allauth-card {
+		margin-top: 2rem;
+		padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+		width: 80vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/*----Review Page form----*/
+	textarea#id_comments.form-control {
 		height: 10vh;
 	}
-	.add-btn{
-		width:40vw !important;
+
+	/*---Add course/exam_course page---*/
+	.add-btn {
+		width: 40vw !important;
 		margin: .25rem .25rem 1.45rem .25rem;
 		background-color: #f1faee;
-    	color: #070a0d;
+		color: #070a0d;
 	}
-	#div_id_image{
+
+	#div_id_image {
 		margin-top: 2rem;
 		height: 15vw;
-    	padding-top: 2rem;
+		padding-top: 2rem;
 	}
 }
