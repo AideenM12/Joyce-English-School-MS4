@@ -298,8 +298,7 @@ label {
 
 /*------------Courses------------*/
 
-.course-card {
-	/*height: 12rem;*/
+.course-card {	
 	margin-left: 1rem !important;
 	margin-right: 1rem !important;
 }
