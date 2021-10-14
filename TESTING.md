@@ -848,14 +848,19 @@ All of the following HTML pages were validated by using [W3C Markup Validation S
 <img src="documentation/doc_images/add-course-validatorw3.png" width="550" height="350" alt="add-course-validator">
 
 
-* **Add Exam Page** &#40; `add_exam_course.html` &#41;:
+* **Add Exam Course Page** &#40; `add_exam_course.html` &#41;:
 
 <img src="documentation/doc_images/add-examcourse-validatorw3.png" width="550" height="350" alt="add-exam-course-validator">
 
 
-* **Add Topic Page** &#40; `add_topic.html` &#41;:
+* **Edit Course Page** &#40; `edit_course.html` &#41;:
 
-<img src="assets/documentation/doc-images/add-topic-w3validator.png" width="550" height="350" alt="add-topic-validator">
+<img src="documentation/doc_images/edit-course-validatorw3.png" width="550" height="350" alt="edit-course-validator">
+
+
+* **Edit Exam Course Page** &#40; `edit_exam_course.html` &#41;:
+
+<img src="documentation/doc_images/edit-exam-course-validatorw3.png" width="550" height="350" alt="edit-exam-course-validator">
 
 
 * **Courses Page** &#40; `courses.html` &#41;:
