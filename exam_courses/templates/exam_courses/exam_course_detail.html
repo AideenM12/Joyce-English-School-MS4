@@ -1,78 +1,95 @@
 {% extends "base.html" %}
 {% load static %}
+<!--Background image inline css-->
+{% block extra_css %}
+<style>
+   body {
+      background: url("{{ MEDIA_URL }}pages.jpg") no-repeat center center fixed;
+      width: 100vw;
+      height: 100vh;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow-x: hidden !important;
+
+   }
+</style>
+{% endblock %}
 {% block content %}
 <!--Main Course Detail Content-->
-<body class="background-image-2">
-   <div class="row">
-      <div class="col s12 center-align">
-         <h3 class="page-header shadow-text">Exam Courses</h3>
+<div class="row">
+   <div class="col s12 center-align">
+      <h3 class="page-header shadow-text">Exam Courses</h3>
+   </div>
+</div>
+<!--Course Detail Content-->
+<div class="row custom-row">
+   <div class="card detail-card">
+      <div class="card-content">
+         <span class="card-title center-align"> {{ exam_course.name }}</span>
+         <div class="row">
+            <div class="col  center-align">
+               <img src="{{MEDIA_URL}}{{ exam_course.image }}" class="image responsive-img center-align" alt="image">
+            </div>
+         </div>
+         <div class="row">
+            <p class="center-align"><span class="highlight"> Course Description </span><br>{{ exam_course.description }}
+            </p>
+            <br>
+            <p class="center-align"><span class="highlight"> Price </span>€{{ exam_course.price }}</p>
+            <p class="center-align"><span class="highlight">Start </span> {{ exam_course.start_date }}</p>
+            <p class="center-align"><span class="highlight">Finish </span> {{ exam_course.end_date }}</p>
+            <p class="center-align"><span class="highlight">Number of hours </span> {{ exam_course.hours }}</p>
+         </div>
+         <!-- Cart Buttons-->
+         {% if request.user.is_authenticated %}
+         <form class="form" action="{% url 'add_to_cart' exam_course.id %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+            <div class="form-row">
+               <div class="col-12 hide">
+                  <div class="form-group w-50">
+                     <div class="input-group d-none">
+                        <input class="form-control qty_input" type="hidden number" name="quantity" value="1" min="1"
+                           max="1" data-item_id="{{ exam_course.id }}" id="id_qty_{{ exam_course.id }}">
+                     </div>
+                  </div>
+               </div>
+               <div class="card-action center-align">
+                  <a href="{% url 'exam_courses' %}" class="btn">
+                     <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                     </span>
+                     <span>Back to Exam Courses</span>
+                  </a>
+                  <input type="submit" class="btn" value="Add to cart">
+                  <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                  <input type="hidden" name="item_type" value="exam_courses" />
+               </div>
+            </div>
+         </form>
+         <!--Admin Buttons-->
+         {% if request.user.is_superuser %}
+         <div class="row">
+            <div class="col s12">
+               <div class="card-action center-align">
+                  <a class="btn" href="{% url 'edit_exam_course' exam_course.id %}">Edit</a>
+                  <a class="btn" href="{% url 'delete_exam_course' exam_course.id %}">Delete</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      {% endif %}
+      <!--Allauth Buttons-->
+      {% else %}
+      <div class="card-action center-align">
+         <p>Please Sign Up or Log In to purchase your place in one of our classes!</p>
+         <a class="btn" href="{% url 'account_signup' %}">Sign Up</a>
+         <a class="btn" href="{% url 'account_login' %}">Log In</a>
       </div>
    </div>
-   <!--Course Detail Content-->
-   <div class="row custom-row">      
-         <div class="card detail-card">
-            <div class="card-content">
-               <span class="card-title center-align">  {{ exam_course.name }}</span>
-               <div class="row">
-                  <div class="col  center-align">
-                     <img src="{{MEDIA_URL}}{{ exam_course.image }}" class="image responsive-img center-align"  alt="image">
-                  </div>
-               </div>
-               <div class="row">
-                  <p class="center-align"><span class="highlight"> Course Description </span><br>{{ exam_course.description }}</p>
-                  <br>
-                  <p class="center-align"><span class="highlight"> Price </span>€{{ exam_course.price }}</p>
-                  <p class="center-align"><span class="highlight">Start </span> {{ exam_course.start_date }}</p>
-                  <p class="center-align"><span class="highlight">Finish </span> {{ exam_course.end_date }}</p>
-                  <p class="center-align"><span class="highlight">Number of hours </span> {{ exam_course.hours }}</p>
-               </div>
-               <!-- Cart Buttons-->
-               {% if request.user.is_authenticated %}
-               <form class="form" action="{% url 'add_to_cart' exam_course.id %}" method="POST">
-                  {% csrf_token %}
-                  <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                  <div class="form-row">
-                     <div class="col-12 hide">
-                        <div class="form-group w-50">
-                           <div class="input-group d-none">
-                              <input class="form-control qty_input" type="hidden number" name="quantity" value="1" min="1" max="1" data-item_id="{{ exam_course.id }}" id="id_qty_{{ exam_course.id }}">
-                           </div>
-                        </div>
-                     </div>
-                     <div class="card-action center-align">
-                        <a href="{% url 'exam_courses' %}" class="btn">
-                        <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span>Back to Exam Courses</span>
-                        </a>
-                        <input type="submit" class="btn" value="Add to cart">
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        <input type="hidden" name="item_type" value="exam_courses" />
-                     </div>
-                  </div>
-               </form>
-               <!--Admin Buttons-->
-               {% if request.user.is_superuser %}
-               <div class="row">
-                  <div class="col s12">
-                     <div class="card-action center-align">
-                        <a class="btn" href="{% url 'edit_exam_course' exam_course.id %}">Edit</a>
-                        <a class="btn" href="{% url 'delete_exam_course' exam_course.id %}">Delete</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            {% endif %}
-            <!--Allauth Buttons-->
-            {% else %}
-            <div class="card-action center-align">
-               <p>Please Sign Up or Log In to purchase your place in one of our classes!</p>
-               <a class="btn" href="{% url 'account_signup' %}">Sign Up</a>
-               <a class="btn" href="{% url 'account_login' %}">Log In</a>
-            </div>
-         </div>      
-      {% endif %}
-   </div>
-</body>
+   {% endif %}
+</div>
 {% endblock %}
