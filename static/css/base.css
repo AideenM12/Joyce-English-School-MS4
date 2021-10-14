@@ -40,32 +40,6 @@ h6 {
 	font-weight: 600 !important;
 }
 
-/*-----Background Image CSS---*/
-
-body.courses {
-	background: url("../../media/flag.jpg") no-repeat center center fixed;
-	width: 100vw;
-	height: 100vh;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	background-repeat: no-repeat;
-	overflow-x: hidden !important;
-}
-
-.background-image-2 {
-	background: url("../../media/pages.jpg") no-repeat center center fixed;
-	width: 100vw;
-	height: 100vh;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	background-repeat: no-repeat;
-	overflow-x: hidden;
-}
-
 /*-----Navigation-----*/
 
 nav {
