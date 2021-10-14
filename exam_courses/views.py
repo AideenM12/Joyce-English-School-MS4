@@ -81,7 +81,7 @@ def edit_exam_course(request, exam_course_id):
             else:
                 messages.error(
                     request,
-                    'Failed to update course. Please ensure the form is valid.')
+                    'Failed to update course. Please ensure form is valid.')
     except Http404:
         messages.error(request, "Sorry! That course doesn't exist!")
         return redirect('exam_courses')

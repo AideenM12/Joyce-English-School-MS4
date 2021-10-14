@@ -937,7 +937,10 @@ All CSS was validated by using [W3C Jigsaw CSS Validation Service](https://jigsa
 ### Python 
 * The app.py file was passed through the [PEP8](http://pep8online.com/) validator and the results can be seen below:
 
-<img src="assets/documentation/doc-images/PEP8-validator.png" width="450" height="350" alt="PEP8-validator">
+* **checkout app**
+line 116 too long
+line 125 too long
+
 
 ## Linters
 

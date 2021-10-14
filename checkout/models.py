@@ -43,7 +43,7 @@ class Order(models.Model):
 
     def update_total(self):
         """
-        Update  total each time a line item is added.        
+        Update  total each time a line item is added.
         """
         self.order_total = self.lineitems.aggregate(
             Sum('lineitem_total'))['lineitem_total__sum'] or 0
@@ -64,7 +64,7 @@ class Order(models.Model):
 
 class OrderLineItem(models.Model):
     """
-    A model for each row of an order, storing course, 
+    A model for each row of an order, storing course,
     exam course, quantity and price total
     """
     order = models.ForeignKey(
