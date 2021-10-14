@@ -811,10 +811,10 @@ Verify that a 500 page exists to handle internal server errors as expected.
 
 **Steps**
 1. Open the Joyce School gitpod workspace.
-2. Navigate to the app.py file.
-3. Inside the app.py file navigate to the index page route handler.
-4. Change return render template value to 1/0.
-5. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
+2. Navigate to the courses template.
+3. Create the following incorrect filepath for the inline background image: {% media 'flag.jpg' %}.
+4. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/).
+5. Navigate to the courses page.
 6. Observe the rendered 500 page.
 
 **Expected Result:**

@@ -1,8 +1,24 @@
 {% extends "base.html" %}
 {% load static %}
+<!--Background image inline css-->
+{% block extra_css %}
+<style>
+   body{
+   background: url("{{ MEDIA_URL }}pages.jpg") no-repeat center center fixed;
+	width: 100vw;
+	height: 100vh;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow-x: hidden !important;
+  
+   }
+</style>
+{% endblock %}
 {% block content %}
 <!--Main Edit Course Content-->
-<body class="background-image-2">
    <div class="row">
       <div class="col s12 center-align">
          <h2 class="page-header shadow-text">Site Management</h2>
@@ -28,7 +44,6 @@
          </form>
       </div>
    </div>
-</body>
 {% endblock %}
 <!--Update Image JS-->
 {% block postloadjs %}

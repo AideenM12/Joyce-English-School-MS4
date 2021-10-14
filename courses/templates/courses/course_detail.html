@@ -1,79 +1,95 @@
 {% extends "base.html" %}
 {% load static %}
+<!--Background image inline css-->
+{% block extra_css %}
+<style>
+   body{
+   background: url("{{ MEDIA_URL }}pages.jpg") no-repeat center center fixed;
+	width: 100vw;
+	height: 100vh;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow-x: hidden !important;
+  
+   }
+</style>
+{% endblock %}
 {% block content %}
 <!--Main Course Detail Content-->
-<body class="background-image-2">
-   <div class="row">
-      <div class="col s12 center-align">
-         <h3 class="page-header shadow-text">Courses</h3>
+<div class="row">
+   <div class="col s12 center-align">
+      <h3 class="page-header shadow-text">Courses</h3>
+   </div>
+</div>
+<!--Course Detail Content-->
+<div class="row custom-row">
+   <div class="card">
+      <div class="card-content">
+         <span class="card-title center-align">{{ course.name }}</span>
+         <br>
+         <div class="row">
+            <div class="col center-align">
+               <img src="{{MEDIA_URL}}{{ course.image }}" class="image responsive-img center-align" alt="image">
+            </div>
+         </div>
+         <div class="row">
+            <p class="center-align"><span class="highlight">Course Description </span><br>{{ course.description }}</p>
+            <br>
+            <p class="center-align"><span class="highlight">Price </span>€{{ course.price }}</p>
+            <p class="center-align"><span class="highlight">Start </span> {{ course.start_date }}</p>
+            <p class="center-align"><span class="highlight">Finish </span> {{ course.end_date }}</p>
+            <p class="center-align"><span class="highlight">Number of hours </span> {{ course.hours }}</p>
+         </div>
+         <!-- Cart Buttons-->
+         {% if request.user.is_authenticated %}
+         <form class="form" action="{% url 'add_to_cart' course.id %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+            <div class="form-row">
+               <div class="col-12 hide">
+                  <div class="form-group w-50">
+                     <div class="input-group d-none">
+                        <input class="form-control qty_input" type="hidden number" name="quantity" value="1" min="1"
+                           max="1" data-item_id="{{ course.id }}" id="id_qty_{{ course.id }}">
+                     </div>
+                  </div>
+               </div>
+               <div class="card-action center-align">
+                  <a href="{% url 'courses' %}" class="btn btn-outline-black rounded-0 mt-5">
+                     <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                     </span>
+                     <span>Back to Courses</span>
+                  </a>
+                  <input type="submit" class="btn " value="Add to cart">
+                  <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                  <input type="hidden" name="item_type" value="courses" />
+               </div>
+            </div>
+         </form>
+         <!--Admin Buttons-->
+         {% if request.user.is_superuser %}
+         <div class="row">
+            <div class="col s12">
+               <div class="card-action center-align">
+                  <a class="btn" href="{% url 'edit_course' course.id %}">Edit</a>
+                  <a class="btn" href="{% url 'delete_course' course.id %}">Delete</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      {% endif %}
+      <!--AllAuth Buttons-->
+      {% else %}
+      <div class="card-action center-align">
+         <p>Please Sign Up or Log In to purchase your place in one of our classes!</p>
+         <a class="btn" href="{% url 'account_signup' %}">Sign Up</a>
+         <a class="btn" href="{% url 'account_login' %}">Log In</a>
       </div>
    </div>
-   <!--Course Detail Content-->
-   <div class="row custom-row">  
-         <div class="card">
-            <div class="card-content">
-               <span class="card-title center-align">{{ course.name }}</span>
-               <br>
-               <div class="row">
-                  <div class="col center-align">
-                     <img src="{{MEDIA_URL}}{{ course.image }}" class="image responsive-img center-align"  alt="image">
-                  </div>
-               </div>
-               <div class="row">
-                  <p class="center-align"><span class="highlight">Course Description </span><br>{{ course.description }}</p>
-                  <br>
-                  <p class="center-align"><span class="highlight">Price </span>€{{ course.price }}</p>
-                  <p class="center-align"><span class="highlight">Start </span> {{ course.start_date }}</p>
-                  <p class="center-align"><span class="highlight">Finish </span> {{ course.end_date }}</p>
-                  <p class="center-align"><span class="highlight">Number of hours </span> {{ course.hours }}</p>
-               </div>
-               <!-- Cart Buttons-->
-               {% if request.user.is_authenticated %} 
-               <form class="form" action="{% url 'add_to_cart' course.id %}" method="POST">
-                  {% csrf_token %}
-                  <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                  <div class="form-row">
-                     <div class="col-12 hide">
-                        <div class="form-group w-50">
-                           <div class="input-group d-none">
-                              <input class="form-control qty_input" type="hidden number" name="quantity" value="1" min="1" max="1" data-item_id="{{ course.id }}" id="id_qty_{{ course.id }}">
-                           </div>
-                        </div>
-                     </div>
-                     <div class="card-action center-align">
-                        <a href="{% url 'courses' %}" class="btn btn-outline-black rounded-0 mt-5">
-                        <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span>Back to Courses</span>
-                        </a>
-                        <input type="submit" class="btn " value="Add to cart">
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        <input type="hidden" name="item_type" value="courses" />
-                     </div>
-                  </div>
-               </form>
-               <!--Admin Buttons-->
-               {% if request.user.is_superuser %}
-               <div class="row">
-                  <div class="col s12">
-                     <div class="card-action center-align">
-                        <a class="btn" href="{% url 'edit_course' course.id %}">Edit</a>
-                        <a class="btn" href="{% url 'delete_course' course.id %}">Delete</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            {% endif %}
-            <!--AllAuth Buttons-->
-            {% else %}
-            <div class="card-action center-align">
-               <p>Please Sign Up or Log In to purchase your place in one of our classes!</p>
-               <a class="btn" href="{% url 'account_signup' %}">Sign Up</a>
-               <a class="btn" href="{% url 'account_login' %}">Log In</a>
-            </div>
-         </div>      
-      {% endif %} 
-   </div>
-</body>
+   {% endif %}
+</div>
 {% endblock %}
