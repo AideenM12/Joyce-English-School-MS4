@@ -5,7 +5,7 @@
 {% block extra_css %}
 <style>
    body{
-   background: url("{% static 'media/flag.jpg' %}") no-repeat center center fixed;
+   background: url("{% media 'flag.jpg' %}") no-repeat center center fixed;
 	width: 100vw;
 	height: 100vh;
 	-webkit-background-size: cover;
@@ -13,12 +13,13 @@
 	-o-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;
-	overflow-x: hidden !important;   
+	overflow-x: hidden !important;
+  
    }
 </style>
 {% endblock %}
-<!--Main Course Content-->
-<<!--body class="background-image-1">-->
+<!--Main Course Content ("{{ MEDIA_URL }}flag.jpg")-->
+<!--body class="background-image-1">-->
 <div class="row">
    <div class="col s12 center-align">
       <h3 class="page-header shadow-text">Courses</h3>

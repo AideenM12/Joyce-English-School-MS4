@@ -1,25 +1,27 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
+
 <!----------Main 500 Page Content------->
 
-    <div class="parallax-container" id="top-parallax">
-        <div class="parallax">
-           <img src="{{ MEDIA_URL }}flag.jpg" alt="joyce-statue" width="640" height="640">
-        </div>
-     </div>
-    <div class="container">
-        <div class="row">
-            <div class="card-panel center-align">
-                <h3 class="center-align">500</h3>
-                <h3 class="center-align">Server Error!</h3>
-                <a href="{% url 'home' %}" class="btn">Home</a>
-            </div>
+<div class="parallax-container">
+    <div class="parallax">
+       <img src="{% get_media_prefix %}flag.jpg" alt="joyce-statue" width="640" height="640">
+    </div>
+ </div>
+<div class="container">
+    <div class="row">
+        <div class="card-panel center-align">
+            <h3 class="center-align">500</h3>
+            <h3 class="center-align">Server Error!</h3>
+            <a href="{% url 'home' %}" class="btn">Home</a>
         </div>
     </div>
-    <div class="parallax-container">
-        <div class="parallax">
-           <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="banshee">
-        </div>
-     </div>
+</div>
+<div class="parallax-container">
+    <div class="parallax">
+       <img class="responsive-img" src="{% get_media_prefix %}pages.jpg" alt="banshee">
+    </div>
+ </div>
 
 {% endblock %}
