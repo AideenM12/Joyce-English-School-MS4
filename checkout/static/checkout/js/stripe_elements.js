@@ -5,13 +5,13 @@
     https://stripe.com/docs/stripe-js
 */
 
-var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
-var clientSecret = $('#id_client_secret').text().slice(1, -1);
-var stripe = Stripe(stripePublicKey);
-var elements = stripe.elements();
+let stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
+let clientSecret = $('#id_client_secret').text().slice(1, -1);
+let stripe = Stripe(stripePublicKey);
+let elements = stripe.elements();
 
 /* Taken from https://codepen.io/ebucis/pen/gWGgXE */
-var card = elements.create('card', {
+let card = elements.create('card', {
   iconStyle: 'solid',
   style: {
     base: {
@@ -39,8 +39,8 @@ card.mount('#card-element');
 
 
 function setOutcome(result) {
-  var successElement = document.querySelector('.success');
-  var errorElement = document.querySelector('.error');
+  let successElement = document.querySelector('.success');
+  let errorElement = document.querySelector('.error');
   successElement.classList.remove('visible');
   errorElement.classList.remove('visible');
 
@@ -56,9 +56,9 @@ function setOutcome(result) {
 }
 
 card.on('change', function(event) {
-  var errorDiv = document.getElementById('card-errors');
+  let errorDiv = document.getElementById('card-errors');
   if (event.error) {
-      var html = `
+      let html = `
           <span class="icon" role="alert">
               <i class="fas fa-times"></i>
           </span>
@@ -71,22 +71,22 @@ card.on('change', function(event) {
 });
 
 // Handle form submit
-var form = document.getElementById('payment-form');
+let form = document.getElementById('payment-form');
 
 form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true});
     $('#submit-button').attr('disabled', true);
 
-    var saveInfo = Boolean($('#id-save-info').attr('checked'));
+    let saveInfo = Boolean($('#id-save-info').attr('checked'));
     // From using {% csrf_token %} in the form
-    var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
-    var postData = {
+    let csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+    let postData = {
         'csrfmiddlewaretoken': csrfToken,
         'client_secret': clientSecret,
         'save_info': saveInfo,
     };
-    var url = '/checkout/cache_checkout_data/';
+    let url = '/checkout/cache_checkout_data/';
 
      $.post(url, postData).done(function () {
         stripe.confirmCardPayment(clientSecret, {
@@ -106,8 +106,8 @@ form.addEventListener('submit', function(ev) {
             },
     }).then(function(result) {
       if (result.error) {
-          var errorDiv = document.getElementById('card-errors');
-          var html = `
+          let errorDiv = document.getElementById('card-errors');
+          let html = `
               <span class="icon" role="alert">
               <i class="fas fa-times"></i>
               </span>
