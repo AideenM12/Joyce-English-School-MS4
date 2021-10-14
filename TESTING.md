@@ -870,7 +870,7 @@ All of the following HTML pages were validated by using [W3C Markup Validation S
 
 * **Contact Page** &#40; `contact.html` &#41;:
 
-<img src="assets/documentation/doc-images/contact-w3validator.png" width="550" height="350" alt="contact-validator">
+<img src="documentation/doc_images/contact-validatorw3.png" width="550" height="350" alt="contact-validator">
 
 
 * **Home Page** &#40; `index.html` &#41;:
@@ -890,17 +890,17 @@ All of the following HTML pages were validated by using [W3C Markup Validation S
 
 * **Reviews Page** &#40; `reviews.html` &#41;:
 
-<img src="assets/documentation/doc-images/topics-w3validator.png" width="550" height="350" alt="topics-validator">
+<img src="documentation/doc_images/reviews-validatorw3.png" width="550" height="350" alt="reviews-validator">
 
 
 * **Add Review Page** &#40; `write_review.html` &#41;:
 
-<img src="assets/documentation/doc-images/topics-w3validator.png" width="550" height="350" alt="topics-validator">
+<img src="documentation/doc_images/add-review-validatorw3.png" width="550" height="350" alt="add-review-validator">
 
 
 * **Edit Review Page** &#40; `edit_review.html` &#41;:
 
-<img src="assets/documentation/doc-images/topics-w3validator.png" width="550" height="350" alt="topics-validator">
+<img src="documentation/doc_images/edit-review-validatorw3.png" width="550" height="350" alt="edit-review-validator">
 
 
 
