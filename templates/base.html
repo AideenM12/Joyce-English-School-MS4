@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">   
+<html lang="en">
    <head>
       {% block meta %}
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -35,35 +35,33 @@
       {% endblock %}
       <title>Joyce School of English  {% block extra_title %}{% endblock %}</title>
    </head>
-  
-      <main>
-         <!--Main Header and Navigation-->
-         <header>
-            <nav>
-               {% include 'includes/mobile-top-header.html' %}
-               {% include 'includes/main-nav.html' %}
-            </nav>
-         </header>
-         <!--Django Messages and Materialize Toasts-->
-         {% if messages %}
-         {% for message in messages %}
-         {% if message.tags == 'success'%}
-         <div class="container">
-            <script>M.toast({html: "{{message}}", classes: 'blue rounded', displayLength:4000});</script>
-         </div>
-         {% endif %}
-         {% if message.tags == 'error'%}
-         <div class="container">
-            <script>M.toast({html: "{{message}}", classes: 'red ', displayLength:4000});</script>
-         </div>
-         {% endif %}
-         {% endfor %}
-         {% endif %}
-         {% block page_header %}
-         {% endblock %}
-         {% block content %}
-         {% endblock %}
-      </main>
+   <body>
+      <!--Main Header and Navigation-->
+      <header>
+         <nav>
+            {% include 'includes/mobile-top-header.html' %}
+            {% include 'includes/main-nav.html' %}
+         </nav>
+      </header>
+      <!--Django Messages and Materialize Toasts-->
+      {% if messages %}
+      {% for message in messages %}
+      {% if message.tags == 'success'%}
+      <div class="container">
+         <script>M.toast({html: "{{message}}", classes: 'blue rounded', displayLength:4000});</script>
+      </div>
+      {% endif %}
+      {% if message.tags == 'error'%}
+      <div class="container">
+         <script>M.toast({html: "{{message}}", classes: 'red ', displayLength:4000});</script>
+      </div>
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+      {% block page_header %}
+      {% endblock %}
+      {% block content %}
+      {% endblock %}      
       <!--Main Footer Content-->
       <footer class = "page-footer shadow-text">
          <div class="row">
@@ -91,5 +89,5 @@
       <!--Postload JS Scripts-->
       {% block postloadjs %}
       {% endblock %}
-   
+   </body>
 </html>

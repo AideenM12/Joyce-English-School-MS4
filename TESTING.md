@@ -814,7 +814,7 @@ Verify that a 500 page exists to handle internal server errors as expected.
 2. Navigate to the app.py file.
 3. Inside the app.py file navigate to the index page route handler.
 4. Change return render template value to 1/0.
-5. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
+5. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 6. Observe the rendered 500 page.
 
 **Expected Result:**
@@ -830,7 +830,7 @@ Pass
 
 **Image of Test Result:**
 
-<img src="assets/documentation/doc-images/500.png" width="450" height="250" alt="404-page">
+<img src="documentation/doc_images/500 (2).png" width="450" height="250" alt="500-page">
 
 ---
 
