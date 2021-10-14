@@ -870,7 +870,7 @@ All of the following HTML pages were validated by using [W3C Markup Validation S
 
 * **Home Page** &#40; `index.html` &#41;:
 
-<img src="assets/documentation/doc-images/home-w3validator.png" width="550" height="350" alt="home-validator">
+<img src="documentation/doc_images/home-validatorw3.png" width="550" height="350" alt="home-validator">
 
 
 * **Login Page** &#40; `login.html` &#41;:
@@ -938,8 +938,7 @@ All CSS was validated by using [W3C Jigsaw CSS Validation Service](https://jigsa
 * The app.py file was passed through the [PEP8](http://pep8online.com/) validator and the results can be seen below:
 
 * **checkout app**
-line 116 too long
-line 125 too long
+
 
 
 ## Linters

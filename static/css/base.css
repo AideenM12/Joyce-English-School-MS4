@@ -42,7 +42,7 @@ h6 {
 
 /*-----Background Image CSS---*/
 
-.background-image-1 {
+body.courses {
 	background: url("../../media/flag.jpg") no-repeat center center fixed;
 	width: 100vw;
 	height: 100vh;
