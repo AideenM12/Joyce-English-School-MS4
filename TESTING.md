@@ -858,9 +858,14 @@ All of the following HTML pages were validated by using [W3C Markup Validation S
 <img src="assets/documentation/doc-images/add-topic-w3validator.png" width="550" height="350" alt="add-topic-validator">
 
 
-* **Articles Page** &#40; `articles.html` &#41;:
+* **Courses Page** &#40; `courses.html` &#41;:
 
-<img src="assets/documentation/doc-images/articles-w3validator.png" width="550" height="350" alt="articles-validator">
+<img src="documentation/doc_images/courses-validatorw3.png" width="550" height="350" alt="courses-validator">
+
+
+* **Exam Courses Page** &#40; `exam_courses.html` &#41;:
+
+<img src="documentation/doc_images/examcourses-validatorw3.png" width="550" height="350" alt="examcourses-validator">
 
 
 * **Contact Page** &#40; `contact.html` &#41;:
@@ -875,12 +880,12 @@ All of the following HTML pages were validated by using [W3C Markup Validation S
 
 * **Login Page** &#40; `login.html` &#41;:
 
-<img src="assets/documentation/doc-images/login-w3validator.png" width="550" height="350" alt="login-validator">
+<img src="documentation/doc_images/login-validatorw3.png" width="550" height="350" alt="login-validator">
 
 
 * **Sign-Up Page** &#40; `sign-up.html` &#41;:
 
-<img src="assets/documentation/doc-images/signup-w3validator.png" width="550" height="350" alt="signup-validator">
+<img src="documentation/doc_images/signup-validatorw3.png" width="550" height="350" alt="signup-validator">
 
 
 * **Topics Page** &#40; `topics.html` &#41;:

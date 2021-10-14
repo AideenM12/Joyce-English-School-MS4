@@ -1,59 +1,58 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<body>
-   <!--Parallax Container-->
-   <div class="parallax-container" id="top-parallax">
-      <div class="parallax">
-         <img src="{{ MEDIA_URL }}flag.jpg" alt="joyce-statue" width="640" height="640">
-      </div>
+<!--Parallax Container-->
+<div class="parallax-container" id="top-parallax">
+   <div class="parallax">
+      <img src="{{ MEDIA_URL }}flag.jpg" alt="joyce-statue" width="640" height="640">
    </div>
-   <!--Main Review Content-->
-   <h1 class="center-align">Our Reviews</h1>
-   {% for review in reviews %}
-   <a href="#" id="scroll" style="display: none;"><span></span></a>
-   <div class="row">
-      <div class="col l10 offset-l1  s12 m10">
-         <div class="card  ">
-            <div class="card-content center-align" id="review-card-content">
-               <h3 class="card-title" id="review-card-title">{{ review.title }}</h3>
-            </div>
+</div>
+<!--Main Review Content-->
+<h1 class="center-align">Our Reviews</h1>
+{% for review in reviews %}
+<a href="#" id="scroll" style="display: none;"><span></span></a>
+<div class="row">
+   <div class="col l10 offset-l1  s12 m10">
+      <div class="card  ">
+         <div class="card-content center-align review-card-content">
+            <h3 class="card-title review-card-title">{{ review.title }}</h3>
+         </div>
+         <div class="card-action center-align">
+            <p class="center-align"><span class="highlight"> Review </span><br>{{ review.comments }}</p>
+            <p class="center-align"><span class="highlight"> Date </span><br>{{ review.date_created }}</p>
+            <p class="center-align"><span class="highlight"> By </span><br>{{ review.creator }}</p>
+            <!--Edit/Delete Review Buttons-->
             <div class="card-action center-align">
-               <p class="center-align"><span class="highlight"> Review </span><br>{{ review.comments }}</p>
-               <p class="center-align"><span class="highlight"> Date </span><br>{{ review.date_created }}</p>
-               <p class="center-align"><span class="highlight"> By </span><br>{{ review.creator }}</p>
-               <!--Edit/Delete Review Buttons-->
-               <div class="card-action center-align">
-                  {% if request.user.userprofile == review.creator %}
-                  <a class="btn" href="{% url 'edit_review' review.id %}" aria-label="Edit review from {{ review.creator }}">Edit</a>
-                  <a class="btn" href="{% url 'delete_review' review.id %}">Delete</a>
-                  {% endif %}
-               </div>
+               {% if request.user.userprofile == review.creator %}
+               <a class="btn" href="{% url 'edit_review' review.id %}"
+                  aria-label="Edit review from {{ review.creator }}">Edit</a>
+               <a class="btn" href="{% url 'delete_review' review.id %}">Delete</a>
+               {% endif %}
             </div>
          </div>
       </div>
    </div>
-   {% endfor %}
-   <!--Add Review CTA Card-->
-   {% if request.user.is_authenticated %}
-   <div class="row">
-      <div class="col s12 m8 offset-m2 ">
-         <div class="card center-align">
-            <div class="card-content center-align ">
-               <p class="large-text">Click here to leave your own review</p>
-            </div>
-            <div class="card-action center-align">
-               <a href="{% url 'write_review' %}" class="btn btn-primary">Create Review</a>
-            </div>
+</div>
+{% endfor %}
+<!--Add Review CTA Card-->
+{% if request.user.is_authenticated %}
+<div class="row">
+   <div class="col s12 m8 offset-m2 ">
+      <div class="card center-align">
+         <div class="card-content center-align ">
+            <p class="large-text">Click here to leave your own review</p>
+         </div>
+         <div class="card-action center-align">
+            <a href="{% url 'write_review' %}" class="btn btn-primary">Create Review</a>
          </div>
       </div>
    </div>
-   {% endif %}
-   <!--Parallax Container-->
-   <div class="parallax-container">
-      <div class="parallax">
-         <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="pages">
-      </div>
+</div>
+{% endif %}
+<!--Parallax Container-->
+<div class="parallax-container">
+   <div class="parallax">
+      <img class="responsive-img" src="{{ MEDIA_URL }}pages.jpg" alt="pages">
    </div>
-</body>
+</div>
 {% endblock %}
