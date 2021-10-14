@@ -9,6 +9,6 @@ $('form').submit(function(event) {
     var data = {'csrfmiddlewaretoken': form.csrf_token.value, 'item_type': form.item_type.value, 'item_id': form.item_id.value};
 
     $.post(url, data).done(function() {
-        location.reload()
-    })
-})
+        location.reload();
+    });
+});

@@ -903,24 +903,36 @@ All CSS was validated by using [W3C Jigsaw CSS Validation Service](https://jigsa
 
 * **Base.css file**
 
-<img src="documentation/doc_images/basecssjigsaw.w3.png" width="550" height="350" alt="Base-CSS-validator">
+<img src="documentation/doc_images/basecssjigsaw.w3.png" width="650" height="350" alt="Base-CSS-validator">
 
 * **Checkout.css file**
 
-<img src="documentation/doc_images/checkoutcssjigsaw.w3.png" width="550" height="350" alt="Checkout-CSS-validator">
+<img src="documentation/doc_images/checkoutcssjigsaw.w3.png" width="650" height="350" alt="Checkout-CSS-validator">
 
 ### Javascript
 * All Javascript code was passed through the [JShint](https://jshint.com/) validator with little to no issues with the exception of 'let' being available in ES6 and the '$' being recognised as an unused variable. Screenshots of the results of these files can be found below:
 
 * **emailjs file**
 
-<img src="assets/documentation/doc-images/emailjs-jshint.png" width="450" height="350" alt="emailjs-JShint-validator">
+<img src="documentation/doc_images/emailjs-jshint.png" width="350" height="550" alt="emailjs-JShint-validator">
 
 
 * **scriptjs file**
 
-<img src="assets/documentation/doc-images/emailjs-jshint.png" width="450" height="350" alt="script-JShint-validator">
+<img src="documentation/doc_images/scriptjs-jshint.png" width="350" height="550" alt="script-JShint-validator">
 
+
+* **cartjs file**
+
+<img src="documentation/doc_images/cartjs-jshint.png" width="350" height="550" alt="cart-JShint-validator">
+
+
+* **stripe-elementsjs file**
+
+<img src="documentation/doc_images/stripejs1-jshint.png" width="350" height="550" alt="stripe-1-JShint-validator">
+
+
+<img src="documentation/doc_images/stripejs2-jshint.png" width="250" height="350" alt="stripe-2-JShint-validator">
 
 ### Python 
 * The app.py file was passed through the [PEP8](http://pep8online.com/) validator and the results can be seen below:
