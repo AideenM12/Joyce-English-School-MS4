@@ -868,9 +868,19 @@ All of the following HTML pages were validated by using [W3C Markup Validation S
 <img src="documentation/doc_images/courses-validatorw3.png" width="550" height="350" alt="courses-validator">
 
 
+* **Course Detail Page** &#40; `course_detail.html` &#41;:
+
+<img src="documentation/doc_images/course-detail-validatorw3.png" width="550" height="350" alt="course-detail-validator">
+
+
 * **Exam Courses Page** &#40; `exam_courses.html` &#41;:
 
 <img src="documentation/doc_images/examcourses-validatorw3.png" width="550" height="350" alt="examcourses-validator">
+
+
+* **Exam Course Detail Page** &#40; `exam_course_detail.html` &#41;:
+
+<img src="documentation/doc_images/exam-course-detail-validatorw3.png" width="550" height="350" alt="exam-detail-course-validator">
 
 
 * **Contact Page** &#40; `contact.html` &#41;:
