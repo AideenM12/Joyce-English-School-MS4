@@ -362,7 +362,7 @@ exams.jpg https://unsplash.com/photos/s9CC2SKySJM
 
 * The email.js code was sourced from Matt Rudge's Code Institute tutorial on the same subject.
 
-* A large portion of this project's code was inspired by Tim Nelson's mini project walkthrough tutorial. This Code Institute tutorial was instrumental in the creation of this site. 
+* A large portion of this project's code was inspired by Chris Zielinski's Boutique Ado project walkthrough tutorial. This Code Institute tutorial was instrumental in the creation of this site. 
 
 * The TESTING.md section of this project was inspired by my classmate, Daisy McGirr's, workshop on testing. This workshop proved very useful for a great deal of students, myself included, in approaching all matters of testing. 
 
