@@ -878,6 +878,12 @@ All of the following HTML pages were validated by using [W3C Markup Validation S
 <img src="documentation/doc_images/contact-validatorw3.png" width="550" height="350" alt="contact-validator">
 
 
+* **Cart Page** &#40; `cart.html` &#41;:
+
+<img src="documentation/doc_images/cart-validatorw3.png" width="550" height="350" alt="cart-validator">
+
+
+
 * **Home Page** &#40; `index.html` &#41;:
 
 <img src="documentation/doc_images/home-validatorw3.png" width="550" height="350" alt="home-validator">
@@ -891,6 +897,11 @@ All of the following HTML pages were validated by using [W3C Markup Validation S
 * **Sign-Up Page** &#40; `sign-up.html` &#41;:
 
 <img src="documentation/doc_images/signup-validatorw3.png" width="550" height="350" alt="signup-validator">
+
+
+* **Profile Page** &#40; `profile.html` &#41;:
+
+<img src="documentation/doc_images/profile-validatorw3.png" width="550" height="350" alt="profile-validator">
 
 
 * **Reviews Page** &#40; `reviews.html` &#41;:
