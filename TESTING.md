@@ -1047,55 +1047,95 @@ After this code was implemented 200 began displaying in the terminal with regard
     No issues were detected in any of these browsers at the time of submission.
 
 
-    The below image is an example result of lighthouse testing performed on the index page for desktop with every other test achieving similar results. The lighthouse tool found in Google Dev Tools was used repeatedly throughout the building of the project and was essential in discovering and resolving the issues described in this document. A lighthouse test was performed on both mobile and desktop for each individual page on the site with links to the full reports of each of these tests found below. The lighthouse tool tested each of the following criteria: performance, accessibility, best practices and SEO of each individual page in both mobile and desktop. Each test often resulted in a score of 90 or above with the lowest score being 80.
+    The below image is an example result of lighthouse testing performed on the index page for desktop with every other test achieving similar results. The lighthouse tool found in Google Dev Tools was used repeatedly throughout the building of the project and was essential in discovering and resolving the issues described in this document. A lighthouse test was performed on both mobile and desktop for each individual page on the site with links to the full reports of each of these tests found below. The lighthouse tool tested each of the following criteria: performance, accessibility, best practices and SEO of each individual page in both mobile and desktop. Each test often resulted in a score of 90 or above with the lowest score being 70.
 
 
-    <img src="assets/documentation/doc-images/Lighthouse.png" width="600" height="250">
+    <img src="documentation/doc_images/MS4-lightouse.jpg" width="600" height="250">
 
 * **Home Page**
 
-    [Lighthouse Desktop Index page results](assets/documentation/doc-images/Homedesktop.pdf) |
-    [Lighthouse Mobile Index page results](assets/documentation/doc-images/Homemobile.pdf)
+    [Lighthouse Desktop Home page results](documentation/lightouse-tests/home-desktop.pdf) |
+    [Lighthouse Mobile Home page results](documentation/lighthouse-tests/home-mobile.pdf)
 
 * **Contact Page**
 
-    [Lighthouse Desktop Contact page results](assets/documentation/doc-images/Contactdesktop.pdf) | 
-    [Lighthouse Mobile Contact page results](assets/documentation/doc-images/Contactdesktop.pdf) 
+    [Lighthouse Desktop Contact page results](documentation/lighthouse-tests/contact-desktop.pdf) | 
+    [Lighthouse Mobile Contact page results](documentation/lighthouse-tests/contact-mobile.pdf) 
 
-* **Articles Page**
+* **Cart Page**
 
-    [Lighthouse Desktop Articles page results](assets/documentation/doc-images/Articlesdesktop.pdf) | 
-    [Lighthouse Mobile Articles page results](assets/documentation/doc-images/Articlesmobile.pdf) 
+    [Lighthouse Desktop Cart page results](documentation/lighthouse-tests/cart-desktop.pdf) | 
+    [Lighthouse Mobile Cart page results](documentation/lighthouse-tests/cart-mobile.pdf)
+
+
+* **Checkout Page**
+
+    [Lighthouse Desktop Checkout page results](documentation/lighthouse-tests/checkout-desktop.pdf) | 
+    [Lighthouse Mobile Checkout page results](documentation/lighthouse-tests/checkout-mobile.pdf)  
+
+    
+* **Add Course Page**
+
+    [Lighthouse Desktop Add Course page results](documentation/lighthouse-tests/add-course-desktop.pdf) | 
+    [Lighthouse Mobile Add Course page results](documentation/lighthouse-tests/add-course-mobile.pdf) 
+
+
+* **Courses Page**
+
+    [Lighthouse Desktop Courses page results](documentation/lighthouse-tests/courses-desktop.pdf) | 
+    [Lighthouse Mobile Courses page results](documentation/lighthouse-tests/courses-mobile.pdf) 
+
+* **Course Detail Page**
+
+    [Lighthouse Desktop Course Detail page results](documentation/lighthouse-tests/course-detail-desktop.pdf) | 
+    [Lighthouse Mobile Course Detail page results](documentation/lighthouse-tests/course-detail-mobile.pdf)
+
+
+* **Add Exam Course Page**
+
+    [Lighthouse Desktop Add Exam Course page results](documentation/lighthouse-tests/add-examcourse-desktop.pdf) | 
+    [Lighthouse Mobile Add Exam Course page results](documentation/lighthouse-tests/add-examcourse-mobile.pdf) 
+ 
+
+* **Exam Courses Page**
+
+    [Lighthouse Desktop Exam Courses page results](documentation/lighthouse-tests/examcourses-desktop.pdf) | 
+    [Lighthouse Mobile Exam Courses page results](documentation/lighthouse-tests/examcourses-mobile.pdf) 
+
+* **Exam Course Detail Page**
+
+    [Lighthouse Desktop Exam Course Detail page results](documentation/lighthouse-tests/examcourse-detail-desktop.pdf) | 
+    [Lighthouse Mobile Exam Course Detail page results](documentation/lighthouse-tests/examcourse-detail-mobile.pdf) 
 
 * **Sign-Up Page**
 
-    [Lighthouse Desktop Sign-Up page results](assets/documentation/doc-images/Signupdesktop.pdf) | 
-    [Lighthouse Mobile Sign-Up page results](assets/documentation/doc-images/Signupmobile.pdf) 
+    [Lighthouse Desktop Sign-Up page results](documentation/lighthouse-tests/sign-up-desktop.pdf) | 
+    [Lighthouse Mobile Sign-Up page results](documentation/lighthouse-tests/sign-up-mobile.pdf) 
 
 * **Log In Page**
 
-    [Lighthouse Desktop Login page results](assets/documentation/doc-images/Logindesktop.pdf) | 
-    [Lighthouse Mobile Login page results](assets/documentation/doc-images/Loginmobile.pdf) 
+    [Lighthouse Desktop Login page results](documentation/lighthouse-tests/login-desktop.pdf) | 
+    [Lighthouse Mobile Login page results](documentation/lighthouse-tests/login-mobile.pdf) 
 
 * **Profile Page**
 
-    [Lighthouse Desktop Profile page results](assets/documentation/doc-images/Profiledesktop.pdf) | 
-    [Lighthouse Mobile Profile page results](assets/documentation/doc-images/Profilemobile.pdf) 
+    [Lighthouse Desktop Profile page results](documentation/lighthouse-tests/profile-desktop.pdf) | 
+    [Lighthouse Mobile Profile page results](documentation/lighthouse-tests/profile-mobile.pdf) 
 
-* **Add Article Page**
+* **Add Review Page**
 
-    [Lighthouse Desktop Add Article page results](assets/documentation/doc-images/Add-articledesktop.pdf) | 
-    [Lighthouse Mobile Add Article page results](assets/documentation/doc-images/Add-articlemobile.pdf) 
+    [Lighthouse Desktop Add Review page results](documentation/lighthouse-tests/Add-review-desktop.pdf) | 
+    [Lighthouse Mobile Add Review page results](documentation/lighthouse-tests/add-review-mobile.pdf) 
 
-* **Edit Article Page**
+* **Edit Review Page**
    
-    [Lighthouse Desktop Edit Article page results](assets/documentation/doc-images/Edit-articledesktop.pdf) | 
-    [Lighthouse Mobile Edit Article page results](assets/documentation/doc-images/Edit-articlemobile.pdf)
+    [Lighthouse Desktop Edit Review page results](documentation/lighthouse-tests/edit-review-desktop.pdf) | 
+    [Lighthouse Mobile Edit Review page results](documentation/lighthouse-tests/edit-review-mobile.pdf)
 
-* **Topics Page**
+* **Reviews Page**
 
-    [Lighthouse Desktop Topics page results](assets/documentation/doc-images/Topicsdesktop.pdf) | 
-    [Lighthouse Mobile Topics page results](assets/documentation/doc-images/Topicsmobile.pdf)
+    [Lighthouse Desktop Reviews page results](documentation/lighthouse-tests/reviews-desktop.pdf) | 
+    [Lighthouse Mobile Reviews page results](documentation/lighthouse-tests/reviews-mobile.pdf)
 
 * **Add Topic Page**
 
