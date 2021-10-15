@@ -197,15 +197,31 @@ This palette was created on the [Coolors Website](https://coolors.co).
 
 ### Database Schema
 
-<img src="assets/documentation/doc-images/dbschema.png" width="900" height="300" alt="database schema">
+<img src="documentation/doc_images/dbschema.png" width="900" height="300" alt="database schema">
 
-* The site contains five collections which are stored in MongoDB. The users collection stores the user's username and password which enables the user to create an account and have a profile page. The articles collection stores all data related to the site's article content and also links to the user's collection if they have created site content using their account. All of their contributions are then linked and displayed to their profile page. The topics collection links to the article content by assigning articles a topic_name. This enables  the filter_topic functionality which allows users to filter articles by topic. The locations collection allows users to select a specific geographical location of the origin point of their article. Finally the further reading collection stores data related to external reading source material. It is also linked to the topics collection as all further reading data is filtered and presented to the user based on a specific topic. Only the Admin has clearance to edit/delete the data found in the topics and further reading collections. 
+* A relational database was used to create this project. During production SQLite was used as the site's database and all data was migrated to Heroku Postgres during deployment to Heroku. The key models can be seen in the image above and are described in depth below:
 
+#### Key Models 
 
-### Sitemap
-* The sitemap was created using [Balsamiq wireframes](https://balsamiq.com/)
+**Courses** 
+- This model alongside the exam_courses model are the foundation of the site's purpose. This model stores all relevant information about what each individual course offers.
+- The price is stored in this model. 
+- Each individual course contains it's own unique description and each course is referenced using a Primary Key which is generated each time a new course is created. 
+- This model also stores information regarding course start and end dates and also the number of class hours that will be allocated for the duration of the course. 
+- The assigned course images are also stored in this model. 
 
-* A link to the [Sitemap can be found here](assets/documentation/wireframes/MS3-sitemap-wireframe.pdf)
+**Exam Courses**
+- The exam_course model follows almost the exact same configuration as the course model aside from a few small differences.
+- English exam courses require a specific level of English before a student can comfortably join a specific exam course. The `required_level` field informs the user of the necessary level of English needed for a particular exam course and the `certification_awarded` field informs the user of the certification they will be working towards should they chose to undertake a particular exam course.
+
+**OrderLineItem**
+- This model stores an instance of a course along with the `lineitem_total` which updates the price in the checkout. 
+
+**Order**
+- This model stores the information that is often expected to be found in an order, namely, the user, billing information, address information, the date of the transaction, the user's contact information and the `stripe_pid`.
+
+**UserProfile**
+
 
 ## Technologies Used
 - This project is primarily built using HTML5 semantic markup, CSS stylesheets, Javascript, Python, Flask and MongoDB.
@@ -233,7 +249,7 @@ This palette was created on the [Coolors Website](https://coolors.co).
 - [flask-paginate](https://pythonhosted.org/Flask-paginate/)
     - flask-paginate was used to create the site's pagination links.
 - [Balsamiq](https://balsamiq.com/)
-    - The wireframes and sitemap for this project were created using Balsamiq.
+    - The wireframes for this project were created using Balsamiq.
  - [Freeformatter- CSS beautifier](https://www.freeformatter.com/css-beautifier.html)
     - This was used to format the CSS stylesheet.
 - [Freeformatter- HTML formatter](https://www.freeformatter.com/html-formatter.html)
