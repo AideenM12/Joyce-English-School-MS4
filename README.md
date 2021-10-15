@@ -233,9 +233,9 @@ This palette was created on the [Coolors Website](https://coolors.co).
 
 
 ## Technologies Used
-- This project is primarily built using HTML5 semantic markup, CSS stylesheets, Javascript, Python, Flask and MongoDB.
-- [Flask](https://flask.palletsprojects.com/en/2.0.x/)
-    - Flask was used as the main python framework in the building of this project.
+- This project is primarily built using HTML5 semantic markup, CSS stylesheets, Javascript, Python, Django, SQLite and Heroku Postgres.
+- [Django](https://docs.djangoproject.com/en/3.1/)
+    - Django was used as the main python framework in the building of this project.
 - [jQuery](https://jquery.com/)
     - This framework was used to create some of the site's interactive functions.
 - [Gitpod](https://gitpod.io)
@@ -251,12 +251,16 @@ This palette was created on the [Coolors Website](https://coolors.co).
    - Materialize was used to make this website responsive
 - [Fontawesome](https://fontawesome.com/)
     - The icons used on this page were found in Fontawesome.
-- [MongoDB](https://www.mongodb.com/)
-    - MongoDB Atlas was used as the database for the creation of this project.
+- [SQLite](https://www.sqlite.org/index.html)
+    - SQLite was used as the database for the creation and development of this project.
+- [Heroku Postgres](https://www.heroku.com/postgres)
+    - Heroku was used as the database for this project in production mode after deployment to Heroku.
 - [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
     - Jinja was used for templating.
-- [flask-paginate](https://pythonhosted.org/Flask-paginate/)
-    - flask-paginate was used to create the site's pagination links.
+- [Stripe](https://stripe.com/ie)
+    - Stripe payments was used to build the card payment system of this site.
+- [AWS-Amazon Web Services](https://aws.amazon.com/)
+    - AWS was used to store all media and static files of this site in production mode.    
 - [Balsamiq](https://balsamiq.com/)
     - The wireframes for this project were created using Balsamiq.
  - [Freeformatter- CSS beautifier](https://www.freeformatter.com/css-beautifier.html)
