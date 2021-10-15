@@ -111,7 +111,7 @@ nav {
 	margin-bottom: 0;
 	left: 0;
 	bottom: 0;
-	background-color: #4ea5d9;
+	background-color: #203a54;
 	color: #f1faee;	
 	border-top: 1px #f1faee solid;
 	height: 70px;
@@ -142,8 +142,8 @@ footer>h5 {
 }
 
 .footer-icon:hover {
-	color: #203a54 !important;
-	background-color: #4ea5d9 !important;
+	color: #4ea5d9 !important;
+	background-color: #203a54 !important;
 }
 
 .footer-icons {
