@@ -44,7 +44,7 @@ def order_history(request, order_number):
     """
     try:
         order = get_object_or_404(Order, order_number=order_number)
-        profile_user = str(order.user_profile)
+        profile_user = str(order.userprofile)
         if profile_user != str(request.user):
             messages.error(request, (
                 f'This order does not belong to you.'
