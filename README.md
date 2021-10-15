@@ -222,6 +222,15 @@ This palette was created on the [Coolors Website](https://coolors.co).
 
 **UserProfile**
 
+- This model is created for each user when they register with the site. It stores the user's relevant profile information in the checkout form after their first purchase to allow for quicker and more convenient future purchases. 
+
+- It is also connected to the allauth User model when a user registers with the site. 
+
+- It connects with the `review_creator` field in the reviews model. 
+
+**Reviews**
+- This model allows the user to have their own CRUD functionality on the site. It connects to the UserProfile in the `review_creator` and allows the user to add their own reviews to the site by storing them in the database through the `comments` field of the model. It also stores the date of the review so that other users can tell how recent and relevant an individual review is. 
+
 
 ## Technologies Used
 - This project is primarily built using HTML5 semantic markup, CSS stylesheets, Javascript, Python, Flask and MongoDB.
