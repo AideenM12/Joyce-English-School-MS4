@@ -35,12 +35,12 @@
       * [Code](#Code)
       * [Acknowledgements](#Acknowledgements)
 
-# MotherFolklore
+# Joyce English School
 
 
-![Website MockUp](assets/documentation/doc-images/MS3-Mockup.png)
+![Website MockUp](documentation/doc_images/MS4-mockup.png)
 
-The live website can be viewed [here]()
+The live website can be viewed [here](https://joyce-english-school.herokuapp.com/)
 
 
 # UX
