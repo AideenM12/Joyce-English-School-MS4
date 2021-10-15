@@ -893,6 +893,16 @@ All of the following HTML pages were validated by using [W3C Markup Validation S
 <img src="documentation/doc_images/cart-validatorw3.png" width="550" height="350" alt="cart-validator">
 
 
+* **Checkout Page** &#40; `checkout.html` &#41;:
+
+<img src="documentation/doc_images/checkout-validatorw3.png" width="550" height="350" alt="checkout-validator">
+
+
+* **Checkout Success Page** &#40; `cart.html` &#41;:
+
+<img src="documentation/doc_images/checkout-success-validatorw3.png" width="550" height="350" alt="checkout-success-validator">
+
+
 
 * **Home Page** &#40; `index.html` &#41;:
 
