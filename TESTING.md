@@ -1047,7 +1047,7 @@ After this code was implemented 200 began displaying in the terminal with regard
     No issues were detected in any of these browsers at the time of submission.
 
 
-    The below image is an example result of lighthouse testing performed on the index page for desktop with every other test achieving similar results. The lighthouse tool found in Google Dev Tools was used repeatedly throughout the building of the project and was essential in discovering and resolving the issues described in this document. A lighthouse test was performed on both mobile and desktop for each individual page on the site with links to the full reports of each of these tests found below. The lighthouse tool tested each of the following criteria: performance, accessibility, best practices and SEO of each individual page in both mobile and desktop. Each test often resulted in a score of 90 or above with the lowest score being 70.
+    The below image is an example result of lighthouse testing performed on the index page for desktop with every other test achieving similar results. The lighthouse tool found in Google Dev Tools was used repeatedly throughout the building of the project and was essential in discovering and resolving the issues described in this document. A lighthouse test was performed on both mobile and desktop for each individual page on the site with links to the full reports of each of these tests found below. The lighthouse tool tested each of the following criteria: performance, accessibility, best practices and SEO of each individual page in both mobile and desktop. Each test often resulted in a score of 90 or above with the lowest score being 70 for mobile performance, steps were taken to improve this score such as image compression but ultimately no further changes could be made without compromising the fidelity of the site's images or the site's frontend functionality.
 
 
     <img src="documentation/doc_images/MS4-lightouse.jpg" width="600" height="250">
@@ -1071,7 +1071,12 @@ After this code was implemented 200 began displaying in the terminal with regard
 * **Checkout Page**
 
     [Lighthouse Desktop Checkout page results](documentation/lighthouse-tests/checkout-desktop.pdf) | 
-    [Lighthouse Mobile Checkout page results](documentation/lighthouse-tests/checkout-mobile.pdf)  
+    [Lighthouse Mobile Checkout page results](documentation/lighthouse-tests/checkout-mobile.pdf) 
+
+* **Checkout Success Page**
+
+    [Lighthouse Desktop Checkout Success page results](documentation/lighthouse-tests/checkout-success-desktop.pdf) | 
+    [Lighthouse Mobile Checkout Success page results](documentation/lighthouse-tests/checkout-success-mobile.pdf)   
 
     
 * **Add Course Page**
