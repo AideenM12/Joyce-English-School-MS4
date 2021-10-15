@@ -44,6 +44,12 @@ def order_history(request, order_number):
     """
     try:
         order = get_object_or_404(Order, order_number=order_number)
+        profile_user = str(order.user_profile)
+        if profile_user != str(request.user):
+            messages.error(request, (
+                f'This order does not belong to you.'
+                ))
+        return redirect('profile')
         messages.info(request, (
             f'This is a past confirmation for order number {order_number}. '
             'A confirmation email was sent on the order date.'
