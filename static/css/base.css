@@ -312,6 +312,11 @@ label {
 	width: 65rem;
 }
 
+.detail-card{
+	margin-left: 1rem!important;
+	margin-right: 1rem!important;
+}
+
 textarea#id_description {
 	height: 25vh;
 }
@@ -434,6 +439,11 @@ textarea#id_comments.form-control {
 		width: 70vw;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.detail-card {
+		margin-left: .75rem !important;
+		margin-right: .75rem !important;
 	}
 
 	.nav-cards {

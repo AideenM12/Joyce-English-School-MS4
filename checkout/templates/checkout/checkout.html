@@ -34,9 +34,8 @@
 <div class="row custom-row">
    <div class="col l10">
       <a href="{% url 'course_detail' item.course.id %}">
-      </a>
-      <div class="col">
-         <div class="card">
+      </a>    
+         <div class="card home-card">
             <div class="card-title center-align">Your General Course Orders:</div>
             <div class="card-content">
                {% if item.course.image %}
@@ -48,7 +47,7 @@
                <h5 class="center-align">Quantity: {{ item.quantity }}</h5>
                <h5 class="center-align">Course Total: €{{ item.course.price | calc_subtotal:item.quantity }}</h5>
             </div>
-         </div>
+            </div>         
       </div>
       {% endif %}
       {% endfor %}

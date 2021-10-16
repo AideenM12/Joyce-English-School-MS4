@@ -22,7 +22,7 @@
 <div class="row custom-row">
    <div class="col l10 s12 center-align">
       <h2 class="shadow-text page-header">Thank You</h2>
-      <div class="card detail-card">
+      <div class="card home-card">
          <p class="card-panel l10 s12 large-text">Your order information is below. A confirmation email will be sent to
             <span class="highlight">{{ order.email }}</span>.</p>
       </div>
@@ -31,7 +31,7 @@
 <!--Order Information-->
 <div class="row custom-row">
    <div class="col l10 s12">
-      <div class="card detail-card">
+      <div class="card home-card">
          <div class="card-content">
             <h3 class="center-align">Order Info:</h3>
             <p class="large-text highlight">Order Number:</p>
@@ -44,12 +44,12 @@
             <p>
                {{ item.course.name }}
             </p>
-            <p class="">{{ item.quantity }} @ €{{ item.course.price }} each</p>
+            <p>{{ item.quantity }} @ €{{ item.course.price }} each</p>
             {% elif item.exam_course %}
-            <p class="">
+            <p>
                {{ item.exam_course.name }}
             </p>
-            <p class="">{{ item.quantity }} @ €{{ item.exam_course.price }} each</p>
+            <p>{{ item.quantity }} @ €{{ item.exam_course.price }} each</p>
             {% endif %}
             {% endfor %}
             <!--Billing Details-->
