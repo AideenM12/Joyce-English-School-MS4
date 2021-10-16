@@ -57,9 +57,9 @@ Verify that the site's purpose is explicitly clear when a user navigates to the 
 
 **Steps**
 1. Open one's internet browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
-3. 
-4. 
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
+3. Scroll to the content directly beneath the site's first image.
+4. Read the site description directly beneath the image in order to understand the site's purpose.
 
 **Expected Result:**
 A card container with text explaining the site's purpose will be displayed beneath the first image.
@@ -72,7 +72,7 @@ Pass
 
 **Image of Test Result:** 
 
-<img src="assets/documentation/doc-images/site-description.png" width="600" height="200" alt="site-description">
+<img src="documentation/doc_images/home-card.png" width="600" height="200" alt="site-description">
 
 ---
 
@@ -81,31 +81,27 @@ Pass
 > As a first time user I want to access reviews of the school to inform my decision before signing up for a course.
 
 **Description**
-Verify that the site...
+Verify that the site offers users access to the reviews page without having to register.
 
 **Steps**
 1. Open one's internet browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. Select the reviews tab in the navigation bar.
-4. 
-5. 
-6. 
+4. Observe the various reviews of other site users.
+
 
 **Expected Result:**
-results...
+ The user will be able to navigate to the reviews section and read other users reviews without registering. 
 
 **Actual Result:**
-results ...
+The user is able to navigate to the reviews section and read other users reviews without registering. 
 
 **Pass/Fail:**
 Pass
 
 **Image of Test Result:** 
 
-<img src="assets/documentation/doc-images/articlestest.png" width="250" height="300" alt="articles-test">
-
-<img src="assets/documentation/doc-images/articlestest1.png" width="250" height="300" alt="articles-test-1">
-
+<img src="documentation/doc_images/review-test.png" width="250" height="300" alt="reviews-test">
 
 ---
 
@@ -118,7 +114,7 @@ Verify that the site provides the user with an intuitively designed navigation b
 
 **Steps**
 1. Open one's internet browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. Select the tab of choice in the navigation bar.
 4. Alternatively create an account for a greater depth of user experience.
 5. Use the navigation and footer links to explore the site and find desired content/services.
@@ -135,9 +131,9 @@ Pass
 
 **Image of Test Result:** 
 
-<img src="assets/documentation/doc-images/navbar.png" width="400" height="50" alt="navbar">
+<img src="documentation/doc_images/nav-links.png" width="400" height="50" alt="navbar">
 
-<img src="assets/documentation/doc-images/footer-icons.png" width="150" height="50" alt="footer-icons">
+<img src="documentation/doc_images/footer-icons.png" width="150" height="50" alt="footer-icons">
 
 ---
 
@@ -146,28 +142,30 @@ Pass
 > As a first time user I want to find information about English language courses in the city of Trieste.
 
 **Description**
-Verify that the site provides the user with ....
+Verify that the site provides the user with information regrading English language courses in the city of Trieste. 
 
 **Steps**
 1. Open one's internet browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
-3. 
-4. 
-5. 
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
+3. Navigate to the courses or exam courses page of the site.
+4. Click on the "Read More" button of desired course for more information. 
+5. Observe all the necessary information regarding the course details.
 
 
 **Expected Result:**
-results..
+A detailed description page of the course will provide the user with all the necessary information regarding their course of choice.
 
 **Actual Result:**
-results
+A detailed description page of the course will provide the user with all the necessary information regarding their course of choice.
 
 **Pass/Fail:**
 Pass
 
 **Image of Test Result:** 
 
-<img src="assets/documentation/doc-images/register-form.png" width="400" height="400" alt="register-form">
+<img src="documentation/doc_images/courses.png" width="400" height="400" alt="courses">
+
+<img src="documentation/doc_images/course-detail.png" width="400" height="400" alt="course-detail">
 
 
 ---
@@ -182,7 +180,7 @@ Verify that the site is responsive on all devices.
 
 **Steps**
 1. Open one's internet browser of choice on one's device of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
+2. Navigate to [[https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. Test the responsiveness of the site on each available device.
 4. Document the results.
 
@@ -209,7 +207,7 @@ Pass
 
 **Image of Test Result:** 
 
-<img src="assets/documentation/doc-images/MS3-Mockup.png" height="600" width="800" alt="site-mockup">
+<img src="documentation/doc_images/MS4-mockup.png" height="600" width="800" alt="site-mockup">
 
 ---
 
@@ -218,59 +216,65 @@ Pass
 > As a user I want to be able to create an account easily.
 
 **Description**
-Verify that the site provides the user with an opportunity to ...
+Verify that the site provides the user with an opportunity to create an account easily. 
 
-**Steps to Edit**
+**Steps**
 1. Open one's internet browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
-3. 
-4. 
-5. 
-6. 
-7. 
-8. 
-9. 
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/).
+3. Click the Sign-Up tab in the navigation bar. Alternatively click the register button beneath the banner image.  
+4. Fill out the the registration form as instruction.
+5. Verify email address as instructed.
+6. Log in with the credentials that were created when filling out the registration form. 
+
 
 
 **Expected Result:**
-
+A registration form will be provided and once successfully completed and submitted the user will recieve an email asking them to verify their account. Once the user's email has been verified they will be able to log in easily with the credentials they have created. 
 
 **Actual Result:**
-
+A registration form will be provided and once successfully completed and submitted the user will recieve an email asking them to verify their account. Once the user's email has been verified they will be able to log in easily with the credentials they have created. 
 
 **Pass/Fail:**
 Pass
 
 **Image of Test Result:** 
 
-* <img src="assets/documentation/doc-images/userarticle.png" width="500" height="200" alt="user-article">
+* <img src="documentation/doc_images/signup-form.png" width="500" height="200" alt="signup-form">
+
+* <img src="documentation/doc_images/verify.png" width="500" height="200" alt="verify-email">
+
+* <img src="documentation/doc_images/confirm.png" width="500" height="200" alt="confirm-email">
+
+* <img src="documentation/doc_images/confirmtoast.png" width="500" height="200" alt="confirm-toast">
 
 ---
 
 ### Test Case 7
 
-> As a user I want to be able to inform the school of my level of English easily.
+> As a user I want to be able to choose an exam course based on my level of English easily.
 
 **Description**
-Verify that the site....
+Verify that the site offers exam courses for a broad range of levels. 
 
 **Steps**
 1. Open one's internet browser of choice on one's device of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
-3. 
-4. 
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
+3. Select the exam courses tab.
+4. Observe the range of exam courses offered and the level required for each exam course. 
+5. Select the exam course appropriate to the user's level of English. 
 
 **Expected Result:**
+The exam courses page will offer a wide variety of exam courses for all levels.
 
 **Actual Result:**
-
+The exam courses page offers a wide variety of exam courses for all levels.
 
 **Pass/Fail:**
 Pass
 
 **Image of Test Result:** 
 
-<img src="assets/documentation/doc-images/MS3-Mockup.png" height="600" width="800" alt="site-mockup">
+<img src="documentation/doc_images/exam-courses.png" height="600" width="800" alt="site-mockup">
 
 ---
 
@@ -279,23 +283,27 @@ Pass
 > As a user I want to be able to pay for courses using a secure credit card payment system.
 
 **Description**
-Verify that the site provides the user.....
+Verify that the site provides the user is able to make payments using a secure and simple card payments system. 
 
 **Steps**
 1. Open one's internet browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
-3. 
-4. 
-5. 
-6. 
-7. 
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
+3. Select the Log In tab in the navigation bar.
+4. Enter user's log in details. 
+5. Navigate to the Courses/Exam Courses page.
+6. Click the "Read More" on the desired Course. 
+7. Click the "Add to Cart" button beneath the course's description.
+8. Navigate to the Cart page.
+9. Click the "Secure Checkout" beneath the course description card.
+10. Fill out the payment form as instructed.
+11. Observe the checkout success page and the payment confirmation email. 
 
 
 **Expected Result:**
-
+The checkout system will be secure and simplisitc for ease of use.
 
 **Actual Result:**
-
+The checkout system is secure and simplisitc for ease of use.
 
 **Pass/Fail:**
 Pass
@@ -315,7 +323,7 @@ Verify that the site provides the user with ....
 
 **Steps**
 1. Open one's internet browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. 
 4. 
 5. 
@@ -347,7 +355,7 @@ Verify that the site provides the user with ....
 
 **Steps**
 1. Open one's internet browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. 
 4. 
 5. 
@@ -379,7 +387,7 @@ Verify that the site provides the user with ....
 
 **Steps**
 1. Open one's internet browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. 
 4. 
 5. 
@@ -411,7 +419,7 @@ Verify that the site provides the user with ....
 
 **Steps**
 1. Open one's internet browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. 
 4. 
 5. 
@@ -444,7 +452,7 @@ Verify that the site provides the user with ....
 
 **Steps**
 1. Open one's internet browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. 
 4. 
 5. 
@@ -475,7 +483,7 @@ Verify that the site provides the user with ....
 
 **Steps**
 1. Open one's internet browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. 
 4. 
 5. 
@@ -507,7 +515,7 @@ Verify that
 
 **Steps**
 1. Open your web browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. 
 4. 
 
@@ -529,7 +537,7 @@ Verify that the site footer is present and responsive on all devices across all 
 
 **Steps**
 1. Open your web browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. As a signed-in user click each of the navigation bar tabs to ensure the footer is present on each page.
 4. Repeat step three on all available devices to check responsiveness.
 
@@ -551,7 +559,7 @@ Verify that all social media icons redirect to the relevant pages in a new tab a
 
 **Steps**
 1. Open your web browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. Click each of the social media icons to ensure they direct to the expected page in a new tab.
 
 **Expected Result:**
@@ -572,7 +580,7 @@ Verify that all home page features function as expected.
 
 **Steps**
 1. Open your web browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. Observe the parallax container containing the site's focal imagery.
 4. Observe the card container explaining the site's purpose.
 5. If the user isn't signed in:
@@ -605,7 +613,7 @@ Verify that the article page search bar functions as expected.
 
 **Steps**
 1. Open your web browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. 
 4. 
 5. 
@@ -633,7 +641,7 @@ Verify that the courses page dropdown containers function as expected.
 
 **Steps**
 1. Open your web browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. Navigate to the courses page.
 4. Click on the title of the course of choice.
 5. Observe the course content contained in the dropdown container.
@@ -657,15 +665,15 @@ Pass
 
 * The edit and delete button functionality are discussed in the [Manual Testing of Route Handlers](#Manual-Testing-of-Route-Handlers) section below.
 
--— **Article Page Float to top Button** —
+-— **Reviews Page Float to top Button** —
 
 **Description**
-Verify that the article page float back to top button functions as expected.
+Verify that the reviews page float back to top button functions as expected.
 
 **Steps**
 1. Open your web browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
-3. Navigate to the articles page.
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
+3. Navigate to the reviews page.
 4. Scroll down until the float back to top button appears in the bottom right corner.
 5. Click the button to scroll back to the top of the page.
 
@@ -706,7 +714,7 @@ Verify that
 
 **Steps**
 1. Open your web browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3.
 4.
 5.
@@ -730,7 +738,7 @@ Verify that
 
 **Steps**
 1. Open your web browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. 
 4. 
 5. 
@@ -754,7 +762,7 @@ Verify that the Log Out feature functions as expected.
 
 **Steps**
 1. Open your web browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. Sign In to the user account.
 4. Click on the Log Out tab on the navigation bar.
 5. Observe the Log Out successful message.
@@ -783,7 +791,7 @@ Verify that the 404 page functions as expected.
 
 **Steps**
 1. Open your web browser of choice.
-2. Navigate to [https://motherfolklore.herokuapp.com/](https://motherfolklore.herokuapp.com/)
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. Type in an incorrect URL.
 4. Observe the rendered 404 page.
 
