@@ -53,11 +53,12 @@ The live website can be viewed [here](https://joyce-english-school.herokuapp.com
 
 
 **The Ideal User of this site:**
-* Is English speaking.
-* Has a passion for history. 
-* Is Interested in local lore.
-* Has a curiosity about their provincial area.
-* Wants to learn more about Irish History. 
+* is someone with a desire to learn English.
+* is a parent of a child who needs assistance learning English. 
+* is someone who wishes to gain an English language certification.
+* is a business owner who wishes to improve their staffs English skills.
+* is a parent of a teenager who wishes to book extracuricular English lessons to supplement their secondary 
+school education. 
   
 
 ### User Stories
@@ -68,16 +69,23 @@ The live website can be viewed [here](https://joyce-english-school.herokuapp.com
 * As a first time user I want to find information about English language courses in the city of Trieste.
 * As a user I want the site to be responsive across all devices.
 * As a user I want to be able to create an account easily.
-* As a user I want to be able to inform the school of my level of English easily.
+* As a user I want to be able to choose an exam course based on my level of English easily.
+* As a user I want to recieve email confirmation that my payments have been successful. 
 * As a user I want to be able to pay for courses using a secure credit card payment system.
-* As a returning user I want to be able to book lessons to suit my own schedule.
+* As a returning user I want to be able to leave reviews of my experience with the school.
 * As a returning user I want be able to contact the school easily for any further enquires I may have.
-* As an existing user I want to receive school updates/news through my account. 
-* As an existing user I want to be able to update my profile information and delete my account if I wish.
+* As a business owner/working professional I want to be able to sign-up for Business English classes. 
+* As an existing user I want to be able to update my profile information easily.
+* As an existing user I want to be able to access my order history easily. 
+* As a parent I want to be able to sign my children up for appropriate courses based on their age and have the option of
+continuning their education over the summer through an English language based summer camp.
+* As a user with limited time I want the opportunity to take an intensive English language course before moving to an English speaking country or returning to school for the academic year. 
 
 ### User Stories - Admin Only
 * As a site administrator I want to be able to create, update and delete course information/course options from the admin view. 
-* As a site administrator I want to be able to create, update and delete the information on the Who we are page of the site from the admin view.  
+* As a site administrator I want to be able to edit or delete reviews that may contain inappropriate content. 
+* As a site administrator I want to have a simple payment system so that users have no problem making purchases.
+* As a site adminstrator I want to prevent unauthorized users from having access to Admin content and other users profiles.
 
 
 
