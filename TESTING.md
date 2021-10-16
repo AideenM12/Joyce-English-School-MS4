@@ -277,8 +277,39 @@ Pass
 <img src="documentation/doc_images/exam-courses.png" height="600" width="800" alt="site-mockup">
 
 ---
-
 ### Test Case 8
+
+> As a user I want to recieve email confirmation that my payments have been successful
+
+**Description**
+Verify that the site provides the user with recieves a confirmation email after a payment.
+
+**Steps**
+1. Open one's internet browser of choice.
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
+3. 
+4. 
+5. 
+6. 
+7. 
+
+
+**Expected Result:**
+
+
+**Actual Result:**
+
+
+**Pass/Fail:**
+Pass
+
+**Image of Test Result:** 
+
+* <img src="assets/documentation/doc-images/topicsimage.png" width="600" height="400" alt="topics-image">
+
+---
+
+### Test Case 9
 
 > As a user I want to be able to pay for courses using a secure credit card payment system.
 
@@ -300,212 +331,202 @@ Verify that the site provides the user is able to make payments using a secure a
 
 
 **Expected Result:**
-The checkout system will be secure and simplisitc for ease of use.
+The checkout system will be secure and simplistic for ease of use.
 
 **Actual Result:**
-The checkout system is secure and simplisitc for ease of use.
+The checkout system is secure and simplistic for ease of use.
 
 **Pass/Fail:**
 Pass
 
 **Image of Test Result:** 
 
-<img src="assets/documentation/doc-images/contact-form.png" width="400" height="400" alt="contact-form">
+<img src="documentation/doc_images/add-to-cart.png" width="400" height="400" alt="cart-btn">
 
----
-
-### Test Case 9
-
-> As a returning user I want to be able to book lessons to suit my own schedule.
-
-**Description**
-Verify that the site provides the user with ....
-
-**Steps**
-1. Open one's internet browser of choice.
-2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
-3. 
-4. 
-5. 
-6. 
-7. 
+<img src="documentation/doc_images/secure-checkout.png" width="400" height="400" alt="checkout-btn">
 
 
-**Expected Result:**
+<img src="documentation/doc_images/checkout-form.png" width="400" height="400" alt="checkout-form">
 
-
-**Actual Result:**
-
-
-**Pass/Fail:**
-Pass
-
-**Image of Test Result:** 
-
-* <img src="assets/documentation/doc-images/topicsimage.png" width="600" height="400" alt="topics-image">
-
----
-
-### Test Case 10
-
-> As a returning user I want be able to contact the school easily for any further enquires I may have.
-
-**Description**
-Verify that the site provides the user with ....
-
-**Steps**
-1. Open one's internet browser of choice.
-2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
-3. 
-4. 
-5. 
-6. 
-7. 
-
-
-**Expected Result:**
-
-
-**Actual Result:**
-
-
-**Pass/Fail:**
-Pass
-
-**Image of Test Result:** 
-
-* <img src="assets/documentation/doc-images/topicsimage.png" width="600" height="400" alt="topics-image">
+<img src="documentation/doc_images/checkout-success.png" width="400" height="400" alt="checkout-success">
 
 ---
 
 ### Test Case 11
 
-> As an existing user I want to receive school updates/news through my account. 
+> As a returning user I want to be able to leave reviews of my experience with the school.
 
 **Description**
-Verify that the site provides the user with ....
+Verify that the site provides the user with the ability to leave reviews of their experience with the school.
 
 **Steps**
 1. Open one's internet browser of choice.
 2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
-3. 
-4. 
-5. 
-6. 
-7. 
+3. Select the Log In tab in the navigation bar.
+4. Enter user's log in details. 
+5. Navigate to the reviews page.
+6. Scroll to the bottom of the reviews.
+7. Click the 'Create Review' button. 
+8. Fill out the form as instructed and click the 'Add Review' button.
+9. Observe the recently created review at the top of the page.
 
 
 **Expected Result:**
-
+The user will be able to successfully leave a review of their experience of the school.
 
 **Actual Result:**
-
+The user is able to successfully leave a review of their experience of the school.
 
 **Pass/Fail:**
 Pass
 
 **Image of Test Result:** 
 
-* <img src="assets/documentation/doc-images/topicsimage.png" width="600" height="400" alt="topics-image">
+* <img src="documentation/doc_images/create-review.png" width="600" height="400" alt="create-review">
+
+* <img src="documentation/doc_images/add-review.png" width="600" height="400" alt="add-review">
+
+* <img src="documentation/doc_images/review-test.png" width="600" height="400" alt="review">
+---
+
+### Test Case 11
+
+> As a returning user I want be able to contact the school easily for any further enquires I may have.
+
+**Description**
+Verify that the site provides the user with the ability to contact the school.
+
+**Steps**
+1. Open one's internet browser of choice.
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
+3. Navigate to the contact page.
+4. Fill out the contact form as instructed.
+5. Observe the 'thank you' message that confirms the school has recieved the user's message. 
+
+**Expected Result:**
+The user will be easily able to contact the school through the site's contact page.
+
+**Actual Result:**
+The user is easily able to contact the school through the site's contact page.
+
+**Pass/Fail:**
+Pass
+
+**Image of Test Result:** 
+
+* <img src="documentation/doc_images/contact-form.png" width="600" height="400" alt="contact-form">
+
+* <img src="documentation/doc_images/thank-you.png" width="600" height="400" alt="thank-you-message">
 
 ---
 
 ### Test Case 12
 
-> As an existing user I want to be able to update my profile information and delete my account if I wish.
+> As a business owner/working professional I want to be able to sign-up for Business English classes. 
 
 **Description**
-Verify that the site provides the user with ....
+Verify that the site provides the user with the option of purchasing business English classes.
 
 **Steps**
 1. Open one's internet browser of choice.
 2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
-3. 
-4. 
-5. 
-6. 
-7. 
+3. Select the Log In tab in the navigation bar.
+4. Enter user's log in details. 
+5. Navigate to the courses page.
+6. Click the 'Read more' button on the 'classes for businesses' card.
+7. Observe the description of business English classes offered by the school.
 
 
 **Expected Result:**
-
+The site will offer the user the ability to study business English.
 
 **Actual Result:**
-
+The site will offer the user the ability to study business English.
 
 **Pass/Fail:**
 Pass
 
 **Image of Test Result:** 
 
-* <img src="assets/documentation/doc-images/topicsimage.png" width="600" height="400" alt="topics-image">
+* <img src="documentation/doc_images/business.png" width="600" height="400" alt="business">
+
+* <img src="documentation/doc_images/business-detail.png" width="600" height="400" alt="business-detail">
 
 ---
 
-## Testing User Stories - Admin Only
 
 ### Test Case 13
-> As a site administrator I want to be able to create, update and delete course information/course options from the admin view. 
+> As an existing user I want to be able to update my profile information easily.
 
 **Description**
-Verify that the site provides the user with ....
+Verify that the site provides the user with the ability to update their profile information. 
 
 **Steps**
 1. Open one's internet browser of choice.
 2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
-3. 
-4. 
-5. 
-6. 
-7. 
+3. Select the Log In tab in the navigation bar.
+4. Enter user's log in details. 
+5. Navigate to the user's profile page.
+6. Fill out the form as instructed.
+7. Click the 'Update Information' button.
+8. Observe the updated profile information and the profile update notification.
 
 
 **Expected Result:**
-
+The user will be able to update their profile information easily.
 
 **Actual Result:**
-
+The user is able to update their profile information easily.
 
 **Pass/Fail:**
 Pass
 
 **Image of Test Result:** 
 
-* <img src="assets/documentation/doc-images/topicsimage.png" width="600" height="400" alt="topics-image">
+* <img src="documentation/doc_images/profile-form.png" width="600" height="400" alt="profile-form">
+
+* <img src="documentation/doc_images/profile-toast.png" width="600" height="400" alt="profile-toast">
 
 ---
 
 ### Test Case 14
-> As a site administrator I want to be able to create, update and delete the information on the Who we are page of the site from the admin view. 
+> As an existing user I want to be able to access my order history easily. 
 
 **Description**
-Verify that the site provides the user with ....
+Verify that the site provides the user with the ability to access their order history easily.
 
 **Steps**
 1. Open one's internet browser of choice.
 2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
-3. 
-4. 
-5. 
-6. 
-7. 
+3. Select the Log In tab in the navigation bar.
+4. Enter user's log in details. 
+5. Navigate to the user's profile page.
+6. Scroll to the order history section on the profile page. 
+7. Click the order number to gain more information about a specific order.
+8. Observe the details of the specific order. 
 
 
 **Expected Result:**
-
+The user will be able to access their order history easily.
 
 **Actual Result:**
-
+The user is able to access their order history easily.
 
 **Pass/Fail:**
 Pass
 
 **Image of Test Result:** 
 
-* <img src="assets/documentation/doc-images/topicsimage.png" width="600" height="400" alt="topics-image">
+* <img src="documentation/doc_images/order-history.png" width="600" height="400" alt="order-history">
+
+* <img src="documentation/doc_images/order-details.png" width="600" height="400" alt="order-details">
 
 ---
 
+
+## Testing User Stories - Admin Only
+
+---
 ## Testing Features
 
 ### Navigation

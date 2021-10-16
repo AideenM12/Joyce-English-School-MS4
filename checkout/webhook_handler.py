@@ -113,7 +113,8 @@ class StripeWH_Handler:
                 cart_as_dict = json.loads(cart)
 
                 if cart_as_dict["courses"]:
-                    for item_id, item_data in cart["courses"].items():
+                    for item_id, item_data in json.loads(
+                            cart)["courses"].items():
                         order_line_item = OrderLineItem(
                             order=order,
                             course=Course.objects.get(pk=item_id),
@@ -122,7 +123,8 @@ class StripeWH_Handler:
                     order_line_item.save()
 
                 if cart_as_dict["exam_courses"]:
-                    for item_id, item_data in cart["exam_courses"].items():
+                    for item_id, item_data in json.loads(
+                        cart)["exam_courses"].items():
                         order_line_item = OrderLineItem(
                             order=order,
                             exam_course=ExamCourse.objects.get(pk=item_id),
