@@ -32,7 +32,7 @@
         * [Login Page Features](#Login-Page-Features)
         * [Sign-Up Page Features](#Sign-Up-Page-Features)
         * [Profile Page Features](#Profile-Page-Features)
-        * [Who we are Page Features](#Who-we-are-Page-Features)
+        * [Review Page Features](#Review-Page-Features)
         * [Further Reading Page Features](#Further-Reading-Page-Features)  
         * [Log Out Features](#Log-Out-Features)
         * [404 Page](#404-Page)
@@ -108,7 +108,7 @@ Pass
 
 **Image of Test Result:** 
 
-<img src="documentation/doc_images/review-test.png" width="250" height="300" alt="reviews-test">
+<img src="documentation/doc_images/review-test.png" width="350" height="300" alt="reviews-test">
 
 ---
 
@@ -170,9 +170,9 @@ Pass
 
 **Image of Test Result:** 
 
-<img src="documentation/doc_images/courses.png" width="400" height="400" alt="courses">
+<img src="documentation/doc_images/courses.png" width="600" height="450" alt="courses">
 
-<img src="documentation/doc_images/course-detail.png" width="400" height="400" alt="course-detail">
+<img src="documentation/doc_images/course-detail.png" width="400" height="650" alt="course-detail">
 
 
 ---
@@ -246,13 +246,13 @@ Pass
 
 **Image of Test Result:** 
 
-* <img src="documentation/doc_images/signup-form.png" width="500" height="200" alt="signup-form">
+* <img src="documentation/doc_images/signup-form.png" width="300" height="450" alt="signup-form">
 
-* <img src="documentation/doc_images/verify.png" width="500" height="200" alt="verify-email">
+* <img src="documentation/doc_images/verify.png" width="300" height="400" alt="verify-email">
 
-* <img src="documentation/doc_images/confirm.png" width="500" height="200" alt="confirm-email">
+* <img src="documentation/doc_images/confirm.png" width="300" height="200" alt="confirm-email">
 
-* <img src="documentation/doc_images/confirmtoast.png" width="500" height="200" alt="confirm-toast">
+* <img src="documentation/doc_images/confirmtoast.png" width="350" height="100" alt="confirm-toast">
 
 ---
 
@@ -316,7 +316,7 @@ Pass
 
 **Image of Test Result:** 
 
-* <img src="documentation/doc_images/checkout-email.png" width="600" height="400" alt="checkout-email">
+* <img src="documentation/doc_images/checkout-email.png" width="500" height="300" alt="checkout-email">
 
 ---
 
@@ -352,12 +352,15 @@ Pass
 
 **Image of Test Result:** 
 
-<img src="documentation/doc_images/add-to-cart.png" width="400" height="400" alt="cart-btn">
+<img src="documentation/doc_images/add-to-cart.png" width="150" height="100" alt="cart-btn">
 
-<img src="documentation/doc_images/secure-checkout.png" width="400" height="400" alt="checkout-btn">
+
+<img src="documentation/doc_images/secure-checkout.png" width="500" height="100" alt="checkout-btn">
+
 
 
 <img src="documentation/doc_images/checkout-form.png" width="400" height="400" alt="checkout-form">
+
 
 <img src="documentation/doc_images/checkout-success.png" width="400" height="400" alt="checkout-success">
 
@@ -393,7 +396,7 @@ Pass
 
 **Image of Test Result:** 
 
-* <img src="documentation/doc_images/create-review.png" width="600" height="400" alt="create-review">
+* <img src="documentation/doc_images/create-review.png" width="400" height="200" alt="create-review">
 
 * <img src="documentation/doc_images/add-review.png" width="600" height="400" alt="add-review">
 
@@ -427,7 +430,7 @@ Pass
 
 * <img src="documentation/doc_images/contact-form.png" width="600" height="400" alt="contact-form">
 
-* <img src="documentation/doc_images/thank-you.png" width="600" height="400" alt="thank-you-message">
+* <img src="documentation/doc_images/thank-you.png" width="300" height="100" alt="thank-you-message">
 
 ---
 
@@ -459,7 +462,7 @@ Pass
 
 **Image of Test Result:** 
 
-* <img src="documentation/doc_images/business.png" width="600" height="400" alt="business">
+* <img src="documentation/doc_images/business.png" width="400" height="200" alt="business">
 
 * <img src="documentation/doc_images/business-detail.png" width="600" height="400" alt="business-detail">
 
@@ -496,7 +499,7 @@ Pass
 
 * <img src="documentation/doc_images/profile-form.png" width="600" height="400" alt="profile-form">
 
-* <img src="documentation/doc_images/profile-toast.png" width="600" height="400" alt="profile-toast">
+* <img src="documentation/doc_images/profile-toast.png" width="300" height="200" alt="profile-toast">
 
 ---
 
@@ -559,9 +562,9 @@ Pass
 
 **Image of Test Result:** 
 
-* <img src="documentation/doc_images/children-card.png" width="600" height="400" alt="children">
+* <img src="documentation/doc_images/children-card.png" width="400" height="300" alt="children">
 
-* <img src="documentation/doc_images/summer-camps-card.png" width="600" height="400" alt="summer-camps">
+* <img src="documentation/doc_images/summer-camps-card.png" width="400" height="300" alt="summer-camps">
 
 ---
 
@@ -622,11 +625,11 @@ Pass
 
 **Image of Test Result:**
 
-<img src="documentation/doc_images/add-toast.png" width="450" height="250" alt="add-toast">
+* <img src="documentation/doc_images/add-toast.png" width="250" height="150" alt="add-toast">
 
-<img src="documentation/doc_images/edit-toast.png" width="450" height="250" alt="edit-toast">
+* <img src="documentation/doc_images/edit-toast.png" width="250" height="150" alt="edit-toast">
 
-<img src="documentation/doc_images/delete-toast.png" width="450" height="250" alt="delete-toast">
+* <img src="documentation/doc_images/delete-toast.png" width="250" height="150" alt="delete-toast">
 
 ---
 
@@ -680,14 +683,14 @@ Verify that
 **Steps**
 1. Open your web browser of choice.
 2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
-3. 
-4. 
+3. As an unsigned-in user click each of the navigation bar tabs to ensure they direct to the expected page.
+4. Repeat step three as a signed-in user.
 
 **Expected Result:**
-
+Each of the links in the navigation bar will direct the user to the desired site page.
 
 **Actual Result:**
-
+Each of the links in the navigation bar directs the user to the desired site page
 
 **Pass/Fail:**
 Pass
@@ -748,9 +751,9 @@ Verify that all home page features function as expected.
 3. Observe the parallax container containing the site's focal imagery.
 4. Observe the card container explaining the site's purpose.
 5. If the user isn't signed in:
-    - Observe the Register and Log in call to action buttons.
+    - Observe the Register, Reviews and Log in call to action buttons.
 6. If the user is signed in:
-    - Observe the articles, topics and contribute call to action buttons.
+    - Observe the Courses, Profile and Exam Courses call to action buttons.
 
 **Expected Result:**
 All home page features will appear present as described in the above steps.
@@ -763,71 +766,81 @@ Pass
 
 **Image of Test Result:**
 
-<img src="assets/documentation/doc-images/homebuttons.png" width="550" height="300" alt="home-page-buttons">
+* <img src="documentation/doc_images/homebtns-1.png" width="550" height="300" alt="home-page-buttons">
 
-<img src="assets/documentation/doc-images/homebuttons2.png" width="700" height="300" alt="home-page-buttons">
+* <img src="documentation/doc_images/homebtns-2.png" width="550" height="300" alt="home-page-buttons">
 ---
 
-### Courses Page Features
+### Courses/ Exam Courses Page Features
 
--— **Article Page Search Bar** —
+-— **Course Page/ Exam Course Page** —
 
 **Description**
-Verify that the article page search bar functions as expected.
+Verify that the Courses and Exam Courses page function as expected.
 
 **Steps**
 1. Open your web browser of choice.
 2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
-3. 
-4. 
-5. 
+3. Click on the Course tab. 
+4. Observe the variety of courses offered.
+5. Repeat these steps for the Exam Courses page.
 
 **Expected Result:**
-
+The Courses/Exam Courses page will display a variety of cards containing the courses offered.
 
 **Actual Result:**
-
+The Courses/Exam Courses page displays a variety of cards containing the courses offered.
 
 **Pass/Fail:**
 Pass
 
 **Image of Test Result:**
 
-* <img src="assets/documentation/doc-images/searchbar.png" width="500" height="300" alt="searchbar">
+* <img src="documentation/doc_images/courses.png" width="500" height="300" alt="courses">
+
+* <img src="documentation/doc_images/exam-courses.png" width="500" height="300" alt="courses">
 
 
-
-
--— **Courses Dropdown Containers** —
+-— **Course Detail Page** —
 
 **Description**
-Verify that the courses page dropdown containers function as expected.
+Verify that the course detail page functions as expected.
 
 **Steps**
 1. Open your web browser of choice.
 2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. Navigate to the courses page.
-4. Click on the title of the course of choice.
-5. Observe the course content contained in the dropdown container.
+4. Click on the 'Read More' button of a course.
+5. Observe the course detail page containing all the necessary information regarding a course.
+6. If a user is logged in observe the 'Add to Cart' and 'Back to Courses' buttons.
+7. If a user is logged out observe the 'Sign-up' and 'Log in' buttons.
 
 **Expected Result:**
-The course dropdown container will drop to display the desired course content. 
+The course detail page will display the desired course content information. 
 
 **Actual Result:**
-The course dropdown container drops to display the desired course content.
+The course detail page displays the desired course content information. 
 
 **Pass/Fail:**
 Pass
 
 **Image of Test Result:**
 
-* <img src="assets/documentation/doc-images/articlestest.png" width="250" height="500" alt="articles-test">
+* <img src="documentation/doc_images/business.png" width="450" height="250" alt="business">
 
-* <img src="assets/documentation/doc-images/articlestest1.png" width="250" height="500" alt="articles-test1">
+* <img src="documentation/doc_images/business-detail.png" width="450" height="250" alt="business-detail">
 
--— **Article Page Edit and Delete Buttons** —
+* <img src="documentation/doc_images/detail-buttons.png" width="350" height="200" alt="detail-btns">
+
+* <img src="documentation/doc_images/CTA-btns.png" width="550" height="200" alt="CTA-btns">
+
+-— **Course Page Edit and Delete Buttons** —
 
 * The edit and delete button functionality are discussed in the [Manual Testing of Route Handlers](#Manual-Testing-of-Route-Handlers) section below.
+
+### Reviews Page Features
+
+* The majority of the Reviews page functionality testing is discussed in the above [Testing User Stories](#Testing-User-Stories) section.
 
 -— **Reviews Page Float to top Button** —
 
@@ -871,51 +884,9 @@ Pass
 
 ---
 
-### Who we are page features:
+### Contact page features:
 
-**Description**
-Verify that
-
-**Steps**
-1. Open your web browser of choice.
-2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
-3.
-4.
-5.
-6. 
-
-**Expected Result:**
-
-
-**Actual Result:**
-
-
-**Pass/Fail:**
-Pass
-
----
-
-### Further Reading page features:
-
-**Description**
-Verify that 
-
-**Steps**
-1. Open your web browser of choice.
-2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
-3. 
-4. 
-5. 
-6. 
-
-**Expected Result:**
-
-
-**Actual Result:**
-
-
-**Pass/Fail:**
-Pass
+* The Contact page functionality testing is discussed in the above [Testing User Stories](#Testing-User-Stories) section.
 
 ---
 
@@ -929,7 +900,9 @@ Verify that the Log Out feature functions as expected.
 2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. Sign In to the user account.
 4. Click on the Log Out tab on the navigation bar.
-5. Observe the Log Out successful message.
+5. Observe the Sign Out page.
+6. Click on the 'Sign Out' button to confirm.
+7. Observe the toast notification to confirm the log out was successful.
 
 **Expected Result:**
 The Log Out button will remove the user's session cookie from the app using the pop method and redirects the user to the login page.
@@ -944,7 +917,9 @@ Pass
 
 **Image of Test Result:**
 
-<img src="assets/documentation/doc-images/logout.png" width="550" height="100" alt="logout">
+* <img src="documentation/doc_images/signout-card.png" width="450" height="400" alt="signout">
+
+* <img src="documentation/doc_images/logout-toast.png" width="250" height="100" alt="signout-toast">
 
 ---
 
@@ -972,7 +947,7 @@ Pass
 
 **Image of Test Result:**
 
-<img src="assets/documentation/doc-images/404.png" width="450" height="250" alt="404-page">
+<img src="documentation/doc_images/404.png" width="450" height="250" alt="404-page">
 
 ---
 
