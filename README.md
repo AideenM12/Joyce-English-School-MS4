@@ -49,7 +49,7 @@ The live website can be viewed [here](https://joyce-english-school.herokuapp.com
 ## Strategy
 
 ### Project Goals
-The primary goal of this site is to facilitate people in the city of Trieste who have a desire to learn English. For the purpose of this project all site content has been presented in English but in a real world application this site would be presented in Italian. The site is named after famed Irish author James Joyce who lived in Trieste for many years and is still revered by the city's inhabitants today. Coincidentially James Joyce also taught English as a foreign language in the city of Trieste. The site is designed to offer user's the opportunity to find out information about the school's courses and also to allow registered user's to purchase courses from the site. Users can also read and leave reviews, view the order history and create a profile with the site. There are many other site features to be implemented which will be discussed in depth later on in this document. 
+The primary goal of this site is to facilitate people in the city of Trieste who have a desire to learn English. For the purpose of this project all site content has been presented in English but in a real world application this site would be presented in Italian. The site is named after famed Irish author James Joyce who lived in Trieste for many years and is still revered by the city's inhabitants today. Coincidentially James Joyce also taught English as a foreign language in the city of Trieste. The site is designed to offer users the opportunity to find out information about the school's courses and also to allow registered users to purchase courses from the site. Users can also read and leave reviews, view the order history and create a profile with the site. There are many other site features to be implemented which will be discussed in depth later on in this document. 
 
 
 
@@ -57,9 +57,8 @@ The primary goal of this site is to facilitate people in the city of Trieste who
 * is someone with a desire to learn English.
 * is a parent of a child who needs assistance learning English. 
 * is someone who wishes to gain an English language certification.
-* is a business owner who wishes to improve their staffs English skills.
-* is a parent of a teenager who wishes to book extracuricular English lessons to supplement their secondary 
-school education. 
+* is a business owner who wishes to improve their staff's English skills.
+* is a parent of a teenager who wishes to book extra-curricular English lessons to supplement their secondary school education. 
   
 
 ### User Stories
@@ -71,22 +70,22 @@ school education.
 * As a user I want the site to be responsive across all devices.
 * As a user I want to be able to create an account easily.
 * As a user I want to be able to choose an exam course based on my level of English easily.
-* As a user I want to recieve email confirmation that my payments have been successful. 
+* As a user I want to receive email confirmation that my payments have been successful. 
 * As a user I want to be able to pay for courses using a secure credit card payment system.
 * As a returning user I want to be able to leave reviews of my experience with the school.
-* As a returning user I want be able to contact the school easily for any further enquires I may have.
+* As a returning user I want to be able to contact the school easily for any further enquiries I may have.
 * As a business owner/working professional I want to be able to sign-up for Business English classes. 
 * As an existing user I want to be able to update my profile information easily.
 * As an existing user I want to be able to access my order history easily. 
 * As a parent I want to be able to sign my children up for appropriate courses based on their age and have the option of
-continuning their education over the summer through an English language based summer camp.
-* As a user with limited time I want the opportunity to take an intensive English language course before moving to an English speaking country or returning to school for the academic year. 
+continuing their education over the summer through an English-language based summer camp.
+* As a user with limited time I want the opportunity to take an intensive English language course before moving to an English-speaking country or returning to school for the academic year. 
 
 ### User Stories - Admin Only
 * As a site administrator I want to be able to create, update and delete course information/course options. 
 * As a site administrator I want to be able to edit or delete reviews that may contain inappropriate content. 
 * As a site administrator I want to have a simple payment system so that users have no problem making purchases.
-* As a site adminstrator I want to prevent unauthorized users from having access to Admin content and other users profiles.
+* As a site adminstrator I want to prevent unauthorized users from having access to Admin content and other users' profiles.
 
 
 
@@ -107,7 +106,7 @@ continuning their education over the summer through an English language based su
 
 <img src="documentation/doc_images/homebtns-1.png" width="450" height="300" alt="home-page-buttons">
 
-* If the user is  signed in there are three call to action buttons, one which invites the user to make an article contribution, visit the articles page or visit the topics page to promote easy of use.
+* If the user is signed in there are three call to action buttons, one which invites the user to make an article contribution, visit the articles page or visit the topics page to promote ease of use.
 
 <img src="documentation/doc_images/homebtns-2.png" width="650" height="300" alt="home-page-buttons">
 
@@ -157,7 +156,7 @@ continuning their education over the summer through an English language based su
 
 
 ### Profile page features:
-* A profile page is automatically create for the user once they have registered with the site. The profile form is automatically updated with the information input from the checkout form after the user has made a purchase. The user can update this information at any time but editing it in their profile page. Beneath the profile form there is a table with the user's order history. The user is able to click the order number in the order history section to view an more in depth description of a particular order. 
+* A profile page is automatically created for the user once they have registered with the site. The profile form is automatically updated with the information input from the checkout form after the user has made a purchase. The user can update this information at any time but editing it in their profile page. Beneath the profile form there is a table with the user's order history. The user is able to click the order number in the order history section to view a more in depth description of a particular order. 
 
 * <img src="documentation/doc_images/profile-form.png" width="600" height="400" alt="profile-form">
 
@@ -207,11 +206,11 @@ continuning their education over the summer through an English language based su
 ## Features left to implement
 The scope of this project was quite large at its inception and decisions had to be made to sacrifice certain content and features in order to meet the submission deadline. The following features will be explored and implemented at a later date:
 
-* A Who We Are page was a potential feature in which users would be able to find out more information about the staff of the school along with the teacher's academic credentials and work experience. All this data would be contained in it's own model which would be modified when necessary by the site administrator through the site management tab and in the admin view. 
+* A Who We Are page was a potential feature in which users would be able to find out more information about the staff of the school along with the teacher's academic credentials and work experience. All this data would be contained in its own model which would be modified when necessary by the site administrator through the site management tab and in the admin view. 
 
-* At the moment the site does not contain a quantity increment/decrement feature. The reason it currently does not exist is that at a later stage users who are purchasing a course for another person will be able to submit information about the student who is taking part in a specific course. The goal behind this particular feature is to allow business owners and employers to submit information about their staff when purchasing numerous courses in a single payment. It will also allow parent's to submit information about their children when purchasing a course for their child. These quantity and forms features will be built in tandem so that the quantity feature will generate the correct amount of student information forms so that the school can easily build class timetables with the data that has been submitted by the user. 
+* At the moment the site does not contain a quantity increment/decrement feature. The reason it currently does not exist is that at a later stage users who are purchasing a course for another person will be able to submit information about the student who is taking part in a specific course. The goal behind this particular feature is to allow business owners and employers to submit information about their staff when purchasing numerous courses in a single payment. It will also allow parents to submit information about their children when purchasing a course for their child. These quantity and forms features will be built in tandem so that the quantity feature will generate the correct amount of student information forms so that the school can easily build class timetables with the data that has been submitted by the user. 
 
-* Another potential feature was a calendar app which allow user's to sign up for individual one-to-one online lessons. This app would function in a similar manner to calendly where the user books a time slot and makes a payment for a single lesson to accommodate users with busy an unpredictable schedules. The feasability of this particular feature will be explored in depth at a later stage but at the time of submission it was not a viable option due to time constraints and the developer's current skill set. 
+* Another potential feature was a calendar app which allow users to sign up for individual one-to-one online lessons. This app would function in a similar manner to calendly where the user books a time slot and makes a payment for a single lesson to accommodate users with busy and unpredictable schedules. The feasibility of this particular feature will be explored in depth at a later stage but at the time of submission it was not a viable option due to time constraints and the developer's current skill set. 
 
 
 
@@ -229,10 +228,10 @@ This palette was created on the [Coolors Website](https://coolors.co).
 
 
 ### Typography
-* The 'Patrick's Hand' font was chosen for header text because of it's similarity to writing that appears on a class room whiteboard so as maintain the school theme and feel thorughout the site and elicit a positive emotional response from the user.
+* The 'Patrick's Hand' font was chosen for header text because of its similarity to writing that appears on a class room whiteboard so as maintain the school theme and feel throughout the site and elicit a positive emotional response from the user.
 
 
-* The 'Architect's Daughter' font was chosen based on its similarity to the writing often found in student notebooks in order to further enhance to the educational feel of the site.
+* The 'Architect's Daughter' font was chosen based on its similarity to the writing often found in student notebooks in order to further enhance the educational feel of the site.
 
 
 * Both fonts were found on [Google Fonts](https://fonts.google.com/)
@@ -240,9 +239,9 @@ This palette was created on the [Coolors Website](https://coolors.co).
 
 ### Imagery
 
-* The top parallax image was chosen for it's appropriateness to English language learning and also because the flags depicted represent the two major English dialects studied by non-native English speakers, namely American English and British English.
+* The top parallax image was chosen for its appropriateness to English language learning and also because the flags depicted represent the two major English dialects studied by non-native English speakers, namely American English and British English.
 
-* The bottom parallax image simply depicts some pages from a book and was chosen for it's similarity to the site color scheme and also for it's relevance to the site's purpose. 
+* The bottom parallax image simply depicts some pages from a book and was chosen for its similarity to the site color scheme and also for its relevance to the site's purpose. 
 
 * The images depicted on each of the cards were chosen based on their relevance to the type of course that is advertised alongside each individual image. 
 
@@ -282,7 +281,7 @@ This palette was created on the [Coolors Website](https://coolors.co).
 **Courses** 
 - This model alongside the exam_courses model are the foundation of the site's purpose. This model stores all relevant information about what each individual course offers.
 - The price is stored in this model. 
-- Each individual course contains it's own unique description and each course is referenced using a Primary Key which is generated each time a new course is created. 
+- Each individual course contains its own unique description and each course is referenced using a Primary Key which is generated each time a new course is created. 
 - This model also stores information regarding course start and end dates and also the number of class hours that will be allocated for the duration of the course. 
 - The assigned course images are also stored in this model. 
 
@@ -342,7 +341,7 @@ This palette was created on the [Coolors Website](https://coolors.co).
 - [Github](https://github.com/)
     - Github was used for online version control and storing files and documents.
 - [Heroku](https://id.heroku.com/)
-    - Heroku was used as a cloud based platform to deploy this site.
+    - Heroku was used as a cloud-based platform to deploy this site.
 - [Google fonts](https://fonts.google.com/) 
     - The font styles used on this website were chosen from Google fonts.
 - [Materializecss](https://materializecss.com/)
@@ -357,7 +356,7 @@ This palette was created on the [Coolors Website](https://coolors.co).
 - [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
     - Jinja was used for templating.
 - [Stripe](https://stripe.com/ie)
-    - Stripe payments was used to build the card payment system of this site.
+    - Stripe payments were used to build the card payment system of this site.
 - [AWS-Amazon Web Services](https://aws.amazon.com/)
     - AWS was used to store all media and static files of this site in production mode.    
 - [Balsamiq](https://balsamiq.com/)
@@ -371,7 +370,7 @@ This palette was created on the [Coolors Website](https://coolors.co).
 - [Google DevTools](https://developers.google.com/web/tools/chrome-devtools) 
     - Google Dev Tools was extensively used throughout the project for various styling and testing purposes. Its lighthouse feature was used as one of the main testing tools for this project.
 - [EmailJS](https://www.emailjs.com/)
-    - The contact-form was created using EmailJS following a code institute tutorial.
+    - The contact form was created using EmailJS following a code institute tutorial.
 - [CSS-Tricks](https://css-tricks.com/)
     - This was used as a general reference resource.
 - [Favicon.io](https://favicon.io/) 
@@ -393,7 +392,7 @@ Testing information can be found here in the separate [TESTING.md file](TESTING.
 ## Deployment
 This project was developed using [Gitpod IDE](https://gitpod.io) and pushed to Github using the in-built terminal. However, because Github can only host static websites it was necessary to deploy this project to Heroku because it is a compatible hosting platform for a back-end focused site like Joyce English School. The master branch of this repository is the most current version and has been used for the deployed version of the site.
 
-The Code Institiue student template was used to create this project.
+The Code Institute student template was used to create this project.
 
 [Code Institute Full Template](https://github.com/Code-Institute-Org/gitpod-full-template)
 
@@ -402,7 +401,7 @@ This project was deployed using Heroku and stored in GitHub.
 ### Project and Repository Creation
 
 1. Navigate to [Github](https://github.com/).
-2. Create a new repository by first clicking the green button labelled new on the top left of the screen.
+2. Create a new repository by first clicking the green button labeled new on the top left of the screen.
 3. Select the Code Institute template in the templates section.
 4. Give the repository a name, in this case Joyce-English-School-MS4.
 5. Click the green 'Create Repository' button at the bottom of the page.
@@ -410,7 +409,7 @@ This project was deployed using Heroku and stored in GitHub.
 8. Future access to this workspace must be gained through gitpod workspaces, clicking the green button in gitpod again 
 will initialize a new workspace.
 9. Use the `git add .` command to add all modified and new files to the staging area.
-10. Use the `git commit -m` command to commit change to the local repository.
+10. Use the `git commit -m` command to commit a change to the local repository.
 11. Use the `git push` command to push all committed changes to github.   
 
 Before deploying the website to Heroku, the following three must be followed to allow the app to work in Heroku:
@@ -625,7 +624,7 @@ Once the project been loaded into the IDE it is necessary to install the necessa
 
 * I would like to thank the entire slack community for being a source of support, knowledge and positive feedback throughout this project.
 
-* I would like to thank the tutor support for their patience and guidance throughout the development of this project. In particular I would like to thank jo_ci, sean_ci and john_ci who went above and beyond the call of duty for me on several occassions and without whom this project may not have been possible. I really am immensely grateful and cannot thank each of them enough. 
+* I would like to thank the tutor support for their patience and guidance throughout the development of this project. In particular, I would like to thank jo_ci, sean_ci and john_ci who went above and beyond the call of duty for me on several occassions and without whom this project may not have been possible. I really am immensely grateful and cannot thank each of them enough. 
 
 * I would like to thank Ben Kavanagh for his excellent and thorough testing during the concluding weeks of this project, for providing excellent suggestions for improvement and also for his kind words of encouragement which provided a much need confidence boost in times of stress.
 
