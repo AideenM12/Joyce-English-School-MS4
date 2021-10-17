@@ -163,7 +163,7 @@ Verify that the site provides the user with information regarding English langua
 A detailed description page of the course will provide the user with all the necessary information regarding their course of choice.
 
 **Actual Result:**
-A detailed description page of the course will provide the user with all the necessary information regarding their course of choice.
+A detailed description page of the course provides the user with all the necessary information regarding their course of choice.
 
 **Pass/Fail:**
 Pass
@@ -239,7 +239,7 @@ Verify that the site provides the user with an opportunity to create an account 
 A registration form will be provided and once successfully completed and submitted the user will receive an email asking them to verify their account. Once the user's email has been verified they will be able to log in easily with the credentials they have created. 
 
 **Actual Result:**
-A registration form will be provided and once successfully completed and submitted the user will receive an email asking them to verify their account. Once the user's email has been verified they will be able to log in easily with the credentials they have created. 
+A registration form is provided and once successfully completed and submitted the user receives an email asking them to verify their account. Once the user's email has been verified they are able to log in easily with the credentials they have created. 
 
 **Pass/Fail:**
 Pass
@@ -286,10 +286,10 @@ Pass
 ---
 ### Test Case 8
 
-> As a user I want to receive email confirmation that my payments have been successful
+> As a user I want to receive email confirmation that my payments have been successful.
 
 **Description**
-Verify that the site provides the user with receives a confirmation email after a payment.
+Verify that the site provides the user with a confirmation email after a payment.
 
 **Steps**
 1. Open one's internet browser of choice.
@@ -306,10 +306,10 @@ Verify that the site provides the user with receives a confirmation email after 
 
 
 **Expected Result:**
-The site will provide the user with receives a confirmation email after a payment
+The site will provide the user with a confirmation email after a payment
 
 **Actual Result:**
-The site provides the user with receives a confirmation email after a payment
+The site provides the user with a confirmation email after a payment
 
 **Pass/Fail:**
 Pass
@@ -325,7 +325,7 @@ Pass
 > As a user I want to be able to pay for courses using a secure credit card payment system.
 
 **Description**
-Verify that the site provides the user is able to make payments using a secure and simple card payments system. 
+Verify that the site provides the user with the ability to make payments using a secure and simple card payments system. 
 
 **Steps**
 1. Open one's internet browser of choice.
@@ -352,17 +352,16 @@ Pass
 
 **Image of Test Result:** 
 
-<img src="documentation/doc_images/add-to-cart.png" width="150" height="100" alt="cart-btn">
+* <img src="documentation/doc_images/add-to-cart.png" width="150" height="100" alt="cart-btn">
 
 
-<img src="documentation/doc_images/secure-checkout.png" width="500" height="100" alt="checkout-btn">
+* <img src="documentation/doc_images/secure-checkout.png" width="500" height="100" alt="checkout-btn">
 
 
+* <img src="documentation/doc_images/checkout-form.png" width="400" height="400" alt="checkout-form">
 
-<img src="documentation/doc_images/checkout-form.png" width="400" height="400" alt="checkout-form">
 
-
-<img src="documentation/doc_images/checkout-success.png" width="400" height="400" alt="checkout-success">
+* <img src="documentation/doc_images/checkout-success.png" width="400" height="400" alt="checkout-success">
 
 ---
 
@@ -455,7 +454,7 @@ Verify that the site provides the user with the option of purchasing business En
 The site will offer the user the ability to study business English.
 
 **Actual Result:**
-The site will offer the user the ability to study business English.
+The site offers the user the ability to study business English.
 
 **Pass/Fail:**
 Pass
@@ -602,7 +601,7 @@ Pass
 > As a site administrator I want to be able to create, update and delete course information/course options.
 
 **Description**
-Verify that 
+Verify that the site administator can create, update and delete course information/course options.
 
 **Steps**
 1. Open your web browser of choice.
@@ -649,7 +648,7 @@ Verify that the site administrator has the ability to delete inappropriate conte
 7. Select the delete option and click delete.
 
 **Expected Result:**
-the site administrator will have the ability to delete inappropriate content on the reviews section of the site.
+The site administrator will have the ability to delete inappropriate content on the reviews section of the site.
 
 **Actual Result:**
 The site administrator has the ability to delete inappropriate content on the reviews section of the site.
@@ -669,7 +668,7 @@ Pass
 ### Test Case 21
 > As a site adminstrator I want to prevent unauthorized users from having access to Admin content and other users' profiles.
 
-* This particular user story will be explored in depth in the Testing Route Handlers section of this document. Please refer to the[Manual Testing of Route Handlers](#Manual-Testing-of-Route-Handlers) section for more information.
+* This particular user story will be explored in depth in the Manual Testing Route Handlers section of this document. Please refer to the[Manual Testing of Route Handlers](#Manual-Testing-of-Route-Handlers) section for more information.
 
 ---
 
@@ -678,7 +677,7 @@ Pass
 ### Navigation
 
 **Description**
-Verify that 
+Verify that all navigation bar tabs work as expected.
 
 **Steps**
 1. Open your web browser of choice.
@@ -776,7 +775,7 @@ Pass
 -— **Course Page/ Exam Course Page** —
 
 **Description**
-Verify that the Courses and Exam Courses page function as expected.
+Verify that the Courses and Exam Courses pages function as expected.
 
 **Steps**
 1. Open your web browser of choice.
