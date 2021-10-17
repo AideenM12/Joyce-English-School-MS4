@@ -48,7 +48,7 @@ The live website can be viewed [here](https://joyce-english-school.herokuapp.com
 ## Strategy
 
 ### Project Goals
-
+The primary goal of this site is to facillitate people in the city of Trieste who have a desire to learn English. For the purpose of this project all site content has been presented in English but in a real world application this site would be presented in Italian. The site is named after famed Irish author James Joyce who lived in Trieste for many years and is still revered by the city's inhabitants today. Coincidentially James Joyce also taught English as a foreign language in the city of Trieste. The site is designed to offer user's the opportunity to find out information about the school's courses and also to allow registered user's to purchase courses from the site. Users can also read and leave reviews, view the order history and create a profile with the site. There are many other site features to be implemented which will be discussed in depth later on in this document. 
 
 
 
@@ -100,34 +100,64 @@ continuning their education over the summer through an English language based su
 
 ### Home page features:
 
+* A parallax container displays the two images described in the Design section below.
+* A card is displayed to the user describing the site's purpose. 
+* If the user is not signed in there are three call to action buttons, one which invites the user to register an account with the site, another which invites the user to read reviews about the school and another which asks current users to sign in as seen in the image below. 
+
+<img src="documentation/doc_images/homebtns-1.png" width="450" height="300" alt="home-page-buttons">
+
+* If the user is  signed in there are three call to action buttons, one which invites the user to make an article contribution, visit the articles page or visit the topics page to promote easy of use.
+
+<img src="documentation/doc_images/homebtns-2.png" width="650" height="300" alt="home-page-buttons">
 
 
 
 
 ### Login page features:
 
+* A parallax container displays the two images described in the Design section below. 
+* A Log in form is presented to the user which asks for their username and password which are validated by django allauth. An image of the login form can be seen below.
 
+<img src="documentation/doc_images/login.png" width="450" height="300" alt="login-form">
 
 ### Sign-Up page features:
+* A parallax container displays the two images described in the Design section below. 
+* A register form is presented to the user which asks for their username, email address and password which are validated by Django allauth. The password must be declared twice to ensure it matches or else the user will be notified that their passwords do not match. This is done to ensure that the user has input a password that they are familiar with and can remember and to avoid any possible typos that could hinder the user from signing in in the future. The user will then be redirected to a page which instructs them to verify their email address. Once this is done they will be brought to a page which asks them to confirm their email address and finally they will be redirected to the login page where they can login with their newly created credentials. An image of the registration form can be seen below.
 
+* <img src="documentation/doc_images/signup-form.png" width="450" height="500" alt="signup-form">
+
+* <img src="documentation/doc_images/verify.png" width="450" height="500" alt="verify-page">
+
+* <img src="documentation/doc_images/confirm.png" width="450" height="500" alt="confirm-page">
 
 
 ### Profile page features:
- 
+* A profile page is automatically create for the user once they have registered with the site. The profile form is automatically updated with the information input from the checkout form after the user has made a purchase. The user can update this information at any time but editing it in their profile page. Beneath the profile form there is a table with the user's order history. The user is able to click the order number in the order history section to view an more in depth description of a particular order. 
 
+* <img src="documentation/doc_images/profile-form.png" width="600" height="400" alt="profile-form">
+
+* <img src="documentation/doc_images/profile-toast.png" width="300" height="200" alt="profile-toast">
+
+* <img src="documentation/doc_images/order-history.png" width="600" height="400" alt="order-history">
+
+* <img src="documentation/doc_images/order-details.png" width="600" height="400" alt="order-details">
 
 ### Logout features:
-* The log out button removes the user's session cookie from the app using the pop method and redirects the user to the login page.
+* The log out button directs the user to the signout page which asks the user to confirm that they wish to sign out. There are also three call to action cards on the sign out page to encourage the user to remain on the site for longer. Once a user clicks the signout button the user's session cookie will be removed from the app and the user will be redirected home page.
+
+* <img src="documentation/doc_images/signout-card.png" width="450" height="400" alt="signout">
+
+* <img src="documentation/doc_images/logout-toast.png" width="250" height="100" alt="signout-toast">
 
 ### 404 Page
 * A 404 Page has been created in order to deal with user errors in navigation or invalid search data in order to assist the user in returning to the home page. All navigation features are present on the 404 page as well as a button labeled 'home' in order to easily redirect the user back to the relevant page.
 
-<img src="assets/documentation/doc-images/404.png" width="450" height="250" alt="404-page">
+<img src="documentation/doc_images/404.png" width="450" height="250" alt="404-page">
 
 ### 500 Page 
 * A 500 page has been created to deal with any potential internal server errors.
 
-<img src="assets/documentation/doc-images/500.png" width="450" height="250" alt="500-page">
+<img src="documentation/doc_images/500 (2).png" width="450" height="250" alt="500-page">
 
 ### Features exclusive to Admin:
 
