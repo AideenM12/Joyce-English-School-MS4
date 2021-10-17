@@ -161,15 +161,19 @@ continuning their education over the summer through an English language based su
 
 ### Features exclusive to Admin:
 
-* Only the Admin can edit/delete all articles content on the site, otherwise the content must belong to the session user in order for it to be edited or deleted. 
-* Only Admin can add new topics to the topics page.
-* Only Admin can edit/delete existing topics on the topics page.
-* Only Admin can add new material to the further reading page.
-* Only Admin can edit/delete material on the further reading page.
+* Only the Admin can edit/delete all course content on the site. 
+* Admin can delete reviews containing inappropriate content through the admin view.
+
 
 
 ## Features left to implement
+The scope of this project was quite large at its inception and decisions had to be made to sacrifice certain content and features in order to meet the submission deadline. The following features will be explored and implemented at a later date:
 
+* A Who We Are page was a potential feature in which users would be able to find out more information about the staff of the school along with the teacher's academic credentials and work experience. All this data would be contained in it's own model which would be modified when necessary by the site administrator through the site management tab and in the admin view. 
+
+* At the moment the site does not contain a quantity increment/decrement feature. The reason it currently does not exist is that at a later stage users who are purchasing a course for another person will be able to submit information about the student who is taking part in a specific course. The goal behind this particular feature is to allow business owners and employers to submit information about their staff when purchasing numerous courses in a single payment. It will also allow parent's to submit information about their children when purchasing a course for their child. These quantity and forms features will be built in tandem so that the quantity feature will generate the correct amount of student information forms so that the school can easily build class timetables with the data that has been submitted by the user. 
+
+* Another potential feature was a calendar app which allow user's to sign up for individual one-to-one online lessons. This app would function in a similar manner to calendly where the user books a time slot and makes a payment for a single lesson to accommodate users with busy an unpredictable schedules. The feasability of this particular feature will be explored in depth at a later stage but at the time of submission it was not a viable option due to time constraints and the developer's current skill set. 
 
 
 
@@ -179,7 +183,7 @@ continuning their education over the summer through an English language based su
 
 ### Colors
 
-* The colors of this site were chosen in order to replicate the feel of old newspapers and books. It's a simple black and white monochrome palette coupled with shades of grey so as not to overwhelm the user and to adhere to the principles of good UX design. They match the monochrome images that have been selected for this site. 
+* The colors of this site were chosen in order because red is the color of Trieste and the shades of blue were chosen as a complementary contrast to the red. The colors were also chosen in tandem with the site's imagery to ensure good UX. 
 
 This palette was created on the [Coolors Website](https://coolors.co).
 
@@ -187,16 +191,10 @@ This palette was created on the [Coolors Website](https://coolors.co).
 
 
 ### Typography
-* The 'Metal Mania' font was chosen for header text because of its striking style and historical feel as well as it's clarity. Other fonts that were found were perhaps more fitting in terms of how frequently they were used in the past but in order to stick with the principles of good UX the aforementioned font was chosen based on its readability.
+* The 'Patrick's Hand' font was chosen for header text because of it's similarity to writing that appears on a class room whiteboard so as maintain the school theme and feel thorughout the site and elicit a positive emotional response from the user.
 
 
-<img src="assets/documentation/doc-images/metalmania.png" width="350" height="150" alt="Metal-Mania">
-
-
-* The 'IM Fell English SC' was chosen based on its similarity to the text often found in older literature in order to enhance the historic feel of the site and promote a positive user experience.
-
-
-<img src="assets/documentation/doc-images/Englishfont.png" width="350" height="150" alt="English-font">
+* The 'Architect's Daughter' font was chosen based on its similarity to the writing often found in student notebooks in order to further enhance to the educational feel of the site.
 
 
 * Both fonts were found on [Google Fonts](https://fonts.google.com/)
