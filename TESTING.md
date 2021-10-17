@@ -1351,28 +1351,3 @@ The code amendment solved the price doubling issue and the issue is now resolved
 
     [Lighthouse Desktop Reviews page results](documentation/lighthouse-tests/reviews-desktop.pdf) | 
     [Lighthouse Mobile Reviews page results](documentation/lighthouse-tests/reviews-mobile.pdf)
-
-* **Add Topic Page**
-
-    [Lighthouse Desktop Add Topic page results](assets/documentation/doc-images/Add-topicdesktop.pdf) | 
-    [Lighthouse Mobile Add Topic page results](assets/documentation/doc-images/Add-topicmobile.pdf)
-
-* **Edit Topic Page**
-
-    [Lighthouse Desktop Edit Topic page results](assets/documentation/doc-images/Edit-topicdesktop.pdf) | 
-    [Lighthouse Mobile Edit Topic page results](assets/documentation/doc-images/Edit-topicmobile.pdf)
-
-* **Further Reading Page**
-
-    [Lighthouse Desktop Further Reading page results](assets/documentation/doc-images/Further-readingdesktop.pdf) | 
-    [Lighthouse Mobile Further Reading page results](assets/documentation/doc-images/Further-readingmobile.pdf)
-
-* **Add Further Reading Page**
-
-    [Lighthouse Desktop Add Further Reading page results](assets/documentation/doc-images/Add-fr-desktop.pdf) | 
-    [Lighthouse Mobile Add Further Reading page results](assets/documentation/doc-images/Add-fr-mobile.pdf)
-
-* **Edit Further Reading Page**
-
-    [Lighthouse Desktop Edit Further Reading page results](assets/documentation/doc-images/Edit-fr-desktop.pdf) | 
-    [Lighthouse Mobile Edit Further Reading page results](assets/documentation/doc-images/Edit-fr-mobile.pdf)
