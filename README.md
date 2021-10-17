@@ -82,7 +82,7 @@ continuning their education over the summer through an English language based su
 * As a user with limited time I want the opportunity to take an intensive English language course before moving to an English speaking country or returning to school for the academic year. 
 
 ### User Stories - Admin Only
-* As a site administrator I want to be able to create, update and delete course information/course options from the admin view. 
+* As a site administrator I want to be able to create, update and delete course information/course options. 
 * As a site administrator I want to be able to edit or delete reviews that may contain inappropriate content. 
 * As a site administrator I want to have a simple payment system so that users have no problem making purchases.
 * As a site adminstrator I want to prevent unauthorized users from having access to Admin content and other users profiles.

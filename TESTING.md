@@ -13,9 +13,15 @@
         * [Test Case 10](#Test-Case-10)
         * [Test Case 11](#Test-Case-11)
         * [Test Case 12](#Test-Case-12)
-   * [Testing User Stories - Admin Only](#Testing-User-Stories-Admin-Only)
         * [Test Case 13](#Test-Case-13)
         * [Test Case 14](#Test-Case-14)
+        * [Test Case 15](#Test-Case-15)
+        * [Test Case 16](#Test-Case-16)
+   * [Testing User Stories - Admin Only](#Testing-User-Stories-Admin-Only)
+        * [Test Case 17](#Test-Case-17)
+        * [Test Case 18](#Test-Case-18)
+        * [Test Case 19](#Test-Case-19)
+        * [Test Case 20](#Test-Case-20)
    * [Testing Features](#Testing-Features)
         * [Navigation](#Navigation)
         * [Footer](#Footer)        
@@ -523,10 +529,142 @@ Pass
 
 ---
 
+### Test Case 15
+> As a parent I want to be able to sign my children up for appropriate courses based on their age and have the option of
+continuning their education over the summer through an English language based summer camp.
 
-## Testing User Stories - Admin Only
+**Description**
+Verify that the school offers classes for children and summer camps. 
+
+**Steps**
+1. Open your web browser of choice.
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
+3. Click the courses tab.
+4. Observe the 'Classes for Children' and 'Summer Camps' cards.
+5. Click the 'Read More' tab to learn more information about these courses and purchase these courses.
+
+**Expected Result:**
+The school will offer potential customers the ability to sign their children up for classes and summer camps.
+
+**Actual Result:**
+The school offers potential customers the ability to sign their children up for classes and summer camps.
+
+**Pass/Fail:**
+Pass
+
+**Image of Test Result:** 
+
+* <img src="documentation/doc_images/children-card.png" width="600" height="400" alt="children">
+
+* <img src="documentation/doc_images/summer-camps-card.png" width="600" height="400" alt="summer-camps">
 
 ---
+
+### Test Case 16
+> As a user with limited time I want the opportunity to take an intensive English language course before moving to an English speaking country or returning to school for the academic year. 
+
+**Description**
+Verify that the school offers intensive courses.
+
+**Steps**
+1. Open your web browser of choice.
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
+3. Click the courses tab.
+4. Observe the intensive courses card.
+5. Click the 'Read More' tab to learn more information about this course and purchase this course.
+
+**Expected Result:**
+The school will offer the user the ability to sign up for intensive English courses.
+
+**Actual Result:**
+The school offers the user the ability to sign up for intensive English courses.
+
+
+**Pass/Fail:**
+Pass
+
+**Image of Test Result:**
+
+<img src="documentation/doc_images/intensive.png" width="450" height="250" alt="intensive-courses">
+
+---
+## Testing User Stories - Admin Only
+
+### Test Case 17
+> As a site administrator I want to be able to create, update and delete course information/course options.
+
+**Description**
+Verify that 
+
+**Steps**
+1. Open your web browser of choice.
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
+3. Click the login tab.
+4. Log in as a super user.
+5. To add a new course click the site management tab and select which type of course to add.
+6. To edit a course simply click on the course and select the edit button beneath the course and fill out the form as instructed.
+7. To delete a course simply click on the course and select the delete button beneath the course.
+
+**Expected Result:**
+The site administrator will have the ability to create, update and delete course options.
+
+**Actual Result:**
+The site administrator has the ability to create, update and delete course options.
+
+
+**Pass/Fail:**
+Pass
+
+**Image of Test Result:**
+
+<img src="documentation/doc_images/add-toast.png" width="450" height="250" alt="add-toast">
+
+<img src="documentation/doc_images/edit-toast.png" width="450" height="250" alt="edit-toast">
+
+<img src="documentation/doc_images/delete-toast.png" width="450" height="250" alt="delete-toast">
+
+---
+
+### Test Case 18
+>As a site administrator I want to be able to edit or delete reviews that may contain inappropriate content.
+
+**Description**
+Verify that the site administrator has the ability to delete inappropriate content on the reviews section of the site.
+
+**Steps**
+1. Open your web browser of choice.
+2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
+3. Navigate to the Admin view.
+4. Log in as a superuser.
+5. Navigate to the reviews section.
+6. Click on the offending review.
+7. Select the delete option and click delete.
+
+**Expected Result:**
+the site administrator will have the ability to delete inappropriate content on the reviews section of the site.
+
+**Actual Result:**
+The site administrator has the ability to delete inappropriate content on the reviews section of the site.
+
+**Pass/Fail:**
+Pass
+
+---
+
+### Test Case 19
+> As a site administrator I want to have a simple payment system so that users have no problem making purchases.
+
+* This particular user story has already been adequately tested in Test Case 9. Please refer back to [Test Case 9](#Test-Case-9) for further information.
+
+---
+
+### Test Case 20
+> As a site adminstrator I want to prevent unauthorized users from having access to Admin content and other users profiles.
+
+* This particular user story will be explored in depth in the Testing Route Handlers section of this document. Please refer to the[Manual Testing of Route Handlers](#Manual-Testing-of-Route-Handlers) section for more information.
+
+---
+
 ## Testing Features
 
 ### Navigation
