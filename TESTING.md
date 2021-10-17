@@ -17,11 +17,12 @@
         * [Test Case 14](#Test-Case-14)
         * [Test Case 15](#Test-Case-15)
         * [Test Case 16](#Test-Case-16)
-   * [Testing User Stories - Admin Only](#Testing-User-Stories-Admin-Only)
         * [Test Case 17](#Test-Case-17)
+   * [Testing User Stories - Admin Only](#Testing-User-Stories-Admin-Only)       
         * [Test Case 18](#Test-Case-18)
         * [Test Case 19](#Test-Case-19)
         * [Test Case 20](#Test-Case-20)
+        * [Test Case 21](#Test-Case-21)
    * [Testing Features](#Testing-Features)
         * [Navigation](#Navigation)
         * [Footer](#Footer)        
@@ -56,7 +57,7 @@
 
 ### Test Case 1
 
-> As a first time user I want to know the site's purpose immediately upon arrival.
+> As a first-time user I want to know the site's purpose immediately upon arrival.
 
 **Description**
 Verify that the site's purpose is explicitly clear when a user navigates to the site landing page.
@@ -84,7 +85,7 @@ Pass
 
 ### Test Case 2
 
-> As a first time user I want to access reviews of the school to inform my decision before signing up for a course.
+> As a first-time user I want to access reviews of the school to inform my decision before signing up for a course.
 
 **Description**
 Verify that the site offers users access to the reviews page without having to register.
@@ -97,10 +98,10 @@ Verify that the site offers users access to the reviews page without having to r
 
 
 **Expected Result:**
- The user will be able to navigate to the reviews section and read other users reviews without registering. 
+ The user will be able to navigate to the reviews section and read other users' reviews without registering. 
 
 **Actual Result:**
-The user is able to navigate to the reviews section and read other users reviews without registering. 
+The user is able to navigate to the reviews section and read other users' reviews without registering. 
 
 **Pass/Fail:**
 Pass
@@ -113,7 +114,7 @@ Pass
 
 ### Test Case 3
 
->  As a first time user I want the site UX to be intuitive for ease of use.
+>  As a first-time user I want the site UX to be intuitive for ease of use.
 
 **Description**
 Verify that the site provides the user with an intuitively designed navigation bar and footer.
@@ -145,16 +146,16 @@ Pass
 
 ### Test Case 4
 
-> As a first time user I want to find information about English language courses in the city of Trieste.
+> As a first-time user I want to find information about English language courses in the city of Trieste.
 
 **Description**
-Verify that the site provides the user with information regrading English language courses in the city of Trieste. 
+Verify that the site provides the user with information regarding English language courses in the city of Trieste. 
 
 **Steps**
 1. Open one's internet browser of choice.
 2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. Navigate to the courses or exam courses page of the site.
-4. Click on the "Read More" button of desired course for more information. 
+4. Click on the "Read More" button of the desired course for more information. 
 5. Observe all the necessary information regarding the course details.
 
 
@@ -227,18 +228,18 @@ Verify that the site provides the user with an opportunity to create an account 
 **Steps**
 1. Open one's internet browser of choice.
 2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/).
-3. Click the Sign-Up tab in the navigation bar. Alternatively click the register button beneath the banner image.  
-4. Fill out the the registration form as instruction.
+3. Click the Sign-Up tab in the navigation bar. Alternatively, click the register button beneath the banner image.  
+4. Fill out the the registration form as instructed.
 5. Verify email address as instructed.
 6. Log in with the credentials that were created when filling out the registration form. 
 
 
 
 **Expected Result:**
-A registration form will be provided and once successfully completed and submitted the user will recieve an email asking them to verify their account. Once the user's email has been verified they will be able to log in easily with the credentials they have created. 
+A registration form will be provided and once successfully completed and submitted the user will receive an email asking them to verify their account. Once the user's email has been verified they will be able to log in easily with the credentials they have created. 
 
 **Actual Result:**
-A registration form will be provided and once successfully completed and submitted the user will recieve an email asking them to verify their account. Once the user's email has been verified they will be able to log in easily with the credentials they have created. 
+A registration form will be provided and once successfully completed and submitted the user will receive an email asking them to verify their account. Once the user's email has been verified they will be able to log in easily with the credentials they have created. 
 
 **Pass/Fail:**
 Pass
@@ -285,33 +286,37 @@ Pass
 ---
 ### Test Case 8
 
-> As a user I want to recieve email confirmation that my payments have been successful
+> As a user I want to receive email confirmation that my payments have been successful
 
 **Description**
-Verify that the site provides the user with recieves a confirmation email after a payment.
+Verify that the site provides the user with receives a confirmation email after a payment.
 
 **Steps**
 1. Open one's internet browser of choice.
 2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
-3. 
-4. 
-5. 
-6. 
-7. 
+3. Select the Log In tab in the navigation bar.
+4. Enter user's log in details. 
+5. Navigate to the Courses/Exam Courses page.
+6. Click the "Read More" on the desired Course. 
+7. Click the "Add to Cart" button beneath the course's description.
+8. Navigate to the Cart page.
+9. Click the "Secure Checkout" beneath the course description card.
+10. Fill out the payment form as instructed.
+11. Observe the checkout success page with the order details and the confirmation email in the user's email inbox.
 
 
 **Expected Result:**
-
+The site will provide the user with receives a confirmation email after a payment
 
 **Actual Result:**
-
+The site provides the user with receives a confirmation email after a payment
 
 **Pass/Fail:**
 Pass
 
 **Image of Test Result:** 
 
-* <img src="assets/documentation/doc-images/topicsimage.png" width="600" height="400" alt="topics-image">
+* <img src="documentation/doc_images/checkout-email.png" width="600" height="400" alt="checkout-email">
 
 ---
 
@@ -333,7 +338,7 @@ Verify that the site provides the user is able to make payments using a secure a
 8. Navigate to the Cart page.
 9. Click the "Secure Checkout" beneath the course description card.
 10. Fill out the payment form as instructed.
-11. Observe the checkout success page and the payment confirmation email. 
+11. Observe the checkout success page with the order details
 
 
 **Expected Result:**
@@ -395,9 +400,9 @@ Pass
 * <img src="documentation/doc_images/review-test.png" width="600" height="400" alt="review">
 ---
 
-### Test Case 11
+### Test Case 12
 
-> As a returning user I want be able to contact the school easily for any further enquires I may have.
+> As a returning user I want to be able to contact the school easily for any further enquiries I may have.
 
 **Description**
 Verify that the site provides the user with the ability to contact the school.
@@ -407,7 +412,7 @@ Verify that the site provides the user with the ability to contact the school.
 2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. Navigate to the contact page.
 4. Fill out the contact form as instructed.
-5. Observe the 'thank you' message that confirms the school has recieved the user's message. 
+5. Observe the 'thank you' message that confirms the school has received the user's message. 
 
 **Expected Result:**
 The user will be easily able to contact the school through the site's contact page.
@@ -426,7 +431,7 @@ Pass
 
 ---
 
-### Test Case 12
+### Test Case 13
 
 > As a business owner/working professional I want to be able to sign-up for Business English classes. 
 
@@ -461,7 +466,7 @@ Pass
 ---
 
 
-### Test Case 13
+### Test Case 14
 > As an existing user I want to be able to update my profile information easily.
 
 **Description**
@@ -495,7 +500,7 @@ Pass
 
 ---
 
-### Test Case 14
+### Test Case 15
 > As an existing user I want to be able to access my order history easily. 
 
 **Description**
@@ -529,9 +534,9 @@ Pass
 
 ---
 
-### Test Case 15
+### Test Case 16
 > As a parent I want to be able to sign my children up for appropriate courses based on their age and have the option of
-continuning their education over the summer through an English language based summer camp.
+continuing their education over the summer through an English language-based summer camp.
 
 **Description**
 Verify that the school offers classes for children and summer camps. 
@@ -560,8 +565,8 @@ Pass
 
 ---
 
-### Test Case 16
-> As a user with limited time I want the opportunity to take an intensive English language course before moving to an English speaking country or returning to school for the academic year. 
+### Test Case 17
+> As a user with limited time I want the opportunity to take an intensive English language course before moving to an English-speaking country or returning to school for the academic year. 
 
 **Description**
 Verify that the school offers intensive courses.
@@ -590,7 +595,7 @@ Pass
 ---
 ## Testing User Stories - Admin Only
 
-### Test Case 17
+### Test Case 18
 > As a site administrator I want to be able to create, update and delete course information/course options.
 
 **Description**
@@ -600,7 +605,7 @@ Verify that
 1. Open your web browser of choice.
 2. Navigate to [https://joyce-english-school.herokuapp.com/](https://joyce-english-school.herokuapp.com/)
 3. Click the login tab.
-4. Log in as a super user.
+4. Log in as a superuser.
 5. To add a new course click the site management tab and select which type of course to add.
 6. To edit a course simply click on the course and select the edit button beneath the course and fill out the form as instructed.
 7. To delete a course simply click on the course and select the delete button beneath the course.
@@ -625,7 +630,7 @@ Pass
 
 ---
 
-### Test Case 18
+### Test Case 19
 >As a site administrator I want to be able to edit or delete reviews that may contain inappropriate content.
 
 **Description**
@@ -651,15 +656,15 @@ Pass
 
 ---
 
-### Test Case 19
+### Test Case 20
 > As a site administrator I want to have a simple payment system so that users have no problem making purchases.
 
 * This particular user story has already been adequately tested in Test Case 9. Please refer back to [Test Case 9](#Test-Case-9) for further information.
 
 ---
 
-### Test Case 20
-> As a site adminstrator I want to prevent unauthorized users from having access to Admin content and other users profiles.
+### Test Case 21
+> As a site adminstrator I want to prevent unauthorized users from having access to Admin content and other users' profiles.
 
 * This particular user story will be explored in depth in the Testing Route Handlers section of this document. Please refer to the[Manual Testing of Route Handlers](#Manual-Testing-of-Route-Handlers) section for more information.
 
@@ -955,11 +960,11 @@ Verify that the 404 page functions as expected.
 4. Observe the rendered 404 page.
 
 **Expected Result:**
-A 404 page will render if the user tries to direct to a non existent page.
+A 404 page will render if the user tries to direct to a non-existent page.
 
 
 **Actual Result:**
-A 404 page renders if the user tries to direct to a non existent page.
+A 404 page renders if the user tries to direct to a non-existent page.
 
 
 **Pass/Fail:**
@@ -1150,7 +1155,7 @@ All CSS was validated by using [W3C Jigsaw CSS Validation Service](https://jigsa
     - line 151
     - line 154
 
-These lines were auto generated by Django and left as found to maintain the integrity of the application.
+These lines were auto-generated by Django and left as found to maintain the integrity of the application.
 
 
 
@@ -1194,11 +1199,11 @@ These lines were auto generated by Django and left as found to maintain the inte
 
 
 
-* All delete functions do not display id specific urls at the time of deletion so similar tests could not be performed on these functions. However similar defensive programming has been implemented so as to prevent any malicious deletion of content and only allow content to be deleted by the the content's owner or the site admin.
+* All delete functions do not display id specific urls at the time of deletion so similar tests could not be performed on these functions. However similar defensive programming has been implemented so as to prevent any malicious deletion of content and only allow content to be deleted by the content's owner or the site admin.
 
 ## Known Bugs and Issues
 
-* One issue during the start of development was the inability to render images in the browser. A 404 error was being display in the the terminal and after consultation with tutor support it was discovered that the following code needed to be added to the templates section of the settings.py file:
+* One issue during the start of development was the inability to render images in the browser. A 404 error was being displayed in the terminal and after consultation with tutor support it was discovered that the following code needed to be added to the templates section of the settings.py file:
 
         'django.template.context_processors.media',
 
@@ -1220,7 +1225,7 @@ This solution was found through a Slack reference to the follow Django documenta
 
 - [Django Documentation](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#get-media-prefix)
 
-* During testing it was discovered that the original code configuation for the site's background images was causing HTML validation errors on several pages. The original code rendered the image by assigning it to a class in the body element and targeting the image inside the base.css. This resulted in validation errors because the body element was being referenced twice, first from the base template and then in the templates that used the background image body class. The solution to this issue was to create inline css in the individual templates that displayed a background image. This resolved the HTML validation issues and no further HTML issues were detected.
+* During testing it was discovered that the original code configuration for the site's background images was causing HTML validation errors on several pages. The original code rendered the image by assigning it to a class in the body element and targeting the image inside the base.css. This resulted in validation errors because the body element was being referenced twice, first from the base template and then in the templates that used the background image body class. The solution to this issue was to create inline css in the individual templates that displayed a background image. This resolved the HTML validation issues and no further HTML issues were detected.
 
 * During the later stages of development it was noted that there were some issues with regard to the checkout/checkout success functionality. The first issue that was noted was that prospective users were being charged double for a purchase. The second was that within the order history section it was revealed that two payments had appeared to have taken place, One with the correct price and one with the doubled price as seen in the images below:
 
