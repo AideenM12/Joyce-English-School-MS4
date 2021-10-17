@@ -10,6 +10,7 @@
             * [Login Page Features](#Login-Page-Features)
             * [Sign-Up Page Features](#Sign-Up-Page-Features)
             * [Profile Page Features](#Profile-Page-Features)
+            * [Reviews Page Features](#Reviews-Page-Features)
             * [Log Out Features](#Log-Out-Features)
             * [404 Page](#404-Page)
             * [500 Page](#500-Page)
@@ -48,7 +49,7 @@ The live website can be viewed [here](https://joyce-english-school.herokuapp.com
 ## Strategy
 
 ### Project Goals
-The primary goal of this site is to facillitate people in the city of Trieste who have a desire to learn English. For the purpose of this project all site content has been presented in English but in a real world application this site would be presented in Italian. The site is named after famed Irish author James Joyce who lived in Trieste for many years and is still revered by the city's inhabitants today. Coincidentially James Joyce also taught English as a foreign language in the city of Trieste. The site is designed to offer user's the opportunity to find out information about the school's courses and also to allow registered user's to purchase courses from the site. Users can also read and leave reviews, view the order history and create a profile with the site. There are many other site features to be implemented which will be discussed in depth later on in this document. 
+The primary goal of this site is to facilitate people in the city of Trieste who have a desire to learn English. For the purpose of this project all site content has been presented in English but in a real world application this site would be presented in Italian. The site is named after famed Irish author James Joyce who lived in Trieste for many years and is still revered by the city's inhabitants today. Coincidentially James Joyce also taught English as a foreign language in the city of Trieste. The site is designed to offer user's the opportunity to find out information about the school's courses and also to allow registered user's to purchase courses from the site. Users can also read and leave reviews, view the order history and create a profile with the site. There are many other site features to be implemented which will be discussed in depth later on in this document. 
 
 
 
@@ -110,8 +111,32 @@ continuning their education over the summer through an English language based su
 
 <img src="documentation/doc_images/homebtns-2.png" width="650" height="300" alt="home-page-buttons">
 
+### Course/Exam Courses page features:
+* Both the courses page and the exam courses page present the user with a series of cards. 
+
+* The courses page presents the user with six cards depicting a variety of general English courses.
+
+* The exam courses page presents the user with six cards each with the title of an exam, the level required to study for this exam and the certification achieved after this exam course.
+
+* Underneath all cards is a 'Read More' button which brings the user to a page which contains a more detailed description of the selected course including the course price, start date, end date and number of class hours as well as a general overview that particular course. 
+
+<img src="documentation/doc_images/courses.png" width="600" height="450" alt="courses">
+
+<img src="documentation/doc_images/course-detail.png" width="400" height="650" alt="course-detail">
 
 
+### Contact page features:
+* The contact page presents the user with a form to complete in order to contact the school. 
+
+* The contact form has been created using [Materializecss](https://materializecss.com/) and [EmailJS](https://www.emailjs.com/) to allow users to contact the site creator with any questions or suggestions that they may have.
+
+* Each field of the contact form has been marked as required to avoid the possibility of an error when trying to contact the owners of the site. 
+
+* When the form has been correctly filled out and submitted and 'thank you' message will be displayed above the form to allow the user to know that they have submitted the form correctly and the form then resets.
+
+* <img src="documentation/doc_images/contact-form.png" width="600" height="400" alt="contact-form">
+
+* <img src="documentation/doc_images/thank-you.png" width="300" height="100" alt="thank-you-message">
 
 ### Login page features:
 
@@ -141,6 +166,19 @@ continuning their education over the summer through an English language based su
 * <img src="documentation/doc_images/order-history.png" width="600" height="400" alt="order-history">
 
 * <img src="documentation/doc_images/order-details.png" width="600" height="400" alt="order-details">
+
+
+### Reviews page features:
+* The reviews page allows unregistered user to read reviews from other users about the school. Signed in users can add, edit and delete their own reviews but are prevented from making any changes to the reviews of others. A call to action button exists at the bottom of the page allowing signed in users to add their own reviews. The user can also edit/delete their review using the buttons located directly beneath their review. A scroll back to top button exists on this page to allow users to easily navigate back to the top of the page easily and quickly. 
+
+* <img src="documentation/doc_images/create-review.png" width="400" height="200" alt="create-review">
+
+* <img src="documentation/doc_images/add-review.png" width="600" height="400" alt="add-review">
+
+* <img src="documentation/doc_images/review-test.png" width="600" height="400" alt="review">
+
+* <img src="documentation/doc_images/review-btns.png" width="250" height="100" alt="reviews-btns">
+
 
 ### Logout features:
 * The log out button directs the user to the signout page which asks the user to confirm that they wish to sign out. There are also three call to action cards on the sign out page to encourage the user to remain on the site for longer. Once a user clicks the signout button the user's session cookie will be removed from the app and the user will be redirected home page.
@@ -200,11 +238,13 @@ This palette was created on the [Coolors Website](https://coolors.co).
 * Both fonts were found on [Google Fonts](https://fonts.google.com/)
 
 
-
 ### Imagery
 
+* The top parallax image was chosen for it's appropriateness to English language learning and also because the flags depicted represent the two major English dialects studied by non-native English speakers, namely American English and British English.
 
+* The bottom parallax image simply depicts some pages from a book and was chosen for it's similarity to the site color scheme and also for it's relevance to the site's purpose. 
 
+* The images depicted on each of the cards were chosen based on their relevance to the type of course that is advertised alongside each individual image. 
 
 
 ## Skeleton
@@ -233,7 +273,7 @@ This palette was created on the [Coolors Website](https://coolors.co).
 
 ### Database Schema
 
-<img src="documentation/doc_images/dbschema.png" width="900" height="300" alt="database schema">
+<img src="documentation/doc_images/dbschema.png" width="900" height="500" alt="database schema">
 
 * A relational database was used to create this project. During production SQLite was used as the site's database and all data was migrated to Heroku Postgres during deployment to Heroku. The key models can be seen in the image above and are described in depth below:
 
@@ -536,46 +576,42 @@ Once the project been loaded into the IDE it is necessary to install the necessa
 2. In Github go to (https://github.com/AideenM12/Joyce-English-School-MS4).
 3. In the top right hand corner click "Fork".
 
-
-
-
-
-
-
 ---
 
 
 ## Credits
 
 ### Media
-The image used to create the James Joyce favicon was originally obtained from [trybooking.com](https://www.trybooking.com/events/landing?eid=751940&)
+* The image used to create the James Joyce favicon was originally obtained from [trybooking.com](https://www.trybooking.com/events/landing?eid=751940&)
 
-Books.jpg https://unsplash.com/photos/IOzk8YKDhYg?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
-flag.jpg Image by <a href="https://pixabay.com/photos/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1209605">Free-Photos</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1209605">Pixabay</a>
+* The books.jpg image was found on [unsplash.com](https://unsplash.com/photos/IOzk8YKDhYg?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink)
 
-pages.jpg Image by <a href="https://pixabay.com/users/kranich17-11197573/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6213537">Kranich17</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6213537">Pixabay</a>
+* The flag.jpg image was found on [pixabay.com](https://pixabay.com/photos/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1209605)
 
-teenagers.jpg https://unsplash.com/photos/8nHQx4zi9Wk
+* The pages.jpg image was found on [pixabay.com](https://pixabay.com/users/kranich17-11197573/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6213537)
 
-children.jpg https://unsplash.com/photos/o_lLsdVTxak
+* The teenagers.jpg image was found on [unsplash.com](https://unsplash.com/photos/8nHQx4zi9Wk)
 
-business-class.jpg https://unsplash.com/photos/FDV1BaKNKEo
+* The children.jpg image was found on [unsplash.com](https://unsplash.com/photos/o_lLsdVTxak)
 
-adults.jpg https://unsplash.com/photos/XkKCui44iM0
+* The business-class.jpg image was found on [unsplash.com](https://unsplash.com/photos/FDV1BaKNKEo)
 
-summer-camp.jpg https://www.pexels.com/photo/man-people-woman-weather-8033897/
+* The adults.jpg image was found on [unsplash.com](https://unsplash.com/photos/XkKCui44iM0)
 
-questions.jpg https://pixabay.com/illustrations/ask-writing-who-what-how-why-2245264/
+* The summer-camp.jpg image was found on [pexels.com](https://www.pexels.com/photo/man-people-woman-weather-8033897/)
 
-intensive-courses.jpg https://pixabay.com/photos/girl-english-dictionary-read-2771936/
+* The questions.jpg image was found on [pixabay.com](https://pixabay.com/illustrations/ask-writing-who-what-how-why-2245264/)
 
-exams.jpg https://unsplash.com/photos/s9CC2SKySJM
+* The intensive-courses.jpg image was found on [pixabay.com](https://pixabay.com/photos/girl-english-dictionary-read-2771936/)
+
+* The exams.jpg image was found on [unsplash.com](https://unsplash.com/photos/s9CC2SKySJM)
+
 ### Content
 
 
 ### Code
 
-
+* The code for the floating back to top button was taken from [codepen.io](https://codepen.io/desirecode/pen/MJPJqV)
 
 * The email.js code was sourced from Matt Rudge's Code Institute tutorial on the same subject.
 
@@ -585,12 +621,20 @@ exams.jpg https://unsplash.com/photos/s9CC2SKySJM
 
 ### Acknowledgements
 
-* I would firstly like to thank my ever-patient mentor, Aaron Sinnott, whose guidance, knowledge and calm advice has been integral to the creation, development and completion of this project. 
+* I would firstly like to thank my ever-patient mentor, Aaron Sinnott, whose guidance, knowledge and calm advice has been integral to the creation, development and completion of this project. I would also like to thank him for his constant encouragement throughout this course which has been invaluable.
 
-* I would like to thank the entire slack community for being a source of support, knowledge and positive feedback throughout this project, in particular data-centric-dev channel lead Ed B who seemed to be constantly available to answer questions and troubleshoot solutions with students throughout the development of their third milestone projects.
+* I would like to thank the entire slack community for being a source of support, knowledge and positive feedback throughout this project.
+
+* I would like to thank the tutor support for their patience and guidance throughout the development of this project. In particular I would like to thank jo_ci, sean_ci and john_ci who went above and beyond the call of duty for me on several occassions and without whom this project may not have been possible. I really am immensely grateful and cannot thank each of them enough. 
+
+* I would like to thank Ben Kavanagh for his excellent and thorough testing during the concluding weeks of this project, for providing excellent suggestions for improvement and also for his kind words of encouragement which provided a much need confidence boost in times of stress.
+
+* I would like to thank Christopher Udritz for providing thoughful constructive feedback and suggestions during the final stages of development and also for being an excellent sounding board during some frustrating moments of development.
+
+* I would like to give a massive Thank You to Harry Dhillion who has consistently provided kind and encouraging feedback for every project I've created during this course and for offering sound advice at various stages of the course which really has been invaluable. Harry has often helped me when I felt completely lost and his quiet and consistent help has encouraged me to pay it forward and strive to be a better developer. 
 
 * I would like to thank Daisy McGirr for taking time out of her busy schedule to provide us with the aforementioned testing workshop and for constantly offering encouragement and help to our Springboard class throughout our Code Institute journey.
 
 * I would like to thank my own Springboard class cohorts for being supportive and helpful throughout the duration of the course. This particular channel provided a great deal of respite and also necessary feedback throughout the course which has proven invaluable for maintaining motivation. 
 
-* Finally I would like to thank my boyfriend Shane for constantly helping to test the project throughout its development, providing insightful suggestions as to how to improve user experience. And also for helping to proof read this document and ensure it meets the correct standards of grammar, spelling and readability.
+* Finally I would like to thank my boyfriend Shane for constantly helping to test the project throughout its development, providing insightful suggestions as to how to improve user experience. And also for helping to proof read this document and ensure it meets the correct standards of grammar, spelling and readability. I would also like to thank Shane for his constant love and support throughout this course and for never allowing me to give up, this would not have been possible without him and I will always been grateful for everything he has done to make this possible. 
